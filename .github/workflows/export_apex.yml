@@ -45,12 +45,12 @@ jobs:
           sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @export_apex_app.sql
 
                 # Commit and push the exported schema file (optional)
-      - name: Commit and Push Changes
-        env:
-          GITHUB_TOKEN: ${{ secrets.TOK }}
-        run: |
-          git config --global user.name "Leonardo Cuyar"
-          git config --global user.email "leo.cuyar@gmail.com"
-          git add .
-          git commit -m "Backup - $(date +%Y%m%d)"
-          git push
+#      - name: Commit and Push Changes
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.TOK }}
+#        run: |
+#          git config --global user.name "Leonardo Cuyar"
+#          git config --global user.email "leo.cuyar@gmail.com"
+#          git add .
+#          git commit -m "Backup - $(date +%Y%m%d)"
+#          git push
