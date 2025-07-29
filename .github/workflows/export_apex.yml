@@ -41,8 +41,8 @@ jobs:
           APEX_APP_ID: ${{ secrets.APEX_APP_EXPORT_ID }}
           #ATP_WALLET_ERP: ${{ ATP_WALLET_ERP }}
         run: |
-          echo "${{ vars.ATP_WALLET_ERP }}" | base64 --decode > Wallet_PEOPLEPAYERP.zip
-          sql  -cloudconfig  Wallet_PEOPLEPAYERP.zip $DB_USER/$DB_PASSWORD@$DB_URL @export_apex_app.sql
+          echo "${{ vars.ATP_WALLET_DEV }}" | base64 --decode > Wallet_DEVENV.zip
+          sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @export_apex_app.sql
 
                 # Commit and push the exported schema file (optional)
       - name: Commit and Push Changes
