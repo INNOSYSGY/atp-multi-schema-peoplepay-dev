@@ -1,0 +1,1857 @@
+prompt --application/pages/page_00199
+begin
+--   Manifest
+--     PAGE: 00199
+--   Manifest End
+wwv_flow_imp.component_begin (
+ p_version_yyyy_mm_dd=>'2024.11.30'
+,p_release=>'24.2.7'
+,p_default_workspace_id=>31592798490575853
+,p_default_application_id=>112
+,p_default_id_offset=>115784133856313705
+,p_default_owner=>'TEMPLATE_APPV8'
+);
+wwv_flow_imp_page.create_page(
+ p_id=>199
+,p_name=>'frmsecurity'
+,p_step_title=>'Security Management'
+,p_warn_on_unsaved_changes=>'N'
+,p_autocomplete_on_off=>'ON'
+,p_group_id=>wwv_flow_imp.id(3278888520595948027)
+,p_html_page_header=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'<script language="JavaScript" type="text/javascript">',
+'<!--',
+'',
+' htmldb_delete_message=''"DELETE_CONFIRM_MSG"'';',
+'',
+'//-->',
+'</script>',
+'<script language="JavaScript" type="text/javascript">',
+'<!--',
+'',
+' htmldb_ch_message=''"OK_TO_GET_NEXT_PREV_PK_VALUE"'';',
+'',
+'//-->',
+'</script>',
+''))
+,p_javascript_file_urls=>'<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>'
+,p_javascript_code=>wwv_flow_string.join(wwv_flow_t_varchar2(
+' function passwordStrength(){',
+'    var pwd = document.getElementById(''P199_NEW_PASSWORD'');',
+'    var password = document.getElementById("P199_NEW_PASSWORD").value;',
+'     var password1 =document.getElementById("P199_VERIFY_NEW_PASSWORD").value;',
+'    var verify =document.getElementById("passwordDescription").innerHTML;',
+'    var desc = new Array();',
+'            desc[0] = "Poor";',
+'            desc[1] = "Doing Better";',
+'            desc[2] = "Average";',
+'            desc[3] = "Medium";',
+'            desc[4] = "Strong";',
+'            desc[5] = "Strongest";',
+'            var score   = 0;',
+'            if (password.length > 8) score++;',
+'            if ( ( password.match(/[a-z]/) ) && ( password.match(/[A-Z]/) ) ) score++;',
+'            if (password.match(/\d+/)) score++;',
+'            if ( password.match(/.[!,@,#,$,%,^,&,*,?,_,~,-,(,)]/) ) score++;',
+'            ',
+'            if (password.length > 12) score++;',
+'            document.getElementById("passwordDescription").innerHTML = desc[score];',
+'             ',
+'             if (password.length==0) {',
+'                 document.getElementById("passwordDescription").innerHTML  = ''Password not entered'';',
+'           }',
+'             if (password===''password'' || password ===''password123'' || password===''Password123''||password===''Password''){',
+'                 document.getElementById("passwordDescription").innerHTML  = ''Too Familiar'';',
+'             }',
+'',
+'     /*if (verify == "Poor" || verify ==''Average'' || verify == ''Average'' || verify==''Too Familiar''){',
+'                $("#create").attr("disabled", true);',
+'            }',
+'     else{',
+'                 $("#create").attr("disabled", false);',
+'             };*/',
+'     document.getElementById("passwordStrength").className = "strength" + score;',
+'',
+'    };',
+'',
+'',
+'/*To verify passwords are matching before save*/',
+'',
+'$(''#P199_NEW_PASSWORD,#P199_VERIFY_NEW_PASSWORD'').on(''keyup'', function () ',
+'                                            ',
+'{',
+'    ',
+'    var verify =document.getElementById("passwordDescription").innerHTML;',
+'  if  ($(''#P199_NEW_PASSWORD'').val()==='''' && $(''#P199_VERIFY_NEW_PASSWORD'').val() ===''''){',
+'    $(''#success'').html('''').css(''color'', ''black''); ',
+'  }',
+'    else if ($(''#P199_NEW_PASSWORD'').val() == $(''#P199_VERIFY_NEW_PASSWORD'').val()){',
+'        $(''#success'').html(''Password Matched'').css(''color'', ''green'');',
+'    }',
+'    else',
+'    $(''#success'').html(''Does not Match'').css(''color'', ''red'');',
+'    ',
+'    ',
+'    if (($(''#P199_NEW_PASSWORD'').val() != $(''#P199_VERIFY_NEW_PASSWORD'').val() ) &&(verify == ''Poor'' || verify ==''Doing Better'' || verify == ''Average'' || verify==''Too Familiar'')){',
+'                $("#create").attr("disabled", true);',
+'            }',
+'     else if(($(''#P199_NEW_PASSWORD'').val() == $(''#P199_VERIFY_NEW_PASSWORD'').val() ) &&(verify == ''Medium'' || verify ==''Strong'' || verify==''Strongest'')){',
+'                 $("#create").attr("disabled", false);',
+'             }',
+'    else if ($(''#P199_NEW_PASSWORD'').val()==='''' && $(''#P199_VERIFY_NEW_PASSWORD'').val() ==='''')',
+'        {',
+'            $("#create").attr("disabled", false);',
+'        }',
+'    else{',
+'        $("#create").attr("disabled", true);',
+'    };',
+'});',
+''))
+,p_inline_css=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'#passwordStrength',
+'{',
+'        height:10px;',
+'        display:block;',
+'        float:left;',
+'}',
+'.strength0',
+'{',
+'        width:190px;',
+'        background:#ffffff;',
+'}',
+'.strength1',
+'{',
+'        width:45px;',
+'        background:#ff0000;',
+'}',
+'.strength2',
+'{',
+'        width:90px;  ',
+'        background:#ff5f5f;',
+'}',
+'.strength3',
+'{',
+'        width:135px;',
+'        background:#56e500;',
+'}',
+'.strength4',
+'{',
+'        background:#4dcd00;',
+'        width:160px;',
+'}',
+'.strength5',
+'{',
+'        background:#399800;',
+'        width:190px;',
+'}',
+'',
+'.t-Form-fieldContainer--postTextBlock .t-Form-itemText--post{',
+'    height:100px;',
+'    background:rgba(99, 55, 220,0.40);',
+'    ',
+'    ',
+'}',
+'.fa-low-vision::before{',
+'   content: "\f2a8";',
+'    background: rgba(99, 55, 220,0.40);',
+'     height:25px;',
+'    display:inline-block;',
+'}',
+'',
+'',
+''))
+,p_page_template_options=>'#DEFAULT#'
+,p_help_text=>'No help is available for this page.'
+,p_page_component_map=>'21'
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(132793733187926916)
+,p_plug_name=>'Security Management'
+,p_region_css_classes=>'is-expanded'
+,p_region_template_options=>'#DEFAULT#'
+,p_plug_template=>4501440665235496320
+,p_plug_display_sequence=>7
+,p_include_in_reg_disp_sel_yn=>'Y'
+,p_plug_display_point=>'REGION_POSITION_08'
+,p_location=>null
+,p_plug_source=>'<font color="red" size="6"><b> Password has expired please change it now! </b><font>'
+,p_plug_display_condition_type=>'VAL_OF_ITEM_IN_COND_EQ_COND2'
+,p_plug_display_when_condition=>'GET_PWD_DURATION'
+,p_plug_display_when_cond2=>'CHANGE_PWD'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'expand_shortcuts', 'N',
+  'output_as', 'HTML')).to_clob
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(3238391596041062401)
+,p_plug_name=>'Security Settings'
+,p_region_template_options=>'#DEFAULT#:t-Region--noPadding:t-Region--accent14:t-Region--hiddenOverflow:t-Form--large'
+,p_component_template_options=>'#DEFAULT#:u-colors:t-Cards--featured force-fa-lg:t-Cards--5cols:t-Cards--animColorFill'
+,p_plug_template=>4072358936313175081
+,p_plug_display_sequence=>48
+,p_plug_display_point=>'REGION_POSITION_08'
+,p_location=>null
+,p_list_id=>wwv_flow_imp.id(3278968486405458172)
+,p_plug_source_type=>'NATIVE_LIST'
+,p_list_template_id=>2886769488667748277
+,p_plug_query_num_rows_type=>'NEXT_PREVIOUS_LINKS'
+,p_plug_query_show_nulls_as=>' - '
+,p_plug_required_role=>wwv_flow_imp.id(3279325973588677334)
+,p_plug_display_condition_type=>'EXISTS'
+,p_plug_display_when_condition=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'select 1',
+'from APP_MODULE_LICENCE a',
+'where trunc(current_date) between trunc(START_LICENCE_DATE) and trunc(EXPIRY_LICENCE_DATE)',
+'and exists (select 1',
+'            from APP_MODULE b',
+'            where a.APP_MODULE_ID=b.id',
+'            and upper(MODULE_NAME)=''SECURITY''',
+'            and trunc(b.START_DATE) <= trunc(current_date)',
+'            and (b.END_DATE is null or trunc(b.END_DATE) >= trunc(current_date))',
+'            )',
+'UNION',
+'SELECT 1',
+'FROM DUAL',
+'WHERE :APP_USER  IN (''RLANGFORD@INNOSYSGY.COM'',''PJOSEPH@INNOSYSGY.COM'')				'))
+,p_pagination_display_position=>'BOTTOM_RIGHT'
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(3242424808136029034)
+,p_plug_name=>'Change Password'
+,p_region_template_options=>'#DEFAULT#:t-Region--accent14:t-Region--scrollBody'
+,p_component_template_options=>'#DEFAULT#'
+,p_plug_template=>4072358936313175081
+,p_plug_display_sequence=>8
+,p_plug_display_point=>'REGION_POSITION_08'
+,p_location=>null
+,p_plug_query_headings_type=>'QUERY_COLUMNS'
+,p_plug_query_num_rows_type=>'NEXT_PREVIOUS_LINKS'
+,p_plug_query_show_nulls_as=>' - '
+,p_pagination_display_position=>'BOTTOM_RIGHT'
+,p_plug_header=>'<div style="height: 195px;">'
+,p_plug_footer=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'<div class="strong-text">Strong passwords are enforced.</div>',
+'</div>'))
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'expand_shortcuts', 'N',
+  'output_as', 'HTML',
+  'show_line_breaks', 'N')).to_clob
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(3317420151870486790)
+,p_plug_name=>'Switch Org, Module or Set Home Screen'
+,p_region_template_options=>'#DEFAULT#:t-Region--accent14:t-Region--scrollBody'
+,p_plug_template=>4072358936313175081
+,p_plug_display_sequence=>28
+,p_include_in_reg_disp_sel_yn=>'Y'
+,p_plug_new_grid_row=>false
+,p_plug_display_point=>'REGION_POSITION_08'
+,p_location=>null
+,p_plug_display_condition_type=>'EXISTS'
+,p_plug_display_when_condition=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'select 1',
+'from tbluserdetail',
+'where user_id =(select user_id from tbluser where UPPER(user_name) = UPPER(:APP_USER))'))
+,p_plug_header=>'<div style="height: 195px;">'
+,p_plug_footer=>'</div>'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'expand_shortcuts', 'N',
+  'output_as', 'HTML')).to_clob
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(3317421087127486799)
+,p_plug_name=>'End User Options'
+,p_region_template_options=>'#DEFAULT#:t-Region--accent14:t-Region--scrollBody'
+,p_plug_template=>4072358936313175081
+,p_plug_display_sequence=>18
+,p_include_in_reg_disp_sel_yn=>'Y'
+,p_plug_new_grid_row=>false
+,p_plug_display_point=>'REGION_POSITION_08'
+,p_location=>null
+,p_plug_header=>'<div style="height: 195px;">'
+,p_plug_footer=>'</div>'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'expand_shortcuts', 'N',
+  'output_as', 'HTML')).to_clob
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(3319052944196497116)
+,p_plug_name=>'Configure Start Screen'
+,p_region_template_options=>'#DEFAULT#:t-Region--accent14:t-Region--scrollBody'
+,p_plug_template=>4072358936313175081
+,p_plug_display_sequence=>38
+,p_include_in_reg_disp_sel_yn=>'Y'
+,p_plug_display_point=>'REGION_POSITION_08'
+,p_location=>null
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'expand_shortcuts', 'N',
+  'output_as', 'HTML')).to_clob
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(3319053556502497122)
+,p_plug_name=>'View/Delete  Excluded Menu Pages'
+,p_parent_plug_id=>wwv_flow_imp.id(3319052944196497116)
+,p_region_template_options=>'#DEFAULT#'
+,p_component_template_options=>'#DEFAULT#'
+,p_plug_template=>2100526641005906379
+,p_plug_display_sequence=>10
+,p_plug_display_point=>'SUB_REGIONS'
+,p_query_type=>'SQL'
+,p_plug_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'SELECT',
+'    id,',
+'    list_name,',
+'    webpage_id,',
+'    last_changed_by,',
+'    last_changed_date,',
+'    user_name',
+'FROM tblstartupscreen',
+'where user_name=:APP_USER',
+'AND LIST_NAME =:P199_DISPLAY_MODULE_STARTS'))
+,p_plug_source_type=>'NATIVE_IG'
+,p_ajax_items_to_submit=>'P199_DISPLAY_MODULE_STARTS'
+);
+wwv_flow_imp_page.create_region_column(
+ p_id=>wwv_flow_imp.id(3319053704858497124)
+,p_name=>'ID'
+,p_source_type=>'DB_COLUMN'
+,p_source_expression=>'ID'
+,p_data_type=>'NUMBER'
+,p_session_state_data_type=>'VARCHAR2'
+,p_is_query_only=>false
+,p_item_type=>'NATIVE_HIDDEN'
+,p_display_sequence=>30
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'value_protected', 'N')).to_clob
+,p_filter_is_required=>false
+,p_use_as_row_header=>false
+,p_enable_sort_group=>true
+,p_enable_control_break=>true
+,p_is_primary_key=>true
+,p_duplicate_value=>true
+,p_include_in_export=>false
+);
+wwv_flow_imp_page.create_region_column(
+ p_id=>wwv_flow_imp.id(3319053869604497125)
+,p_name=>'LIST_NAME'
+,p_source_type=>'DB_COLUMN'
+,p_source_expression=>'LIST_NAME'
+,p_data_type=>'VARCHAR2'
+,p_session_state_data_type=>'VARCHAR2'
+,p_is_query_only=>false
+,p_item_type=>'NATIVE_TEXTAREA'
+,p_heading=>'List Name'
+,p_heading_alignment=>'LEFT'
+,p_display_sequence=>40
+,p_value_alignment=>'LEFT'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'auto_height', 'N',
+  'character_counter', 'N',
+  'resizable', 'Y',
+  'trim_spaces', 'BOTH')).to_clob
+,p_is_required=>true
+,p_max_length=>100
+,p_enable_filter=>true
+,p_filter_operators=>'C:S:CASE_INSENSITIVE:REGEXP'
+,p_filter_is_required=>false
+,p_filter_text_case=>'MIXED'
+,p_filter_lov_type=>'NONE'
+,p_use_as_row_header=>false
+,p_enable_sort_group=>false
+,p_enable_hide=>true
+,p_is_primary_key=>false
+,p_duplicate_value=>true
+,p_include_in_export=>true
+);
+wwv_flow_imp_page.create_region_column(
+ p_id=>wwv_flow_imp.id(3319053973994497126)
+,p_name=>'WEBPAGE_ID'
+,p_source_type=>'DB_COLUMN'
+,p_source_expression=>'WEBPAGE_ID'
+,p_data_type=>'NUMBER'
+,p_session_state_data_type=>'VARCHAR2'
+,p_is_query_only=>false
+,p_item_type=>'NATIVE_SELECT_LIST'
+,p_heading=>'Webpage Name'
+,p_heading_alignment=>'LEFT'
+,p_display_sequence=>50
+,p_value_alignment=>'LEFT'
+,p_is_required=>true
+,p_lov_type=>'SQL_QUERY'
+,p_lov_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'SELECT STARTSCREEN_LABEL, webpage_id',
+'FROM tblpagelist',
+'where STARTSCREEN_LABEL is not null'))
+,p_lov_display_extra=>true
+,p_lov_display_null=>true
+,p_enable_filter=>true
+,p_filter_operators=>'C:S:CASE_INSENSITIVE:REGEXP'
+,p_filter_is_required=>false
+,p_filter_text_case=>'MIXED'
+,p_filter_exact_match=>true
+,p_filter_lov_type=>'LOV'
+,p_use_as_row_header=>false
+,p_enable_sort_group=>true
+,p_enable_control_break=>true
+,p_enable_hide=>true
+,p_is_primary_key=>false
+,p_duplicate_value=>true
+,p_include_in_export=>true
+);
+wwv_flow_imp_page.create_region_column(
+ p_id=>wwv_flow_imp.id(3319054037956497127)
+,p_name=>'LAST_CHANGED_BY'
+,p_source_type=>'DB_COLUMN'
+,p_source_expression=>'LAST_CHANGED_BY'
+,p_data_type=>'VARCHAR2'
+,p_session_state_data_type=>'VARCHAR2'
+,p_is_query_only=>false
+,p_item_type=>'NATIVE_TEXT_FIELD'
+,p_heading=>'Last Changed By'
+,p_heading_alignment=>'LEFT'
+,p_display_sequence=>60
+,p_value_alignment=>'LEFT'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'trim_spaces', 'BOTH')).to_clob
+,p_is_required=>true
+,p_max_length=>50
+,p_enable_filter=>true
+,p_filter_operators=>'C:S:CASE_INSENSITIVE:REGEXP'
+,p_filter_is_required=>false
+,p_filter_text_case=>'MIXED'
+,p_filter_exact_match=>true
+,p_filter_lov_type=>'DISTINCT'
+,p_use_as_row_header=>false
+,p_enable_sort_group=>true
+,p_enable_control_break=>true
+,p_enable_hide=>true
+,p_is_primary_key=>false
+,p_duplicate_value=>true
+,p_include_in_export=>true
+);
+wwv_flow_imp_page.create_region_column(
+ p_id=>wwv_flow_imp.id(3319054159713497128)
+,p_name=>'LAST_CHANGED_DATE'
+,p_source_type=>'DB_COLUMN'
+,p_source_expression=>'LAST_CHANGED_DATE'
+,p_data_type=>'DATE'
+,p_session_state_data_type=>'VARCHAR2'
+,p_is_query_only=>false
+,p_item_type=>'NATIVE_DATE_PICKER_APEX'
+,p_heading=>'Last Changed Date'
+,p_heading_alignment=>'CENTER'
+,p_display_sequence=>70
+,p_value_alignment=>'CENTER'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'appearance_and_behavior', 'MONTH-PICKER:YEAR-PICKER:TODAY-BUTTON',
+  'days_outside_month', 'VISIBLE',
+  'display_as', 'POPUP',
+  'max_date', 'NONE',
+  'min_date', 'NONE',
+  'multiple_months', 'N',
+  'show_on', 'FOCUS',
+  'show_time', 'N',
+  'use_defaults', 'Y')).to_clob
+,p_is_required=>true
+,p_enable_filter=>true
+,p_filter_is_required=>false
+,p_filter_date_ranges=>'ALL'
+,p_filter_lov_type=>'DISTINCT'
+,p_use_as_row_header=>false
+,p_enable_sort_group=>true
+,p_enable_control_break=>true
+,p_enable_hide=>true
+,p_is_primary_key=>false
+,p_duplicate_value=>true
+,p_include_in_export=>true
+);
+wwv_flow_imp_page.create_region_column(
+ p_id=>wwv_flow_imp.id(3319054189889497129)
+,p_name=>'USER_NAME'
+,p_source_type=>'DB_COLUMN'
+,p_source_expression=>'USER_NAME'
+,p_data_type=>'VARCHAR2'
+,p_session_state_data_type=>'VARCHAR2'
+,p_is_query_only=>false
+,p_item_type=>'NATIVE_TEXTAREA'
+,p_heading=>'User Name'
+,p_heading_alignment=>'LEFT'
+,p_display_sequence=>80
+,p_value_alignment=>'LEFT'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'auto_height', 'N',
+  'character_counter', 'N',
+  'resizable', 'Y',
+  'trim_spaces', 'BOTH')).to_clob
+,p_is_required=>true
+,p_max_length=>200
+,p_enable_filter=>true
+,p_filter_operators=>'C:S:CASE_INSENSITIVE:REGEXP'
+,p_filter_is_required=>false
+,p_filter_text_case=>'MIXED'
+,p_filter_lov_type=>'NONE'
+,p_use_as_row_header=>false
+,p_enable_sort_group=>false
+,p_enable_hide=>true
+,p_is_primary_key=>false
+,p_duplicate_value=>true
+,p_include_in_export=>true
+);
+wwv_flow_imp_page.create_region_column(
+ p_id=>wwv_flow_imp.id(3319054368979497130)
+,p_name=>'APEX$ROW_ACTION'
+,p_session_state_data_type=>'VARCHAR2'
+,p_item_type=>'NATIVE_ROW_ACTION'
+,p_display_sequence=>20
+,p_use_as_row_header=>false
+);
+wwv_flow_imp_page.create_region_column(
+ p_id=>wwv_flow_imp.id(3319054413408497131)
+,p_name=>'APEX$ROW_SELECTOR'
+,p_session_state_data_type=>'VARCHAR2'
+,p_item_type=>'NATIVE_ROW_SELECTOR'
+,p_display_sequence=>10
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'enable_multi_select', 'Y',
+  'hide_control', 'N',
+  'show_select_all', 'Y')).to_clob
+,p_use_as_row_header=>false
+);
+wwv_flow_imp_page.create_interactive_grid(
+ p_id=>wwv_flow_imp.id(3319053597705497123)
+,p_internal_uid=>2529216577268817
+,p_is_editable=>true
+,p_edit_operations=>'d'
+,p_lost_update_check_type=>'VALUES'
+,p_submit_checked_rows=>false
+,p_lazy_loading=>false
+,p_requires_filter=>false
+,p_show_nulls_as=>'-'
+,p_select_first_row=>true
+,p_fixed_row_height=>true
+,p_pagination_type=>'SCROLL'
+,p_show_total_row_count=>true
+,p_show_toolbar=>true
+,p_enable_save_public_report=>false
+,p_enable_subscriptions=>true
+,p_enable_flashback=>true
+,p_define_chart_view=>true
+,p_enable_download=>true
+,p_enable_mail_download=>true
+,p_fixed_header=>'PAGE'
+,p_show_icon_view=>false
+,p_show_detail_view=>false
+);
+wwv_flow_imp_page.create_ig_report(
+ p_id=>wwv_flow_imp.id(3319128898795011521)
+,p_interactive_grid_id=>wwv_flow_imp.id(3319053597705497123)
+,p_static_id=>'17774'
+,p_type=>'PRIMARY'
+,p_default_view=>'GRID'
+,p_show_row_number=>false
+,p_settings_area_expanded=>true
+);
+wwv_flow_imp_page.create_ig_report_view(
+ p_id=>wwv_flow_imp.id(3319129020459011521)
+,p_report_id=>wwv_flow_imp.id(3319128898795011521)
+,p_view_type=>'GRID'
+,p_srv_exclude_null_values=>false
+,p_srv_only_display_columns=>true
+,p_edit_mode=>false
+);
+wwv_flow_imp_page.create_ig_report_column(
+ p_id=>wwv_flow_imp.id(3319129492750011526)
+,p_view_id=>wwv_flow_imp.id(3319129020459011521)
+,p_display_seq=>1
+,p_column_id=>wwv_flow_imp.id(3319053704858497124)
+,p_is_visible=>true
+,p_is_frozen=>false
+);
+wwv_flow_imp_page.create_ig_report_column(
+ p_id=>wwv_flow_imp.id(3319130076406011531)
+,p_view_id=>wwv_flow_imp.id(3319129020459011521)
+,p_display_seq=>2
+,p_column_id=>wwv_flow_imp.id(3319053869604497125)
+,p_is_visible=>true
+,p_is_frozen=>false
+);
+wwv_flow_imp_page.create_ig_report_column(
+ p_id=>wwv_flow_imp.id(3319130534458011533)
+,p_view_id=>wwv_flow_imp.id(3319129020459011521)
+,p_display_seq=>3
+,p_column_id=>wwv_flow_imp.id(3319053973994497126)
+,p_is_visible=>true
+,p_is_frozen=>false
+);
+wwv_flow_imp_page.create_ig_report_column(
+ p_id=>wwv_flow_imp.id(3319131005022011534)
+,p_view_id=>wwv_flow_imp.id(3319129020459011521)
+,p_display_seq=>4
+,p_column_id=>wwv_flow_imp.id(3319054037956497127)
+,p_is_visible=>true
+,p_is_frozen=>false
+);
+wwv_flow_imp_page.create_ig_report_column(
+ p_id=>wwv_flow_imp.id(3319131448576011535)
+,p_view_id=>wwv_flow_imp.id(3319129020459011521)
+,p_display_seq=>5
+,p_column_id=>wwv_flow_imp.id(3319054159713497128)
+,p_is_visible=>true
+,p_is_frozen=>false
+);
+wwv_flow_imp_page.create_ig_report_column(
+ p_id=>wwv_flow_imp.id(3319131927376011537)
+,p_view_id=>wwv_flow_imp.id(3319129020459011521)
+,p_display_seq=>6
+,p_column_id=>wwv_flow_imp.id(3319054189889497129)
+,p_is_visible=>true
+,p_is_frozen=>false
+);
+wwv_flow_imp_page.create_ig_report_column(
+ p_id=>wwv_flow_imp.id(3319133004409014518)
+,p_view_id=>wwv_flow_imp.id(3319129020459011521)
+,p_display_seq=>0
+,p_column_id=>wwv_flow_imp.id(3319054368979497130)
+,p_is_visible=>true
+,p_is_frozen=>false
+);
+wwv_flow_imp_page.create_page_button(
+ p_id=>wwv_flow_imp.id(3327020771999045944)
+,p_button_sequence=>10
+,p_button_plug_id=>wwv_flow_imp.id(3242424808136029034)
+,p_button_name=>'PASSWORD'
+,p_button_static_id=>'create'
+,p_button_action=>'SUBMIT'
+,p_button_template_options=>'#DEFAULT#'
+,p_button_template_id=>4072362960822175091
+,p_button_is_hot=>'Y'
+,p_button_image_alt=>'Change Password'
+,p_button_position=>'EDIT'
+);
+wwv_flow_imp_page.create_page_button(
+ p_id=>wwv_flow_imp.id(3327022125457045950)
+,p_button_sequence=>10
+,p_button_plug_id=>wwv_flow_imp.id(3317420151870486790)
+,p_button_name=>'Switch_ORG'
+,p_button_action=>'SUBMIT'
+,p_button_template_options=>'#DEFAULT#'
+,p_button_template_id=>4072362960822175091
+,p_button_is_hot=>'Y'
+,p_button_image_alt=>'Process'
+,p_button_position=>'EDIT'
+,p_button_execute_validations=>'N'
+);
+wwv_flow_imp_page.create_page_button(
+ p_id=>wwv_flow_imp.id(3319053102790497118)
+,p_button_sequence=>20
+,p_button_plug_id=>wwv_flow_imp.id(3319052944196497116)
+,p_button_name=>'PROCESS'
+,p_button_action=>'SUBMIT'
+,p_button_template_options=>'#DEFAULT#'
+,p_button_template_id=>4072362960822175091
+,p_button_is_hot=>'Y'
+,p_button_image_alt=>'Process'
+,p_button_position=>'EDIT'
+);
+wwv_flow_imp_page.create_page_button(
+ p_id=>wwv_flow_imp.id(3319053438368497121)
+,p_button_sequence=>30
+,p_button_plug_id=>wwv_flow_imp.id(3319052944196497116)
+,p_button_name=>'RESET_MENU'
+,p_button_action=>'SUBMIT'
+,p_button_template_options=>'#DEFAULT#:t-Button--danger'
+,p_button_template_id=>4072362960822175091
+,p_button_image_alt=>'Reset Menu'
+,p_button_position=>'EDIT'
+);
+wwv_flow_imp_page.create_page_button(
+ p_id=>wwv_flow_imp.id(12113405154398787)
+,p_button_sequence=>90
+,p_button_plug_id=>wwv_flow_imp.id(3317421087127486799)
+,p_button_name=>'PROCCESS_RESP'
+,p_button_action=>'SUBMIT'
+,p_button_template_options=>'#DEFAULT#'
+,p_button_template_id=>4072362960822175091
+,p_button_is_hot=>'Y'
+,p_button_image_alt=>'Proccess'
+,p_button_position=>'EDIT'
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(12113549435398788)
+,p_name=>'P199_SINGLE_RESPONSIBILITY'
+,p_item_sequence=>10
+,p_item_plug_id=>wwv_flow_imp.id(3317421087127486799)
+,p_use_cache_before_default=>'NO'
+,p_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'select case when ENFORCE_ONE_ACTIVE_RESP =1 then ''This user has Single Responsibility Mode enforced set to Yes''  else ''Multi Responsibility Mode Active'' end label',
+'from tbluser',
+'where upper(user_name) = upper(:APP_USER)'))
+,p_source_type=>'QUERY'
+,p_display_as=>'NATIVE_DISPLAY_ONLY'
+,p_grid_label_column_span=>2
+,p_field_template=>2318601014859922299
+,p_item_template_options=>'#DEFAULT#'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'based_on', 'VALUE',
+  'format', 'PLAIN',
+  'send_on_page_submit', 'Y',
+  'show_line_breaks', 'Y')).to_clob
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(12113651323398789)
+,p_name=>'P199_ENFORCE_ONE_ACTIVE_RESP1'
+,p_item_sequence=>20
+,p_item_plug_id=>wwv_flow_imp.id(3317421087127486799)
+,p_prompt=>'One Responsibility'
+,p_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'select ENFORCE_ONE_ACTIVE_RESP ',
+'from tbluser',
+'where upper(user_name) = upper(:APP_USER)'))
+,p_source_type=>'QUERY'
+,p_display_as=>'NATIVE_YES_NO'
+,p_field_template=>3031561666792084173
+,p_item_template_options=>'#DEFAULT#'
+,p_help_text=>'This feature allows you to enforce one active responsibility. This feature greatly reduces the amount of items on the user''s menu.'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'off_label', 'No',
+  'off_value', '0',
+  'on_label', 'Yes',
+  'on_value', '1',
+  'use_defaults', 'N')).to_clob
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(12113697038398790)
+,p_name=>'P199_MFA_DELIVERY_METHOD'
+,p_item_sequence=>30
+,p_item_plug_id=>wwv_flow_imp.id(3317421087127486799)
+,p_prompt=>'MFA Delivery Method'
+,p_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'select x.MFA_DELIVERY_METHOD a',
+'from tbluser x',
+'where upper(user_name) = upper(:APP_USER)'))
+,p_source_type=>'QUERY'
+,p_display_as=>'NATIVE_SELECT_LIST'
+,p_lov=>'STATIC:Email;EMAIL,SMS;SMS,WhatsApp;WHATSAPP'
+,p_cHeight=>1
+,p_begin_on_new_line=>'N'
+,p_field_template=>3031561666792084173
+,p_item_template_options=>'#DEFAULT#'
+,p_lov_display_extra=>'NO'
+,p_help_text=>'Allows end user to select an actve responsibility assigned to this current company logged into.'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'page_action_on_selection', 'NONE')).to_clob
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(12113787558398791)
+,p_name=>'P199_SHOW_WIZARD'
+,p_item_sequence=>60
+,p_item_plug_id=>wwv_flow_imp.id(3317421087127486799)
+,p_use_cache_before_default=>'NO'
+,p_prompt=>'Show Wizard'
+,p_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'select display_wizard',
+'from TBLuser',
+'where upper(user_name) = upper(:APP_USER)'))
+,p_source_type=>'QUERY'
+,p_display_as=>'NATIVE_YES_NO'
+,p_field_template=>3031561666792084173
+,p_item_template_options=>'#DEFAULT#'
+,p_help_text=>'Allows end user to select an active responsibility assigned to this current company logged into.'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'off_label', 'No',
+  'off_value', 'N',
+  'on_label', 'Yes',
+  'on_value', 'Y',
+  'use_defaults', 'N')).to_clob
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(12113992034398793)
+,p_name=>'P199_SHOW_TIP'
+,p_item_sequence=>70
+,p_item_plug_id=>wwv_flow_imp.id(3317421087127486799)
+,p_use_cache_before_default=>'NO'
+,p_prompt=>'Show Tip'
+,p_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'select SHOW_TIP',
+'from TBLuser',
+'where upper(user_name) = upper(:APP_USER)'))
+,p_source_type=>'QUERY'
+,p_display_as=>'NATIVE_YES_NO'
+,p_begin_on_new_line=>'N'
+,p_field_template=>3031561666792084173
+,p_item_template_options=>'#DEFAULT#'
+,p_help_text=>'Allows end user to select an actve responsibility assigned to this current company logged into.'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'off_label', 'No',
+  'off_value', '0',
+  'on_label', 'Yes',
+  'on_value', '1',
+  'use_defaults', 'N')).to_clob
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(2858569941828830885)
+,p_name=>'P199_ENFORCE_ONE_ACTIVE_RESP'
+,p_item_sequence=>50
+,p_item_plug_id=>wwv_flow_imp.id(3317421087127486799)
+,p_use_cache_before_default=>'NO'
+,p_prompt=>'Active Responsibility'
+,p_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'select responsibility_id',
+'from tblresponsibility  a ',
+'where exists (select 1',
+'              from tbluserdetail b ',
+'              where a.responsibility_id =b.responsibility_id       ',
+'              and b.effective_to is null',
+'              and user_id = (select user_id from tbluser where user_name=:APP_USER)',
+'             )',
+'order by 1'))
+,p_source_type=>'QUERY'
+,p_display_as=>'NATIVE_RADIOGROUP'
+,p_lov=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'select responsibility_name, responsibility_id',
+'from tblresponsibility  a ',
+'where exists (select 1',
+'              from tbluserdetail b ',
+'              where a.responsibility_id =b.responsibility_id                        ',
+'              and user_id = (select user_id from tbluser where user_name=:APP_USER and ENFORCE_ONE_ACTIVE_RESP=1)',
+'             )',
+'order by 1'))
+,p_display_when=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'select 1',
+'from tbluser',
+'where user_name =:APP_USER',
+'and ENFORCE_ONE_ACTIVE_RESP=1'))
+,p_display_when_type=>'EXISTS'
+,p_field_template=>3031561666792084173
+,p_item_template_options=>'#DEFAULT#'
+,p_lov_display_extra=>'NO'
+,p_help_text=>'Allows end user to select an actve responsibility assigned to this current company logged into.'
+,p_encrypt_session_state_yn=>'N'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'number_of_columns', '5',
+  'page_action_on_selection', 'NONE')).to_clob
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(3172763324029279067)
+,p_name=>'P199_MODULE_SWITCH'
+,p_item_sequence=>30
+,p_item_plug_id=>wwv_flow_imp.id(3317420151870486790)
+,p_prompt=>'Module Switch'
+,p_display_as=>'NATIVE_SELECT_LIST'
+,p_lov=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'select initcap(main_module_name) descrip, z.id ',
+'from APP_MAIN_MODULE z',
+'WHERE EXISTS (SELECT 1',
+'              FROM TBLRESPONSIBILITY B JOIN TBLUSERDETAIL C ON B.RESPONSIBILITY_ID=C.RESPONSIBILITY_ID',
+'              JOIN TBLRESPONSIBILITYORGPAGE D ON B.RESPONSIBILITY_ID=D.RESPONSIBILITY_ID',
+'              JOIN TBLUSER E ON E.USER_ID=C.USER_ID',
+'              join TBLPAGELIST A on a.page_id = d.page_id',
+'              join APP_MODULE x  on a.APP_MODULE_ID = x.ID  ',
+'              where x.APP_MAIN_MODULE_ID = z.id',
+'              AND trim(user_name)  = NVL(V(''APP_USER''),USER)',
+'              AND CAN_VIEW = ''Y''            ',
+'              and trunc(d.start_date) <= trunc(current_date)',
+'              and (d.end_date is null or trunc(d.end_date) >= trunc(current_date))',
+'              and c.org_id = nvl(:P199_SWITCH_ORG, :APP_ORG_ID)',
+'             )',
+'and trunc(z.start_date) <= trunc(current_date)',
+'and (z.end_date is null or trunc(z.end_date) >= trunc(current_date))',
+'and id=21',
+';',
+''))
+,p_lov_display_null=>'YES'
+,p_lov_null_text=>'--select module--'
+,p_lov_cascade_parent_items=>'P199_SWITCH_ORG'
+,p_ajax_optimize_refresh=>'Y'
+,p_cHeight=>1
+,p_grid_label_column_span=>3
+,p_field_template=>2318601014859922299
+,p_item_template_options=>'#DEFAULT#:t-Form-fieldContainer--stretchInputs'
+,p_lov_display_extra=>'NO'
+,p_encrypt_session_state_yn=>'N'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'page_action_on_selection', 'NONE')).to_clob
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(3300812258776041660)
+,p_name=>'P199_STARTUP'
+,p_item_sequence=>40
+,p_item_plug_id=>wwv_flow_imp.id(3317420151870486790)
+,p_prompt=>'Home screen:'
+,p_display_as=>'NATIVE_SELECT_LIST'
+,p_lov=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'select INITCAP(page_title) page_name, c.webpage_id',
+'from APEX_APPLICATION_PAGES a join tblpagelist c on c.webpage_id=a.page_id',
+'join app_module b on b.id = c.app_module_id',
+'where application_id = :APP_ID',
+'and module_start_pagetype is not null',
+'and exists(select 1',
+'           from APP_MAIN_MODULE w',
+'          where b.APP_MAIN_MODULE_ID = w.id',
+'          and w.id = :P199_MODULE_SWITCH',
+'          )',
+'order by page_name',
+''))
+,p_lov_cascade_parent_items=>'P199_MODULE_SWITCH'
+,p_ajax_optimize_refresh=>'Y'
+,p_cHeight=>1
+,p_grid_label_column_span=>3
+,p_field_template=>2318601014859922299
+,p_item_template_options=>'#DEFAULT#:t-Form-fieldContainer--stretchInputs'
+,p_lov_display_extra=>'NO'
+,p_encrypt_session_state_yn=>'N'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'page_action_on_selection', 'NONE')).to_clob
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(3319052983686497117)
+,p_name=>'P199_EXCLUDE_PAGES'
+,p_item_sequence=>70
+,p_item_plug_id=>wwv_flow_imp.id(3319052944196497116)
+,p_prompt=>'Exclude Pages from Start Menu'
+,p_display_as=>'NATIVE_POPUP_LOV'
+,p_lov=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'SELECT  page_label,WEBPAGE_ID',
+'FROM  QRY_USER_PAGE_DML_ACCESS_START',
+'where DISPLAY_MODULE_STARTSCREEN=:P199_DISPLAY_MODULE_STARTS',
+'ORDER BY page_label'))
+,p_lov_display_null=>'YES'
+,p_lov_cascade_parent_items=>'P199_DISPLAY_MODULE_STARTS'
+,p_ajax_optimize_refresh=>'Y'
+,p_cSize=>30
+,p_field_template=>3031561666792084173
+,p_item_template_options=>'#DEFAULT#:t-Form-fieldContainer--stretchInputs'
+,p_lov_display_extra=>'YES'
+,p_encrypt_session_state_yn=>'N'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'case_sensitive', 'N',
+  'display_as', 'POPUP',
+  'fetch_on_search', 'Y',
+  'initial_fetch', 'FIRST_ROWSET',
+  'manual_entry', 'N',
+  'match_type', 'CONTAINS',
+  'min_chars', '0')).to_clob
+,p_multi_value_type=>'SEPARATED'
+,p_multi_value_separator=>':'
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(3319122169355571816)
+,p_name=>'P199_DISPLAY_MODULE_STARTS'
+,p_item_sequence=>60
+,p_item_plug_id=>wwv_flow_imp.id(3319052944196497116)
+,p_prompt=>'Start Menu'
+,p_display_as=>'NATIVE_SELECT_LIST'
+,p_lov=>'STATIC:HR & Payroll;HR_PAYROLL'
+,p_cHeight=>1
+,p_field_template=>3031561666792084173
+,p_item_template_options=>'#DEFAULT#'
+,p_lov_display_extra=>'NO'
+,p_help_text=>'If a value is selected this page will display on the main screen of the selected value. Ensure you are viewing a report when selecting start screen'
+,p_encrypt_session_state_yn=>'N'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'page_action_on_selection', 'NONE')).to_clob
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(3327019107725045941)
+,p_name=>'P199_SEPARATOR'
+,p_item_sequence=>50
+,p_item_plug_id=>wwv_flow_imp.id(3242424808136029034)
+,p_display_as=>'NATIVE_DISPLAY_ONLY'
+,p_encrypt_session_state_yn=>'N'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'based_on', 'VALUE',
+  'format', 'PLAIN',
+  'send_on_page_submit', 'N',
+  'show_line_breaks', 'Y')).to_clob
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(3327019533352045941)
+,p_name=>'P199_VERIFY_NEW_PASSWORD'
+,p_item_sequence=>40
+,p_item_plug_id=>wwv_flow_imp.id(3242424808136029034)
+,p_prompt=>'Re-type new:'
+,p_placeholder=>'Verify Password'
+,p_post_element_text=>'<span class="fa fa-low-vision"></span>'
+,p_display_as=>'NATIVE_PASSWORD'
+,p_cSize=>30
+,p_cMaxlength=>4000
+,p_grid_label_column_span=>3
+,p_field_template=>2526760615038828570
+,p_item_template_options=>'#DEFAULT#:t-Form-fieldContainer--stretchInputs'
+,p_is_persistent=>'N'
+,p_help_text=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'',
+''))
+,p_inline_help_text=>'<div id ="success"></div>'
+,p_encrypt_session_state_yn=>'N'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'submit_when_enter_pressed', 'Y')).to_clob
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(3327019914452045942)
+,p_name=>'P199_NEW_PASSWORD'
+,p_item_sequence=>30
+,p_item_plug_id=>wwv_flow_imp.id(3242424808136029034)
+,p_prompt=>'New:'
+,p_placeholder=>'New Password'
+,p_post_element_text=>'<span class="fa fa-low-vision"></span>'
+,p_display_as=>'NATIVE_PASSWORD'
+,p_cSize=>30
+,p_cMaxlength=>4000
+,p_tag_attributes=>'onkeyup="return passwordStrength();" '
+,p_grid_label_column_span=>3
+,p_field_template=>2526760615038828570
+,p_item_template_options=>'#DEFAULT#:t-Form-fieldContainer--stretchInputs'
+,p_is_persistent=>'N'
+,p_help_text=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'<b>Your password should contain atleast </b><br>',
+'<b>An uppercase letter, numbers, and a special character</b>',
+'<b>It needs to be atleast 8 characters in length</b>',
+''))
+,p_inline_help_text=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'<div id="passwordDescription">Password not entered</div>',
+' <div id="passwordStrength" class="strength0">',
+'    </div>',
+''))
+,p_encrypt_session_state_yn=>'N'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'submit_when_enter_pressed', 'Y')).to_clob
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(3327020369433045943)
+,p_name=>'P199_OLD_PASSWORD'
+,p_item_sequence=>20
+,p_item_plug_id=>wwv_flow_imp.id(3242424808136029034)
+,p_prompt=>'Current:'
+,p_placeholder=>'Old Password'
+,p_post_element_text=>'<span class="fa fa-low-vision"></span>'
+,p_display_as=>'NATIVE_PASSWORD'
+,p_cSize=>30
+,p_cMaxlength=>4000
+,p_grid_label_column_span=>3
+,p_field_template=>2526760615038828570
+,p_item_template_options=>'#DEFAULT#:t-Form-fieldContainer--stretchInputs'
+,p_is_persistent=>'N'
+,p_inline_help_text=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'',
+''))
+,p_encrypt_session_state_yn=>'N'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'submit_when_enter_pressed', 'Y')).to_clob
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(3327021785290045949)
+,p_name=>'P199_SWITCH_ORG'
+,p_item_sequence=>10
+,p_item_plug_id=>wwv_flow_imp.id(3317420151870486790)
+,p_prompt=>'Organisation:'
+,p_display_as=>'NATIVE_SELECT_LIST'
+,p_lov=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'select INITCAP(organisation_name) A,id',
+'from hr_hcf_organisation a',
+'where organisation_type=''SOFTWARE USER''',
+'and id !=:APP_ORG_ID',
+'and exists(select 1',
+'             from tbluserdetail b',
+'             where a.id=b.ORG_ID           ',
+'             and user_id=(SELECT user_id FROM tbluser WHERE USER_NAME= :APP_USER )',
+'             and expire_access=0)	',
+'and exists (select 1',
+'            from APP_MODULE_LICENCE c',
+'            where c.org_id=a.id',
+'            and EXPIRY_LICENCE_DATE >= trunc(current_date))',
+'order by 1            '))
+,p_lov_display_null=>'YES'
+,p_lov_null_text=>'--Select--'
+,p_cHeight=>1
+,p_grid_label_column_span=>3
+,p_field_template=>2318601014859922299
+,p_item_template_options=>'#DEFAULT#:t-Form-fieldContainer--stretchInputs'
+,p_lov_display_extra=>'YES'
+,p_encrypt_session_state_yn=>'N'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'page_action_on_selection', 'NONE')).to_clob
+);
+wwv_flow_imp_page.create_page_validation(
+ p_id=>wwv_flow_imp.id(3317669615683640760)
+,p_validation_name=>'null_pwd'
+,p_validation_sequence=>20
+,p_validation=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'',
+'',
+'return not(:P199_old_password is null or :P199_new_password is null or :P199_verify_new_password is null);'))
+,p_validation2=>'PLSQL'
+,p_validation_type=>'FUNC_BODY_RETURNING_BOOLEAN'
+,p_error_message=>'Please ensure all fields have valid information'
+,p_when_button_pressed=>wwv_flow_imp.id(3327020771999045944)
+,p_error_display_location=>'INLINE_WITH_FIELD_AND_NOTIFICATION'
+);
+wwv_flow_imp_page.create_page_validation(
+ p_id=>wwv_flow_imp.id(3327018096044045932)
+,p_validation_name=>'invalid_pwd'
+,p_validation_sequence=>30
+,p_validation=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'if :P199_VERIFY_NEW_PASSWORD = :P199_NEW_PASSWORD then',
+'  return true;',
+'else',
+'  return false;',
+'end if;'))
+,p_validation2=>'PLSQL'
+,p_validation_type=>'FUNC_BODY_RETURNING_BOOLEAN'
+,p_error_message=>'The new passwords entered doesn''t match. Please re-enter then retry.'
+,p_when_button_pressed=>wwv_flow_imp.id(3327020771999045944)
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+);
+wwv_flow_imp_page.create_page_da_event(
+ p_id=>wwv_flow_imp.id(3304298011060255762)
+,p_name=>'Submit PROCESS'
+,p_event_sequence=>10
+,p_triggering_element_type=>'ITEM'
+,p_triggering_element=>'P199_SIMPLE_MODE'
+,p_condition_element=>'P199_SIMPLE_MODE'
+,p_triggering_condition_type=>'NOT_NULL'
+,p_bind_type=>'bind'
+,p_execution_type=>'IMMEDIATE'
+,p_bind_event_type=>'change'
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(3193404374613652440)
+,p_event_id=>wwv_flow_imp.id(3304298011060255762)
+,p_event_result=>'TRUE'
+,p_action_sequence=>10
+,p_execute_on_page_init=>'N'
+,p_action=>'NATIVE_EXECUTE_PLSQL_CODE'
+,p_attribute_01=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'BEGIN',
+'',
+'update tbluser',
+'set Simple_Mode=:P199_SIMPLE_MODE',
+'where user_name=:APP_USER;',
+'',
+'if :P199_SIMPLE_MODE =''Y'' then',
+' :SIMPLE_MODE:=''Simple Mode Activated'';',
+'else',
+'  :SIMPLE_MODE:='''';',
+'end if;',
+'COMMIT;',
+'end;',
+''))
+,p_attribute_02=>'P199_SIMPLE_MODE'
+,p_attribute_05=>'PLSQL'
+,p_wait_for_result=>'Y'
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(3193404625378652442)
+,p_event_id=>wwv_flow_imp.id(3304298011060255762)
+,p_event_result=>'TRUE'
+,p_action_sequence=>40
+,p_execute_on_page_init=>'N'
+,p_action=>'NATIVE_SUBMIT_PAGE'
+,p_attribute_02=>'Y'
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(3193404464004652441)
+,p_event_id=>wwv_flow_imp.id(3304298011060255762)
+,p_event_result=>'TRUE'
+,p_action_sequence=>50
+,p_execute_on_page_init=>'N'
+,p_action=>'NATIVE_JAVASCRIPT_CODE'
+,p_affected_elements_type=>'TRIGGERING_ELEMENT'
+,p_attribute_01=>'apex.message.showPageSuccess( ''System switch simple mode to the select option.'' );'
+);
+wwv_flow_imp_page.create_page_da_event(
+ p_id=>wwv_flow_imp.id(3319653869584112926)
+,p_name=>'dy_show_password'
+,p_event_sequence=>10
+,p_triggering_element_type=>'JQUERY_SELECTOR'
+,p_triggering_element=>'.fa-low-vision'
+,p_bind_type=>'bind'
+,p_execution_type=>'IMMEDIATE'
+,p_bind_event_type=>'click'
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(3319653992735112927)
+,p_event_id=>wwv_flow_imp.id(3319653869584112926)
+,p_event_result=>'TRUE'
+,p_action_sequence=>10
+,p_execute_on_page_init=>'N'
+,p_action=>'NATIVE_JAVASCRIPT_CODE'
+,p_attribute_01=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'var password = ',
+'document.getElementById("P199_OLD_PASSWORD")',
+'',
+'if (password.type ==="password")',
+'',
+'{',
+'',
+'',
+'password.type = "text";',
+'}',
+'',
+'',
+'else{',
+'',
+'password.type="password";',
+'}'))
+);
+wwv_flow_imp_page.create_page_da_event(
+ p_id=>wwv_flow_imp.id(3319654093147112928)
+,p_name=>'dy_show_password1'
+,p_event_sequence=>20
+,p_triggering_element_type=>'JQUERY_SELECTOR'
+,p_triggering_element=>'.fa-low-vision'
+,p_bind_type=>'bind'
+,p_execution_type=>'IMMEDIATE'
+,p_bind_event_type=>'click'
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(3319654169914112929)
+,p_event_id=>wwv_flow_imp.id(3319654093147112928)
+,p_event_result=>'TRUE'
+,p_action_sequence=>10
+,p_execute_on_page_init=>'N'
+,p_action=>'NATIVE_JAVASCRIPT_CODE'
+,p_attribute_01=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'var password = ',
+'document.getElementById("P199_NEW_PASSWORD")',
+'',
+'if (password.type ==="password")',
+'',
+'{',
+'',
+'',
+'password.type = "text";',
+'}'))
+);
+wwv_flow_imp_page.create_page_da_event(
+ p_id=>wwv_flow_imp.id(3319654303386112930)
+,p_name=>'dy_show_password2'
+,p_event_sequence=>30
+,p_triggering_element_type=>'JQUERY_SELECTOR'
+,p_triggering_element=>'.fa-low-vision'
+,p_bind_type=>'bind'
+,p_execution_type=>'IMMEDIATE'
+,p_bind_event_type=>'click'
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(3319654397179112931)
+,p_event_id=>wwv_flow_imp.id(3319654303386112930)
+,p_event_result=>'TRUE'
+,p_action_sequence=>10
+,p_execute_on_page_init=>'N'
+,p_action=>'NATIVE_JAVASCRIPT_CODE'
+,p_attribute_01=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'var password = ',
+'document.getElementById("P199_VERFIY_NEW_PASSWORD")',
+'',
+'if (password.type ==="password")',
+'',
+'{',
+'',
+'',
+'password.type = "text";',
+'}'))
+);
+wwv_flow_imp_page.create_page_da_event(
+ p_id=>wwv_flow_imp.id(3046241461540142721)
+,p_name=>'switch_self_serve'
+,p_event_sequence=>40
+,p_triggering_element_type=>'ITEM'
+,p_triggering_element=>'P199_SERVE_MODE'
+,p_bind_type=>'bind'
+,p_execution_type=>'IMMEDIATE'
+,p_bind_event_type=>'change'
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(3046241572754142722)
+,p_event_id=>wwv_flow_imp.id(3046241461540142721)
+,p_event_result=>'TRUE'
+,p_action_sequence=>10
+,p_execute_on_page_init=>'N'
+,p_action=>'NATIVE_EXECUTE_PLSQL_CODE'
+,p_attribute_01=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'IF :P199_SERVE_MODE=1 then',
+'',
+'    UPDATE TBLUSER',
+'    SET SELF_SERVE_ONLY_SW=1',
+'    WHERE UPPER(user_name) = UPPER(:APP_USER);',
+'',
+'    UPDATE tbluserdetail',
+'    SET EFFECTIVE_TO = NULL',
+'    WHERE effective_to is NOT null',
+'    AND tbluserdetail.user_id =(select user_id from tbluser where UPPER(user_name) = UPPER(:APP_USER))  ',
+'    and self_serve_org=1',
+'    and org_id =:APP_ORG_ID',
+'    and exists(select 1',
+'               from tblresponsibility b',
+'               where b.responsibility_id = tbluserdetail.responsibility_id',
+'               and responsibility_name like ''%SELF%SERVE%''',
+'               )',
+'    and expire_access=0;',
+'',
+'    UPDATE tbluserdetail',
+'    SET EFFECTIVE_TO = current_date -1 ',
+'    WHERE effective_to is null',
+'    AND tbluserdetail.user_id =(select user_id from tbluser where UPPER(user_name) = UPPER(:APP_USER))  ',
+'    and self_serve_org = 0',
+'    and org_id = :APP_ORG_ID',
+'    and not exists(select 1',
+'                   from tblresponsibility b',
+'                   where b.responsibility_id = tbluserdetail.responsibility_id',
+'                   and responsibility_name  like ''%SELF%SERVE%''',
+'                   )',
+'    and expire_access=0;',
+'',
+'       :SIMPLE_MODE:=''Self Serve Mode Activated'';',
+'else',
+'    UPDATE TBLUSER',
+'    SET SELF_SERVE_ONLY_SW=0',
+'    WHERE UPPER(user_name) = UPPER(:APP_USER);',
+'    ',
+'    UPDATE tbluserdetail',
+'    SET EFFECTIVE_TO = current_date - 1',
+'    WHERE effective_to is null',
+'    AND tbluserdetail.user_id =(select user_id from tbluser where UPPER(user_name) = UPPER(:APP_USER))  ',
+'    and self_serve_org=1',
+'    and org_id =:APP_ORG_ID',
+'    and exists(select 1',
+'               from tblresponsibility b',
+'               where b.responsibility_id = tbluserdetail.responsibility_id',
+'               and responsibility_name  like ''%SELF%SERVE%''',
+'               )',
+'    and expire_access=0;',
+'',
+'    UPDATE tbluserdetail us',
+'    SET EFFECTIVE_TO = null',
+'    WHERE effective_to is not null',
+'    AND us.user_id =(select user_id from tbluser where UPPER(user_name) = UPPER(:APP_USER))  ',
+'    and self_serve_org=0',
+'    and org_id =:APP_ORG_ID ',
+'    and exists( SELECT 1',
+'                FROM tblpagelist a join APP_MODULE b on a.app_module_id=b.id',
+'                JOIN TBLRESPONSIBILITYORGPAGE c on a.PAGE_ID =c.PAGE_ID',
+'                JOIN tblresponsibility res on res.responsibility_id = c.responsibility_id',
+'                join app_main_module d on d.id = b.app_main_module_id                                    ',
+'                where US.RESPONSIBILITY_ID =res.RESPONSIBILITY_ID',
+'                and b.app_main_module_id = :APP_MODULE_ID                     ',
+'                and a.start_date <= trunc(current_date)',
+'                and (trunc(a.end_date) is null or trunc(a.end_date) > trunc(current_date))',
+'                and trunc(c.start_date) <= trunc(current_date)',
+'                and (trunc(c.end_date) is null or trunc(c.end_date) > trunc(current_date))  ',
+'                and ALLOW_MODULE_SWITCH=1 ',
+'                and responsibility_name not like ''%SELF%SERVE%''',
+'              )',
+'     and exists(select 1',
+'                    from tblresponsibility b',
+'                    where b.responsibility_id = us.responsibility_id',
+'                    and responsibility_name not like ''%SELF%SERVE%''',
+'               )',
+'    and expire_access=0;       ',
+'',
+'     :SIMPLE_MODE:='''';',
+'end if;',
+'',
+''))
+,p_attribute_02=>'P199_SERVE_MODE'
+,p_attribute_05=>'PLSQL'
+,p_wait_for_result=>'Y'
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(3046241668706142723)
+,p_event_id=>wwv_flow_imp.id(3046241461540142721)
+,p_event_result=>'TRUE'
+,p_action_sequence=>20
+,p_execute_on_page_init=>'N'
+,p_action=>'NATIVE_SUBMIT_PAGE'
+,p_attribute_02=>'Y'
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(3046241773790142724)
+,p_event_id=>wwv_flow_imp.id(3046241461540142721)
+,p_event_result=>'TRUE'
+,p_action_sequence=>30
+,p_execute_on_page_init=>'N'
+,p_action=>'NATIVE_JAVASCRIPT_CODE'
+,p_affected_elements_type=>'TRIGGERING_ELEMENT'
+,p_attribute_01=>'apex.message.showPageSuccess( ''System switch self serve mode to the select option.'' );'
+);
+wwv_flow_imp_page.create_page_da_event(
+ p_id=>wwv_flow_imp.id(12114128888398794)
+,p_name=>'switch_single_mode'
+,p_event_sequence=>50
+,p_triggering_element_type=>'ITEM'
+,p_triggering_element=>'P199_ENFORCE_ONE_ACTIVE_RESP1'
+,p_bind_type=>'bind'
+,p_execution_type=>'IMMEDIATE'
+,p_bind_event_type=>'change'
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(13092466955347045)
+,p_event_id=>wwv_flow_imp.id(12114128888398794)
+,p_event_result=>'TRUE'
+,p_action_sequence=>10
+,p_execute_on_page_init=>'N'
+,p_name=>'switch_single_mode'
+,p_action=>'NATIVE_EXECUTE_PLSQL_CODE'
+,p_attribute_01=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'begin',
+'    update tbluser',
+'    set ENFORCE_ONE_ACTIVE_RESP = :P199_ENFORCE_ONE_ACTIVE_RESP1',
+'    where UPPER(user_name) = UPPER(:APP_USER);',
+'',
+'    if :P10500_ENFORCE_ONE_ACTIVE_RESP1 = 1 then',
+'',
+'            :SINGLE_MODE:=''Single Responsibility Mode Activated'';',
+'    else',
+'            :SINGLE_MODE:=null;',
+'    end if;',
+'   ',
+'end;'))
+,p_attribute_02=>'P199_ENFORCE_ONE_ACTIVE_RESP1'
+,p_attribute_05=>'PLSQL'
+,p_wait_for_result=>'Y'
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(13092651416347046)
+,p_event_id=>wwv_flow_imp.id(12114128888398794)
+,p_event_result=>'TRUE'
+,p_action_sequence=>20
+,p_execute_on_page_init=>'N'
+,p_action=>'NATIVE_SUBMIT_PAGE'
+,p_attribute_02=>'Y'
+);
+wwv_flow_imp_page.create_page_da_event(
+ p_id=>wwv_flow_imp.id(13092659383347047)
+,p_name=>'process_wizard'
+,p_event_sequence=>60
+,p_triggering_element_type=>'ITEM'
+,p_triggering_element=>'P199_SHOW_WIZARD'
+,p_bind_type=>'bind'
+,p_execution_type=>'IMMEDIATE'
+,p_bind_event_type=>'change'
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(13092832501347048)
+,p_event_id=>wwv_flow_imp.id(13092659383347047)
+,p_event_result=>'TRUE'
+,p_action_sequence=>10
+,p_execute_on_page_init=>'N'
+,p_action=>'NATIVE_EXECUTE_PLSQL_CODE'
+,p_attribute_01=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'update TBLuser',
+'set display_wizard= :P199_SHOW_WIZARD',
+'where upper(user_name) = upper(:APP_USER);'))
+,p_attribute_02=>'P199_SHOW_WIZARD'
+,p_attribute_05=>'PLSQL'
+,p_wait_for_result=>'Y'
+);
+wwv_flow_imp_page.create_page_da_event(
+ p_id=>wwv_flow_imp.id(13092900224347049)
+,p_name=>'process_tips'
+,p_event_sequence=>70
+,p_triggering_element_type=>'ITEM'
+,p_triggering_element=>'P199_SHOW_TIP'
+,p_bind_type=>'bind'
+,p_execution_type=>'IMMEDIATE'
+,p_bind_event_type=>'change'
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(13092969097347050)
+,p_event_id=>wwv_flow_imp.id(13092900224347049)
+,p_event_result=>'TRUE'
+,p_action_sequence=>10
+,p_execute_on_page_init=>'N'
+,p_action=>'NATIVE_EXECUTE_PLSQL_CODE'
+,p_attribute_01=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'begin',
+'    update TBLuser',
+'    set SHOW_TIP= :P199_SHOW_TIP',
+'   where upper(user_name) = upper(:APP_USER);',
+' end;'))
+,p_attribute_02=>'P199_SHOW_TIP'
+,p_attribute_05=>'PLSQL'
+,p_wait_for_result=>'Y'
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(13093073326347051)
+,p_event_id=>wwv_flow_imp.id(13092900224347049)
+,p_event_result=>'TRUE'
+,p_action_sequence=>20
+,p_execute_on_page_init=>'N'
+,p_action=>'NATIVE_SUBMIT_PAGE'
+,p_attribute_02=>'Y'
+);
+wwv_flow_imp_page.create_page_process(
+ p_id=>wwv_flow_imp.id(3327016981886045932)
+,p_process_sequence=>10
+,p_process_point=>'AFTER_SUBMIT'
+,p_process_type=>'NATIVE_PLSQL'
+,p_process_name=>'changepwd'
+,p_process_sql_clob=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'DECLARE',
+' V_SEC_SCHEMA VARCHAR2(20);',
+'BEGIN',
+'',
+'select AUTHENTICATION_SCHEME INTO V_SEC_SCHEMA ',
+'from TBLUSER',
+'WHERE USER_NAME=nvl(V(''APP_USER''),USER);',
+'',
+'if :P199_VERIFY_NEW_PASSWORD=:P199_NEW_PASSWORD  and V_SEC_SCHEMA =''APEX'' THEN',
+'    APEX_UTIL.CHANGE_CURRENT_USER_PW(:P199_NEW_PASSWORD);',
+'elsif :P199_VERIFY_NEW_PASSWORD=:P199_NEW_PASSWORD  and V_SEC_SCHEMA =''BCRYPT'' THEN',
+'   -- pkg_security.p_change_password (nvl(V(''APP_USER''),USER) , :P199_OLD_PASSWORD , :P199_NEW_PASSWORD );',
+'        update tbluser',
+'        set PASSWORD =/*pkg_security.hash_pw(*/:P199_NEW_PASSWORD/*,pkg_security.gen_salt)*/',
+'        where USER_ID=(select USER_ID from tbluser where user_name=:APP_USER)',
+'        and :P199_NEW_PASSWORD is not null;',
+'',
+'elsif :P199_VERIFY_NEW_PASSWORD=:P199_NEW_PASSWORD  and V_SEC_SCHEMA =''SHA256'' THEN',
+'',
+'       update tbluser',
+'        set PASSWORD =/*pkg_security.hash_pw(*/:P199_NEW_PASSWORD/*,pkg_security.gen_salt)*/',
+'        where USER_ID=(select USER_ID from tbluser where user_name=:APP_USER)',
+'        and :P199_NEW_PASSWORD is not null;',
+'        ',
+'elsif :P199_VERIFY_NEW_PASSWORD=:P199_NEW_PASSWORD  and V_SEC_SCHEMA =''DATABASE'' THEN',
+'   pkg_security.Change_Password(:P199_NEW_PASSWORD, nvl(V(''APP_USER''),USER));',
+'end if;',
+'END;'))
+,p_process_clob_language=>'PLSQL'
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_process_when_button_id=>wwv_flow_imp.id(3327020771999045944)
+,p_process_when=>'P199_OLD_PASSWORD'
+,p_process_when_type=>'ITEM_IS_NOT_NULL'
+,p_process_success_message=>'Password successfully changed.'
+,p_internal_uid=>3211232848029732227
+);
+wwv_flow_imp_page.create_page_process(
+ p_id=>wwv_flow_imp.id(3327017318335045932)
+,p_process_sequence=>30
+,p_process_point=>'AFTER_SUBMIT'
+,p_process_type=>'NATIVE_PLSQL'
+,p_process_name=>'switch_org'
+,p_process_sql_clob=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'--switches the company',
+'begin',
+'',
+'if :P199_SWITCH_ORG is not null then',
+'',
+'        select id INTO :APP_MODULE_ID',
+'        from APP_MAIN_MODULE c',
+'        where exists (select 1',
+'                        FROM TBLPAGELIST A join APP_MODULE x on a.APP_MODULE_ID = x.ID',
+'                        where c.id = x.app_main_module_id',
+'                        and a.webpage_id = :APP_HOME                       ',
+'                        );',
+'        ',
+'        UPDATE tbluserdetail us',
+'        SET EFFECTIVE_TO = NULL',
+'           ,EFFECTIVE_FROM = CASE WHEN EFFECTIVE_FROM > trunc(current_date) THEN trunc(current_date)',
+'                            ELSE EFFECTIVE_FROM END',
+'        WHERE expire_access=0',
+'        and Application_Schema_Name = :G_PARSING_SCHEMA',
+'        and exists( SELECT 1',
+'                FROM tblpagelist a join APP_MODULE b on a.app_module_id=b.id',
+'                JOIN TBLRESPONSIBILITYORGPAGE c on a.PAGE_ID =c.PAGE_ID',
+'                JOIN tblresponsibility res on res.responsibility_id = c.responsibility_id',
+'                join app_main_module d on d.id = b.app_main_module_id                                    ',
+'                where US.RESPONSIBILITY_ID =res.RESPONSIBILITY_ID',
+'                and b.app_main_module_id = nvl(:APP_MODULE_ID,b.app_main_module_id)                     ',
+'                and a.start_date <= trunc(current_date)',
+'                and (trunc(a.end_date) is null or trunc(a.end_date) > trunc(current_date))',
+'                and trunc(c.start_date) <= trunc(current_date)',
+'                and (trunc(c.end_date) is null or trunc(c.end_date) > trunc(current_date))  ',
+'                and ALLOW_MODULE_SWITCH=1 ',
+'          --      and responsibility_name not like ''%SELF%SERVE%''',
+'              )',
+'        AND us.user_id =(select user_id from tbluser where UPPER(user_name) = UPPER(:APP_USER))           ',
+'        AND us.ORG_ID =:P199_SWITCH_ORG;',
+'',
+'        UPDATE tbluserdetail us',
+'        SET EFFECTIVE_TO = trunc(current_date)-1',
+'        WHERE  expire_access=0',
+'        and Application_Schema_Name = :G_PARSING_SCHEMA',
+'        and exists (',
+'                        SELECT 1',
+'                        FROM tblpagelist a join APP_MODULE b on a.app_module_id=b.id',
+'                        JOIN TBLRESPONSIBILITYORGPAGE c on a.PAGE_ID =c.PAGE_ID',
+'                        JOIN tblresponsibility res on res.responsibility_id = c.responsibility_id',
+'                        join app_main_module d on d.id = b.app_main_module_id                                    ',
+'                        where US.RESPONSIBILITY_ID =res.RESPONSIBILITY_ID',
+'                        and b.app_main_module_id = nvl(:APP_MODULE_ID,b.app_main_module_id)                  ',
+'                        and a.start_date <= trunc(current_date)',
+'                        and (trunc(a.end_date) is null or trunc(a.end_date) > trunc(current_date))',
+'                        and trunc(c.start_date) <= trunc(current_date)',
+'                        and (trunc(c.end_date) is null or trunc(c.end_date) > trunc(current_date))   ',
+'                        and ALLOW_MODULE_SWITCH=1   ',
+'                  --      and responsibility_name not like ''%SELF%SERVE%''',
+'                      )',
+'        and us.user_id = (select user_id from tbluser where UPPER(user_name) = UPPER(:APP_USER))      ',
+'        AND us.ORG_ID !=:P199_SWITCH_ORG;',
+'',
+'        SELECT DISTINCT short_name, id, pkg_global_fnts.fn_shareRefOrg(id), UPPER(COUNTRY) into :APP_ORG_NAME , :APP_ORG_ID, :APP_ORG_SHR_DED, :APP_COUNTRY',
+'        FROM hr_hcf_organisation B',
+'        where organisation_type=''SOFTWARE USER''',
+'        AND  ID =:P199_SWITCH_ORG;',
+'',
+'',
+'end if;',
+'COMMIT;',
+'end;',
+''))
+,p_process_clob_language=>'PLSQL'
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_process_when_button_id=>wwv_flow_imp.id(3327022125457045950)
+,p_process_success_message=>'System successfully switched Organisation or home page or both.'
+,p_internal_uid=>3211233184478732227
+);
+wwv_flow_imp_page.create_page_process(
+ p_id=>wwv_flow_imp.id(3319053227671497119)
+,p_process_sequence=>40
+,p_process_point=>'AFTER_SUBMIT'
+,p_process_type=>'NATIVE_PLSQL'
+,p_process_name=>'process_startmenu_setup'
+,p_process_sql_clob=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'DECLARE',
+'',
+'  l_rejected  APEX_APPLICATION_GLOBAL.VC_ARR2;',
+'',
+' BEGIN',
+'',
+'',
+'  l_rejected := APEX_UTIL.STRING_TO_TABLE(:P199_EXCLUDE_PAGES);',
+'  FOR i IN 1..l_rejected.COUNT',
+'  LOOP',
+'	',
+'        merge into tblstartupscreen',
+'        using (',
+'                SELECT :APP_USER user_name, :P199_DISPLAY_MODULE_STARTS DISPLAY_MODULE_STARTS, l_rejected(i) WEBPAGE_ID',
+'                FROM  dual',
+'                ) source',
+'        on ',
+'          (tblstartupscreen.WEBPAGE_ID = source.WEBPAGE_ID',
+'           and tblstartupscreen.LIST_NAME = source.DISPLAY_MODULE_STARTS',
+'           and tblstartupscreen.USER_NAME = source.user_name',
+'          )',
+'    when matched then ',
+'    update set tblstartupscreen.LAST_CHANGED_BY =  source.user_name',
+'    when not matched then      ',
+'    insert (LIST_NAME,webpage_id, USER_NAME)		           		',
+'    values(source.DISPLAY_MODULE_STARTS,source.WEBPAGE_ID,source.user_name);',
+'    ',
+' end loop;',
+' ',
+'   :P199_EXCLUDE_PAGES:=null; ',
+'',
+'end;'))
+,p_process_clob_language=>'PLSQL'
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_process_when_button_id=>wwv_flow_imp.id(3319053102790497118)
+,p_process_success_message=>'Successful configuration of selected start menu.'
+,p_internal_uid=>3203269093815183414
+);
+wwv_flow_imp_page.create_page_process(
+ p_id=>wwv_flow_imp.id(3319053348228497120)
+,p_process_sequence=>50
+,p_process_point=>'AFTER_SUBMIT'
+,p_process_type=>'NATIVE_PLSQL'
+,p_process_name=>'reset_start_menu'
+,p_process_sql_clob=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'delete',
+'from tblstartupscreen',
+'where USER_NAME = :APP_USER',
+'and LIST_NAME = :P199_DISPLAY_MODULE_STARTS;'))
+,p_process_clob_language=>'PLSQL'
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_process_when_button_id=>wwv_flow_imp.id(3319053438368497121)
+,p_process_success_message=>'Menu successfully reset.'
+,p_internal_uid=>3203269214372183415
+);
+wwv_flow_imp_page.create_page_process(
+ p_id=>wwv_flow_imp.id(3319054764133497134)
+,p_process_sequence=>60
+,p_process_point=>'AFTER_SUBMIT'
+,p_process_type=>'NATIVE_PLSQL'
+,p_process_name=>'switch_module'
+,p_process_sql_clob=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'--Switches the modules and sets home page',
+'',
+'begin',
+'     ',
+' ',
+'     if :P199_MODULE_SWITCH is not null then',
+'',
+'        UPDATE TBLUSER ',
+'        SET LOAD_HOME = nvl(:P199_STARTUP, LOAD_HOME)',
+'        WHERE UPPER(USER_NAME)=UPPER(:APP_USER);',
+'        ',
+'        :APP_MODULE_ID := :P199_MODULE_SWITCH;',
+'             ',
+'            update TBLUSERDETAIL US',
+'            set EFFECTIVE_TO=trunc(current_date)-1',
+'            where ORG_ID =:APP_ORG_ID',
+'            and  expire_access=0',
+'            and exists (',
+'                                SELECT 1',
+'                                FROM tblpagelist a join APP_MODULE b on a.app_module_id=b.id',
+'                                JOIN TBLRESPONSIBILITYORGPAGE c on a.PAGE_ID =c.PAGE_ID',
+'                                JOIN tblresponsibility res on res.responsibility_id = c.responsibility_id',
+'                                join app_main_module d on d.id = b.app_main_module_id                                    ',
+'                                where US.RESPONSIBILITY_ID =res.RESPONSIBILITY_ID',
+'                                and b.app_main_module_id != :P199_MODULE_SWITCH                     ',
+'                                and a.start_date <= trunc(current_date)',
+'                                and (trunc(a.end_date) is null or trunc(a.end_date) > trunc(current_date))',
+'                                and trunc(c.start_date) <= trunc(current_date)',
+'                                and (trunc(c.end_date) is null or trunc(c.end_date) > trunc(current_date))   ',
+'                                and ALLOW_MODULE_SWITCH=1   ',
+'                                and responsibility_name not like ''%SELF%SERVE%''',
+'                                )            ',
+'             and Application_Schema_Name = :G_PARSING_SCHEMA                    ',
+'            and USER_ID=(select user_id from TBLUSER where user_name=:APP_USER);',
+'          ',
+'            ',
+'            update TBLUSERDETAIL US',
+'            set EFFECTIVE_TO=null',
+'            where ORG_ID =:APP_ORG_ID',
+'            and  expire_access=0',
+'            and exists (',
+'                                SELECT 1',
+'                                FROM tblpagelist a join APP_MODULE b on a.app_module_id=b.id',
+'                                JOIN TBLRESPONSIBILITYORGPAGE c on a.PAGE_ID =c.PAGE_ID',
+'                                JOIN tblresponsibility res on res.responsibility_id = c.responsibility_id',
+'                                join app_main_module d on d.id = b.app_main_module_id                                    ',
+'                                where US.RESPONSIBILITY_ID =res.RESPONSIBILITY_ID',
+'                                and b.app_main_module_id = :P199_MODULE_SWITCH                     ',
+'                                and a.start_date <= trunc(current_date)',
+'                                and (trunc(a.end_date) is null or trunc(a.end_date) > trunc(current_date))',
+'                                and trunc(c.start_date) <= trunc(current_date)',
+'                                and (trunc(c.end_date) is null or trunc(c.end_date) > trunc(current_date))  ',
+'                                and ALLOW_MODULE_SWITCH=1       ',
+'                                and responsibility_name not like ''%SELF%SERVE%''  ',
+'                                )       ',
+'            and Application_Schema_Name = :G_PARSING_SCHEMA                                      ',
+'            and USER_ID=(select user_id from TBLUSER where user_name=:APP_USER);',
+'     ',
+'            update TBLUSERDETAIL US',
+'            set EFFECTIVE_TO=null',
+'            where ORG_ID =:APP_ORG_ID',
+'            and exists (SELECT 1',
+'                          from tblresponsibility res',
+'                          where US.RESPONSIBILITY_ID =res.RESPONSIBILITY_ID',
+'                          and ALLOW_MODULE_SWITCH=0',
+'                          and responsibility_name not like ''%SELF%SERVE%''',
+'                         )             ',
+'            and  expire_access=0',
+'            and Application_Schema_Name = :G_PARSING_SCHEMA',
+'            and USER_ID=(select user_id from TBLUSER where user_name=:APP_USER);',
+'    ',
+'            :APP_MODULE_ID := :P199_MODULE_SWITCH;',
+'',
+'    end if;',
+'    ',
+'     :P199_MODULE_SWITCH :=null;',
+'     :P199_SWITCH_ORG:=null;',
+'    COMMIT;',
+'end;',
+''))
+,p_process_clob_language=>'PLSQL'
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_process_when_button_id=>wwv_flow_imp.id(3327022125457045950)
+,p_internal_uid=>3203270630277183429
+);
+wwv_flow_imp_page.create_page_process(
+ p_id=>wwv_flow_imp.id(3319054547527497132)
+,p_process_sequence=>70
+,p_process_point=>'AFTER_SUBMIT'
+,p_region_id=>wwv_flow_imp.id(3319053556502497122)
+,p_process_type=>'NATIVE_IG_DML'
+,p_process_name=>'View/Delete  Excluded Menu Pages - Save Interactive Grid Data'
+,p_attribute_01=>'REGION_SOURCE'
+,p_attribute_05=>'Y'
+,p_attribute_06=>'Y'
+,p_attribute_08=>'Y'
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_internal_uid=>3203270413671183427
+);
+wwv_flow_imp_page.create_page_process(
+ p_id=>wwv_flow_imp.id(2858571975459838565)
+,p_process_sequence=>80
+,p_process_point=>'AFTER_SUBMIT'
+,p_process_type=>'NATIVE_PLSQL'
+,p_process_name=>'switch_Resp'
+,p_process_sql_clob=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'    UPDATE tbluserdetail',
+'    SET EFFECTIVE_TO = NULL',
+'    WHERE tbluserdetail.user_id =(select user_id from tbluser where UPPER(user_name) = UPPER(:APP_USER))     ',
+'    and org_id =:APP_ORG_ID',
+'    and expire_access=0',
+'    and Application_Schema_Name = :G_PARSING_SCHEMA',
+'    and responsibility_id = :P231_ENFORCE_ONE_ACTIVE_RESP;',
+'',
+'    UPDATE tbluserdetail',
+'    SET EFFECTIVE_TO = current_date -1 ',
+'    WHERE tbluserdetail.user_id =(select user_id from tbluser where UPPER(user_name) = UPPER(:APP_USER))     ',
+'    and org_id =:APP_ORG_ID',
+'    and expire_access=0',
+'    and Application_Schema_Name = :G_PARSING_SCHEMA',
+'    and responsibility_id != :P231_ENFORCE_ONE_ACTIVE_RESP;',
+'',
+'    commit;',
+'    ',
+''))
+,p_process_clob_language=>'PLSQL'
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_internal_uid=>2742787841603524860
+);
+wwv_flow_imp_page.create_page_process(
+ p_id=>wwv_flow_imp.id(13093219319347052)
+,p_process_sequence=>90
+,p_process_point=>'AFTER_SUBMIT'
+,p_process_type=>'NATIVE_PLSQL'
+,p_process_name=>'single_Resp'
+,p_process_sql_clob=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'    UPDATE tbluserdetail',
+'    SET EFFECTIVE_TO = NULL',
+'    WHERE tbluserdetail.user_id =(select user_id from tbluser where UPPER(user_name) = UPPER(:APP_USER))     ',
+'    and org_id =:APP_ORG_ID',
+'    and expire_access=0',
+'    and responsibility_id = :P199_ENFORCE_ONE_ACTIVE_RESP;',
+'',
+'    UPDATE tbluserdetail',
+'    SET EFFECTIVE_TO = SYSDATE -1 ',
+'    WHERE tbluserdetail.user_id =(select user_id from tbluser where UPPER(user_name) = UPPER(:APP_USER))     ',
+'    and org_id =:APP_ORG_ID',
+'    and expire_access=0',
+'    and responsibility_id != :P199_ENFORCE_ONE_ACTIVE_RESP;',
+'',
+'      :SINGLE_MODE:=''Single Responsibility Mode Activated'';',
+'',
+'    commit;',
+'    ',
+''))
+,p_process_clob_language=>'PLSQL'
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_process_when_button_id=>wwv_flow_imp.id(12113405154398787)
+,p_internal_uid=>58017660470327008
+);
+wwv_flow_imp_page.create_page_process(
+ p_id=>wwv_flow_imp.id(13093278268347053)
+,p_process_sequence=>100
+,p_process_point=>'AFTER_SUBMIT'
+,p_process_type=>'NATIVE_PLSQL'
+,p_process_name=>'update_mfa'
+,p_process_sql_clob=>wwv_flow_string.join(wwv_flow_t_varchar2(
+' BEGIN   ',
+'    UPDATE tbluser',
+'    SET MFA_DELIVERY_METHOD = :P199_MFA_DELIVERY_METHOD',
+'    WHERE user_id = :APP_USER_ID;',
+'',
+'END;'))
+,p_process_clob_language=>'PLSQL'
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_process_when_button_id=>wwv_flow_imp.id(12113405154398787)
+,p_internal_uid=>58017719419327009
+);
+wwv_flow_imp.component_end;
+end;
+/
