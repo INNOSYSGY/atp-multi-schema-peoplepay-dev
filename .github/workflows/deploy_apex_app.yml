@@ -1,1 +1,55 @@
+name: Export APEX App with SQLcl
+
+on:
+  workflow_dispatch:  # Allow manual triggering
+  #schedule:
+    # Run the workflow every day at midnight UTC
+    #- cron: '0 23 * * 5'
+
+permissions:
+  contents: write  # Grant write permissions to the GITHUB_TOKEN
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Set up Java (required for SQLcl)
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: '11'
+          distribution: 'temurin'
+
+      # Download and set up SQLcl
+      - name: Set up SQLcl
+        run: |
+          wget https://download.oracle.com/otn_software/java/sqldeveloper/sqlcl-latest.zip
+          unzip -o sqlcl-latest.zip
+          echo "$(pwd)/sqlcl/bin" >> $GITHUB_PATH
+
+      - name: Pull changes from Repo
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOK }}
+        run: |
+          git config --global user.name "Leonardo Cuyar"
+          git config --global user.email "leo.cuyar@gmail.com"
+          git add .
+          git commit -m "Backup - $(date +%Y%m%d)"
+          git push
+
+      - name: Deploy APEX App
+        env:
+          DB_URL: ${{ secrets.DB_URL }}
+          DB_USER: ${{ secrets.DB_USER }}
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+          APEX_APP_ID: ${{ secrets.APEX_APP_EXPORT_ID }}
+          #ATP_WALLET_ERP: ${{ ATP_WALLET_ERP }}
+        run: |
+          echo "${{ vars.ATP_WALLET_DEV }}" | base64 --decode > Wallet_DEVENV.zip
+          sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @deploy_apex_app.sql
 
