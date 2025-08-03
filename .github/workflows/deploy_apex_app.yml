@@ -1,4 +1,4 @@
-name: Export APEX App with SQLcl
+name: Deploy APEX App with SQLcl
 
 on:
   workflow_dispatch:  # Allow manual triggering
