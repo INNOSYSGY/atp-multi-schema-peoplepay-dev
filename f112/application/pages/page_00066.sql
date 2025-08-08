@@ -133,6 +133,7 @@ wwv_flow_imp_page.create_page_plug(
 wwv_flow_imp_page.create_worksheet(
  p_id=>wwv_flow_imp.id(62206625009645339)
 ,p_max_row_count=>'1000000'
+,p_allow_save_rpt_public=>'Y'
 ,p_pagination_type=>'ROWS_X_TO_Y'
 ,p_pagination_display_pos=>'BOTTOM_RIGHT'
 ,p_report_list_mode=>'TABS'
@@ -2227,6 +2228,7 @@ wwv_flow_imp_page.create_page_item(
 '                                                            and e.org_id = v.org_id)',
 '              where ohd.org_id = e.org_id)',
 'and ohd.org_id = :P66_ORGANISATION_1',
+'and (DATE_ENDED is null or DATE_ENDED > trunc(sysdate))',
 'order by 1    '))
 ,p_lov_display_null=>'YES'
 ,p_lov_null_text=>'--ALL--'

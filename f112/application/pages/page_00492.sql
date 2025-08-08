@@ -46,6 +46,7 @@ wwv_flow_imp_page.create_page_plug(
 ,p_plug_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
 'select PA_PCF_ADHOCPAYMENT.ID as ID,',
 '    PA_PCF_ADHOCPAYMENT.EMP_ID as EMP_ID,',
+'    (select position_name from hr_rcm_employee empl where empl.id=PA_PCF_ADHOCPAYMENT.emp_id) position_name,',
 '    PA_PCF_ADHOCPAYMENT.EMPENT_ID as EMPENT_ID,',
 '    PA_PCF_ADHOCPAYMENT.EARNINGS_PERIOD_ID as EARNINGS_PERIOD_ID,',
 '    PA_PCF_ADHOCPAYMENT.QUANTITY as QUANTITY,',
@@ -69,10 +70,11 @@ wwv_flow_imp_page.create_page_plug(
 'from PA_PCF_ADHOCPAYMENT PA_PCF_ADHOCPAYMENT join PA_PCF_EARNINGPERIOD V ON V.ID=PA_PCF_ADHOCPAYMENT.EARNINGS_PERIOD_ID',
 'where exists ( ',
 '              select 1',
-'              FROM VW_USERACCESS A',
+'              FROM VW_USERACCESS A left outer join vw_selfserveuser b on a.employee_no=b.employee_no',
 '              where v.org_id=a.org_id',
 '              and v.employment_class_id=a.employment_class_id',
-'              and upper(v.payment_type)=a.payment_type             ',
+'              and upper(v.payment_type)=a.payment_type',
+'              and PA_PCF_ADHOCPAYMENT.emp_id = decode(pkg_global_fnts.fn_selfserveuser(:APP_ORG_ID),1,b.employee_no,PA_PCF_ADHOCPAYMENT.emp_id)',
 '           )',
 'and START_PERIOD_PAID between :P492_START_DATE AND  :P492_END_DATE',
 ''))
@@ -367,6 +369,16 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_column_identifier=>'Y'
 ,p_column_label=>'Payment Type'
 ,p_column_type=>'STRING'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(87808165616570945)
+,p_db_column_name=>'POSITION_NAME'
+,p_display_order=>62
+,p_column_identifier=>'Z'
+,p_column_label=>'Position Name'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_rpt(

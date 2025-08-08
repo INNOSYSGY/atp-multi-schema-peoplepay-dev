@@ -421,7 +421,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_column_identifier=>'I'
 ,p_column_label=>'Date Effective'
 ,p_column_type=>'DATE'
-,p_format_mask=>'fmDay, fmDD fmMonth, YYYY'
+,p_format_mask=>'DD-MON-YYYY'
 ,p_tz_dependent=>'N'
 ,p_use_as_row_header=>'N'
 );
@@ -1293,7 +1293,7 @@ wwv_flow_imp_page.create_page_process(
 '  );',
 '',
 '  -- Step 2: Generate ACH data',
-'  pkg_ach.prcd_ach_dembank_rbgl(',
+'  pkg_ach.prcd_ach_rbgl(',
 '    IN_CONFIG_ID        => IN_CONFIG_ID,',
 '    IN_ORG_ID           => IN_ORG_ID,',
 '    IN_EARN_PRD         => IN_EARN_PRD,',
@@ -1327,9 +1327,9 @@ wwv_flow_imp_page.create_page_process(
 '        pkg_errorlogger.insert_err(',
 '                                    v_sqlcode,',
 '                                    v_sqlerrm,',
-'                                    ''error occured while executing PKG_ACH.prcd_ach_dembank_rbgl or PKG_ACH.prcd_export_to_rbgl_table'',',
+'                                    ''error occured while executing PKG_ACH.prcd_ach_rbgl or PKG_ACH.prcd_export_to_rbgl_table'',',
 '                                    ''PKG_ACH'',',
-'                                    ''prcd_ach_dembank_rbgl-prcd_export_to_rbgl_table'',',
+'                                    ''prcd_ach_rbgl-prcd_export_to_rbgl_table'',',
 '                                    ''ACH'',',
 '                                   null',
 '                                );',
