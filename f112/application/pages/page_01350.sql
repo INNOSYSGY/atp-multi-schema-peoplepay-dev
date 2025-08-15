@@ -15178,7 +15178,7 @@ wwv_flow_imp_page.create_page_da_action(
  p_id=>wwv_flow_imp.id(47077124070189020)
 ,p_event_id=>wwv_flow_imp.id(47075637038189021)
 ,p_event_result=>'TRUE'
-,p_action_sequence=>50
+,p_action_sequence=>40
 ,p_execute_on_page_init=>'N'
 ,p_action=>'NATIVE_JAVASCRIPT_CODE'
 ,p_affected_elements_type=>'TRIGGERING_ELEMENT'
@@ -15190,7 +15190,7 @@ wwv_flow_imp_page.create_page_da_action(
  p_id=>wwv_flow_imp.id(47077697988189019)
 ,p_event_id=>wwv_flow_imp.id(47075637038189021)
 ,p_event_result=>'TRUE'
-,p_action_sequence=>60
+,p_action_sequence=>50
 ,p_execute_on_page_init=>'N'
 ,p_action=>'NATIVE_CLOSE_REGION'
 ,p_affected_elements_type=>'REGION'
@@ -15517,10 +15517,20 @@ wwv_flow_imp_page.create_page_da_event(
 ,p_bind_event_type=>'click'
 );
 wwv_flow_imp_page.create_page_da_action(
- p_id=>wwv_flow_imp.id(47088876004189013)
+ p_id=>wwv_flow_imp.id(121254898673654202)
 ,p_event_id=>wwv_flow_imp.id(47087840999189014)
 ,p_event_result=>'TRUE'
 ,p_action_sequence=>10
+,p_execute_on_page_init=>'N'
+,p_action=>'NATIVE_OPEN_REGION'
+,p_affected_elements_type=>'REGION'
+,p_affected_region_id=>wwv_flow_imp.id(5098048364983021595)
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(47088876004189013)
+,p_event_id=>wwv_flow_imp.id(47087840999189014)
+,p_event_result=>'TRUE'
+,p_action_sequence=>20
 ,p_execute_on_page_init=>'N'
 ,p_action=>'NATIVE_EXECUTE_PLSQL_CODE'
 ,p_attribute_01=>wwv_flow_string.join(wwv_flow_t_varchar2(
@@ -15572,7 +15582,7 @@ wwv_flow_imp_page.create_page_da_action(
  p_id=>wwv_flow_imp.id(47089345360189013)
 ,p_event_id=>wwv_flow_imp.id(47087840999189014)
 ,p_event_result=>'TRUE'
-,p_action_sequence=>20
+,p_action_sequence=>30
 ,p_execute_on_page_init=>'N'
 ,p_action=>'NATIVE_JAVASCRIPT_CODE'
 ,p_affected_elements_type=>'TRIGGERING_ELEMENT'
@@ -15581,10 +15591,20 @@ wwv_flow_imp_page.create_page_da_action(
 ''))
 );
 wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(121254976310654203)
+,p_event_id=>wwv_flow_imp.id(47087840999189014)
+,p_event_result=>'TRUE'
+,p_action_sequence=>40
+,p_execute_on_page_init=>'N'
+,p_action=>'NATIVE_CLOSE_REGION'
+,p_affected_elements_type=>'REGION'
+,p_affected_region_id=>wwv_flow_imp.id(5098048364983021595)
+);
+wwv_flow_imp_page.create_page_da_action(
  p_id=>wwv_flow_imp.id(47089864538189013)
 ,p_event_id=>wwv_flow_imp.id(47087840999189014)
 ,p_event_result=>'TRUE'
-,p_action_sequence=>30
+,p_action_sequence=>50
 ,p_execute_on_page_init=>'N'
 ,p_action=>'NATIVE_REFRESH'
 ,p_affected_elements_type=>'REGION'
@@ -15595,7 +15615,7 @@ wwv_flow_imp_page.create_page_da_action(
  p_id=>wwv_flow_imp.id(47090368169189013)
 ,p_event_id=>wwv_flow_imp.id(47087840999189014)
 ,p_event_result=>'TRUE'
-,p_action_sequence=>50
+,p_action_sequence=>60
 ,p_execute_on_page_init=>'N'
 ,p_action=>'NATIVE_REFRESH'
 ,p_affected_elements_type=>'REGION'
@@ -15606,7 +15626,7 @@ wwv_flow_imp_page.create_page_da_action(
  p_id=>wwv_flow_imp.id(47088397506189013)
 ,p_event_id=>wwv_flow_imp.id(47087840999189014)
 ,p_event_result=>'TRUE'
-,p_action_sequence=>60
+,p_action_sequence=>80
 ,p_execute_on_page_init=>'N'
 ,p_action=>'NATIVE_REFRESH'
 ,p_affected_elements_type=>'REGION'
@@ -15617,7 +15637,7 @@ wwv_flow_imp_page.create_page_da_action(
  p_id=>wwv_flow_imp.id(40497390826984844)
 ,p_event_id=>wwv_flow_imp.id(47087840999189014)
 ,p_event_result=>'TRUE'
-,p_action_sequence=>70
+,p_action_sequence=>90
 ,p_execute_on_page_init=>'N'
 ,p_name=>'refresh_summary_income'
 ,p_action=>'NATIVE_REFRESH'
@@ -15629,7 +15649,7 @@ wwv_flow_imp_page.create_page_da_action(
  p_id=>wwv_flow_imp.id(40497426209984845)
 ,p_event_id=>wwv_flow_imp.id(47087840999189014)
 ,p_event_result=>'TRUE'
-,p_action_sequence=>80
+,p_action_sequence=>100
 ,p_execute_on_page_init=>'N'
 ,p_name=>'refresh_summary_deduction'
 ,p_action=>'NATIVE_REFRESH'
@@ -15641,7 +15661,7 @@ wwv_flow_imp_page.create_page_da_action(
  p_id=>wwv_flow_imp.id(4178086639926674)
 ,p_event_id=>wwv_flow_imp.id(47087840999189014)
 ,p_event_result=>'TRUE'
-,p_action_sequence=>90
+,p_action_sequence=>110
 ,p_execute_on_page_init=>'N'
 ,p_name=>'refresh_summary_stat'
 ,p_action=>'NATIVE_REFRESH'
@@ -15653,7 +15673,7 @@ wwv_flow_imp_page.create_page_da_action(
  p_id=>wwv_flow_imp.id(118257272415255148)
 ,p_event_id=>wwv_flow_imp.id(47087840999189014)
 ,p_event_result=>'TRUE'
-,p_action_sequence=>100
+,p_action_sequence=>120
 ,p_execute_on_page_init=>'N'
 ,p_name=>'refresh_tax_deduction'
 ,p_action=>'NATIVE_REFRESH'

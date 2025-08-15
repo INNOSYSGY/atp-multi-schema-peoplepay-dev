@@ -2624,6 +2624,7 @@ wwv_flow_imp_page.create_page_item(
 ,p_item_sequence=>190
 ,p_item_plug_id=>wwv_flow_imp.id(6243557348514880117)
 ,p_item_source_plug_id=>wwv_flow_imp.id(6243557348514880117)
+,p_item_default=>'21'
 ,p_source=>'MODULE_MAIN_ID'
 ,p_source_type=>'REGION_SOURCE_COLUMN'
 ,p_display_as=>'NATIVE_HIDDEN'
