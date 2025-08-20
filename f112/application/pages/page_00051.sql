@@ -3233,7 +3233,7 @@ wwv_flow_imp_page.create_page_item(
 '            and org.id = tblmv.org_id',
 '            )',
 '            --and pkg_global_fnts.get_lookup_col(ID,''TABLE_VALUE'') != ''NEWE''',
-'            and lookup_id in (202)',
+'           and lookup_id = pkg_global_fnts.get_lookup_id(''EMPMOVE'' ,''TBLMOVEMENTCLASS'') ',
 'ORDER BY 1'))
 ,p_cSize=>30
 ,p_grid_label_column_span=>2

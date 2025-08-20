@@ -449,7 +449,6 @@ wwv_flow_imp_page.create_region_column(
 ,p_source_type=>'DB_COLUMN'
 ,p_source_expression=>'RULESOURCE_ID'
 ,p_data_type=>'NUMBER'
-,p_session_state_data_type=>'VARCHAR2'
 ,p_is_query_only=>false
 ,p_item_type=>'NATIVE_POPUP_LOV'
 ,p_heading=>'Rule Source'
@@ -473,13 +472,13 @@ wwv_flow_imp_page.create_region_column(
 '      ''select ''''Date of Rate: ''''||date_of_rate||'''' Ceiling ''''||trim(to_char(nis_ceiling,''''$999,999,999''''))||'''' Payment Type ''''||Payment_type lable, id',
 '       from hr_hcf_nisrate',
 '       where date_effective_end is null',
-'       and org_id =:P1311_ID'';',
+'       and org_id = pkg_global_fnts.fn_shareRefOrg(:P1311_ID)'';',
 '',
 'elsif :RULE_TABLE =''NIS'' and :ID is not null then',
 'return',
 '      ''select ''''Date of Rate: ''''||date_of_rate||'''' Ceiling ''''||trim(to_char(nis_ceiling,''''$999,999,999''''))||'''' Payment Type ''''||Payment_type lable, id',
 '       from hr_hcf_nisrate',
-'       where org_id =:P1311_ID'';',
+'       where org_id = pkg_global_fnts.fn_shareRefOrg(:P1311_ID)'';',
 '',
 'elsif :RULE_TABLE =''TAX'' and :ID is null then',
 'return',
@@ -487,13 +486,13 @@ wwv_flow_imp_page.create_region_column(
 '        ||''''/''''||trim(to_char(tax_ceiling_upper,''''$999,999,999''''))||'''' Payment Type ''''||Payment_type label, id',
 '        FROM HR_HCF_taxrATE',
 '        where date_effective_end is null',
-'        and org_id =:P1311_ID'';',
+'        and org_id = pkg_global_fnts.fn_shareRefOrg(:P1311_ID)'';',
 'else',
 '    return',
 '      ''SELECT ''''Date of Rate: ''''||date_of_rate||'''' Ceiling 1/2/3:- ''''||trim(to_char(tax_ceiling_lower,''''$999,999,999''''))||''''/''''||trim(to_char(tax_ceiling_upper_b,''''$999,999,999'''')) ',
 '        ||''''/''''||trim(to_char(tax_ceiling_upper,''''$999,999,999''''))||'''' Payment Type ''''||Payment_type label, id',
 '            FROM HR_HCF_taxrATE',
-'            where org_id =:P1311_ID'';',
+'            where org_id = pkg_global_fnts.fn_shareRefOrg(:P1311_ID)'';',
 'end if;            '))
 ,p_lov_display_extra=>true
 ,p_lov_display_null=>true

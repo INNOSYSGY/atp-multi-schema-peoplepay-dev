@@ -1289,6 +1289,7 @@ prompt --install
 @@application/pages/page_01506.sql
 @@application/pages/page_01507.sql
 @@application/pages/page_01508.sql
+@@application/pages/page_01509.sql
 @@application/pages/page_01700.sql
 @@application/pages/page_01710.sql
 @@application/pages/page_01720.sql

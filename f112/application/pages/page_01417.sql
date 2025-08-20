@@ -5201,7 +5201,7 @@ wwv_flow_imp_page.create_page_process(
 ,p_process_clob_language=>'PLSQL'
 ,p_error_display_location=>'INLINE_IN_NOTIFICATION'
 ,p_process_when_button_id=>wwv_flow_imp.id(135898185188396827)
-,p_process_when=>'pkg_global_fnts.status_descript(:P1417_STATUS) IN ( ''APPROVED'', ''DISAPPROVED'')'
+,p_process_when=>'pkg_global_fnts.status_descript(:P1417_STATUS) IN ( ''APPROVED'', ''DISAPPROVED'', ''SEND FOR'')'
 ,p_process_when_type=>'EXPRESSION'
 ,p_process_when2=>'PLSQL'
 ,p_internal_uid=>20168299207083176

@@ -1078,7 +1078,7 @@ wwv_flow_imp_page.create_page_branch(
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(454317600192792562)
 ,p_name=>'P1314_EXPENSE_ID'
-,p_item_sequence=>260
+,p_item_sequence=>270
 ,p_item_plug_id=>wwv_flow_imp.id(3622561941363716374)
 ,p_use_cache_before_default=>'NO'
 ,p_prompt=>'Expense Code'
@@ -1111,7 +1111,7 @@ wwv_flow_imp_page.create_page_item(
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(454317689392792563)
 ,p_name=>'P1314_SOURCE_ALGORITHM'
-,p_item_sequence=>300
+,p_item_sequence=>290
 ,p_item_plug_id=>wwv_flow_imp.id(3622561941363716374)
 ,p_use_cache_before_default=>'NO'
 ,p_prompt=>'Source Algorithm'
@@ -1132,7 +1132,7 @@ wwv_flow_imp_page.create_page_item(
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(3710561372253527083)
 ,p_name=>'P1314_ID_PREV'
-,p_item_sequence=>330
+,p_item_sequence=>320
 ,p_item_plug_id=>wwv_flow_imp.id(3622561941363716374)
 ,p_display_as=>'NATIVE_HIDDEN'
 ,p_encrypt_session_state_yn=>'N'
@@ -1143,7 +1143,7 @@ wwv_flow_imp_page.create_page_item(
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(3710561720265527084)
 ,p_name=>'P1314_ID_NEXT'
-,p_item_sequence=>320
+,p_item_sequence=>310
 ,p_item_plug_id=>wwv_flow_imp.id(3622561941363716374)
 ,p_display_as=>'NATIVE_HIDDEN'
 ,p_encrypt_session_state_yn=>'N'
@@ -1154,7 +1154,7 @@ wwv_flow_imp_page.create_page_item(
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(3710562151287527084)
 ,p_name=>'P1314_ID_COUNT'
-,p_item_sequence=>310
+,p_item_sequence=>300
 ,p_item_plug_id=>wwv_flow_imp.id(3622561941363716374)
 ,p_display_as=>'NATIVE_DISPLAY_ONLY'
 ,p_tag_attributes=>'class="fielddata"'
@@ -1199,7 +1199,7 @@ wwv_flow_imp_page.create_page_item(
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(3710562935136527085)
 ,p_name=>'P1314_COUNTRY'
-,p_item_sequence=>290
+,p_item_sequence=>280
 ,p_item_plug_id=>wwv_flow_imp.id(3622561941363716374)
 ,p_use_cache_before_default=>'NO'
 ,p_item_default=>'APP_COUNTRY'
@@ -1221,7 +1221,7 @@ wwv_flow_imp_page.create_page_item(
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(3710563705532527087)
 ,p_name=>'P1314_DATE_EFFECTIVE_END'
-,p_item_sequence=>250
+,p_item_sequence=>260
 ,p_item_plug_id=>wwv_flow_imp.id(3622561941363716374)
 ,p_use_cache_before_default=>'NO'
 ,p_prompt=>'Date Effective End'
@@ -1246,7 +1246,7 @@ wwv_flow_imp_page.create_page_item(
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(3710564099009527087)
 ,p_name=>'P1314_DATE_EFFECTIVE'
-,p_item_sequence=>240
+,p_item_sequence=>250
 ,p_item_plug_id=>wwv_flow_imp.id(3622561941363716374)
 ,p_use_cache_before_default=>'NO'
 ,p_prompt=>'Date Effective'
@@ -1270,7 +1270,7 @@ wwv_flow_imp_page.create_page_item(
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(3710564555397527087)
 ,p_name=>'P1314_DAILY_TAX_CEILING_UPPER'
-,p_item_sequence=>230
+,p_item_sequence=>240
 ,p_item_plug_id=>wwv_flow_imp.id(3622561941363716374)
 ,p_use_cache_before_default=>'NO'
 ,p_prompt=>'Daily Tax Ceiling Upper'
@@ -1295,7 +1295,7 @@ wwv_flow_imp_page.create_page_item(
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(3710564969518527087)
 ,p_name=>'P1314_DAILY_TAX_CEILING_LOWER'
-,p_item_sequence=>220
+,p_item_sequence=>230
 ,p_item_plug_id=>wwv_flow_imp.id(3622561941363716374)
 ,p_use_cache_before_default=>'NO'
 ,p_prompt=>'Daily Tax Ceiling Lower'
@@ -1324,7 +1324,7 @@ wwv_flow_imp_page.create_page_item(
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(3710565361294527089)
 ,p_name=>'P1314_ADJ_ANN_TAX_CEILING_UPPER'
-,p_item_sequence=>210
+,p_item_sequence=>220
 ,p_item_plug_id=>wwv_flow_imp.id(3622561941363716374)
 ,p_use_cache_before_default=>'NO'
 ,p_item_default=>'0'
@@ -1348,7 +1348,7 @@ wwv_flow_imp_page.create_page_item(
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(3710565760769527089)
 ,p_name=>'P1314_ADJ_ANN_TAX_CEILING_LOWER'
-,p_item_sequence=>200
+,p_item_sequence=>210
 ,p_item_plug_id=>wwv_flow_imp.id(3622561941363716374)
 ,p_use_cache_before_default=>'NO'
 ,p_prompt=>'Adj Ann Tax Ceiling Lower'
@@ -1372,7 +1372,7 @@ wwv_flow_imp_page.create_page_item(
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(3710566161440527089)
 ,p_name=>'P1314_ADJ_CEILING_UPPER'
-,p_item_sequence=>190
+,p_item_sequence=>200
 ,p_item_plug_id=>wwv_flow_imp.id(3622561941363716374)
 ,p_use_cache_before_default=>'NO'
 ,p_item_default=>'0'
@@ -1398,7 +1398,7 @@ wwv_flow_imp_page.create_page_item(
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(3710566566393527089)
 ,p_name=>'P1314_ADJ_CEILING_LOWER'
-,p_item_sequence=>180
+,p_item_sequence=>190
 ,p_item_plug_id=>wwv_flow_imp.id(3622561941363716374)
 ,p_use_cache_before_default=>'NO'
 ,p_prompt=>'Adj Ceiling Lower'
@@ -1421,7 +1421,7 @@ wwv_flow_imp_page.create_page_item(
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(3710566981981527091)
 ,p_name=>'P1314_PRO_RATE_TAXFREE'
-,p_item_sequence=>170
+,p_item_sequence=>180
 ,p_item_plug_id=>wwv_flow_imp.id(3622561941363716374)
 ,p_use_cache_before_default=>'NO'
 ,p_prompt=>'Pro Rate Taxfree'
@@ -1447,11 +1447,11 @@ wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(3710567336396527091)
 ,p_name=>'P1314_TAX_CEILING_UPPER_B'
 ,p_is_required=>true
-,p_item_sequence=>160
+,p_item_sequence=>130
 ,p_item_plug_id=>wwv_flow_imp.id(3622561941363716374)
 ,p_use_cache_before_default=>'NO'
 ,p_item_default=>'0'
-,p_prompt=>'Tax Ceiling Upper B'
+,p_prompt=>'Tax Ceiling Mid'
 ,p_format_mask=>'FML999G999G999G999G990'
 ,p_source=>'TAX_CEILING_UPPER_B'
 ,p_source_type=>'DB_COLUMN'
@@ -1469,7 +1469,7 @@ wwv_flow_imp_page.create_page_item(
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(3710567775719527092)
 ,p_name=>'P1314_ANN_TAX_CEILING_LOWER'
-,p_item_sequence=>150
+,p_item_sequence=>160
 ,p_item_plug_id=>wwv_flow_imp.id(3622561941363716374)
 ,p_use_cache_before_default=>'NO'
 ,p_item_default=>'0'
@@ -1496,7 +1496,7 @@ wwv_flow_imp_page.create_page_item(
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(3710568102810527092)
 ,p_name=>'P1314_TAX_PERCENTAGE_UPPER'
-,p_item_sequence=>140
+,p_item_sequence=>150
 ,p_item_plug_id=>wwv_flow_imp.id(3622561941363716374)
 ,p_use_cache_before_default=>'NO'
 ,p_item_default=>'0'
@@ -1518,11 +1518,11 @@ wwv_flow_imp_page.create_page_item(
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(3710568505984527092)
 ,p_name=>'P1314_TAX_CEILING_UPPER'
-,p_item_sequence=>130
+,p_item_sequence=>170
 ,p_item_plug_id=>wwv_flow_imp.id(3622561941363716374)
 ,p_use_cache_before_default=>'NO'
 ,p_item_default=>'0'
-,p_prompt=>'Tax Ceiling Upper A'
+,p_prompt=>'Tax Ceiling Upper'
 ,p_format_mask=>'FML999G999G999G999G990'
 ,p_source=>'TAX_CEILING_UPPER'
 ,p_source_type=>'DB_COLUMN'
@@ -1530,7 +1530,6 @@ wwv_flow_imp_page.create_page_item(
 ,p_cSize=>10
 ,p_cMaxlength=>255
 ,p_begin_on_new_line=>'N'
-,p_grid_label_column_span=>2
 ,p_field_template=>2526760615038828570
 ,p_item_template_options=>'#DEFAULT#'
 ,p_encrypt_session_state_yn=>'N'
