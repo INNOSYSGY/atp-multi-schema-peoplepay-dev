@@ -6,8 +6,10 @@ on:
     # Run the workflow every day at midnight UTC
     #- cron: '0 23 * * 5'
 env:
-  GITHUB_USERNAME: ${{ github.actor }}
-  REPO_NAME: ${{ github.repository }}
+  GITHUB_USER: ${{ github.actor }}
+  GITHUB_BRANCH: ${{ github.ref_name }}
+  GITHUB_BRANCH_REF: ${{ github.ref }}
+  DEPLOY_TIMESTAMP: ${{ github.run_id }}
   
 permissions:
   contents: write  # Grant write permissions to the GITHUB_TOKEN
