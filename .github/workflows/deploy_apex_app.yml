@@ -43,7 +43,7 @@ jobs:
         run: |
           git config --global user.name "Leonardo Cuyar"
           git config --global user.email "leo.cuyar@gmail.com"
-          git pull
+          git pull origin ${{ github.event.inputs.branch-name }}
           ls -al
           
       - name: Deploy APEX App
