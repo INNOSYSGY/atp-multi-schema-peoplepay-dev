@@ -6004,7 +6004,7 @@ wwv_flow_imp_page.create_page_item(
 'and exists (select 1',
 '            from hr_rcm_employee w',
 '            where TRIM(upper(W.PAYMENT_TYPE))=TRIM(upper(B.PAYMENT_TYPE))',
-'            and B.ORG_ID = pkg_global_fnts.fn_shareRefOrg(w.ORG_ID)',
+'            and B.ORG_ID = w.ORG_ID',
 '            AND w.ORG_ID =:P1241_ORG_ID     ',
 '            )'))
 ,p_lov_cascade_parent_items=>'P1241_COMPANY_YEAR_ID,P1241_ORG_ID'
