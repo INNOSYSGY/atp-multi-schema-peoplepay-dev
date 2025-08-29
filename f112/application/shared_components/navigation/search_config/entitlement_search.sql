@@ -30,6 +30,7 @@ wwv_flow_imp_shared.create_search_config(
 'join HR_RCM_EMPENTITLE empent on C.id=empent.EMP_ID',
 'join PA_PCF_INCOMECODE pcfincome on pcfincome.id=empent.INCOME_CODE_ID',
 'where ind_org_id = :APP_ORG_ID',
+'and c.date_separated is null',
 'and empent.start_date <= current_date',
 'and (empent.end_date is null or empent.end_date > current_date)',
 'and exists (select 1',
@@ -47,7 +48,7 @@ wwv_flow_imp_shared.create_search_config(
 ,p_badge_column_name=>'BADGE'
 ,p_icon_source_type=>'STATIC_CLASS'
 ,p_icon_css_classes=>'fa-money'
-,p_version_scn=>41799874253581
+,p_version_scn=>45054067513958
 );
 wwv_flow_imp.component_end;
 end;

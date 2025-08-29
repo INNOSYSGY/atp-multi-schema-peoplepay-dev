@@ -29,6 +29,7 @@ wwv_flow_imp_shared.create_search_config(
 'from hr_rcm_individual a join hr_rcm_emphistory b on b.ind_id=a.id',
 'left outer join hr_rcm_employee c on a.id=c.ind_id',
 'where ind_org_id = :APP_ORG_ID',
+'and c.date_separated is null',
 'and b.from_date <= current_date',
 'and (b.TO_DATE is null or b.TO_DATE > current_date)',
 'and exists (select 1',
@@ -46,7 +47,7 @@ wwv_flow_imp_shared.create_search_config(
 ,p_badge_column_name=>'BADGE'
 ,p_icon_source_type=>'STATIC_CLASS'
 ,p_icon_css_classes=>'fa-building-o'
-,p_version_scn=>41799874412348
+,p_version_scn=>45054067917986
 );
 wwv_flow_imp.component_end;
 end;

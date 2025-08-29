@@ -49,8 +49,8 @@ wwv_flow_imp_page.create_page_plug(
 '"LAST_UPDATED_BY",',
 '"LAST_UPDATE_DATE"',
 'from "TBLWORKFLOWDTL"',
-'where "STAGE_ID" = :P1386_STAGE_ID',
-'AND WEBPAGE_ID= DECODE(:P1386_SEARCH,1,  WEBPAGE_ID, :P1386_SEARCH)'))
+'where STAGE_ID = :P1386_STAGE_ID',
+'AND WEBPAGE_ID = DECODE(:P1386_SEARCH, 1,  WEBPAGE_ID, :P1386_SEARCH)'))
 ,p_plug_source_type=>'NATIVE_IG'
 ,p_ajax_items_to_submit=>'P1386_STAGE_ID,P1386_SEARCH'
 ,p_plug_display_condition_type=>'ITEM_IS_NOT_NULL'
@@ -181,7 +181,6 @@ wwv_flow_imp_page.create_region_column(
 ,p_source_type=>'DB_COLUMN'
 ,p_source_expression=>'WEBPAGE_ID'
 ,p_data_type=>'NUMBER'
-,p_session_state_data_type=>'VARCHAR2'
 ,p_is_query_only=>false
 ,p_item_type=>'NATIVE_POPUP_LOV'
 ,p_heading=>'Web Page'
@@ -191,7 +190,7 @@ wwv_flow_imp_page.create_region_column(
 ,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
   'case_sensitive', 'N',
   'display_as', 'DIALOG',
-  'fetch_on_search', 'N',
+  'fetch_on_search', 'Y',
   'initial_fetch', 'FIRST_ROWSET',
   'manual_entry', 'N',
   'match_type', 'CONTAINS',
@@ -336,8 +335,7 @@ wwv_flow_imp_page.create_region_column(
 ,p_name=>'CREATION_DATE'
 ,p_source_type=>'DB_COLUMN'
 ,p_source_expression=>'CREATION_DATE'
-,p_data_type=>'DATE'
-,p_session_state_data_type=>'VARCHAR2'
+,p_data_type=>'TIMESTAMP_LTZ'
 ,p_is_query_only=>false
 ,p_item_type=>'NATIVE_DATE_PICKER_APEX'
 ,p_heading=>'Creation Date'
@@ -345,13 +343,10 @@ wwv_flow_imp_page.create_region_column(
 ,p_display_sequence=>120
 ,p_value_alignment=>'CENTER'
 ,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
-  'appearance_and_behavior', 'MONTH-PICKER:YEAR-PICKER:TODAY-BUTTON',
-  'days_outside_month', 'VISIBLE',
   'display_as', 'POPUP',
   'max_date', 'NONE',
   'min_date', 'NONE',
   'multiple_months', 'N',
-  'show_on', 'FOCUS',
   'show_time', 'Y',
   'use_defaults', 'Y')).to_clob
 ,p_format_mask=>'DD-MON-YYYY HH:MIPM'
@@ -404,8 +399,7 @@ wwv_flow_imp_page.create_region_column(
 ,p_name=>'LAST_UPDATE_DATE'
 ,p_source_type=>'DB_COLUMN'
 ,p_source_expression=>'LAST_UPDATE_DATE'
-,p_data_type=>'DATE'
-,p_session_state_data_type=>'VARCHAR2'
+,p_data_type=>'TIMESTAMP_LTZ'
 ,p_is_query_only=>false
 ,p_item_type=>'NATIVE_DATE_PICKER_APEX'
 ,p_heading=>'Last Update Date'
@@ -413,13 +407,10 @@ wwv_flow_imp_page.create_region_column(
 ,p_display_sequence=>140
 ,p_value_alignment=>'CENTER'
 ,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
-  'appearance_and_behavior', 'MONTH-PICKER:YEAR-PICKER:TODAY-BUTTON',
-  'days_outside_month', 'VISIBLE',
   'display_as', 'POPUP',
   'max_date', 'NONE',
   'min_date', 'NONE',
   'multiple_months', 'N',
-  'show_on', 'FOCUS',
   'show_time', 'Y',
   'use_defaults', 'Y')).to_clob
 ,p_format_mask=>'DD-MON-YYYY HH:MIPM'
@@ -1250,17 +1241,6 @@ wwv_flow_imp_page.create_page_process(
 ,p_internal_uid=>3189164656790409325
 );
 wwv_flow_imp_page.create_page_process(
- p_id=>wwv_flow_imp.id(3304948380711723030)
-,p_process_sequence=>40
-,p_process_point=>'AFTER_SUBMIT'
-,p_process_type=>'NATIVE_SESSION_STATE'
-,p_process_name=>'reset page'
-,p_attribute_01=>'CLEAR_CACHE_CURRENT_PAGE'
-,p_error_display_location=>'INLINE_IN_NOTIFICATION'
-,p_process_when_button_id=>wwv_flow_imp.id(3304966783104723065)
-,p_internal_uid=>3189164246855409325
-);
-wwv_flow_imp_page.create_page_process(
  p_id=>wwv_flow_imp.id(3222706036181829391)
 ,p_process_sequence=>50
 ,p_process_point=>'AFTER_SUBMIT'
@@ -1273,6 +1253,17 @@ wwv_flow_imp_page.create_page_process(
 ,p_attribute_08=>'Y'
 ,p_error_display_location=>'INLINE_IN_NOTIFICATION'
 ,p_internal_uid=>3106921902325515686
+);
+wwv_flow_imp_page.create_page_process(
+ p_id=>wwv_flow_imp.id(3304948380711723030)
+,p_process_sequence=>60
+,p_process_point=>'AFTER_SUBMIT'
+,p_process_type=>'NATIVE_SESSION_STATE'
+,p_process_name=>'reset page'
+,p_attribute_01=>'CLEAR_CACHE_CURRENT_PAGE'
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_process_when_button_id=>wwv_flow_imp.id(3304966783104723065)
+,p_internal_uid=>3189164246855409325
 );
 wwv_flow_imp.component_end;
 end;

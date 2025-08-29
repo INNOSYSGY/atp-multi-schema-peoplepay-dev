@@ -5827,7 +5827,7 @@ wwv_flow_imp_page.create_page_validation(
 'and exists (select 1',
 '            from APP_MODULE b',
 '            where a.APP_MODULE_ID=b.id',
-'            and upper(MODULE_NAME)=''RECRUITMENT''',
+'            and upper(MODULE_NAME)=''EMPLOYEE MANAGEMENT''',
 '            and trunc(b.START_DATE) <= trunc(current_date)',
 '            and (b.END_DATE is null or trunc(b.END_DATE) >= trunc(current_date))',
 '            );',

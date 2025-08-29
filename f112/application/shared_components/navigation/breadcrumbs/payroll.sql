@@ -16,6 +16,26 @@ wwv_flow_imp_shared.create_menu(
 ,p_name=>'Payroll'
 );
 wwv_flow_imp_shared.create_menu_option(
+ p_id=>wwv_flow_imp.id(69015755348172732)
+,p_parent_id=>wwv_flow_imp.id(167990808712398705)
+,p_short_name=>'Prior Remittance'
+,p_link=>'f?p=&APP_ID.:147:&SESSION.::&DEBUG.:::'
+,p_page_id=>147
+);
+wwv_flow_imp_shared.create_menu_option(
+ p_id=>wwv_flow_imp.id(167990808712398705)
+,p_short_name=>'Home'
+,p_link=>'f?p=&APP_ID.:1:&SESSION.::&DEBUG.:::'
+,p_page_id=>1
+);
+wwv_flow_imp_shared.create_menu_option(
+ p_id=>wwv_flow_imp.id(167991486670415055)
+,p_parent_id=>wwv_flow_imp.id(69015755348172732)
+,p_short_name=>'Manage Prior Remittance'
+,p_link=>'f?p=&APP_ID.:65:&SESSION.::&DEBUG.:::'
+,p_page_id=>65
+);
+wwv_flow_imp_shared.create_menu_option(
  p_id=>wwv_flow_imp.id(3268978170006322678)
 ,p_parent_id=>wwv_flow_imp.id(3268978364830325062)
 ,p_short_name=>'Quick Entries'
@@ -38,6 +58,7 @@ wwv_flow_imp_shared.create_menu_option(
 );
 wwv_flow_imp_shared.create_menu_option(
  p_id=>wwv_flow_imp.id(3268978751243331312)
+,p_parent_id=>wwv_flow_imp.id(167990808712398705)
 ,p_short_name=>'Listing of Payrolls'
 ,p_link=>'f?p=&APP_ID.:1250:&SESSION.::&DEBUG.:::'
 ,p_page_id=>1250

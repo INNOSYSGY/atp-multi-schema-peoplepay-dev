@@ -26,6 +26,7 @@ wwv_flow_imp_shared.create_search_config(
 '     ''No.''||emp_company_no badge',
 'from hr_rcm_individual a join hr_rcm_employee c on a.id=c.ind_id',
 'where org_id = :APP_ORG_ID',
+'and c.date_separated is null',
 'and exists (select 1',
 '            from vw_useraccess ua',
 '            where ua.org_id = c.org_id',
@@ -39,7 +40,7 @@ wwv_flow_imp_shared.create_search_config(
 ,p_badge_column_name=>'BADGE'
 ,p_icon_source_type=>'STATIC_CLASS'
 ,p_icon_css_classes=>'fa-user-magnifying-glass'
-,p_version_scn=>41799875090289
+,p_version_scn=>45054070753323
 );
 wwv_flow_imp.component_end;
 end;

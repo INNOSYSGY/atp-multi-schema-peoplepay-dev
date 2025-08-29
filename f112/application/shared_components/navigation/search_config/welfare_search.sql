@@ -30,6 +30,7 @@ wwv_flow_imp_shared.create_search_config(
 'join HR_RCM_EMPITEM empitem on C.ID=empitem.EMP_ID',
 'join hr_hcf_LOOKUP welfareitem on welfareitem.ID = to_number(empitem.ITEM_CODE)',
 'where ind_org_id = :APP_ORG_ID',
+'and c.date_separated is null',
 'and empitem.START_PERIOD <= current_date',
 'and (empitem.end_period is null or empitem.end_period > current_date)',
 'and exists (select 1',
@@ -48,7 +49,7 @@ wwv_flow_imp_shared.create_search_config(
 ,p_description_column_name=>'DESCRIPTION'
 ,p_badge_column_name=>'BADGE'
 ,p_icon_source_type=>'INITIALS'
-,p_version_scn=>41799876146811
+,p_version_scn=>45054070553115
 );
 wwv_flow_imp.component_end;
 end;

@@ -462,7 +462,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_db_column_name=>'ACTUAL_COUNT'
 ,p_display_order=>130
 ,p_column_identifier=>'T'
-,p_column_label=>'Actual Count'
+,p_column_label=>'Actual Count in File'
 ,p_column_type=>'NUMBER'
 ,p_column_alignment=>'CENTER'
 ,p_use_as_row_header=>'N'

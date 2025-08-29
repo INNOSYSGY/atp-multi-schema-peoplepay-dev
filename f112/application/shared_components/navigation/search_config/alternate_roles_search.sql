@@ -30,6 +30,7 @@ wwv_flow_imp_shared.create_search_config(
 'join HR_RCM_ALT_POSIT_LOC altjob on C.ID=altjob.EMP_ID',
 'join HR_HCF_WORKLOCATION locadesc on locadesc.id = locadesc.ID',
 'where ind_org_id = :APP_ORG_ID',
+'and c.date_separated is null',
 'and date_start <= current_date',
 'and (altjob.date_end is null or date_end > current_date)',
 'and exists (select 1',
@@ -47,7 +48,7 @@ wwv_flow_imp_shared.create_search_config(
 ,p_badge_column_name=>'BADGE'
 ,p_icon_source_type=>'STATIC_CLASS'
 ,p_icon_css_classes=>'fa-tasks-alt'
-,p_version_scn=>41799871545758
+,p_version_scn=>45054066488545
 );
 wwv_flow_imp.component_end;
 end;

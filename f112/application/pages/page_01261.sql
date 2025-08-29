@@ -6891,8 +6891,7 @@ wwv_flow_imp_page.create_page_item(
 ,p_item_sequence=>30
 ,p_item_plug_id=>wwv_flow_imp.id(3106814392586310862)
 ,p_item_source_plug_id=>wwv_flow_imp.id(2722436906644757850)
-,p_use_cache_before_default=>'NO'
-,p_item_default=>':APP_ORG_ID'
+,p_item_default=>':APP_ORG_SHR_DED'
 ,p_item_default_type=>'EXPRESSION'
 ,p_item_default_language=>'PLSQL'
 ,p_source=>'IND_ORG_ID'

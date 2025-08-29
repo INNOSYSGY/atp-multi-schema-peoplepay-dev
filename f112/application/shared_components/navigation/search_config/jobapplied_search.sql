@@ -29,6 +29,7 @@ wwv_flow_imp_shared.create_search_config(
 'from hr_rcm_individual a join hr_apl_jobrequest b on b.applicant_id = a.id',
 'left outer join hr_rcm_employee c on a.id = c.ind_id',
 'where ind_org_id = :APP_ORG_ID',
+'and c.date_separated is null',
 'and exists (select 1',
 '            from vw_useraccess ua',
 '            where ua.org_id = c.org_id',
@@ -54,7 +55,7 @@ wwv_flow_imp_shared.create_search_config(
 ,p_badge_column_name=>'BADGE'
 ,p_icon_source_type=>'STATIC_CLASS'
 ,p_icon_css_classes=>'fa-heat-map'
-,p_version_scn=>41799874304395
+,p_version_scn=>45054067752351
 );
 wwv_flow_imp.component_end;
 end;

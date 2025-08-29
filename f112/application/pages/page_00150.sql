@@ -70,6 +70,7 @@ wwv_flow_imp_page.create_page_plug(
 ' (select job_id from hr_hcf_position pos where pos.id=b.position_id) job_id, EMP_GRADE_ID',
 'from  hr_rcm_individual a JOIN hr_rcm_employee b ON a.id = b.ind_id',
 'where b.org_id=  :APP_ORG_ID',
+'and date_separated is null',
 'and   exists(select 1',
 '           from HR_HCF_ORGSTRUCTUREDTL z left outer join VW_USERORGSTRUCT y on ( NVL(z.id, 1)=y.ORG_STRUCTURE_ID  and nvl(y.user_name,''1'') = decode(y.user_name, null, ''1'', :APP_USER))',
 '           where NVL(z.id, 1)= NVL(b.ORGDTL_ID,1)',

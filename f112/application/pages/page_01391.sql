@@ -436,7 +436,7 @@ wwv_flow_imp_page.create_page_item(
 ,p_prompt=>'Transaction Status'
 ,p_source=>'WFL_STATUS_ID'
 ,p_source_type=>'REGION_SOURCE_COLUMN'
-,p_display_as=>'NATIVE_SELECT_LIST'
+,p_display_as=>'NATIVE_POPUP_LOV'
 ,p_lov=>wwv_flow_string.join(wwv_flow_t_varchar2(
 'Select initcap(Webpage_Name||'': ''||Wfl_Status_Description||'' (''||TRANSACTION_DESCRIPTION||'')'') screen, Wfl_Status_Id',
 'From Tblworkflowstatus A Join Tblworkflowdtl D On D.Id=A.Workflow_Dtl_Id',
@@ -453,7 +453,7 @@ wwv_flow_imp_page.create_page_item(
 ,p_lov_null_text=>'--null--'
 ,p_lov_cascade_parent_items=>'P1391_STAGE_ID'
 ,p_ajax_optimize_refresh=>'Y'
-,p_cHeight=>1
+,p_cSize=>30
 ,p_begin_on_new_line=>'N'
 ,p_grid_label_column_span=>2
 ,p_field_template=>2526760615038828570
@@ -462,7 +462,13 @@ wwv_flow_imp_page.create_page_item(
 ,p_lov_display_extra=>'YES'
 ,p_encrypt_session_state_yn=>'N'
 ,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
-  'page_action_on_selection', 'NONE')).to_clob
+  'case_sensitive', 'N',
+  'display_as', 'POPUP',
+  'fetch_on_search', 'Y',
+  'initial_fetch', 'FIRST_ROWSET',
+  'manual_entry', 'N',
+  'match_type', 'CONTAINS',
+  'min_chars', '0')).to_clob
 );
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(1687829341754671014)

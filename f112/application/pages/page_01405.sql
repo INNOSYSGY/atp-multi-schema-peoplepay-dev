@@ -1928,7 +1928,6 @@ wwv_flow_imp_page.create_region_column(
 ,p_source_type=>'DB_COLUMN'
 ,p_source_expression=>'FORM_NAME'
 ,p_data_type=>'VARCHAR2'
-,p_session_state_data_type=>'VARCHAR2'
 ,p_is_query_only=>false
 ,p_item_type=>'NATIVE_POPUP_LOV'
 ,p_heading=>'Form Name'
@@ -1955,7 +1954,7 @@ wwv_flow_imp_page.create_region_column(
 'and exists(select 1',
 '           from APP_MODULE x',
 '           where upper(trim(b.page_group)) = trim(x.module_name)',
-'           and module_name = ''RECRUITMENT''',
+'           and module_name = ''EMPLOYEE MANAGEMENT''',
 '           )',
 'order by 1'))
 ,p_lov_display_extra=>true

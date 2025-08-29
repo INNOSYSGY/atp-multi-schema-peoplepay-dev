@@ -29,6 +29,7 @@ wwv_flow_imp_shared.create_search_config(
 'from HR_RCM_INDIVIDUAL a join hr_rcm_employee C on a.id=C.IND_ID',
 'join HR_RCM_EMPWORKPERMIT permit on C.ID=permit.EMP_ID',
 'where ind_org_id = :APP_ORG_ID',
+'and c.date_separated is null',
 'and PERIOD_START <= current_date',
 'and (permit.PERIOD_end is null or PERIOD_end > current_date)',
 'and exists (select 1',
@@ -49,7 +50,7 @@ wwv_flow_imp_shared.create_search_config(
 ,p_badge_column_name=>'BADGE'
 ,p_icon_source_type=>'STATIC_CLASS'
 ,p_icon_css_classes=>'fa-briefcase'
-,p_version_scn=>41799875086188
+,p_version_scn=>45054070696816
 );
 wwv_flow_imp.component_end;
 end;

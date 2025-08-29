@@ -82,7 +82,7 @@ wwv_flow_imp_page.create_page_item(
 '            hr_hcf_guides a ',
 '            join APP_MODULE b on a.module = b.id ',
 '        where ',
-'            b.module_name = ''RECRUITMENT''',
+'            b.module_name = ''EMPLOYEE MANAGEMENT''',
 '            and upper(a.sub_module) like upper(''%Employee Man%''))'))
 ,p_source_type=>'QUERY'
 ,p_display_as=>'NATIVE_HIDDEN'
@@ -120,7 +120,7 @@ wwv_flow_imp_page.create_page_da_action(
 '            hr_hcf_guides a ',
 '            join APP_MODULE b on a.module = b.id ',
 '        where ',
-'            b.module_name = ''RECRUITMENT''',
+'            b.module_name = ''EMPLOYEE MANAGEMENT''',
 '            and upper(a.sub_module) like upper(''%Employee Man%''));',
 '',
 '',

@@ -2222,6 +2222,7 @@ wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(3323654332801899829)
 ,p_name=>'P1211_START_DATE'
 ,p_source_data_type=>'DATE'
+,p_is_required=>true
 ,p_item_sequence=>660
 ,p_item_plug_id=>wwv_flow_imp.id(3236622858581362068)
 ,p_item_source_plug_id=>wwv_flow_imp.id(3236622858581362068)

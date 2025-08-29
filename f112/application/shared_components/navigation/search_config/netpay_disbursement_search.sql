@@ -32,6 +32,7 @@ wwv_flow_imp_shared.create_search_config(
 'join hr_rcm_disbursement b on c.id =b.emp_id_disp',
 'left outer join vw_bank bank on bank.id = b.bank_branch_id_dist',
 'where ind_org_id = :APP_ORG_ID',
+'and c.date_separated is null',
 'and b.start_date <= current_date',
 'and (b.end_date is null or b.end_date > current_date)',
 'and exists (select 1',
@@ -49,7 +50,7 @@ wwv_flow_imp_shared.create_search_config(
 ,p_badge_column_name=>'BADGE'
 ,p_icon_source_type=>'STATIC_CLASS'
 ,p_icon_css_classes=>'fa-money'
-,p_version_scn=>41799874334344
+,p_version_scn=>45054067870273
 );
 wwv_flow_imp.component_end;
 end;

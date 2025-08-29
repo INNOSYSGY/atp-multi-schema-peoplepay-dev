@@ -560,7 +560,7 @@ wwv_flow_imp_page.create_page_da_event(
 ,p_triggering_element=>'P1504_ALL_EMPLOYEES'
 ,p_condition_element=>'P1504_ALL_EMPLOYEES'
 ,p_triggering_condition_type=>'EQUALS'
-,p_triggering_expression=>'P1504_ALL_EMPLOYEES'
+,p_triggering_expression=>'0'
 ,p_bind_type=>'bind'
 ,p_execution_type=>'IMMEDIATE'
 ,p_bind_event_type=>'change'

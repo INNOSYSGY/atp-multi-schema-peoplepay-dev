@@ -30,6 +30,7 @@ wwv_flow_imp_shared.create_search_config(
 'join hr_rcm_salary b on a.id = b.emp_id',
 'join Hr_Att_Shift_Rota c on c.id = a.shift_id',
 'where a.org_id = :APP_ORG_ID',
+'and a.date_separated is null',
 'and b.start_date <= current_date',
 'and exists (select 1',
 '            from vw_useraccess ua',
@@ -45,7 +46,7 @@ wwv_flow_imp_shared.create_search_config(
 ,p_badge_column_name=>'BADGE'
 ,p_icon_source_type=>'STATIC_CLASS'
 ,p_icon_css_classes=>'fa-money'
-,p_version_scn=>41799874500359
+,p_version_scn=>45054068896629
 );
 wwv_flow_imp.component_end;
 end;

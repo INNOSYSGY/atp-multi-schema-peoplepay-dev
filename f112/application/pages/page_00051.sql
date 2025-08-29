@@ -5764,36 +5764,6 @@ wwv_flow_imp_page.create_page_validation(
 ,p_error_display_location=>'INLINE_IN_NOTIFICATION'
 );
 wwv_flow_imp_page.create_page_validation(
- p_id=>wwv_flow_imp.id(3198847530536641470)
-,p_validation_name=>'chk_workflow_mode'
-,p_validation_sequence=>70
-,p_validation=>wwv_flow_string.join(wwv_flow_t_varchar2(
-'if pkg_global_fnts.CHK_WORKFLOW_MODE(:P51_FROM_DATE, :P51_TRANSACTION_TYPE_ID)=TRUE then',
-'  return true;',
-'else',
-'  return false;',
-'end if;'))
-,p_validation2=>'PLSQL'
-,p_validation_type=>'FUNC_BODY_RETURNING_BOOLEAN'
-,p_error_message=>'Workflow mode is enabled, please select a transaction and subsequent status.'
-,p_error_display_location=>'INLINE_IN_NOTIFICATION'
-);
-wwv_flow_imp_page.create_page_validation(
- p_id=>wwv_flow_imp.id(3198847986336641471)
-,p_validation_name=>'enf_workflow_seq'
-,p_validation_sequence=>80
-,p_validation=>wwv_flow_string.join(wwv_flow_t_varchar2(
-'IF pkg_global_fnts.fn_enforce_wfl_seq(:P51_TRANSACTION_TYPE_ID, :APP_PAGE_ID, :P51_ID, :P51_STATUS) =FALSE THEN',
-'  RETURN FALSE;',
-'ELSE',
-'  RETURN TRUE;',
-'END IF;'))
-,p_validation2=>'PLSQL'
-,p_validation_type=>'FUNC_BODY_RETURNING_BOOLEAN'
-,p_error_message=>'The work flow sequence is set to enforce mode, select the next status value in sequence as it appear in the LOV.'
-,p_error_display_location=>'INLINE_IN_NOTIFICATION'
-);
-wwv_flow_imp_page.create_page_validation(
  p_id=>wwv_flow_imp.id(3198848333115641471)
 ,p_validation_name=>'chk_tin'
 ,p_validation_sequence=>90
@@ -5862,50 +5832,6 @@ wwv_flow_imp_page.create_page_validation(
 ,p_validation_type=>'FUNC_BODY_RETURNING_BOOLEAN'
 ,p_error_message=>'You are not a verifier, actual disallowed.'
 ,p_when_button_pressed=>wwv_flow_imp.id(3198775366772641422)
-,p_error_display_location=>'INLINE_IN_NOTIFICATION'
-);
-wwv_flow_imp_page.create_page_validation(
- p_id=>wwv_flow_imp.id(3198849932455641472)
-,p_validation_name=>'enforce_employee_license'
-,p_validation_sequence=>130
-,p_validation=>wwv_flow_string.join(wwv_flow_t_varchar2(
-'declare',
-'   v_get_license number(10):=0; cur_emp_count number(10):=0;',
-'',
-'begin',
-'',
-'select NO_OF_EMPLOYEES into v_get_license',
-'from APP_MODULE_LICENCE a',
-'where trunc(current_date) between trunc(START_LICENCE_DATE) and trunc(EXPIRY_LICENCE_DATE)',
-'and org_id =:P51_ORG_ID',
-'and exists (select 1',
-'            from APP_MODULE b',
-'            where a.APP_MODULE_ID=b.id',
-'            and upper(MODULE_NAME)=''RECRUITMENT''',
-'            and trunc(b.START_DATE) <= trunc(current_date)',
-'            and (b.END_DATE is null or trunc(b.END_DATE) >= trunc(current_date))',
-'            );',
-'            ',
-'select count(1) into cur_emp_count',
-'from hr_rcm_employee',
-'where Separated_Status is null',
-'and Date_Separated is null',
-'and org_id =:P51_ORG_ID',
-'and Employment_Status not in (''APPLIED ONLY'',''INTERVIEWED ONLY'',''RESERVED'',''SECONDED'');',
-'',
-'IF v_get_license < cur_emp_count then',
-'return ''You have exceeded the required license purchased of ''||v_get_license||'' current license count is ''||cur_emp_count||''.'';',
-'else',
-'return null;',
-'end if;',
-'',
-'exception',
-'  when no_data_found then ',
-'        raise_application_error(-20018, ''The system found no valid License record for this company. Contact Innosys and make payment for same.'');',
-'',
-'end;'))
-,p_validation2=>'PLSQL'
-,p_validation_type=>'FUNC_BODY_RETURNING_ERR_TEXT'
 ,p_error_display_location=>'INLINE_IN_NOTIFICATION'
 );
 wwv_flow_imp_page.create_page_validation(
@@ -6131,6 +6057,80 @@ wwv_flow_imp_page.create_page_validation(
 ,p_error_message=>'Sorry, this movement can not be executed for a future date.'
 ,p_when_button_pressed=>wwv_flow_imp.id(3198775366772641422)
 ,p_error_display_location=>'INLINE_WITH_FIELD_AND_NOTIFICATION'
+);
+wwv_flow_imp_page.create_page_validation(
+ p_id=>wwv_flow_imp.id(3198847530536641470)
+,p_validation_name=>'chk_workflow_mode'
+,p_validation_sequence=>360
+,p_validation=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'if pkg_global_fnts.CHK_WORKFLOW_MODE(:P51_FROM_DATE, :P51_TRANSACTION_TYPE_ID)=TRUE then',
+'  return true;',
+'else',
+'  return false;',
+'end if;'))
+,p_validation2=>'PLSQL'
+,p_validation_type=>'FUNC_BODY_RETURNING_BOOLEAN'
+,p_error_message=>'Workflow mode is enabled, please select a transaction and subsequent status.'
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+);
+wwv_flow_imp_page.create_page_validation(
+ p_id=>wwv_flow_imp.id(3198847986336641471)
+,p_validation_name=>'enf_workflow_seq'
+,p_validation_sequence=>370
+,p_validation=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'IF pkg_global_fnts.fn_enforce_wfl_seq(:P51_TRANSACTION_TYPE_ID, :APP_PAGE_ID, :P51_ID, :P51_STATUS) =FALSE THEN',
+'  RETURN FALSE;',
+'ELSE',
+'  RETURN TRUE;',
+'END IF;'))
+,p_validation2=>'PLSQL'
+,p_validation_type=>'FUNC_BODY_RETURNING_BOOLEAN'
+,p_error_message=>'The work flow sequence is set to enforce mode, select the next status value in sequence as it appear in the LOV.'
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+);
+wwv_flow_imp_page.create_page_validation(
+ p_id=>wwv_flow_imp.id(3198849932455641472)
+,p_validation_name=>'enforce_employee_license'
+,p_validation_sequence=>380
+,p_validation=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'declare',
+'   v_get_license number(10):=0; cur_emp_count number(10):=0;',
+'',
+'begin',
+'',
+'select NO_OF_EMPLOYEES into v_get_license',
+'from APP_MODULE_LICENCE a',
+'where trunc(current_date) between trunc(START_LICENCE_DATE) and trunc(EXPIRY_LICENCE_DATE)',
+'and org_id =:P51_ORG_ID',
+'and exists (select 1',
+'            from APP_MODULE b',
+'            where a.APP_MODULE_ID=b.id',
+'            and upper(MODULE_NAME)=''EMPLOYEE MANAGEMENT''',
+'            and trunc(b.START_DATE) <= trunc(current_date)',
+'            and (b.END_DATE is null or trunc(b.END_DATE) >= trunc(current_date))',
+'            );',
+'            ',
+'select count(1) into cur_emp_count',
+'from hr_rcm_employee',
+'where Separated_Status is null',
+'and Date_Separated is null',
+'and org_id =:P51_ORG_ID',
+'and Employment_Status not in (''APPLIED ONLY'',''INTERVIEWED ONLY'',''RESERVED'',''SECONDED'');',
+'',
+'IF v_get_license < cur_emp_count then',
+'return ''You have exceeded the required license purchased of ''||v_get_license||'' current license count is ''||cur_emp_count||''.'';',
+'else',
+'return null;',
+'end if;',
+'',
+'exception',
+'  when no_data_found then ',
+'        raise_application_error(-20018, ''The system found no valid License record for this company. Contact Innosys and make payment for same.'');',
+'',
+'end;'))
+,p_validation2=>'PLSQL'
+,p_validation_type=>'FUNC_BODY_RETURNING_ERR_TEXT'
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
 );
 wwv_flow_imp_page.create_page_da_event(
  p_id=>wwv_flow_imp.id(3198854656044641475)
