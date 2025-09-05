@@ -5,7 +5,7 @@ begin
 --   Manifest End
 wwv_flow_imp.component_begin (
  p_version_yyyy_mm_dd=>'2024.11.30'
-,p_release=>'24.2.7'
+,p_release=>'24.2.8'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>112
 ,p_default_id_offset=>115784133856313705
@@ -7353,9 +7353,9 @@ wwv_flow_imp_page.create_page_da_action(
 ,p_affected_elements=>'P1297_DEDUCTION_TYPE,P1297_PERCENT_BASIC,P1297_PERCENT_OPTION'
 ,p_attribute_01=>'SQL_STATEMENT'
 ,p_attribute_03=>wwv_flow_string.join(wwv_flow_t_varchar2(
-'SELECT case when upper(WHO_PAYS) IN (''BOTH'',''EMPLOYEE'') then ''EMPLOYEE'' else WHO_PAYS end a',
-'        , employee_ded_per * 100,',
-' percent_option_dedcode',
+'SELECT ',
+'    case when upper(WHO_PAYS) IN (''BOTH'',''EMPLOYEE'') then ''EMPLOYEE'' else WHO_PAYS end a',
+'        , employee_ded_per, percent_option_dedcode',
 'FROM PA_PCF_DEDUCTIONCODE',
 'WHERE ID =:P1297_EXPENSE_ID'))
 ,p_attribute_07=>'P1297_EXPENSE_ID'

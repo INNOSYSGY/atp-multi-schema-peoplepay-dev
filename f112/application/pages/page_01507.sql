@@ -5,7 +5,7 @@ begin
 --   Manifest End
 wwv_flow_imp.component_begin (
  p_version_yyyy_mm_dd=>'2024.11.30'
-,p_release=>'24.2.7'
+,p_release=>'24.2.8'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>112
 ,p_default_id_offset=>115784133856313705
@@ -112,7 +112,7 @@ wwv_flow_imp_page.create_report_region(
 '    PA_PMG_PAYROLLDEDUCTION.AMOUNT_DEDUCTED as AMOUNT_DEDUCTED,',
 '    PA_PMG_PAYROLLDEDUCTION.AMOUNT_DEDUCTED_YTD as AMOUNT_DEDUCTED_YTD, ',
 '    PA_PMG_PAYROLLDEDUCTION.EXPENSE_CODE as EXPENSE_CODE',
-' from PA_PMG_PAYROLLDEDUCTION PA_PMG_PAYROLLDEDUCTION',
+' from PA_PMG_PAYROLLDEDUCTIONneg PA_PMG_PAYROLLDEDUCTION',
 'WHERE PA_PMG_PAYROLLDEDUCTION.PAY_SLIPNO=:P1507_ID',
 'AND   UPPER(PA_PMG_PAYROLLDEDUCTION.DEDUCTION_TYPE)=''EMPLOYEE'''))
 ,p_display_when_condition=>wwv_flow_string.join(wwv_flow_t_varchar2(
@@ -243,7 +243,7 @@ wwv_flow_imp_page.create_report_region(
 '    A.DESCRIPTION as DESCRIPTION,',
 '    B.QUANTITY as QUANTITY,',
 '    B.RATE as RATE',
-' from PA_PMG_PAYROLLINCOME B JOIN HR_RCM_EMPENTITLE C ON C.ID=B.EMPENT_ID',
+' from PA_PMG_PAYROLLINCOMEneg B JOIN HR_RCM_EMPENTITLE C ON C.ID=B.EMPENT_ID',
 ' JOIN PA_PCF_INCOMECODE A ON A.ID=C.INCOME_CODE_ID',
 ' WHERE  B.PAY_SLIPNO=:P1507_ID'))
 ,p_display_when_condition=>wwv_flow_string.join(wwv_flow_t_varchar2(

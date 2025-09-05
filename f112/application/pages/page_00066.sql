@@ -5,7 +5,7 @@ begin
 --   Manifest End
 wwv_flow_imp.component_begin (
  p_version_yyyy_mm_dd=>'2024.11.30'
-,p_release=>'24.2.7'
+,p_release=>'24.2.8'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>112
 ,p_default_id_offset=>115784133856313705
@@ -1302,7 +1302,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_column_alignment=>'RIGHT'
 ,p_format_mask=>'FML999G999G999G999G990D00'
 ,p_display_condition_type=>'EXPRESSION'
-,p_display_condition=>':G_PARSING_SCHEMA = ''TEMPLATE_APPV8'''
+,p_display_condition=>':G_PARSING_SCHEMA = ''GAFOORS'''
 ,p_display_condition2=>'PLSQL'
 ,p_use_as_row_header=>'N'
 );
@@ -1317,7 +1317,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_column_alignment=>'RIGHT'
 ,p_format_mask=>'FML999G999G999G999G990D00'
 ,p_display_condition_type=>'EXPRESSION'
-,p_display_condition=>':G_PARSING_SCHEMA = ''TEMPLATE_APPV8'''
+,p_display_condition=>':G_PARSING_SCHEMA = ''GAFOORS'''
 ,p_display_condition2=>'PLSQL'
 ,p_use_as_row_header=>'N'
 );
@@ -1332,7 +1332,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_column_alignment=>'RIGHT'
 ,p_format_mask=>'FML999G999G999G999G990D00'
 ,p_display_condition_type=>'EXPRESSION'
-,p_display_condition=>':G_PARSING_SCHEMA = ''TEMPLATE_APPV8'''
+,p_display_condition=>':G_PARSING_SCHEMA = ''GAFOORS'''
 ,p_display_condition2=>'PLSQL'
 ,p_use_as_row_header=>'N'
 );
