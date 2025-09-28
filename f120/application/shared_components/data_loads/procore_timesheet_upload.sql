@@ -1,0 +1,339 @@
+prompt --application/shared_components/data_loads/procore_timesheet_upload
+begin
+--   Manifest
+--     DATA LOAD: Procore Timesheet Upload
+--   Manifest End
+wwv_flow_imp.component_begin (
+ p_version_yyyy_mm_dd=>'2024.11.30'
+,p_release=>'24.2.8'
+,p_default_workspace_id=>31592798490575853
+,p_default_application_id=>120
+,p_default_id_offset=>188895268110624634
+,p_default_owner=>'TEMPLATE_APPV8'
+);
+wwv_flow_imp_shared.create_data_profile(
+ p_id=>wwv_flow_imp.id(440404075174212957)
+,p_name=>'Procore Timesheet Upload'
+,p_format=>'CSV'
+,p_encoding=>'utf-8'
+,p_csv_enclosed=>'"'
+,p_has_header_row=>true
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(440404377845212992)
+,p_data_profile_id=>wwv_flow_imp.id(440404075174212957)
+,p_name=>'EMPLOYEE'
+,p_sequence=>1
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>50
+,p_selector_type=>'NAME'
+,p_selector=>'EMPLOYEE'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(440404620281212993)
+,p_data_profile_id=>wwv_flow_imp.id(440404075174212957)
+,p_name=>'EMPLOYEE_ID'
+,p_sequence=>2
+,p_is_primary_key=>true
+,p_column_type=>'DATA'
+,p_data_type=>'NUMBER'
+,p_selector_type=>'NAME'
+,p_selector=>'EMPLOYEE_ID'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(440404992268212993)
+,p_data_profile_id=>wwv_flow_imp.id(440404075174212957)
+,p_name=>'STATUS'
+,p_sequence=>3
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>50
+,p_selector_type=>'NAME'
+,p_selector=>'STATUS'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(440405209620212994)
+,p_data_profile_id=>wwv_flow_imp.id(440404075174212957)
+,p_name=>'CLASSIFICATION'
+,p_sequence=>4
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>50
+,p_selector_type=>'NAME'
+,p_selector=>'CLASSIFICATION'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(440405527801212994)
+,p_data_profile_id=>wwv_flow_imp.id(440404075174212957)
+,p_name=>'CLASS_CODE'
+,p_sequence=>5
+,p_is_primary_key=>true
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>4000
+,p_selector_type=>'NAME'
+,p_selector=>'CLASS_CODE'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(440405860282212994)
+,p_data_profile_id=>wwv_flow_imp.id(440404075174212957)
+,p_name=>'PROJECT'
+,p_sequence=>6
+,p_is_primary_key=>true
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>4000
+,p_selector_type=>'NAME'
+,p_selector=>'PROJECT'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(440406191737212994)
+,p_data_profile_id=>wwv_flow_imp.id(440404075174212957)
+,p_name=>'WORK_DATE'
+,p_sequence=>7
+,p_is_primary_key=>true
+,p_column_type=>'DATA'
+,p_data_type=>'DATE'
+,p_format_mask=>'mm/dd/yyyy'
+,p_has_time_zone=>false
+,p_selector_type=>'NAME'
+,p_selector=>'DATE_'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(440406482699212995)
+,p_data_profile_id=>wwv_flow_imp.id(440404075174212957)
+,p_name=>'SUB_JOB'
+,p_sequence=>8
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>32767
+,p_selector_type=>'NAME'
+,p_selector=>'SUB_JOB'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(440406758969212995)
+,p_data_profile_id=>wwv_flow_imp.id(440404075174212957)
+,p_name=>'SUB_JOB_CODE'
+,p_sequence=>9
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>32767
+,p_selector_type=>'NAME'
+,p_selector=>'SUB_JOB_CODE'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(440407003701212995)
+,p_data_profile_id=>wwv_flow_imp.id(440404075174212957)
+,p_name=>'COST_CODE'
+,p_sequence=>10
+,p_is_primary_key=>true
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>4000
+,p_selector_type=>'NAME'
+,p_selector=>'COST_CODE'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(440407341191212995)
+,p_data_profile_id=>wwv_flow_imp.id(440404075174212957)
+,p_name=>'COST_CODE_NUMBER'
+,p_sequence=>11
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>50
+,p_selector_type=>'NAME'
+,p_selector=>'COST_CODE_NUMBER'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(440407650786212995)
+,p_data_profile_id=>wwv_flow_imp.id(440404075174212957)
+,p_name=>'LOCATION'
+,p_sequence=>12
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>32767
+,p_selector_type=>'NAME'
+,p_selector=>'LOCATION'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(440407913616213023)
+,p_data_profile_id=>wwv_flow_imp.id(440404075174212957)
+,p_name=>'START_TIME__AMERICA_NEW_YORK_GMT__05_00_'
+,p_sequence=>13
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>32767
+,p_selector_type=>'NAME'
+,p_selector=>'START_TIME__AMERICA_NEW_YORK_GMT__05_00_'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(440408248116213023)
+,p_data_profile_id=>wwv_flow_imp.id(440404075174212957)
+,p_name=>'STOP_TIME__AMERICA_NEW_YORK_GMT__05_00_'
+,p_sequence=>14
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>32767
+,p_selector_type=>'NAME'
+,p_selector=>'STOP_TIME__AMERICA_NEW_YORK_GMT__05_00_'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(440408493719213023)
+,p_data_profile_id=>wwv_flow_imp.id(440404075174212957)
+,p_name=>'LUNCH_START'
+,p_sequence=>15
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>32767
+,p_selector_type=>'NAME'
+,p_selector=>'LUNCH_START'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(440408799655213024)
+,p_data_profile_id=>wwv_flow_imp.id(440404075174212957)
+,p_name=>'LUNCH_STOP'
+,p_sequence=>16
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>32767
+,p_selector_type=>'NAME'
+,p_selector=>'LUNCH_STOP'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(440409103176213024)
+,p_data_profile_id=>wwv_flow_imp.id(440404075174212957)
+,p_name=>'LUNCH_TIME'
+,p_sequence=>17
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>32767
+,p_selector_type=>'NAME'
+,p_selector=>'LUNCH_TIME'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(440409445154213024)
+,p_data_profile_id=>wwv_flow_imp.id(440404075174212957)
+,p_name=>'TOTAL_TIME'
+,p_sequence=>18
+,p_is_primary_key=>true
+,p_column_type=>'DATA'
+,p_data_type=>'NUMBER'
+,p_selector_type=>'NAME'
+,p_selector=>'TOTAL_TIME'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(440409707330213024)
+,p_data_profile_id=>wwv_flow_imp.id(440404075174212957)
+,p_name=>'TIME_TYPE'
+,p_sequence=>19
+,p_is_primary_key=>true
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>4000
+,p_selector_type=>'NAME'
+,p_selector=>'TIME_TYPE'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(440410051787213024)
+,p_data_profile_id=>wwv_flow_imp.id(440404075174212957)
+,p_name=>'TIME_TYPE_ABBREVIATION'
+,p_sequence=>20
+,p_column_type=>'DATA'
+,p_data_type=>'NUMBER'
+,p_selector_type=>'NAME'
+,p_selector=>'TIME_TYPE_ABBREVIATION'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(440410381737213025)
+,p_data_profile_id=>wwv_flow_imp.id(440404075174212957)
+,p_name=>'BILLABLE'
+,p_sequence=>21
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>50
+,p_selector_type=>'NAME'
+,p_selector=>'BILLABLE_'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(440410644186213025)
+,p_data_profile_id=>wwv_flow_imp.id(440404075174212957)
+,p_name=>'APPROVED_BY'
+,p_sequence=>22
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>50
+,p_selector_type=>'NAME'
+,p_selector=>'APPROVED_BY'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(440410950812213025)
+,p_data_profile_id=>wwv_flow_imp.id(440404075174212957)
+,p_name=>'CLOCK_IN_LOCATION'
+,p_sequence=>23
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>32767
+,p_selector_type=>'NAME'
+,p_selector=>'CLOCK_IN_LOCATION'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(440411292059213025)
+,p_data_profile_id=>wwv_flow_imp.id(440404075174212957)
+,p_name=>'CLOCK_OUT_LOCATION'
+,p_sequence=>24
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>32767
+,p_selector_type=>'NAME'
+,p_selector=>'CLOCK_OUT_LOCATION'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(440411589437213026)
+,p_data_profile_id=>wwv_flow_imp.id(440404075174212957)
+,p_name=>'SIGNATURE_STATUS'
+,p_sequence=>25
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>50
+,p_selector_type=>'NAME'
+,p_selector=>'SIGNATURE_STATUS'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(440411843751213026)
+,p_data_profile_id=>wwv_flow_imp.id(440404075174212957)
+,p_name=>'CREATED_BY'
+,p_sequence=>26
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>50
+,p_selector_type=>'NAME'
+,p_selector=>'CREATED_BY'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(440412172091213026)
+,p_data_profile_id=>wwv_flow_imp.id(440404075174212957)
+,p_name=>'DESCRIPTION'
+,p_sequence=>27
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>32767
+,p_selector_type=>'NAME'
+,p_selector=>'DESCRIPTION'
+);
+wwv_flow_imp_shared.create_load_table(
+ p_id=>wwv_flow_imp.id(440412365226213026)
+,p_name=>'Procore Timesheet Upload'
+,p_static_id=>'procore_timesheet_upload'
+,p_target_type=>'TABLE'
+,p_table_name=>'PROCORE_TIMESHEET_IMPORT'
+,p_data_profile_id=>wwv_flow_imp.id(440404075174212957)
+,p_loading_method=>'MERGE'
+,p_commit_interval=>200
+,p_error_handling=>'ABORT'
+,p_skip_validation=>'N'
+,p_version_scn=>1
+);
+wwv_flow_imp.component_end;
+end;
+/
