@@ -5,7 +5,7 @@ begin
 --   Manifest End
 wwv_flow_imp.component_begin (
  p_version_yyyy_mm_dd=>'2024.11.30'
-,p_release=>'24.2.8'
+,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
 ,p_default_id_offset=>188895268110624634
@@ -293,7 +293,7 @@ wwv_flow_imp_page.create_page_button(
 ,p_button_is_hot=>'Y'
 ,p_button_image_alt=>'Chart'
 ,p_button_position=>'EDIT'
-,p_button_redirect_url=>'f?p=&APP_ID.:1456:&SESSION.::&DEBUG.:RP,1456:P1456_RETURN_PAGE:1295'
+,p_button_redirect_url=>'f?p=&APP_ID.:1456:&SESSION.::&DEBUG.::P1456_RETURN_PAGE,P1456_ORG_STRUCTURE,P1456_DEPARTMENTS:1295,&P1295_ORG_STRUCTURE_ID.,&P1295_ID.'
 ,p_button_condition=>'P1295_ID'
 ,p_button_condition_type=>'ITEM_IS_NOT_NULL'
 ,p_icon_css_classes=>'fa-user-chart'

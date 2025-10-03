@@ -5,7 +5,7 @@ begin
 --   Manifest End
 wwv_flow_imp.component_begin (
  p_version_yyyy_mm_dd=>'2024.11.30'
-,p_release=>'24.2.8'
+,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
 ,p_default_id_offset=>188895268110624634
@@ -5758,7 +5758,6 @@ wwv_flow_imp_page.create_region_column(
 ,p_source_type=>'DB_COLUMN'
 ,p_source_expression=>'EMP_ID'
 ,p_data_type=>'NUMBER'
-,p_session_state_data_type=>'VARCHAR2'
 ,p_is_query_only=>false
 ,p_item_type=>'NATIVE_POPUP_LOV'
 ,p_heading=>'Employee'
@@ -5777,7 +5776,7 @@ wwv_flow_imp_page.create_region_column(
 ,p_lov_type=>'SQL_QUERY'
 ,p_lov_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
 'SELECT  ',
-'initcap(Surname || 1, 1 || nvl(z.First_Name, 11)) ||1 1||nvl(Middle_Name,11) ||1(1||EMP_COMPANY_NO||1)1 a,x.ID b',
+'initcap(Surname || '', '' || nvl(z.First_Name, '''')) ||'' ''||nvl(Middle_Name,'''') ||''(''||EMP_COMPANY_NO||'')'' a,x.ID b',
 '',
 'from vw_employee x join hr_rcm_individual z on z.id=x.ind_id',
 'where exists(select 1        ',
@@ -5790,7 +5789,7 @@ wwv_flow_imp_page.create_region_column(
 '        and X.ORGDTL_ID=decode(pkg_security.fn_testfinegradeOrgStruct(:APP_USER), 0, X.ORGDTL_ID, w.org_structure_id)         ',
 '          )',
 'and org_id=:APP_ORG_ID',
-'and upper(x.EMPLOYMENT_STATUS) = upper(1ACTIVE1)      ',
+'and upper(x.EMPLOYMENT_STATUS) = upper(''ACTIVE'')      ',
 'and x.id = nvl(:P12817_EMPLOYEE, x.id)',
 'and x.orgdtl_id = nvl(:P12817_DEPARTMENT,x.orgdtl_id)',
 'order by 1'))

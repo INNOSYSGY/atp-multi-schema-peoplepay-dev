@@ -5,7 +5,7 @@ begin
 --   Manifest End
 wwv_flow_imp.component_begin (
  p_version_yyyy_mm_dd=>'2024.11.30'
-,p_release=>'24.2.8'
+,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
 ,p_default_id_offset=>188895268110624634
@@ -133,8 +133,17 @@ wwv_flow_imp_page.create_page_plug(
 'SELECT ',
 '    null link,  ',
 '    to_char(p.id) key_value,  ',
-unistr('    ''<div  style = " color: '' || get_color_at_index(level) ||  ''; width : 100%;" > ''||  ''<b>'' || replace(position_name, '''''''', ''\2019'') || ''</b>'' || ''<br>'' || replace(c.grade_description, '''''''', ''\2019'') || ''<br>'' || ''Required: '' || p.no_required_max || ''</div')
-||'>'' display_value, ',
+unistr('    ''<div  style = " color: '' || get_color_at_index(level) || ''; width : 100%;" > ''||  ''<b>'' || replace(position_name, '''''''', ''\2019'')  '),
+'    || ''</b>'' || ''<br>'' ',
+'    || case when trim(dtl.unit_name) is not null then',
+'        ''<span style="color: #000; font-size: 10.5px;">'' ',
+unistr('         || ''('' || replace(dtl.unit_name, '''''''', ''\2019'') || '')'' '),
+'         || ''</span>''',
+'       else ',
+'         ''<i style="color: #808080; font-size: 13px;">No Department</i>''',
+'     end',
+'    || ''<br>'' || ''Required: '' ',
+'    || p.no_required_max || ''</div>'' display_value, ',
 '    case when p.id = :P95_POSITION then null else to_char(p.report_to) end parent_key',
 'FROM ',
 '    hr_hcf_position p ',

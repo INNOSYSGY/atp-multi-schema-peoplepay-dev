@@ -5,7 +5,7 @@ begin
 --   Manifest End
 wwv_flow_imp.component_begin (
  p_version_yyyy_mm_dd=>'2024.11.30'
-,p_release=>'24.2.8'
+,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
 ,p_default_id_offset=>188895268110624634
@@ -332,7 +332,7 @@ wwv_flow_imp_page.create_page_plug(
 '    <div id="helpWidget" style="font-size: 18px;">?</div>',
 '    <div id="helpWidgetContent">',
 '      <span class="closeBtn">&times;</span>',
-unistr('      <h3 style="font-size:18px; display:flex; justify-content: space-between; flex-wrap: wrap; align-items: center;">'' || v_page_name || ''<span id="darkModeToggle" style="cursor:pointer; font-size:18px;">Dark\D83C\DF19</span></h3>'),
+unistr('      <h3 style="font-size:18px; display:flex; justify-content: space-between; flex-wrap: wrap; align-items: center;">'' || v_page_name|| ''<span id="darkModeToggle" style="cursor:pointer; font-size:18px;">Dark Mode\D83C\DF19</span></h3>'),
 '      <div class="helpCardContainer">',
 '    '');',
 '',
@@ -403,7 +403,7 @@ unistr('      <h3 style="font-size:18px; display:flex; justify-content: space-be
 '          // Dark mode toggle',
 '          $("#helpWidgetContent").off("click", "#darkModeToggle").on("click", "#darkModeToggle", function(){',
 '            $("#helpWidgetContent").toggleClass("dark-mode");',
-unistr('            $(this).text($("#helpWidgetContent").hasClass("dark-mode") ? "Light\2600\FE0F" : "Dark\D83C\DF19");'),
+unistr('            $(this).text($("#helpWidgetContent").hasClass("dark-mode") ? "Light Mode\2600\FE0F" : "Dark Mode\D83C\DF19");'),
 '          });',
 '        });',
 '      }, 600);',
@@ -412,9 +412,7 @@ unistr('            $(this).text($("#helpWidgetContent").hasClass("dark-mode") ?
 'END;',
 ''))
 ,p_plug_source_type=>'NATIVE_PLSQL'
-,p_plug_display_condition_type=>'EXPRESSION'
-,p_plug_display_when_condition=>':APP_PAGE_ID != 101'
-,p_plug_display_when_cond2=>'PLSQL'
+,p_plug_display_condition_type=>'NEVER'
 );
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(130459133780198136)
@@ -689,7 +687,7 @@ wwv_flow_imp_page.create_page_da_action(
 '            x02: $v("P0_CURRENT_PAGE")   // page id',
 '        },',
 '        {',
-'            dataType: "html",  // very important, since your PL/SQL returns HTML',
+'            dataType: "html",  // very important, since PL/SQL returns HTML',
 '            success: function(data){',
 '                container.html(data);',
 '                popup.show();',

@@ -5,7 +5,7 @@ begin
 --   Manifest End
 wwv_flow_imp.component_begin (
  p_version_yyyy_mm_dd=>'2024.11.30'
-,p_release=>'24.2.8'
+,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
 ,p_default_id_offset=>188895268110624634
@@ -81,6 +81,7 @@ wwv_flow_imp_page.create_page_plug(
 '   join hr_hcf_lookup K on K.id = B.FREEPAY_NAME_ID',
 'WHERE A.period_start between :P70_START_DATE and  :P70_END_DATE',
 'and A.org_id=:APP_ORG_ID',
+'AND upper(payment_type_hist) = NVL(upper(:P70_PAYMENT_TYPE), upper(payment_type_hist))',
 'AND exists ( ',
 '              select 1',
 '              FROM VW_USERACCESS x',
@@ -89,7 +90,7 @@ wwv_flow_imp_page.create_page_plug(
 '             and upper(a.payment_type_hist)=x.payment_type              ',
 '              )'))
 ,p_plug_source_type=>'NATIVE_IR'
-,p_ajax_items_to_submit=>'P70_START_DATE,P70_END_DATE'
+,p_ajax_items_to_submit=>'P70_START_DATE,P70_END_DATE,P70_PAYMENT_TYPE'
 ,p_prn_content_disposition=>'ATTACHMENT'
 ,p_prn_units=>'INCHES'
 ,p_prn_paper_size=>'LETTER'
@@ -419,7 +420,8 @@ wwv_flow_imp_page.create_page_plug(
 ',freepay, freepay_ytd ,freepay_mid ,freepay_upper ,freepay_mid_ytd ,freepay_upper_ytd ,lower_tax_ceiling,lower_tax_ceiling_ytd, net_pay, earnings_period_id,gross_nis_bkpay, medical_sum',
 'from "PA_PMG_PAYROLLDTL" V',
 'WHERE v.ORG_ID =:APP_ORG_ID',
-'AND period_start between :P70_START_DATE_1 and  :P70_END_DATE_1',
+'AND period_start between :P70_START_DATE and  :P70_END_DATE',
+'AND upper(payment_type_hist) = NVL(upper(:P70_PAYMENT_TYPE), upper(payment_type_hist))',
 'AND exists ( ',
 '              select 1',
 '              FROM VW_USERACCESS A ',
@@ -428,7 +430,7 @@ wwv_flow_imp_page.create_page_plug(
 '             and upper(v.payment_type_hist)=a.payment_type',
 '                    )'))
 ,p_plug_source_type=>'NATIVE_IR'
-,p_ajax_items_to_submit=>'P70_START_DATE_1,P70_END_DATE_1'
+,p_ajax_items_to_submit=>'P70_START_DATE_1,P70_END_DATE_1,P70_PAYMENT_TYPE'
 );
 wwv_flow_imp_page.create_worksheet(
  p_id=>wwv_flow_imp.id(2981649859287680441)
@@ -886,19 +888,20 @@ wwv_flow_imp_page.create_page_plug(
 'tax_amount_bkpay,',
 'temp1, temp2',
 'from "PA_PMG_PAYROLLDTL" V',
-'WHERE ORG_ID =:APP_ORG_ID',
+'WHERE ORG_ID = :APP_ORG_ID',
 'AND period_start between :P70_START_DATE and  :P70_END_DATE',
+'AND upper(payment_type_hist) = NVL(upper(:P70_PAYMENT_TYPE), upper(payment_type_hist))',
 'AND exists ( ',
 '              select 1',
 '              FROM VW_USERACCESS A',
 '              where v.org_id=a.org_id',
 '              and UPPER(v.employment_class_hist)=pkg_global_fnts.Get_Lookup_Col(a.employment_class_id, ''VALUE_DESCRIPTION'')',
 '             and upper(v.payment_type_hist)=a.payment_type',
-'             ',
+'        ',
 '              )',
 '              '))
 ,p_plug_source_type=>'NATIVE_IR'
-,p_ajax_items_to_submit=>'P70_START_DATE,P70_END_DATE'
+,p_ajax_items_to_submit=>'P70_START_DATE,P70_END_DATE,P70_PAYMENT_TYPE'
 );
 wwv_flow_imp_page.create_worksheet(
  p_id=>wwv_flow_imp.id(3716587722532377171)
@@ -2481,6 +2484,7 @@ wwv_flow_imp_page.create_page_plug(
 ' JOIN HR_RCM_EMPENTITLE C ON C.ID=B.EMPENT_ID',
 ' JOIN PA_PCF_INCOMECODE A ON A.ID=C.INCOME_CODE_ID',
 ' WHERE period_start between :P70_START_DATE and  :P70_END_DATE',
+' AND upper(payment_type_hist) = NVL(upper(:P70_PAYMENT_TYPE), upper(payment_type_hist))',
 'AND exists ( ',
 '              select 1',
 '              FROM VW_USERACCESS A',
@@ -2489,7 +2493,7 @@ wwv_flow_imp_page.create_page_plug(
 '             and upper(PAYDTL.payment_type_hist)=a.payment_type',
 '               )'))
 ,p_plug_source_type=>'NATIVE_IR'
-,p_ajax_items_to_submit=>'P70_START_DATE,P70_END_DATE'
+,p_ajax_items_to_submit=>'P70_START_DATE,P70_END_DATE,P70_PAYMENT_TYPE'
 ,p_prn_content_disposition=>'ATTACHMENT'
 ,p_prn_units=>'INCHES'
 ,p_prn_paper_size=>'LETTER'
@@ -2701,6 +2705,7 @@ wwv_flow_imp_page.create_page_plug(
 ' join PA_PCF_DEDUCTIONCODE c on c.id = b.expense_id',
 ' --join hr_rcm_employee e on paydtl.emp_id = e.id',
 'WHERE period_start between :P70_START_DATE and  :P70_END_DATE',
+'AND upper(paydtl.payment_type_hist) = NVL(upper(:P70_PAYMENT_TYPE), upper(paydtl.payment_type_hist))',
 'AND exists ( ',
 '              select 1',
 '              FROM VW_USERACCESS A ',
@@ -2709,7 +2714,7 @@ wwv_flow_imp_page.create_page_plug(
 '             and upper(PAYDTL.payment_type_hist)=a.payment_type              ',
 '              )'))
 ,p_plug_source_type=>'NATIVE_IR'
-,p_ajax_items_to_submit=>'P70_START_DATE,P70_END_DATE'
+,p_ajax_items_to_submit=>'P70_START_DATE,P70_END_DATE,P70_PAYMENT_TYPE'
 ,p_prn_content_disposition=>'ATTACHMENT'
 ,p_prn_units=>'INCHES'
 ,p_prn_paper_size=>'LETTER'
@@ -2913,6 +2918,7 @@ wwv_flow_imp_page.create_page_button(
 ,p_button_image_alt=>'Return'
 ,p_button_position=>'EDIT'
 ,p_button_redirect_url=>'f?p=&APP_ID.:23:&SESSION.::&DEBUG.:::'
+,p_button_condition_type=>'NEVER'
 );
 wwv_flow_imp_page.create_page_button(
  p_id=>wwv_flow_imp.id(2966753497246435206)
@@ -2928,6 +2934,90 @@ wwv_flow_imp_page.create_page_button(
 ,p_button_redirect_url=>'f?p=&APP_ID.:1:&SESSION.::&DEBUG.:::'
 );
 wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(199799654028167631)
+,p_name=>'P70_PAYMENT_TYPE'
+,p_item_sequence=>20
+,p_item_plug_id=>wwv_flow_imp.id(3658767909372033079)
+,p_prompt=>'Payment Type'
+,p_display_as=>'NATIVE_POPUP_LOV'
+,p_named_lov=>'PAYMENT_TYPE_FULL'
+,p_lov=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'select distinct VALUE_DESCRIPTION A, UPPER(VALUE_DESCRIPTION) B',
+'from  HR_HCF_LOOKUP',
+'where upper(table_name)=''TBLPAYMENTTYPE''',
+'ORDER BY 1',
+''))
+,p_lov_display_null=>'YES'
+,p_lov_null_text=>'-- ALL --'
+,p_cSize=>30
+,p_begin_on_new_line=>'N'
+,p_field_template=>2318601014859922299
+,p_item_template_options=>'#DEFAULT#:margin-right-lg'
+,p_lov_display_extra=>'NO'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'case_sensitive', 'N',
+  'display_as', 'POPUP',
+  'fetch_on_search', 'N',
+  'initial_fetch', 'FIRST_ROWSET',
+  'manual_entry', 'N',
+  'match_type', 'CONTAINS',
+  'min_chars', '0')).to_clob
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(199800600370167641)
+,p_name=>'P70_NEW'
+,p_item_sequence=>50
+,p_item_plug_id=>wwv_flow_imp.id(3658767909372033079)
+,p_prompt=>'VALUE'
+,p_display_as=>'NATIVE_TEXT_FIELD'
+,p_cSize=>30
+,p_field_template=>2318601014859922299
+,p_item_template_options=>'#DEFAULT#'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'disabled', 'N',
+  'submit_when_enter_pressed', 'N',
+  'subtype', 'TEXT',
+  'trim_spaces', 'BOTH')).to_clob
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(214719766777312401)
+,p_name=>'P70_FILTER_EARN_PRD'
+,p_item_sequence=>10
+,p_item_plug_id=>wwv_flow_imp.id(3658767909372033079)
+,p_prompt=>'Earn Period'
+,p_display_as=>'NATIVE_POPUP_LOV'
+,p_lov=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'SELECT a,B',
+'FROM',
+'    (  SELECT DISTINCT TO_CHAR(END_DATE,''MONTH'')||'' ''||company_year A',
+'      , company_year||EXTRACT(month FROM END_DATE) b',
+'      ,  company_year C, EXTRACT(month FROM END_DATE) D',
+'      FROM PA_PCF_EARNINGPERIOD  v join HR_HCF_COMPANYYEAR x on x.id = v.company_year_id',
+'     where  exists ( ',
+'              select 1',
+'              FROM VW_USERACCESS A ',
+'              where v.org_id=a.org_id      ',
+'              and v.payment_type=a.payment_type ',
+'              and v.employment_class_id=a.employment_class_id ',
+'                    ) ',
+'      )',
+'ORDER BY C DESC, D DESC    '))
+,p_lov_display_null=>'YES'
+,p_lov_null_text=>'-- None --'
+,p_cSize=>30
+,p_field_template=>2318601014859922299
+,p_item_template_options=>'#DEFAULT#'
+,p_lov_display_extra=>'YES'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'case_sensitive', 'N',
+  'display_as', 'POPUP',
+  'fetch_on_search', 'N',
+  'initial_fetch', 'FIRST_ROWSET',
+  'manual_entry', 'N',
+  'match_type', 'CONTAINS',
+  'min_chars', '0')).to_clob
+);
+wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(1896834372088384592)
 ,p_name=>'P70_START_DATE_1'
 ,p_item_sequence=>10
@@ -2936,6 +3026,7 @@ wwv_flow_imp_page.create_page_item(
 ,p_format_mask=>'DD-MON-YYYY'
 ,p_display_as=>'NATIVE_DATE_PICKER_APEX'
 ,p_cSize=>12
+,p_display_when_type=>'NEVER'
 ,p_field_template=>2318601014859922299
 ,p_item_template_options=>'#DEFAULT#'
 ,p_encrypt_session_state_yn=>'N'
@@ -2957,6 +3048,7 @@ wwv_flow_imp_page.create_page_item(
 ,p_display_as=>'NATIVE_DATE_PICKER_APEX'
 ,p_cSize=>12
 ,p_begin_on_new_line=>'N'
+,p_display_when_type=>'NEVER'
 ,p_field_template=>2318601014859922299
 ,p_item_template_options=>'#DEFAULT#'
 ,p_encrypt_session_state_yn=>'N'
@@ -2971,8 +3063,9 @@ wwv_flow_imp_page.create_page_item(
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(2966698816582435117)
 ,p_name=>'P70_START_DATE'
-,p_item_sequence=>20
+,p_item_sequence=>30
 ,p_item_plug_id=>wwv_flow_imp.id(3658767909372033079)
+,p_use_cache_before_default=>'NO'
 ,p_prompt=>'Start Date'
 ,p_format_mask=>'DD-MON-YYYY'
 ,p_display_as=>'NATIVE_DATE_PICKER_APEX'
@@ -2993,6 +3086,7 @@ wwv_flow_imp_page.create_page_item(
 ,p_name=>'P70_END_DATE'
 ,p_item_sequence=>40
 ,p_item_plug_id=>wwv_flow_imp.id(3658767909372033079)
+,p_use_cache_before_default=>'NO'
 ,p_prompt=>'End Date'
 ,p_format_mask=>'DD-MON-YYYY'
 ,p_display_as=>'NATIVE_DATE_PICKER_APEX'
@@ -3165,6 +3259,168 @@ wwv_flow_imp_page.create_page_da_action(
 ,p_action=>'NATIVE_REFRESH'
 ,p_affected_elements_type=>'REGION'
 ,p_affected_region_id=>wwv_flow_imp.id(3965475576890302799)
+,p_attribute_01=>'N'
+);
+wwv_flow_imp_page.create_page_da_event(
+ p_id=>wwv_flow_imp.id(199799736402167632)
+,p_name=>'refersh_payment_type'
+,p_event_sequence=>70
+,p_triggering_element_type=>'ITEM'
+,p_triggering_element=>'P70_PAYMENT_TYPE'
+,p_bind_type=>'bind'
+,p_execution_type=>'IMMEDIATE'
+,p_bind_event_type=>'change'
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(199799848555167633)
+,p_event_id=>wwv_flow_imp.id(199799736402167632)
+,p_event_result=>'TRUE'
+,p_action_sequence=>10
+,p_execute_on_page_init=>'N'
+,p_action=>'NATIVE_REFRESH'
+,p_affected_elements_type=>'REGION'
+,p_affected_region_id=>wwv_flow_imp.id(3716587542988377160)
+,p_attribute_01=>'N'
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(199799943168167634)
+,p_event_id=>wwv_flow_imp.id(199799736402167632)
+,p_event_result=>'TRUE'
+,p_action_sequence=>20
+,p_execute_on_page_init=>'N'
+,p_action=>'NATIVE_REFRESH'
+,p_affected_elements_type=>'REGION'
+,p_affected_region_id=>wwv_flow_imp.id(3965475576890302799)
+,p_attribute_01=>'N'
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(199800034148167635)
+,p_event_id=>wwv_flow_imp.id(199799736402167632)
+,p_event_result=>'TRUE'
+,p_action_sequence=>30
+,p_execute_on_page_init=>'N'
+,p_action=>'NATIVE_REFRESH'
+,p_affected_elements_type=>'REGION'
+,p_affected_region_id=>wwv_flow_imp.id(3965484047844422158)
+,p_attribute_01=>'N'
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(199800112428167636)
+,p_event_id=>wwv_flow_imp.id(199799736402167632)
+,p_event_result=>'TRUE'
+,p_action_sequence=>40
+,p_execute_on_page_init=>'N'
+,p_action=>'NATIVE_REFRESH'
+,p_affected_elements_type=>'REGION'
+,p_affected_region_id=>wwv_flow_imp.id(477043478561839838)
+,p_attribute_01=>'N'
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(199800364921167638)
+,p_event_id=>wwv_flow_imp.id(199799736402167632)
+,p_event_result=>'TRUE'
+,p_action_sequence=>50
+,p_execute_on_page_init=>'N'
+,p_action=>'NATIVE_REFRESH'
+,p_affected_elements_type=>'REGION'
+,p_affected_region_id=>wwv_flow_imp.id(2974098351857291086)
+,p_attribute_01=>'N'
+);
+wwv_flow_imp_page.create_page_da_event(
+ p_id=>wwv_flow_imp.id(214719827974312402)
+,p_name=>'set_dates'
+,p_event_sequence=>80
+,p_triggering_element_type=>'ITEM'
+,p_triggering_element=>'P70_FILTER_EARN_PRD'
+,p_condition_element=>'P70_FILTER_EARN_PRD'
+,p_triggering_condition_type=>'NOT_NULL'
+,p_bind_type=>'bind'
+,p_execution_type=>'IMMEDIATE'
+,p_bind_event_type=>'change'
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(214719965702312403)
+,p_event_id=>wwv_flow_imp.id(214719827974312402)
+,p_event_result=>'TRUE'
+,p_action_sequence=>10
+,p_execute_on_page_init=>'N'
+,p_action=>'NATIVE_SET_VALUE'
+,p_affected_elements_type=>'ITEM'
+,p_affected_elements=>'P70_START_DATE,P70_END_DATE'
+,p_attribute_01=>'FUNCTION_BODY'
+,p_attribute_06=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'DECLARE',
+'    l_year  NUMBER;',
+'    l_month NUMBER;',
+'BEGIN',
+unistr('    -- Parse return value: e.g., ''20241'' \2192 year=2024, month=1'),
+'    l_year  := TO_NUMBER(SUBSTR(:P70_FILTER_EARN_PRD, 1, 4));',
+'    l_month := TO_NUMBER(SUBSTR(:P70_FILTER_EARN_PRD, 5));',
+'',
+'    -- Get min start and max end for that year/month',
+'    SELECT ',
+'        MIN(v.START_DATE),',
+'        MAX(v.END_DATE) - 1',
+'    INTO ',
+'        :P70_START_DATE,',
+'        :P70_END_DATE',
+'        ',
+'    FROM PA_PCF_EARNINGPERIOD v',
+'    JOIN HR_HCF_COMPANYYEAR x ON x.id = v.company_year_id',
+'    WHERE x.company_year = l_year',
+'      AND EXTRACT(MONTH FROM v.END_DATE) = l_month',
+'      AND EXISTS (',
+'          SELECT 1',
+'          FROM VW_USERACCESS a',
+'          WHERE v.org_id = a.org_id',
+'            AND v.payment_type = a.payment_type',
+'            AND v.employment_class_id = a.employment_class_id',
+'      );',
+'EXCEPTION',
+'    WHEN NO_DATA_FOUND THEN',
+'        :P70_START_DATE := NULL;',
+'        :P70_END_DATE   := NULL;',
+'    WHEN OTHERS THEN NULL;',
+'END;'))
+,p_attribute_07=>'P70_FILTER_EARN_PRD'
+,p_attribute_08=>'Y'
+,p_attribute_09=>'N'
+,p_wait_for_result=>'Y'
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(214720435932312408)
+,p_event_id=>wwv_flow_imp.id(214719827974312402)
+,p_event_result=>'TRUE'
+,p_action_sequence=>20
+,p_execute_on_page_init=>'N'
+,p_action=>'NATIVE_JAVASCRIPT_CODE'
+,p_attribute_01=>'location.reload();'
+,p_server_condition_type=>'NEVER'
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(199800712539167642)
+,p_event_id=>wwv_flow_imp.id(214719827974312402)
+,p_event_result=>'TRUE'
+,p_action_sequence=>30
+,p_execute_on_page_init=>'Y'
+,p_action=>'NATIVE_SET_VALUE'
+,p_affected_elements_type=>'ITEM'
+,p_affected_elements=>'P70_NEW'
+,p_attribute_01=>'STATIC_ASSIGNMENT'
+,p_attribute_09=>'N'
+,p_wait_for_result=>'Y'
+,p_server_condition_type=>'NEVER'
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(199800858283167643)
+,p_event_id=>wwv_flow_imp.id(214719827974312402)
+,p_event_result=>'TRUE'
+,p_action_sequence=>40
+,p_execute_on_page_init=>'N'
+,p_name=>'refresh_dates'
+,p_action=>'NATIVE_REFRESH'
+,p_affected_elements_type=>'ITEM'
+,p_affected_elements=>'P70_START_DATE,P70_END_DATE'
 ,p_attribute_01=>'N'
 );
 wwv_flow_imp.component_end;

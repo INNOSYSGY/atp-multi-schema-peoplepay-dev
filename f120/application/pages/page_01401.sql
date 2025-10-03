@@ -5,7 +5,7 @@ begin
 --   Manifest End
 wwv_flow_imp.component_begin (
  p_version_yyyy_mm_dd=>'2024.11.30'
-,p_release=>'24.2.8'
+,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
 ,p_default_id_offset=>188895268110624634
@@ -3007,6 +3007,7 @@ wwv_flow_imp_page.create_page_item(
 ,p_name=>'P1401_ALL_POSITION_LOCATION'
 ,p_item_sequence=>190
 ,p_item_plug_id=>wwv_flow_imp.id(3892466178441984312)
+,p_item_default=>'1'
 ,p_prompt=>'All Employees'
 ,p_display_as=>'NATIVE_YES_NO'
 ,p_grid_label_column_span=>1

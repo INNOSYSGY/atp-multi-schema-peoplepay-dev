@@ -5,7 +5,7 @@ begin
 --   Manifest End
 wwv_flow_imp.component_begin (
  p_version_yyyy_mm_dd=>'2024.11.30'
-,p_release=>'24.2.8'
+,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
 ,p_default_id_offset=>188895268110624634
@@ -11822,7 +11822,7 @@ wwv_flow_imp_page.create_page_da_action(
 'end if;',
 '',
 'end;'))
-,p_attribute_02=>'P1307_ORGANISATION_STRUCTURE,P1307_STATUS,P1307_JOB_GRADE_ID,P1307_ID,P1307_DEF_WORK_LOCATION_ID,P1307_POSITION_START'
+,p_attribute_02=>'P1307_ORGANISATION_STRUCTURE,P1307_STATUS,P1307_JOB_GRADE_ID,P1307_ID,P1307_DEF_WORK_LOCATION_ID,P1307_POSITION_START,P1307_DESCRIPTION'
 ,p_attribute_05=>'PLSQL'
 ,p_wait_for_result=>'Y'
 );

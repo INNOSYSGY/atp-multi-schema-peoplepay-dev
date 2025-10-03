@@ -5,7 +5,7 @@ begin
 --   Manifest End
 wwv_flow_imp.component_begin (
  p_version_yyyy_mm_dd=>'2024.11.30'
-,p_release=>'24.2.8'
+,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
 ,p_default_id_offset=>188895268110624634
@@ -232,11 +232,11 @@ wwv_flow_imp_page.create_page_button(
  p_id=>wwv_flow_imp.id(197504139431680801)
 ,p_button_sequence=>10
 ,p_button_plug_id=>wwv_flow_imp.id(298457485385896541)
-,p_button_name=>'CANCEL'
+,p_button_name=>'RETURN'
 ,p_button_action=>'REDIRECT_PAGE'
 ,p_button_template_options=>'#DEFAULT#:t-Button--primary'
 ,p_button_template_id=>4072362960822175091
-,p_button_image_alt=>'Cancel'
+,p_button_image_alt=>'Return'
 ,p_button_position=>'TOP'
 ,p_button_alignment=>'RIGHT'
 ,p_button_redirect_url=>'f?p=&APP_ID.:1:&APP_SESSION.::&DEBUG.:::'
@@ -443,7 +443,7 @@ wwv_flow_imp_page.create_page_item(
 ,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
   'allow_custom_html', 'Y',
   'format', 'HTML',
-  'min_height', '180',
+  'min_height', '250',
   'toolbar', 'FULL',
   'toolbar_style', 'OVERFLOW')).to_clob
 );
@@ -467,7 +467,6 @@ wwv_flow_imp_page.create_page_item(
   'format', 'PLAIN',
   'send_on_page_submit', 'Y',
   'show_line_breaks', 'Y')).to_clob
-,p_ai_enabled=>false
 );
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(298471412461896634)
@@ -511,7 +510,6 @@ wwv_flow_imp_page.create_page_item(
   'format', 'PLAIN',
   'send_on_page_submit', 'Y',
   'show_line_breaks', 'Y')).to_clob
-,p_ai_enabled=>false
 );
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(298472633684896631)

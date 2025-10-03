@@ -5,7 +5,7 @@ begin
 --   Manifest End
 wwv_flow_imp.component_begin (
  p_version_yyyy_mm_dd=>'2024.11.30'
-,p_release=>'24.2.8'
+,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
 ,p_default_id_offset=>188895268110624634
@@ -271,7 +271,8 @@ wwv_flow_imp_page.create_page_branch(
 );
 wwv_flow_imp_page.create_page_branch(
  p_id=>wwv_flow_imp.id(3609384649840252585)
-,p_branch_action=>'f?p=&APP_ID.:1316:&SESSION.::&DEBUG.:::&success_msg=#SUCCESS_MSG#'
+,p_branch_name=>'Go To Page 1316'
+,p_branch_action=>'f?p=&APP_ID.:1316:&SESSION.::&DEBUG.:1316:P1316_ID:&P1316_ID.&success_msg=#SUCCESS_MSG#'
 ,p_branch_point=>'AFTER_PROCESSING'
 ,p_branch_type=>'REDIRECT_URL'
 ,p_branch_sequence=>3

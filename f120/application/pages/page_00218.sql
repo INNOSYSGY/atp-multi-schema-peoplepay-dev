@@ -5,7 +5,7 @@ begin
 --   Manifest End
 wwv_flow_imp.component_begin (
  p_version_yyyy_mm_dd=>'2024.11.30'
-,p_release=>'24.2.8'
+,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
 ,p_default_id_offset=>188895268110624634
@@ -670,18 +670,21 @@ wwv_flow_imp_page.create_page_item(
 ,p_prompt=>'Config Name'
 ,p_source=>'CONFIG_NAME'
 ,p_source_type=>'REGION_SOURCE_COLUMN'
-,p_display_as=>'NATIVE_TEXT_FIELD'
-,p_cSize=>30
-,p_cMaxlength=>255
+,p_display_as=>'NATIVE_SELECT_LIST'
+,p_lov=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'select ''DEMBANK'' a, ''DEMBANK'' b from dual',
+'union',
+'select ''RBGL'' a, ''RBGL'' b from dual'))
+,p_lov_display_null=>'YES'
+,p_lov_null_text=>'--Select Config--'
+,p_cHeight=>1
 ,p_field_template=>3031561932232085882
 ,p_item_template_options=>'#DEFAULT#'
 ,p_is_persistent=>'N'
+,p_lov_display_extra=>'NO'
 ,p_encrypt_session_state_yn=>'N'
 ,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
-  'disabled', 'N',
-  'submit_when_enter_pressed', 'N',
-  'subtype', 'TEXT',
-  'trim_spaces', 'BOTH')).to_clob
+  'page_action_on_selection', 'NONE')).to_clob
 );
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(3385487882445751436)

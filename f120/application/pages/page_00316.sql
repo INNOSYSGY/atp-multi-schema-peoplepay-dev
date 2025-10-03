@@ -5,7 +5,7 @@ begin
 --   Manifest End
 wwv_flow_imp.component_begin (
  p_version_yyyy_mm_dd=>'2024.11.30'
-,p_release=>'24.2.8'
+,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
 ,p_default_id_offset=>188895268110624634
@@ -55,6 +55,7 @@ wwv_flow_imp_page.create_page_plug(
 ,p_plug_template=>4501440665235496320
 ,p_plug_display_sequence=>60
 ,p_include_in_reg_disp_sel_yn=>'Y'
+,p_location=>null
 ,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
   'expand_shortcuts', 'N',
   'output_as', 'HTML')).to_clob
@@ -1194,6 +1195,7 @@ wwv_flow_imp_page.create_page_da_action(
 ,p_affected_elements_type=>'ITEM'
 ,p_affected_elements=>'P316_COURSE_SCHEDULE,P316_COURSE_STRUCTURE'
 ,p_attribute_01=>'N'
+,p_server_condition_type=>'NEVER'
 );
 wwv_flow_imp_page.create_page_da_event(
  p_id=>wwv_flow_imp.id(445272316048007377)
@@ -1215,6 +1217,7 @@ wwv_flow_imp_page.create_page_da_action(
 ,p_affected_elements_type=>'ITEM'
 ,p_affected_elements=>'P316_COURSE_STRUCTURE'
 ,p_attribute_01=>'N'
+,p_server_condition_type=>'NEVER'
 );
 wwv_flow_imp_page.create_page_da_event(
  p_id=>wwv_flow_imp.id(445273200422007377)
@@ -1305,7 +1308,7 @@ wwv_flow_imp_page.create_page_da_action(
 ,p_event_id=>wwv_flow_imp.id(445274689188007378)
 ,p_event_result=>'TRUE'
 ,p_action_sequence=>10
-,p_execute_on_page_init=>'Y'
+,p_execute_on_page_init=>'N'
 ,p_action=>'NATIVE_SET_VALUE'
 ,p_affected_elements_type=>'COLUMN'
 ,p_affected_elements=>'CLASS_HOURS'
@@ -1323,7 +1326,7 @@ wwv_flow_imp_page.create_page_da_action(
 ,p_event_id=>wwv_flow_imp.id(445274689188007378)
 ,p_event_result=>'TRUE'
 ,p_action_sequence=>20
-,p_execute_on_page_init=>'Y'
+,p_execute_on_page_init=>'N'
 ,p_action=>'NATIVE_REFRESH'
 ,p_affected_elements_type=>'COLUMN'
 ,p_affected_elements=>'CLASS_HOURS'
@@ -1349,6 +1352,7 @@ wwv_flow_imp_page.create_page_da_action(
 ,p_affected_elements_type=>'REGION'
 ,p_affected_region_id=>wwv_flow_imp.id(6083157441654981523)
 ,p_attribute_01=>'N'
+,p_server_condition_type=>'NEVER'
 );
 wwv_flow_imp_page.create_page_da_event(
  p_id=>wwv_flow_imp.id(445276942766007379)
@@ -1370,6 +1374,7 @@ wwv_flow_imp_page.create_page_da_action(
 ,p_affected_elements_type=>'ITEM'
 ,p_affected_elements=>'P316_COURSE,P316_COURSE_SCHEDULE'
 ,p_attribute_01=>'N'
+,p_server_condition_type=>'NEVER'
 );
 wwv_flow_imp_page.create_page_da_event(
  p_id=>wwv_flow_imp.id(445277812585007380)
@@ -1395,6 +1400,7 @@ wwv_flow_imp_page.create_page_da_action(
 ,p_action=>'NATIVE_SHOW'
 ,p_affected_elements_type=>'BUTTON'
 ,p_affected_button_id=>wwv_flow_imp.id(445257140781007364)
+,p_server_condition_type=>'NEVER'
 );
 wwv_flow_imp_page.create_page_da_action(
  p_id=>wwv_flow_imp.id(445278872397007380)
@@ -1405,6 +1411,7 @@ wwv_flow_imp_page.create_page_da_action(
 ,p_action=>'NATIVE_HIDE'
 ,p_affected_elements_type=>'BUTTON'
 ,p_affected_button_id=>wwv_flow_imp.id(445257140781007364)
+,p_server_condition_type=>'NEVER'
 );
 wwv_flow_imp_page.create_page_da_event(
  p_id=>wwv_flow_imp.id(445279232624007381)
@@ -1432,6 +1439,7 @@ wwv_flow_imp_page.create_page_da_action(
 ,p_attribute_08=>'Y'
 ,p_attribute_09=>'N'
 ,p_wait_for_result=>'Y'
+,p_server_condition_type=>'NEVER'
 );
 wwv_flow_imp_page.create_page_da_event(
  p_id=>wwv_flow_imp.id(445280181357007381)

@@ -5,7 +5,7 @@ begin
 --   Manifest End
 wwv_flow_imp.component_begin (
  p_version_yyyy_mm_dd=>'2024.11.30'
-,p_release=>'24.2.8'
+,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
 ,p_default_id_offset=>188895268110624634
@@ -659,6 +659,15 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_column_type=>'STRING'
 ,p_column_alignment=>'CENTER'
 ,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_rpt(
+ p_id=>wwv_flow_imp.id(212492664940133597)
+,p_application_user=>'APXWS_DEFAULT'
+,p_report_seq=>10
+,p_report_alias=>'2124927'
+,p_status=>'PUBLIC'
+,p_is_default=>'Y'
+,p_report_columns=>'EMP_ID:EMPLOYEE_NAME:MISSING_BANK_CODE:MISSING_BRANCH_CODE:MISSING_ACCOUNT_TYPE:MISSING_ACCOUNT_NUMBER:INVALID_AMOUNT:MISSING_NAME:MISSING_DESCRIPTION:MISSING_DRCR:MISSING_ADDRESS:MISSING_CONTACT:MISSING_CATEGORY'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(3352384996346586981)

@@ -5,7 +5,7 @@ begin
 --   Manifest End
 wwv_flow_imp.component_begin (
  p_version_yyyy_mm_dd=>'2024.11.30'
-,p_release=>'24.2.8'
+,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
 ,p_default_id_offset=>188895268110624634
@@ -4748,7 +4748,7 @@ wwv_flow_imp_page.create_page_item(
 ,p_prompt=>'Additional Income'
 ,p_source=>'EMPENT_ID'
 ,p_source_type=>'REGION_SOURCE_COLUMN'
-,p_display_as=>'NATIVE_SELECT_ONE'
+,p_display_as=>'NATIVE_POPUP_LOV'
 ,p_lov_language=>'PLSQL'
 ,p_lov=>wwv_flow_string.join(wwv_flow_t_varchar2(
 'if :P1298_ID IS NULL then',
@@ -4767,6 +4767,7 @@ wwv_flow_imp_page.create_page_item(
 '        order by 1'';',
 '',
 'end if;'))
+,p_lov_display_null=>'YES'
 ,p_lov_cascade_parent_items=>'P1298_EMP_ID'
 ,p_ajax_items_to_submit=>'P1298_ID,P1298_EARNINGS_PERIOD_ID,P1298_EMP_ID'
 ,p_ajax_optimize_refresh=>'Y'
@@ -4775,10 +4776,14 @@ wwv_flow_imp_page.create_page_item(
 ,p_field_template=>2526760615038828570
 ,p_item_template_options=>'#DEFAULT#'
 ,p_is_persistent=>'N'
+,p_lov_display_extra=>'YES'
 ,p_encrypt_session_state_yn=>'N'
 ,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
   'case_sensitive', 'N',
-  'fetch_on_search', 'N',
+  'display_as', 'POPUP',
+  'fetch_on_search', 'Y',
+  'initial_fetch', 'FIRST_ROWSET',
+  'manual_entry', 'N',
   'match_type', 'CONTAINS',
   'min_chars', '0')).to_clob
 );

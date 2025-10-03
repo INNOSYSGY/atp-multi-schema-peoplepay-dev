@@ -5,7 +5,7 @@ begin
 --   Manifest End
 wwv_flow_imp.component_begin (
  p_version_yyyy_mm_dd=>'2024.11.30'
-,p_release=>'24.2.8'
+,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
 ,p_default_id_offset=>188895268110624634
@@ -33,13 +33,42 @@ wwv_flow_imp_page.create_page_plug(
 ,p_menu_template_id=>4072363345357175094
 );
 wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(3619972626246118145)
+,p_plug_name=>'Detail Journal Parameters'
+,p_region_template_options=>'#DEFAULT#:t-Region--accent8:t-Region--scrollBody'
+,p_plug_template=>4072358936313175081
+,p_plug_display_sequence=>30
+,p_location=>null
+,p_plug_source_type=>'NATIVE_DISPLAY_SELECTOR'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'display_region_icons', 'N',
+  'include_show_all', 'N',
+  'rds_mode', 'STANDARD',
+  'remember_selection', 'SESSION')).to_clob
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(433620455556770136)
+,p_plug_name=>'PeoplePay Generic'
+,p_parent_plug_id=>wwv_flow_imp.id(3619972626246118145)
+,p_region_template_options=>'#DEFAULT#:t-TabsRegion-mod--simple'
+,p_plug_template=>3223171818405608528
+,p_plug_display_sequence=>10
+,p_include_in_reg_disp_sel_yn=>'Y'
+,p_plug_display_point=>'SUB_REGIONS'
+,p_location=>null
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'expand_shortcuts', 'N',
+  'output_as', 'HTML')).to_clob
+);
+wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(3364249060561111494)
 ,p_plug_name=>'Journal Summarized by Employee'
+,p_parent_plug_id=>wwv_flow_imp.id(433620455556770136)
 ,p_region_template_options=>'#DEFAULT#'
 ,p_component_template_options=>'#DEFAULT#'
 ,p_plug_template=>2100526641005906379
-,p_plug_display_sequence=>110
-,p_include_in_reg_disp_sel_yn=>'Y'
+,p_plug_display_sequence=>120
+,p_plug_display_point=>'SUB_REGIONS'
 ,p_query_type=>'SQL'
 ,p_plug_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
 'select v.* ,(select id from pa_pmg_payrolldtl where earnings_period_id = :P6002_PAID_EARNINGS_PERIOD and emp_id = v.emp_id) pay_slipno    ',
@@ -414,11 +443,12 @@ wwv_flow_imp_page.create_worksheet_computation(
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(3444040020453660637)
 ,p_plug_name=>'Financial Journal'
+,p_parent_plug_id=>wwv_flow_imp.id(433620455556770136)
 ,p_region_template_options=>'#DEFAULT#:js-showMaximizeButton:t-Region--accent5:t-Region--scrollBody'
 ,p_component_template_options=>'#DEFAULT#'
 ,p_plug_template=>4072358936313175081
-,p_plug_display_sequence=>30
-,p_include_in_reg_disp_sel_yn=>'Y'
+,p_plug_display_sequence=>40
+,p_plug_display_point=>'SUB_REGIONS'
 ,p_query_type=>'SQL'
 ,p_plug_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
 '/*',
@@ -836,11 +866,12 @@ wwv_flow_imp_page.create_worksheet_rpt(
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(3561600015404229067)
 ,p_plug_name=>'Grade Summary'
+,p_parent_plug_id=>wwv_flow_imp.id(433620455556770136)
 ,p_region_template_options=>'#DEFAULT#'
 ,p_component_template_options=>'#DEFAULT#'
 ,p_plug_template=>2100526641005906379
-,p_plug_display_sequence=>90
-,p_include_in_reg_disp_sel_yn=>'Y'
+,p_plug_display_sequence=>100
+,p_plug_display_point=>'SUB_REGIONS'
 ,p_query_type=>'SQL'
 ,p_plug_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
 'select c.emp_company_no_hist, surname_hist, first_name_hist, unit_code, unit_name, position_name_hist, pay_grade_id, to_char(income_code) income_code, income_amount',
@@ -1033,10 +1064,11 @@ wwv_flow_imp_page.create_worksheet_rpt(
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(3562421011028691693)
 ,p_plug_name=>'Journal Detail by Employee'
+,p_parent_plug_id=>wwv_flow_imp.id(433620455556770136)
 ,p_region_template_options=>'#DEFAULT#'
 ,p_plug_template=>2100526641005906379
-,p_plug_display_sequence=>100
-,p_include_in_reg_disp_sel_yn=>'Y'
+,p_plug_display_sequence=>110
+,p_plug_display_point=>'SUB_REGIONS'
 ,p_query_type=>'SQL'
 ,p_plug_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
 'select * from (',
@@ -1346,11 +1378,12 @@ wwv_flow_imp_page.create_worksheet_rpt(
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(3562610662105697425)
 ,p_plug_name=>'Department Head Count'
+,p_parent_plug_id=>wwv_flow_imp.id(433620455556770136)
 ,p_region_template_options=>'#DEFAULT#'
 ,p_component_template_options=>'#DEFAULT#'
 ,p_plug_template=>2100526641005906379
-,p_plug_display_sequence=>80
-,p_include_in_reg_disp_sel_yn=>'Y'
+,p_plug_display_sequence=>90
+,p_plug_display_point=>'SUB_REGIONS'
 ,p_query_type=>'SQL'
 ,p_plug_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
 'select (select UNIT_NAME',
@@ -1492,10 +1525,11 @@ wwv_flow_imp_page.create_worksheet_pivot_sort(
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(3562612728609697446)
 ,p_plug_name=>'Department Cost'
+,p_parent_plug_id=>wwv_flow_imp.id(433620455556770136)
 ,p_region_template_options=>'#DEFAULT#'
 ,p_plug_template=>2100526641005906379
-,p_plug_display_sequence=>60
-,p_include_in_reg_disp_sel_yn=>'Y'
+,p_plug_display_sequence=>80
+,p_plug_display_point=>'SUB_REGIONS'
 ,p_query_type=>'SQL'
 ,p_plug_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
 'select (select UNIT_NAME',
@@ -1682,11 +1716,12 @@ wwv_flow_imp_page.create_worksheet_pivot_agg(
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(3562613438790697453)
 ,p_plug_name=>'Employment Cost'
+,p_parent_plug_id=>wwv_flow_imp.id(433620455556770136)
 ,p_region_template_options=>'#DEFAULT#'
 ,p_component_template_options=>'#DEFAULT#'
 ,p_plug_template=>2100526641005906379
-,p_plug_display_sequence=>50
-,p_include_in_reg_disp_sel_yn=>'Y'
+,p_plug_display_sequence=>70
+,p_plug_display_point=>'SUB_REGIONS'
 ,p_query_type=>'SQL'
 ,p_plug_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
 'select DESCRIPTION, sum(Income_Sum) Amount',
@@ -1788,26 +1823,14 @@ wwv_flow_imp_page.create_worksheet_rpt(
 ,p_sum_columns_on_break=>'INCOME_SUM:AMOUNT'
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(3619972626246118145)
-,p_plug_name=>'Detail Journal Parameters'
-,p_region_template_options=>'#DEFAULT#:t-Region--accent8:t-Region--scrollBody'
-,p_plug_template=>4072358936313175081
-,p_plug_display_sequence=>20
-,p_plug_source_type=>'NATIVE_DISPLAY_SELECTOR'
-,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
-  'display_region_icons', 'N',
-  'include_show_all', 'N',
-  'rds_mode', 'STANDARD',
-  'remember_selection', 'SESSION')).to_clob
-);
-wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(3619973186868118151)
 ,p_plug_name=>'Employee/Employer Deductions'
+,p_parent_plug_id=>wwv_flow_imp.id(433620455556770136)
 ,p_region_template_options=>'#DEFAULT#:t-Region--accent9:t-Region--scrollBody'
 ,p_component_template_options=>'#DEFAULT#'
 ,p_plug_template=>4072358936313175081
-,p_plug_display_sequence=>40
-,p_include_in_reg_disp_sel_yn=>'Y'
+,p_plug_display_sequence=>60
+,p_plug_display_point=>'SUB_REGIONS'
 ,p_query_type=>'SQL'
 ,p_plug_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
 'select count(1) Employee_count, B.description, c.deduction_type',
@@ -1920,6 +1943,3053 @@ wwv_flow_imp_page.create_worksheet_pivot_agg(
 ,p_format_mask=>'999G999G999G999G990'
 ,p_display_sum=>'N'
 );
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(433620471162770137)
+,p_plug_name=>'Specific'
+,p_parent_plug_id=>wwv_flow_imp.id(3619972626246118145)
+,p_region_template_options=>'#DEFAULT#:t-TabsRegion-mod--simple'
+,p_plug_template=>3223171818405608528
+,p_plug_display_sequence=>20
+,p_include_in_reg_disp_sel_yn=>'Y'
+,p_plug_display_point=>'SUB_REGIONS'
+,p_location=>null
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'expand_shortcuts', 'N',
+  'output_as', 'HTML')).to_clob
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(433620582500770138)
+,p_plug_name=>'Branch Entries'
+,p_parent_plug_id=>wwv_flow_imp.id(433620471162770137)
+,p_region_template_options=>'#DEFAULT#:t-IRR-region--hideHeader js-addHiddenHeadingRoleDesc'
+,p_component_template_options=>'#DEFAULT#'
+,p_plug_template=>2100526641005906379
+,p_plug_display_sequence=>10
+,p_plug_display_point=>'SUB_REGIONS'
+,p_query_type=>'SQL'
+,p_plug_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'select ACCOUNT_NAME, ',
+'						 to_char(BK) BK, ',
+'						 TO_CHAR(BR) BR, ',
+'						 CCY, ',
+'						 GL, ',
+'						 CC, ',
+'						 DR_CR, ',
+'						 DEBIT_AMOUNT, ',
+'						 CREDIT_AMOUNT, ',
+'						 D_C,',
+'                         emp_id',
+'',
+'               from (',
+' select  x.account_code GL,',
+'				 x.coa_code CC, ',
+'				 x.description ACCOUNT_NAME, ',
+'				 x.income_amount ALL_AMOUNT, ',
+'				 x.debit_credit DR_CR, ',
+'				 ''GYD'' CCY,',
+'				 ''01'' BK,',
+'				 to_char(case when length(location_code) = 1 then ''00''||location_code ',
+'				      when length(location_code) = 2 then ''0''||location_code',
+'							else location_code end) BR,',
+'				 case when UPPER(x.debit_credit) = ''DR'' THEN ''D''',
+'						  when UPPER(x.debit_credit) = ''CR'' THEN ''C'' END D_C,',
+'				 case when UPPER(x.debit_credit) = ''DR'' THEN INCOME_AMOUNT ELSE 0 END DEBIT_AMOUNT,',
+'				 case when UPPER(x.debit_credit) = ''CR'' THEN INCOME_AMOUNT ELSE 0 END CREDIT_AMOUNT,',
+' row_number() over (partition by emp_id,unit_name, COA_CODE, debit_credit,orgdtl_id order by emp_id ) as seqnum,',
+'                x.emp_id',
+' from (',
+' ',
+' ',
+'select to_char(account_code) account_code,',
+'			 orgdtl_id, ',
+'			 emp_id,',
+'			 COA_CODE,',
+'			 UNIT_NAME, ',
+'			 cast(initcap(DESCRIPTION) as nvarchar2(100)) DESCRIPTION, ',
+'			 sum(income_amount) income_amount, ',
+'			 sum(income_amount_ytd) income_amount_ytd, ',
+'			 ''DR'' Debit_Credit,',
+'			 location_code',
+'from',
+'		(select distinct a.id,',
+'						e.account_code, ',
+'						c.emp_id,',
+'						c.orgdtl_id, ',
+'						x.COA_CODE,',
+'						x.UNIT_NAME, ',
+'						initcap(e.DESCRIPTION) DESCRIPTION, ',
+'						a.income_amount income_amount, ',
+'						a.income_amount_ytd income_amount_ytd, ',
+'						''DR'' Debit_Credit,',
+'						wk.location_code',
+'		from hr_rcm_employee b ',
+'		join pa_pmg_payrolldtl c on b.id = c.emp_id',
+'		join hr_hcf_orgstructuredtl x on x.id = c.orgdtl_id',
+'		join PA_PMG_PAYROLLINCOME a on c.id=a.pay_slipno',
+'		join PA_PCF_INCOMECODE e on e.INCOME_CODE=a.INCOME_CODE',
+'		JOIN PA_PCF_EARNINGPERIOD ep on ep.id = c.earnings_period_id ',
+'		join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'		where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'		and c.org_id=:APP_ORG_ID and e.org_id=:APP_ORG_ID',
+'		and (c.compute_gross_hist !=''BASIC_PAY'' or earnings_type = ''SUPPL'' or e.id !=6004))',
+'group by COA_CODE, UNIT_NAME, DESCRIPTION,emp_id,orgdtl_id, account_code,location_code',
+'',
+'',
+'union ',
+'--personal rate',
+'select * ',
+'from(',
+'		select nvl(sal.GL_CODE,''500701000000'') account_code,',
+'					 k.orgdtl_id, ',
+'					 k.emp_id,',
+'					 x.COA_CODE,',
+'					 x.UNIT_NAME,  ',
+'					 case when nvl(sal.GL_CODE,''500701000000'') = ''500901000000'' then cast(''Basic Salary - Security''  as nvarchar2(100))',
+'                     when nvl(sal.GL_CODE,''500701000000'') = ''500933000000'' then cast(''Basic Salary - Director''  as nvarchar2(100))',
+'                     else cast(''Basic Salary''  as nvarchar2(100)) end DESCRIPTION, ',
+'					 sum(time_tax_earnings) + sum(time_nontax_earnings) - case when :APP_ORG_ID = 32661 then sum(nvl(get_overtime_cb(k.id),0)) ',
+'                     else nvl(fn_adhocPayment(:P6002_PAID_EARNINGS_PERIOD,  x.COA_CODE),0) end ',
+'                     time_tax_earnings,  ',
+'					 sum(time_tax_earnings_YTD) time_tax_earnings_ytd, ',
+'					 ''DR'' Debit_Credit,',
+'						wk.location_code',
+'		from hr_rcm_employee b ',
+'		join pa_pmg_payrolldtl K ON b.id=k.emp_id',
+'        join hr_rcm_salary sal on sal.emp_id = k.emp_id',
+'		join hr_hcf_orgstructuredtl x on x.id = k.orgdtl_id',
+'		join pa_pcf_earningperiod w on w.id = k.earnings_period_id',
+'		join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'		where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'		and k.compute_gross_hist=''BASIC_PAY''',
+'		and earnings_type = ''RG''',
+'		and k.org_id=:APP_ORG_ID',
+'        and ((sal.start_date <= k.period_start and (sal.end_Date is null or sal.end_Date >= k.period_end)) or',
+'        (sal.start_date between k.period_start and k.period_end))',
+'		group by x.COA_CODE,UNIT_NAME,  cast(''Basic Salary'' as nvarchar2(100)) ,k.emp_id,k.orgdtl_id,wk.location_code,sal.GL_CODE)',
+'',
+'union',
+'--employers deductions only',
+'',
+'select to_char(ACCOUNT_CODE) account_code,',
+'			 orgdtl_id,',
+'			 emp_id,',
+'			 COA_CODE,',
+'			 UNIT_NAME, ',
+'			 cast(initcap(DESCRIPTION) as nvarchar2(100)) DESCRIPTION , ',
+'			 sum(amount_deducted) amount_deducted, ',
+'			 sum(amount_deducted_ytd) amount_deducted_ytd, ',
+'			 ''DR'' Debit_Credit,',
+'			 location_code',
+'from',
+'		(select distinct a.id,',
+'						--case when d.expense_code = ''PENSION DEDUCTION'' then cast(d.ACCOUNT_CODE as nvarchar2(100)) else cast(d.account_code_emplr as nvarchar2(100)) end',
+'                        d.account_code_emplr ACCOUNT_CODE,',
+'						x.COA_CODE,',
+'						x.UNIT_NAME,',
+'						k.emp_id,',
+'						k.orgdtl_id, ',
+'						initcap(d.DESCRIPTION||'' ''||DEDUCTION_TYPE) DESCRIPTION , ',
+'						a.amount_deducted amount_deducted, ',
+'						amount_deducted_ytd amount_deducted_ytd, ',
+'						''DR'' Debit_Credit,',
+'						wk.location_code',
+'		from  hr_rcm_employee b ',
+'		join pa_pmg_payrolldtl K ON b.id=k.emp_id',
+'		join pa_pmg_payrolldeduction a on k.id=a.pay_slipno',
+'		join hr_hcf_orgstructuredtl x on x.id = k.orgdtl_id',
+'		join Pa_Pcf_Deductioncode d on d.EXPENSE_CODE=a.EXPENSE_CODE',
+'		join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'		where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'		and A.DEDUCTION_TYPE=''EMPLOYER''',
+'		and k.org_id=:APP_ORG_ID)',
+'group by COA_CODE,UNIT_NAME, DESCRIPTION,emp_id,orgdtl_id,ACCOUNT_CODE,location_code',
+'',
+'--NIS-ER',
+'union',
+'',
+'select ''500714000000''  account_code,--''210008000000''',
+'			 k.orgdtl_id,',
+'			 k.emp_id,',
+'			 x.COA_CODE,',
+'			 x.UNIT_NAME,  ',
+'			 cast(''NIS Employer''  as nvarchar2(100)) DESCRIPTION, ',
+'			 sum(nis_employer) nis_employer,  ',
+'			 sum(nis_employer_YTD) nis_employer_YTD, ',
+'			 ''DR'' Debit_Credit,',
+'			 wk.location_code',
+'from hr_rcm_employee b ',
+'join pa_pmg_payrolldtl K ON b.id=k.emp_id',
+'join hr_hcf_orgstructuredtl x on x.id = k.orgdtl_id',
+'join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'and k.org_id=:APP_ORG_ID',
+'group by x.COA_CODE,UNIT_NAME,  cast(''NIS Employer''  as nvarchar2(100)) ,k.emp_id,k.orgdtl_id, wk.location_code',
+'',
+'',
+'---************ CREDITS ***********',
+'union ',
+'/*',
+'select to_char(account_code) account_code,',
+'			 orgdtl_id,',
+'			 emp_id,',
+'			 COA_CODE,',
+'			 UNIT_NAME, ',
+'			 DESCRIPTION , ',
+'			 sum(amount_deducted) amount_deducted, ',
+'			 sum(amount_deducted_ytd) amount_deducted_ytd, ',
+'			 ''CR'' Debit_Credit,',
+'			 location_code',
+'from',
+'		(select distinct a.id,',
+'						d.account_code, ',
+'						x.COA_CODE,',
+'						UNIT_NAME, ',
+'						k.emp_id,',
+'						k.orgdtl_id,',
+'						initcap(d.DESCRIPTION||'' ''||DEDUCTION_TYPE) DESCRIPTION , ',
+'						a.amount_deducted amount_deducted, ',
+'						a.amount_deducted_ytd amount_deducted_ytd, ',
+'						''CR'' Debit_Credit,',
+'						wk.location_code',
+'		from  hr_rcm_employee b ',
+'		join pa_pmg_payrolldtl K ON b.id=k.emp_id',
+'		join pa_pmg_payrolldeduction a on k.id=a.pay_slipno',
+'		join hr_hcf_orgstructuredtl x on x.id = k.orgdtl_id',
+'		join Pa_Pcf_Deductioncode d on d.EXPENSE_CODE=a.EXPENSE_CODE',
+'		join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'		where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'		and k.org_id=:APP_ORG_ID and d.org_id=:APP_ORG_ID)',
+'group by COA_CODE,UNIT_NAME, DESCRIPTION,emp_id,orgdtl_id,account_code,location_code',
+'*/',
+'select  case when deduction_type=''EMPLOYEE'' THEN to_char(account_code) ',
+'                else to_char(account_code) end account_code,',
+'         --    account_code_emplr  account_code,   ',
+'			 orgdtl_id,',
+'			 emp_id,',
+'			 COA_CODE,',
+'			 UNIT_NAME, ',
+'			 cast(initcap(DESCRIPTION) as nvarchar2(100)) DESCRIPTION , ',
+'			 sum(amount_deducted) amount_deducted, ',
+'			 sum(amount_deducted_ytd) amount_deducted_ytd, ',
+'		--	case when deduction_type=''EMPLOYEE'' THEN ''DR''',
+'        --            else ''CR'' end   Debit_Credit,',
+'             ''CR'' Debit_Credit,',
+'			 location_code',
+'from',
+'		(select distinct a.id,',
+'						d.account_code, ',
+'                        account_code_emplr,',
+'                        DEDUCTION_TYPE,',
+'						x.COA_CODE,',
+'						UNIT_NAME, ',
+'						k.emp_id,',
+'						k.orgdtl_id,',
+'						initcap(d.DESCRIPTION||'' ''||DEDUCTION_TYPE) DESCRIPTION , ',
+'						a.amount_deducted amount_deducted, ',
+'						a.amount_deducted_ytd amount_deducted_ytd, ',
+'					--	case when deduction_type=''EMPLOYEE'' THEN ''CR''',
+'                      --  else ''DR'' end  Debit_Credit,',
+'						wk.location_code',
+'from  hr_rcm_employee b ',
+'join pa_pmg_payrolldtl K ON b.id=k.emp_id',
+'join pa_pmg_payrolldeduction a on k.id=a.pay_slipno',
+'join hr_hcf_orgstructuredtl x on x.id = k.orgdtl_id',
+'join Pa_Pcf_Deductioncode d on d.EXPENSE_CODE=a.EXPENSE_CODE',
+'join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'and k.org_id=:APP_ORG_ID and d.org_id=:APP_ORG_ID)',
+'group by COA_CODE,UNIT_NAME, DESCRIPTION,emp_id,orgdtl_id,account_code,account_code_emplr,DEDUCTION_TYPE,location_code',
+'',
+'--NETPAY',
+'union',
+'',
+'select       to_char(BANK_ACCOUNT_NO) account_code,',
+'			 k.orgdtl_id, ',
+'			 k.emp_id,',
+'			 x.COA_CODE,',
+'			 UNIT_NAME, ',
+'			 cast(''NETPAY''  as nvarchar2(100))  DESCRIPTION, ',
+'			 sum(net_pay) net_pay,  ',
+'			 sum(net_pay_YTD) net_pay_TD, ',
+'			 ''CR'' Debit_Credit,',
+'			 wk.location_code',
+'from hr_rcm_employee b ',
+'join hr_rcm_individual ind on ind.id=b.ind_id',
+'join pa_pmg_payrolldtl K ON b.id=k.emp_id',
+'join hr_hcf_orgstructuredtl x on x.id = k.orgdtl_id',
+'join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'and k.org_id=:APP_ORG_ID',
+'group by x.COA_CODE,UNIT_NAME, cast(''NETPAY''  as nvarchar2(100)),k.emp_id,k.orgdtl_id,wk.location_code,BANK_ACCOUNT_NO',
+'',
+'',
+'--PAYE',
+'union',
+'',
+'select ''210005000000'' account_code,',
+'			 k.orgdtl_id,',
+'			 k.emp_id,',
+'			 x.COA_CODE,',
+'			 UNIT_NAME, ',
+'			 cast(''PAYE''  as nvarchar2(100))  DESCRIPTION, ',
+'			 sum(case when tax_amount<0 then 0 else tax_amount end) net_pay,  ',
+'			 sum(tax_amount_YTD) net_pay_TD, ',
+'			 ''CR'' Debit_Credit,',
+'				wk.location_code',
+'from hr_rcm_employee b ',
+'join pa_pmg_payrolldtl K ON b.id=k.emp_id',
+'join hr_hcf_orgstructuredtl x on x.id = k.orgdtl_id',
+'join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'and k.org_id=:APP_ORG_ID',
+'group by x.COA_CODE,UNIT_NAME, cast(''PAYE''  as nvarchar2(100)),k.emp_id,k.orgdtl_id,wk.location_code',
+'',
+'',
+'--NIS',
+'union',
+'',
+'select ''210007000000'' account_code,',
+'			 k.orgdtl_id,',
+'			 k.emp_id,',
+'			 x.COA_CODE,',
+'			 UNIT_NAME, ',
+'			 cast(''NIS Employee''  as nvarchar2(100))  DESCRIPTION, ',
+'			 sum(nis_employee) net_pay,  ',
+'			 sum(nis_employee_YTD) net_pay_TD, ',
+'			 ''CR'' Debit_Credit,',
+'			 wk.location_code',
+'from hr_rcm_employee b ',
+'join pa_pmg_payrolldtl K ON b.id=k.emp_id',
+'join hr_hcf_orgstructuredtl x on x.id = k.orgdtl_id',
+'join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'and k.org_id=:APP_ORG_ID',
+'group by x.COA_CODE,UNIT_NAME, cast(''NIS Employee''  as nvarchar2(100)),k.emp_id,k.orgdtl_id,wk.location_code',
+'',
+'',
+'--NIS-ER',
+'union',
+'',
+'select  ''210008000000'' account_code,--''500714000000''',
+'			 k.orgdtl_id, ',
+'			 k.emp_id,',
+'			 x.COA_CODE,',
+'			 UNIT_NAME, ',
+'			 cast(''NIS Employer''  as nvarchar2(100))  DESCRIPTION, ',
+'			 sum(nis_employer) net_pay,  ',
+'			 sum(nis_employer_YTD) net_pay_TD, ',
+'			 ''CR'' Debit_Credit,',
+'			 wk.location_code',
+'from hr_rcm_employee b ',
+'join pa_pmg_payrolldtl K ON b.id=k.emp_id',
+'join hr_hcf_orgstructuredtl x on x.id = k.orgdtl_id',
+'join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'and k.org_id=:APP_ORG_ID',
+'group by x.COA_CODE,UNIT_NAME, cast(''NIS Employer''  as nvarchar2(100)) ,k.emp_id,k.orgdtl_id,wk.location_code',
+'',
+'union ',
+'--personal rate negative pay',
+'select * ',
+'from(',
+'		select nvl(sal.GL_CODE,''500701000000'') account_code,',
+'					 b.orgdtl_id, ',
+'					 k.emp_id,',
+'					 x.COA_CODE,',
+'					 x.UNIT_NAME,  ',
+'					 case when nvl(sal.GL_CODE,''500701000000'') = ''500901000000'' then cast(''Basic Salary - Security''  as nvarchar2(100))',
+'                     when nvl(sal.GL_CODE,''500701000000'') = ''500933000000'' then cast(''Basic Salary - Director''  as nvarchar2(100))',
+'                     else cast(''Basic Salary''  as nvarchar2(100)) end DESCRIPTION, ',
+'					 sum(time_tax_earnings) + sum(time_nontax_earnings) - sum(nvl(get_overtime_cb_negative(k.id),0))-- nvl(fn_adhocPayment(:P6002_PAID_EARNINGS_PERIOD,  x.COA_CODE),0) ',
+'                     time_tax_earnings,  ',
+'					 sum(time_tax_earnings) time_tax_earnings_ytd, ',
+'					 ''DR'' Debit_Credit,',
+'						wk.location_code',
+'		from hr_rcm_employee b ',
+'		join PA_PMG_PAYROLLDTLNEG K ON b.id=k.emp_id',
+'        join hr_rcm_salary sal on sal.emp_id = k.emp_id',
+'		join hr_hcf_orgstructuredtl x on x.id = b.orgdtl_id',
+'		join pa_pcf_earningperiod w on w.id = k.earnings_period_id',
+'		join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'		where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'        and sal.start_date<w.end_date',
+'        and ',
+'        (sal.end_date is null or sal.end_date BETWEEN w.start_date and w.end_date)',
+'		group by x.COA_CODE,UNIT_NAME,  cast(''Basic Salary'' as nvarchar2(100)) ,k.emp_id,b.orgdtl_id,wk.location_code,sal.GL_CODE)',
+'',
+'',
+'--NIS-ER -negative pay',
+'union',
+'',
+'select ''500714000000''  account_code,--''210008000000''',
+'			 b.orgdtl_id,',
+'			 k.emp_id,',
+'			 x.COA_CODE,',
+'			 x.UNIT_NAME,  ',
+'			 cast(''NIS Employer''  as nvarchar2(100)) DESCRIPTION, ',
+'			 sum(nis_employer) nis_employer,  ',
+'			 sum(nis_employer) nis_employer_YTD, ',
+'			 ''DR'' Debit_Credit,',
+'			 wk.location_code',
+'from hr_rcm_employee b ',
+'join PA_PMG_PAYROLLDTLNEG K ON b.id=k.emp_id',
+'join hr_hcf_orgstructuredtl x on x.id = b.orgdtl_id',
+'join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'group by x.COA_CODE,UNIT_NAME,  cast(''NIS Employer''  as nvarchar2(100)) ,k.emp_id,b.orgdtl_id, wk.location_code',
+'',
+'',
+'',
+'--NETPAY negative pay',
+'union',
+'',
+'select       to_char(BANK_ACCOUNT_NO) account_code,',
+'			 b.orgdtl_id, ',
+'			 k.emp_id,',
+'			 x.COA_CODE,',
+'			 UNIT_NAME, ',
+'			 cast(''NETPAY''  as nvarchar2(100))  DESCRIPTION, ',
+'			 sum(net_pay)*-1 net_pay,  ',
+'			 sum(net_pay) net_pay_TD, ',
+'			 ''DR'' Debit_Credit,',
+'			 wk.location_code',
+'from hr_rcm_employee b ',
+'join hr_rcm_individual ind on ind.id=b.ind_id',
+'join PA_PMG_PAYROLLDTLNEG K ON b.id=k.emp_id',
+'join hr_hcf_orgstructuredtl x on x.id = b.orgdtl_id',
+'join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'group by x.COA_CODE,UNIT_NAME, cast(''NETPAY''  as nvarchar2(100)),k.emp_id,b.orgdtl_id,wk.location_code,BANK_ACCOUNT_NO',
+'',
+'',
+'',
+'--PAYE negative pay',
+'union',
+'',
+'select ''210005000000'' account_code,',
+'			 b.orgdtl_id,',
+'			 k.emp_id,',
+'			 x.COA_CODE,',
+'			 UNIT_NAME, ',
+'			 cast(''PAYE''  as nvarchar2(100))  DESCRIPTION, ',
+'			 sum(case when tax_amount<0 then 0 else tax_amount end) net_pay,  ',
+'			 sum(case when tax_amount<0 then 0 else tax_amount end) net_pay_TD, ',
+'			 ''CR'' Debit_Credit,',
+'				wk.location_code',
+'from hr_rcm_employee b ',
+'join PA_PMG_PAYROLLDTLNEG K ON b.id=k.emp_id',
+'join hr_hcf_orgstructuredtl x on x.id = b.orgdtl_id',
+'join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'group by x.COA_CODE,UNIT_NAME, cast(''PAYE''  as nvarchar2(100)),k.emp_id,b.orgdtl_id,wk.location_code',
+'',
+'',
+'--NIS  negative pay',
+'union',
+'',
+'select ''210007000000'' account_code,',
+'			 b.orgdtl_id,',
+'			 k.emp_id,',
+'			 x.COA_CODE,',
+'			 UNIT_NAME, ',
+'			 cast(''NIS Employee''  as nvarchar2(100))  DESCRIPTION, ',
+'			 sum(nis_employee) net_pay,  ',
+'			 sum(nis_employee) net_pay_TD, ',
+'			 ''CR'' Debit_Credit,',
+'			 wk.location_code',
+'from hr_rcm_employee b ',
+'join PA_PMG_PAYROLLDTLNEG K ON b.id=k.emp_id',
+'join hr_hcf_orgstructuredtl x on x.id = b.orgdtl_id',
+'join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'group by x.COA_CODE,UNIT_NAME, cast(''NIS Employee''  as nvarchar2(100)),k.emp_id,b.orgdtl_id,wk.location_code',
+'',
+'',
+'--NIS-ER',
+'union',
+'',
+'select  ''210008000000'' account_code,--''500714000000''',
+'			 b.orgdtl_id, ',
+'			 k.emp_id,',
+'			 x.COA_CODE,',
+'			 UNIT_NAME, ',
+'			 cast(''NIS Employer''  as nvarchar2(100))  DESCRIPTION, ',
+'			 sum(nis_employer) net_pay,  ',
+'			 sum(nis_employer) net_pay_TD, ',
+'			 ''CR'' Debit_Credit,',
+'			 wk.location_code',
+'from hr_rcm_employee b ',
+'join PA_PMG_PAYROLLDTLNEG K ON b.id=k.emp_id',
+'join hr_hcf_orgstructuredtl x on x.id = b.orgdtl_id',
+'join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'group by x.COA_CODE,UNIT_NAME, cast(''NIS Employer''  as nvarchar2(100)) ,k.emp_id,b.orgdtl_id,wk.location_code',
+'',
+'union ',
+'--income negative pay',
+'select to_char(account_code) account_code,',
+'			 orgdtl_id, ',
+'			 emp_id,',
+'			 COA_CODE,',
+'			 UNIT_NAME, ',
+'			 cast(initcap(DESCRIPTION) as nvarchar2(100)) DESCRIPTION, ',
+'			 sum(income_amount) income_amount, ',
+'			 sum(income_amount_ytd) income_amount_ytd, ',
+'			 ''DR'' Debit_Credit,',
+'			 location_code',
+'from',
+'		(select distinct a.id,',
+'						e.account_code, ',
+'						c.emp_id,',
+'						b.orgdtl_id, ',
+'						x.COA_CODE,',
+'						x.UNIT_NAME, ',
+'						initcap(e.DESCRIPTION) DESCRIPTION, ',
+'						a.income_amount income_amount, ',
+'						a.income_amount_ytd income_amount_ytd, ',
+'						''DR'' Debit_Credit,',
+'						wk.location_code',
+'		from hr_rcm_employee b ',
+'		join PA_PMG_PAYROLLDTLNEG c on b.id = c.emp_id',
+'		join hr_hcf_orgstructuredtl x on x.id = b.orgdtl_id',
+'		join PA_PMG_PAYROLLINCOMENEG a on c.id=a.pay_slipno',
+'		join PA_PCF_INCOMECODE e on e.INCOME_CODE=a.INCOME_CODE',
+'		JOIN PA_PCF_EARNINGPERIOD ep on ep.id = c.earnings_period_id ',
+'		join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'		where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'		and e.org_id=:APP_ORG_ID',
+'		)',
+'group by COA_CODE, UNIT_NAME, DESCRIPTION,emp_id, orgdtl_id, account_code,location_code',
+'',
+'',
+'union',
+'--employers deductions only negative pay',
+'',
+'select to_char(ACCOUNT_CODE) account_code,',
+'			 orgdtl_id,',
+'			 emp_id,',
+'			 COA_CODE,',
+'			 UNIT_NAME, ',
+'			 cast(initcap(DESCRIPTION) as nvarchar2(100)) DESCRIPTION , ',
+'			 sum(amount_deducted) amount_deducted, ',
+'			 sum(amount_deducted_ytd) amount_deducted_ytd, ',
+'			 ''DR'' Debit_Credit,',
+'			 location_code',
+'from',
+'		(select distinct a.id,',
+'					--	case when d.expense_code = ''PENSION DEDUCTION'' then cast(d.ACCOUNT_CODE as nvarchar2(100)) else d.account_code end',
+'                        d.account_code_emplr ACCOUNT_CODE,',
+'						x.COA_CODE,',
+'						x.UNIT_NAME,',
+'						k.emp_id,',
+'						b.orgdtl_id, ',
+'						initcap(d.DESCRIPTION||'' ''||DEDUCTION_TYPE) DESCRIPTION , ',
+'						a.amount_deducted amount_deducted, ',
+'						amount_deducted_ytd amount_deducted_ytd, ',
+'						''DR'' Debit_Credit,',
+'						wk.location_code',
+'		from  hr_rcm_employee b ',
+'		join PA_PMG_PAYROLLDTLNEG K ON b.id=k.emp_id',
+'		join PA_PMG_PAYROLLDEDUCTIONNEG a on k.id=a.pay_slipno',
+'		join hr_hcf_orgstructuredtl x on x.id = b.orgdtl_id',
+'		join Pa_Pcf_Deductioncode d on d.EXPENSE_CODE=a.EXPENSE_CODE',
+'		join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'		where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'		and A.DEDUCTION_TYPE=''EMPLOYER''',
+'		)',
+'group by COA_CODE,UNIT_NAME, DESCRIPTION,emp_id,orgdtl_id,ACCOUNT_CODE,location_code',
+'',
+'---credits deduction  negative pay',
+'union ',
+'',
+'select  --case when deduction_type=''EMPLOYEE'' THEN to_char(account_code) ',
+'         --       else account_code_emplr end account_code,',
+'',
+'        case when deduction_type=''EMPLOYEE'' THEN to_char(account_code) ',
+'                else to_char(account_code) end account_code,        ',
+'         --    account_code_emplr  account_code,   ',
+'			 orgdtl_id,',
+'			 emp_id,',
+'			 COA_CODE,',
+'			 UNIT_NAME, ',
+'			 cast(initcap(DESCRIPTION) as nvarchar2(100)) DESCRIPTION , ',
+'			 sum(amount_deducted) amount_deducted, ',
+'			 sum(amount_deducted_ytd) amount_deducted_ytd, ',
+'		--	case when deduction_type=''EMPLOYEE'' THEN ''DR''',
+'        --            else ''CR'' end   Debit_Credit,',
+'             ''CR'' Debit_Credit,',
+'			 location_code',
+'from',
+'		(select distinct a.id,',
+'						d.account_code, ',
+'                        account_code_emplr,',
+'                        DEDUCTION_TYPE,',
+'						x.COA_CODE,',
+'						UNIT_NAME, ',
+'						k.emp_id,',
+'						b.orgdtl_id,',
+'						initcap(d.DESCRIPTION||'' ''||DEDUCTION_TYPE) DESCRIPTION , ',
+'						a.amount_deducted amount_deducted, ',
+'						a.amount_deducted_ytd amount_deducted_ytd, ',
+'					--	case when deduction_type=''EMPLOYEE'' THEN ''CR''',
+'                      --  else ''DR'' end  Debit_Credit,',
+'						wk.location_code',
+'from  hr_rcm_employee b ',
+'join PA_PMG_PAYROLLDTLNEG K ON b.id=k.emp_id',
+'join PA_PMG_PAYROLLDEDUCTIONNEG a on k.id=a.pay_slipno',
+'join hr_hcf_orgstructuredtl x on x.id = b.orgdtl_id',
+'join Pa_Pcf_Deductioncode d on d.EXPENSE_CODE=a.EXPENSE_CODE',
+'join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'and d.org_id=:APP_ORG_ID)',
+'group by COA_CODE,UNIT_NAME, DESCRIPTION,emp_id,orgdtl_id,account_code,account_code_emplr,DEDUCTION_TYPE,location_code',
+'',
+') x ',
+')'))
+,p_plug_source_type=>'NATIVE_IR'
+,p_ajax_items_to_submit=>'P6002_PAID_EARNINGS_PERIOD'
+,p_prn_content_disposition=>'ATTACHMENT'
+,p_prn_units=>'INCHES'
+,p_prn_paper_size=>'LETTER'
+,p_prn_width=>11
+,p_prn_height=>8.5
+,p_prn_orientation=>'HORIZONTAL'
+,p_prn_page_header_font_color=>'#000000'
+,p_prn_page_header_font_family=>'Helvetica'
+,p_prn_page_header_font_weight=>'normal'
+,p_prn_page_header_font_size=>'12'
+,p_prn_page_footer_font_color=>'#000000'
+,p_prn_page_footer_font_family=>'Helvetica'
+,p_prn_page_footer_font_weight=>'normal'
+,p_prn_page_footer_font_size=>'12'
+,p_prn_header_bg_color=>'#EEEEEE'
+,p_prn_header_font_color=>'#000000'
+,p_prn_header_font_family=>'Helvetica'
+,p_prn_header_font_weight=>'bold'
+,p_prn_header_font_size=>'10'
+,p_prn_body_bg_color=>'#FFFFFF'
+,p_prn_body_font_color=>'#000000'
+,p_prn_body_font_family=>'Helvetica'
+,p_prn_body_font_weight=>'normal'
+,p_prn_body_font_size=>'10'
+,p_prn_border_width=>.5
+,p_prn_page_header_alignment=>'CENTER'
+,p_prn_page_footer_alignment=>'CENTER'
+,p_prn_border_color=>'#666666'
+);
+wwv_flow_imp_page.create_worksheet(
+ p_id=>wwv_flow_imp.id(433620672705770139)
+,p_max_row_count=>'1000000'
+,p_pagination_type=>'ROWS_X_TO_Y'
+,p_pagination_display_pos=>'BOTTOM_RIGHT'
+,p_report_list_mode=>'TABS'
+,p_lazy_loading=>false
+,p_show_detail_link=>'N'
+,p_show_notify=>'Y'
+,p_download_formats=>'CSV:HTML:XLSX:PDF'
+,p_enable_mail_download=>'Y'
+,p_owner=>'LMORALES@INNOSYSGY.COM'
+,p_internal_uid=>244725404595145505
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(433620999850770142)
+,p_db_column_name=>'ACCOUNT_NAME'
+,p_display_order=>10
+,p_column_identifier=>'A'
+,p_column_label=>'Account Name'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(433621128162770143)
+,p_db_column_name=>'BK'
+,p_display_order=>20
+,p_column_identifier=>'B'
+,p_column_label=>'Bk'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(433621192963770144)
+,p_db_column_name=>'BR'
+,p_display_order=>30
+,p_column_identifier=>'C'
+,p_column_label=>'Br'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(433621347810770145)
+,p_db_column_name=>'CCY'
+,p_display_order=>40
+,p_column_identifier=>'D'
+,p_column_label=>'Ccy'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(433621438648770146)
+,p_db_column_name=>'GL'
+,p_display_order=>50
+,p_column_identifier=>'E'
+,p_column_label=>'Gl'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(433621553917770147)
+,p_db_column_name=>'CC'
+,p_display_order=>60
+,p_column_identifier=>'F'
+,p_column_label=>'Cc'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(433621643018770148)
+,p_db_column_name=>'DR_CR'
+,p_display_order=>70
+,p_column_identifier=>'G'
+,p_column_label=>'Dr Cr'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(433621696079770149)
+,p_db_column_name=>'DEBIT_AMOUNT'
+,p_display_order=>80
+,p_column_identifier=>'H'
+,p_column_label=>'Debit Amount'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(433621828663770150)
+,p_db_column_name=>'CREDIT_AMOUNT'
+,p_display_order=>90
+,p_column_identifier=>'I'
+,p_column_label=>'Credit Amount'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(433621939794770151)
+,p_db_column_name=>'D_C'
+,p_display_order=>100
+,p_column_identifier=>'J'
+,p_column_label=>'D C'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(433622023561770152)
+,p_db_column_name=>'EMP_ID'
+,p_display_order=>110
+,p_column_identifier=>'K'
+,p_column_label=>'Emp Id'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_rpt(
+ p_id=>wwv_flow_imp.id(551287201277401204)
+,p_application_user=>'APXWS_DEFAULT'
+,p_report_seq=>10
+,p_report_alias=>'3623920'
+,p_status=>'PUBLIC'
+,p_is_default=>'Y'
+,p_report_columns=>'ACCOUNT_NAME:BK:BR:CCY:GL:CC:DR_CR:DEBIT_AMOUNT:CREDIT_AMOUNT:D_C:EMP_ID'
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(433620821134770140)
+,p_plug_name=>'Branch Entries by Branch'
+,p_parent_plug_id=>wwv_flow_imp.id(433620471162770137)
+,p_region_template_options=>'#DEFAULT#:t-IRR-region--hideHeader js-addHiddenHeadingRoleDesc'
+,p_plug_template=>2100526641005906379
+,p_plug_display_sequence=>20
+,p_plug_display_point=>'SUB_REGIONS'
+,p_query_type=>'SQL'
+,p_plug_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'select       ACCOUNT_NAME, ',
+'						 to_char(max(BK)) BK, ',
+'						 TO_CHAR(BR) BR, ',
+'						 max(CCY) CCY, ',
+'                         trim(GL) GL, ',
+'						 max(CC) CC, ',
+'						 max(DR_CR) DR_CR, ',
+'						 sum(DEBIT_AMOUNT) DEBIT_AMOUNT, ',
+'						 sum(CREDIT_AMOUNT) CREDIT_AMOUNT, ',
+'						 max(D_C) D_C',
+'',
+'               from (',
+' select  x.account_code GL,',
+'				 x.coa_code CC, ',
+'				 x.description ACCOUNT_NAME, ',
+'				 x.income_amount ALL_AMOUNT, ',
+'				 x.debit_credit DR_CR, ',
+'				 ''GYD'' CCY,',
+'				 ''01'' BK,',
+'				 to_char(case when length(location_code) = 1 then ''00''||location_code ',
+'				      when length(location_code) = 2 then ''0''||location_code',
+'							else location_code end) BR,',
+'				 case when UPPER(x.debit_credit) = ''DR'' THEN ''D''',
+'						  when UPPER(x.debit_credit) = ''CR'' THEN ''C'' END D_C,',
+'				 case when UPPER(x.debit_credit) = ''DR'' THEN INCOME_AMOUNT ELSE 0 END DEBIT_AMOUNT,',
+'				 case when UPPER(x.debit_credit) = ''CR'' THEN INCOME_AMOUNT ELSE 0 END CREDIT_AMOUNT,',
+' row_number() over (partition by emp_id,unit_name, COA_CODE, debit_credit,orgdtl_id order by emp_id ) as seqnum,',
+'                x.emp_id',
+' from (',
+' ',
+' ',
+'select to_char(account_code) account_code,',
+'			 orgdtl_id, ',
+'			 emp_id,',
+'			 COA_CODE,',
+'			 UNIT_NAME, ',
+'			 cast(initcap(DESCRIPTION) as nvarchar2(100)) DESCRIPTION, ',
+'			 sum(income_amount) income_amount, ',
+'			 sum(income_amount_ytd) income_amount_ytd, ',
+'			 ''DR'' Debit_Credit,',
+'			 location_code',
+'from',
+'		(select distinct a.id,',
+'						e.account_code, ',
+'						c.emp_id,',
+'						c.orgdtl_id, ',
+'						x.COA_CODE,',
+'						x.UNIT_NAME, ',
+'						initcap(e.DESCRIPTION) DESCRIPTION, ',
+'						a.income_amount income_amount, ',
+'						a.income_amount_ytd income_amount_ytd, ',
+'						''DR'' Debit_Credit,',
+'						wk.location_code',
+'		from hr_rcm_employee b ',
+'		join pa_pmg_payrolldtl c on b.id = c.emp_id',
+'		join hr_hcf_orgstructuredtl x on x.id = c.orgdtl_id',
+'		join PA_PMG_PAYROLLINCOME a on c.id=a.pay_slipno',
+'		join PA_PCF_INCOMECODE e on e.INCOME_CODE=a.INCOME_CODE',
+'		JOIN PA_PCF_EARNINGPERIOD ep on ep.id = c.earnings_period_id ',
+'		join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'		where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'		and c.org_id=:APP_ORG_ID and e.org_id=:APP_ORG_ID',
+'		and (c.compute_gross_hist !=''BASIC_PAY'' or earnings_type = ''SUPPL'' or e.id !=6004))',
+'group by COA_CODE, UNIT_NAME, DESCRIPTION,emp_id,orgdtl_id, account_code,location_code',
+'',
+'',
+'union ',
+'--personal rate',
+'select * ',
+'from(',
+'		select nvl(sal.GL_CODE,''500701000000'') account_code,',
+'					 k.orgdtl_id, ',
+'					 k.emp_id,',
+'					 x.COA_CODE,',
+'					 x.UNIT_NAME,  ',
+'					 case when nvl(sal.GL_CODE,''500701000000'') = ''500901000000'' then cast(''Basic Salary - Security''  as nvarchar2(100))',
+'                     when nvl(sal.GL_CODE,''500701000000'') = ''500933000000'' then cast(''Basic Salary - Director''  as nvarchar2(100))',
+'                     else cast(''Basic Salary''  as nvarchar2(100)) end DESCRIPTION, ',
+'					 sum(time_tax_earnings) + sum(time_nontax_earnings) - case when :APP_ORG_ID = 32661 then sum(nvl(get_overtime_cb(k.id),0)) ',
+'                     else nvl(fn_adhocPayment(:P6002_PAID_EARNINGS_PERIOD,  x.COA_CODE),0) end ',
+'                     time_tax_earnings,  ',
+'					 sum(time_tax_earnings_YTD) time_tax_earnings_ytd, ',
+'					 ''DR'' Debit_Credit,',
+'						wk.location_code',
+'		from hr_rcm_employee b ',
+'		join pa_pmg_payrolldtl K ON b.id=k.emp_id',
+'        join hr_rcm_salary sal on sal.emp_id = k.emp_id',
+'		join hr_hcf_orgstructuredtl x on x.id = k.orgdtl_id',
+'		join pa_pcf_earningperiod w on w.id = k.earnings_period_id',
+'		join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'		where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'		and k.compute_gross_hist=''BASIC_PAY''',
+'		and earnings_type = ''RG''',
+'		and k.org_id=:APP_ORG_ID',
+'        and ((sal.start_date <= k.period_start and (sal.end_Date is null or sal.end_Date >= k.period_end)) or',
+'        (sal.start_date between k.period_start and k.period_end))',
+'		group by x.COA_CODE,UNIT_NAME,  cast(''Basic Salary'' as nvarchar2(100)) ,k.emp_id,k.orgdtl_id,wk.location_code,sal.GL_CODE)',
+'',
+'union',
+'--employers deductions only',
+'',
+'select to_char(ACCOUNT_CODE) account_code,',
+'			 orgdtl_id,',
+'			 emp_id,',
+'			 COA_CODE,',
+'			 UNIT_NAME, ',
+'			 cast(initcap(DESCRIPTION) as nvarchar2(100)) DESCRIPTION , ',
+'			 sum(amount_deducted) amount_deducted, ',
+'			 sum(amount_deducted_ytd) amount_deducted_ytd, ',
+'			 ''DR'' Debit_Credit,',
+'			 location_code',
+'from',
+'		(select distinct a.id,',
+'						--case when d.expense_code = ''PENSION DEDUCTION'' then cast(d.ACCOUNT_CODE as nvarchar2(100)) else cast(d.account_code_emplr as nvarchar2(100)) end',
+'                        d.account_code_emplr  ACCOUNT_CODE,',
+'						x.COA_CODE,',
+'						x.UNIT_NAME,',
+'						k.emp_id,',
+'						k.orgdtl_id, ',
+'						initcap(d.DESCRIPTION||'' ''||DEDUCTION_TYPE) DESCRIPTION , ',
+'						a.amount_deducted amount_deducted, ',
+'						amount_deducted_ytd amount_deducted_ytd, ',
+'						''DR'' Debit_Credit,',
+'						wk.location_code',
+'		from  hr_rcm_employee b ',
+'		join pa_pmg_payrolldtl K ON b.id=k.emp_id',
+'		join pa_pmg_payrolldeduction a on k.id=a.pay_slipno',
+'		join hr_hcf_orgstructuredtl x on x.id = k.orgdtl_id',
+'		join Pa_Pcf_Deductioncode d on d.EXPENSE_CODE=a.EXPENSE_CODE',
+'		join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'		where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'		and A.DEDUCTION_TYPE=''EMPLOYER''',
+'		and k.org_id=:APP_ORG_ID)',
+'group by COA_CODE,UNIT_NAME, DESCRIPTION,emp_id,orgdtl_id,ACCOUNT_CODE,location_code',
+'',
+'--NIS-ER',
+'union',
+'',
+'select ''500714000000''  account_code,--''210008000000''',
+'			 k.orgdtl_id,',
+'			 k.emp_id,',
+'			 x.COA_CODE,',
+'			 x.UNIT_NAME,  ',
+'			 cast(''NIS Employer''  as nvarchar2(100)) DESCRIPTION, ',
+'			 sum(nis_employer) nis_employer,  ',
+'			 sum(nis_employer_YTD) nis_employer_YTD, ',
+'			 ''DR'' Debit_Credit,',
+'			 wk.location_code',
+'from hr_rcm_employee b ',
+'join pa_pmg_payrolldtl K ON b.id=k.emp_id',
+'join hr_hcf_orgstructuredtl x on x.id = k.orgdtl_id',
+'join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'and k.org_id=:APP_ORG_ID',
+'group by x.COA_CODE,UNIT_NAME,  cast(''NIS Employer''  as nvarchar2(100)) ,k.emp_id,k.orgdtl_id, wk.location_code',
+'',
+'',
+'---************ CREDITS ***********',
+'union ',
+'/*',
+'select to_char(account_code) account_code,',
+'			 orgdtl_id,',
+'			 emp_id,',
+'			 COA_CODE,',
+'			 UNIT_NAME, ',
+'			 DESCRIPTION , ',
+'			 sum(amount_deducted) amount_deducted, ',
+'			 sum(amount_deducted_ytd) amount_deducted_ytd, ',
+'			 ''CR'' Debit_Credit,',
+'			 location_code',
+'from',
+'		(select distinct a.id,',
+'						d.account_code, ',
+'						x.COA_CODE,',
+'						UNIT_NAME, ',
+'						k.emp_id,',
+'						k.orgdtl_id,',
+'						initcap(d.DESCRIPTION||'' ''||DEDUCTION_TYPE) DESCRIPTION , ',
+'						a.amount_deducted amount_deducted, ',
+'						a.amount_deducted_ytd amount_deducted_ytd, ',
+'						''CR'' Debit_Credit,',
+'						wk.location_code',
+'		from  hr_rcm_employee b ',
+'		join pa_pmg_payrolldtl K ON b.id=k.emp_id',
+'		join pa_pmg_payrolldeduction a on k.id=a.pay_slipno',
+'		join hr_hcf_orgstructuredtl x on x.id = k.orgdtl_id',
+'		join Pa_Pcf_Deductioncode d on d.EXPENSE_CODE=a.EXPENSE_CODE',
+'		join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'		where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'		and k.org_id=:APP_ORG_ID and d.org_id=:APP_ORG_ID)',
+'group by COA_CODE,UNIT_NAME, DESCRIPTION,emp_id,orgdtl_id,account_code,location_code',
+'*/',
+'select  case when deduction_type=''EMPLOYEE'' THEN to_char(account_code) ',
+'                else to_char(account_code)  end account_code,',
+'         --    account_code_emplr  account_code,   ',
+'			 orgdtl_id,',
+'			 emp_id,',
+'			 COA_CODE,',
+'			 UNIT_NAME, ',
+'			 cast(initcap(DESCRIPTION) as nvarchar2(100)) DESCRIPTION , ',
+'			 sum(amount_deducted) amount_deducted, ',
+'			 sum(amount_deducted_ytd) amount_deducted_ytd, ',
+'		--	case when deduction_type=''EMPLOYEE'' THEN ''DR''',
+'        --            else ''CR'' end   Debit_Credit,',
+'             ''CR'' Debit_Credit,',
+'			 location_code',
+'from',
+'		(select distinct a.id,',
+'						d.account_code, ',
+'                        account_code_emplr,',
+'                        DEDUCTION_TYPE,',
+'						x.COA_CODE,',
+'						UNIT_NAME, ',
+'						k.emp_id,',
+'						k.orgdtl_id,',
+'						initcap(d.DESCRIPTION||'' ''||DEDUCTION_TYPE) DESCRIPTION , ',
+'						a.amount_deducted amount_deducted, ',
+'						a.amount_deducted_ytd amount_deducted_ytd, ',
+'					--	case when deduction_type=''EMPLOYEE'' THEN ''CR''',
+'                      --  else ''DR'' end  Debit_Credit,',
+'						wk.location_code',
+'from  hr_rcm_employee b ',
+'join pa_pmg_payrolldtl K ON b.id=k.emp_id',
+'join pa_pmg_payrolldeduction a on k.id=a.pay_slipno',
+'join hr_hcf_orgstructuredtl x on x.id = k.orgdtl_id',
+'join Pa_Pcf_Deductioncode d on d.EXPENSE_CODE=a.EXPENSE_CODE',
+'join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'and k.org_id=:APP_ORG_ID and d.org_id=:APP_ORG_ID)',
+'group by COA_CODE,UNIT_NAME, DESCRIPTION,emp_id,orgdtl_id,account_code,account_code_emplr,DEDUCTION_TYPE,location_code',
+'',
+'--NETPAY',
+'union',
+'',
+'select       to_char(BANK_ACCOUNT_NO) account_code,',
+'			 k.orgdtl_id, ',
+'			 k.emp_id,',
+'			 x.COA_CODE,',
+'			 UNIT_NAME, ',
+'			 cast(''NETPAY''  as nvarchar2(100))  DESCRIPTION, ',
+'			 sum(net_pay) net_pay,  ',
+'			 sum(net_pay_YTD) net_pay_TD, ',
+'			 ''CR'' Debit_Credit,',
+'			 wk.location_code',
+'from hr_rcm_employee b ',
+'join hr_rcm_individual ind on ind.id=b.ind_id',
+'join pa_pmg_payrolldtl K ON b.id=k.emp_id',
+'join hr_hcf_orgstructuredtl x on x.id = k.orgdtl_id',
+'join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'and k.org_id=:APP_ORG_ID',
+'group by x.COA_CODE,UNIT_NAME, cast(''NETPAY''  as nvarchar2(100)),k.emp_id,k.orgdtl_id,wk.location_code,BANK_ACCOUNT_NO',
+'',
+'',
+'--PAYE',
+'union',
+'',
+'select ''210005000000'' account_code,',
+'			 k.orgdtl_id,',
+'			 k.emp_id,',
+'			 x.COA_CODE,',
+'			 UNIT_NAME, ',
+'			 cast(''PAYE''  as nvarchar2(100))  DESCRIPTION, ',
+'			 sum(case when tax_amount<0 then 0 else tax_amount end) net_pay,  ',
+'			 sum(tax_amount_YTD) net_pay_TD, ',
+'			 ''CR'' Debit_Credit,',
+'				wk.location_code',
+'from hr_rcm_employee b ',
+'join pa_pmg_payrolldtl K ON b.id=k.emp_id',
+'join hr_hcf_orgstructuredtl x on x.id = k.orgdtl_id',
+'join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'and k.org_id=:APP_ORG_ID',
+'group by x.COA_CODE,UNIT_NAME, cast(''PAYE''  as nvarchar2(100)),k.emp_id,k.orgdtl_id,wk.location_code',
+'',
+'',
+'--NIS',
+'union',
+'',
+'select ''210007000000'' account_code,',
+'			 k.orgdtl_id,',
+'			 k.emp_id,',
+'			 x.COA_CODE,',
+'			 UNIT_NAME, ',
+'			 cast(''NIS Employee''  as nvarchar2(100))  DESCRIPTION, ',
+'			 sum(nis_employee) net_pay,  ',
+'			 sum(nis_employee_YTD) net_pay_TD, ',
+'			 ''CR'' Debit_Credit,',
+'			 wk.location_code',
+'from hr_rcm_employee b ',
+'join pa_pmg_payrolldtl K ON b.id=k.emp_id',
+'join hr_hcf_orgstructuredtl x on x.id = k.orgdtl_id',
+'join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'and k.org_id=:APP_ORG_ID',
+'group by x.COA_CODE,UNIT_NAME, cast(''NIS Employee''  as nvarchar2(100)),k.emp_id,k.orgdtl_id,wk.location_code',
+'',
+'',
+'--NIS-ER',
+'union',
+'',
+'select  ''210008000000'' account_code,--''500714000000''',
+'			 k.orgdtl_id, ',
+'			 k.emp_id,',
+'			 x.COA_CODE,',
+'			 UNIT_NAME, ',
+'			 cast(''NIS Employer''  as nvarchar2(100))  DESCRIPTION, ',
+'			 sum(nis_employer) net_pay,  ',
+'			 sum(nis_employer_YTD) net_pay_TD, ',
+'			 ''CR'' Debit_Credit,',
+'			 wk.location_code',
+'from hr_rcm_employee b ',
+'join pa_pmg_payrolldtl K ON b.id=k.emp_id',
+'join hr_hcf_orgstructuredtl x on x.id = k.orgdtl_id',
+'join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'and k.org_id=:APP_ORG_ID',
+'group by x.COA_CODE,UNIT_NAME, cast(''NIS Employer''  as nvarchar2(100)) ,k.emp_id,k.orgdtl_id,wk.location_code',
+'',
+'union ',
+'--personal rate negative pay',
+'select * ',
+'from(',
+'		select nvl(sal.GL_CODE,''500701000000'') account_code,',
+'					 b.orgdtl_id, ',
+'					 k.emp_id,',
+'					 x.COA_CODE,',
+'					 x.UNIT_NAME,  ',
+'					 case when nvl(sal.GL_CODE,''500701000000'') = ''500901000000'' then cast(''Basic Salary - Security''  as nvarchar2(100))',
+'                     when nvl(sal.GL_CODE,''500701000000'') = ''500933000000'' then cast(''Basic Salary - Director''  as nvarchar2(100))',
+'                     else cast(''Basic Salary''  as nvarchar2(100)) end DESCRIPTION, ',
+'					 sum(time_tax_earnings) + sum(time_nontax_earnings) - sum(nvl(get_overtime_cb_negative(k.id),0)) -- nvl(fn_adhocPayment(:P6002_PAID_EARNINGS_PERIOD,  x.COA_CODE),0) ',
+'                     time_tax_earnings,  ',
+'					 sum(time_tax_earnings) time_tax_earnings_ytd, ',
+'					 ''DR'' Debit_Credit,',
+'						wk.location_code',
+'		from hr_rcm_employee b ',
+'		join PA_PMG_PAYROLLDTLNEG K ON b.id=k.emp_id',
+'        join hr_rcm_salary sal on sal.emp_id = k.emp_id',
+'		join hr_hcf_orgstructuredtl x on x.id = b.orgdtl_id',
+'		join pa_pcf_earningperiod w on w.id = k.earnings_period_id',
+'		join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'		where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'          and sal.start_date<w.end_date',
+'        and ',
+'        (sal.end_date is null or sal.end_date BETWEEN w.start_date and w.end_date)',
+'		group by x.COA_CODE,UNIT_NAME,  cast(''Basic Salary'' as nvarchar2(100)) ,k.emp_id,b.orgdtl_id,wk.location_code,sal.GL_CODE)',
+'',
+'',
+'--NIS-ER -negative pay',
+'union',
+'',
+'select ''500714000000''  account_code,--''210008000000''',
+'			 b.orgdtl_id,',
+'			 k.emp_id,',
+'			 x.COA_CODE,',
+'			 x.UNIT_NAME,  ',
+'			 cast(''NIS Employer''  as nvarchar2(100)) DESCRIPTION, ',
+'			 sum(nis_employer) nis_employer,  ',
+'			 sum(nis_employer) nis_employer_YTD, ',
+'			 ''DR'' Debit_Credit,',
+'			 wk.location_code',
+'from hr_rcm_employee b ',
+'join PA_PMG_PAYROLLDTLNEG K ON b.id=k.emp_id',
+'join hr_hcf_orgstructuredtl x on x.id = b.orgdtl_id',
+'join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'group by x.COA_CODE,UNIT_NAME,  cast(''NIS Employer''  as nvarchar2(100)) ,k.emp_id,b.orgdtl_id, wk.location_code',
+'',
+'',
+'',
+'--NETPAY negative pay',
+'union',
+'',
+'select       to_char(BANK_ACCOUNT_NO) account_code,',
+'			 b.orgdtl_id, ',
+'			 k.emp_id,',
+'			 x.COA_CODE,',
+'			 UNIT_NAME, ',
+'			 cast(''NETPAY''  as nvarchar2(100))  DESCRIPTION, ',
+'			 sum(net_pay)*-1 net_pay,  ',
+'			 sum(net_pay) net_pay_TD, ',
+'			 ''DR'' Debit_Credit,',
+'			 wk.location_code',
+'from hr_rcm_employee b ',
+'join hr_rcm_individual ind on ind.id=b.ind_id',
+'join PA_PMG_PAYROLLDTLNEG K ON b.id=k.emp_id',
+'join hr_hcf_orgstructuredtl x on x.id = b.orgdtl_id',
+'join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'group by x.COA_CODE,UNIT_NAME, cast(''NETPAY''  as nvarchar2(100)),k.emp_id,b.orgdtl_id,wk.location_code,BANK_ACCOUNT_NO',
+'',
+'',
+'',
+'--PAYE -negative pay',
+'union',
+'',
+'select ''210005000000'' account_code,',
+'			 b.orgdtl_id,',
+'			 k.emp_id,',
+'			 x.COA_CODE,',
+'			 UNIT_NAME, ',
+'			 cast(''PAYE''  as nvarchar2(100))  DESCRIPTION, ',
+'			 sum(case when tax_amount<0 then 0 else tax_amount end) net_pay,  ',
+'			 sum(case when tax_amount<0 then 0 else tax_amount end) net_pay_TD, ',
+'			 ''CR'' Debit_Credit,',
+'				wk.location_code',
+'from hr_rcm_employee b ',
+'join PA_PMG_PAYROLLDTLNEG K ON b.id=k.emp_id',
+'join hr_hcf_orgstructuredtl x on x.id = b.orgdtl_id',
+'join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'group by x.COA_CODE,UNIT_NAME, cast(''PAYE''  as nvarchar2(100)),k.emp_id,b.orgdtl_id,wk.location_code',
+'',
+'',
+'--NIS negative pay',
+'union',
+'',
+'select ''210007000000'' account_code,',
+'			 b.orgdtl_id,',
+'			 k.emp_id,',
+'			 x.COA_CODE,',
+'			 UNIT_NAME, ',
+'			 cast(''NIS Employee''  as nvarchar2(100))  DESCRIPTION, ',
+'			 sum(nis_employee) net_pay,  ',
+'			 sum(nis_employee) net_pay_TD, ',
+'			 ''CR'' Debit_Credit,',
+'			 wk.location_code',
+'from hr_rcm_employee b ',
+'join PA_PMG_PAYROLLDTLNEG K ON b.id=k.emp_id',
+'join hr_hcf_orgstructuredtl x on x.id = b.orgdtl_id',
+'join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'group by x.COA_CODE,UNIT_NAME, cast(''NIS Employee''  as nvarchar2(100)),k.emp_id,b.orgdtl_id,wk.location_code',
+'',
+'',
+'--NIS-ER',
+'union',
+'',
+'select  ''210008000000'' account_code,--''500714000000''',
+'			 b.orgdtl_id, ',
+'			 k.emp_id,',
+'			 x.COA_CODE,',
+'			 UNIT_NAME, ',
+'			 cast(''NIS Employer''  as nvarchar2(100))  DESCRIPTION, ',
+'			 sum(nis_employer) net_pay,  ',
+'			 sum(nis_employer) net_pay_TD, ',
+'			 ''CR'' Debit_Credit,',
+'			 wk.location_code',
+'from hr_rcm_employee b ',
+'join PA_PMG_PAYROLLDTLNEG K ON b.id=k.emp_id',
+'join hr_hcf_orgstructuredtl x on x.id = b.orgdtl_id',
+'join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'group by x.COA_CODE,UNIT_NAME, cast(''NIS Employer''  as nvarchar2(100)) ,k.emp_id,b.orgdtl_id,wk.location_code',
+'',
+'union ',
+'--income negative pay',
+'select to_char(account_code) account_code,',
+'			 orgdtl_id, ',
+'			 emp_id,',
+'			 COA_CODE,',
+'			 UNIT_NAME, ',
+'			 cast(initcap(DESCRIPTION) as nvarchar2(100)) DESCRIPTION, ',
+'			 sum(income_amount) income_amount, ',
+'			 sum(income_amount_ytd) income_amount_ytd, ',
+'			 ''DR'' Debit_Credit,',
+'			 location_code',
+'from',
+'		(select distinct a.id,',
+'						e.account_code, ',
+'						c.emp_id,',
+'						b.orgdtl_id, ',
+'						x.COA_CODE,',
+'						x.UNIT_NAME, ',
+'						initcap(e.DESCRIPTION) DESCRIPTION, ',
+'						a.income_amount income_amount, ',
+'						a.income_amount_ytd income_amount_ytd, ',
+'						''DR'' Debit_Credit,',
+'						wk.location_code',
+'		from hr_rcm_employee b ',
+'		join PA_PMG_PAYROLLDTLNEG c on b.id = c.emp_id',
+'		join hr_hcf_orgstructuredtl x on x.id = b.orgdtl_id',
+'		join PA_PMG_PAYROLLINCOMENEG a on c.id=a.pay_slipno',
+'		join PA_PCF_INCOMECODE e on e.INCOME_CODE=a.INCOME_CODE',
+'		JOIN PA_PCF_EARNINGPERIOD ep on ep.id = c.earnings_period_id ',
+'		join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'		where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'		and e.org_id=:APP_ORG_ID',
+'		)',
+'group by COA_CODE, UNIT_NAME, DESCRIPTION,emp_id, orgdtl_id, account_code,location_code',
+'',
+'',
+'union',
+'--employers deductions only negative pay',
+'',
+'select to_char(ACCOUNT_CODE) account_code,',
+'			 orgdtl_id,',
+'			 emp_id,',
+'			 COA_CODE,',
+'			 UNIT_NAME, ',
+'			 cast(initcap(DESCRIPTION) as nvarchar2(100)) DESCRIPTION , ',
+'			 sum(amount_deducted) amount_deducted, ',
+'			 sum(amount_deducted_ytd) amount_deducted_ytd, ',
+'			 ''DR'' Debit_Credit,',
+'			 location_code',
+'from',
+'		(select distinct a.id,',
+'					--	case when d.expense_code = ''PENSION DEDUCTION'' then cast(d.ACCOUNT_CODE as nvarchar2(100)) else d.account_code end',
+'                        d.account_code_emplr ACCOUNT_CODE, ',
+'						x.COA_CODE,',
+'						x.UNIT_NAME,',
+'						k.emp_id,',
+'						b.orgdtl_id, ',
+'						initcap(d.DESCRIPTION||'' ''||DEDUCTION_TYPE) DESCRIPTION , ',
+'						a.amount_deducted amount_deducted, ',
+'						amount_deducted_ytd amount_deducted_ytd, ',
+'						''DR'' Debit_Credit,',
+'						wk.location_code',
+'		from  hr_rcm_employee b ',
+'		join PA_PMG_PAYROLLDTLNEG K ON b.id=k.emp_id',
+'		join PA_PMG_PAYROLLDEDUCTIONNEG a on k.id=a.pay_slipno',
+'		join hr_hcf_orgstructuredtl x on x.id = b.orgdtl_id',
+'		join Pa_Pcf_Deductioncode d on d.EXPENSE_CODE=a.EXPENSE_CODE',
+'		join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'		where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'		and A.DEDUCTION_TYPE=''EMPLOYER''',
+'		)',
+'group by COA_CODE,UNIT_NAME, DESCRIPTION,emp_id,orgdtl_id,ACCOUNT_CODE,location_code',
+'',
+'---credits deduction  negative pay',
+'union ',
+'',
+'select  case when deduction_type=''EMPLOYEE'' THEN to_char(account_code) ',
+'                else to_char(account_code) end account_code,',
+'',
+'        --case when deduction_type=''EMPLOYEE'' THEN to_char(account_code) ',
+'        --        else account_code_emplr end account_code,',
+'         --    account_code_emplr  account_code,   ',
+'			 orgdtl_id,',
+'			 emp_id,',
+'			 COA_CODE,',
+'			 UNIT_NAME, ',
+'			 cast(initcap(DESCRIPTION) as nvarchar2(100)) DESCRIPTION , ',
+'			 sum(amount_deducted) amount_deducted, ',
+'			 sum(amount_deducted_ytd) amount_deducted_ytd, ',
+'		--	case when deduction_type=''EMPLOYEE'' THEN ''DR''',
+'        --            else ''CR'' end   Debit_Credit,',
+'             ''CR'' Debit_Credit,',
+'			 location_code',
+'from',
+'		(select distinct a.id,',
+'						d.account_code, ',
+'                        account_code_emplr,',
+'                        DEDUCTION_TYPE,',
+'						x.COA_CODE,',
+'						UNIT_NAME, ',
+'						k.emp_id,',
+'						b.orgdtl_id,',
+'						initcap(d.DESCRIPTION||'' ''||DEDUCTION_TYPE) DESCRIPTION , ',
+'						a.amount_deducted amount_deducted, ',
+'						a.amount_deducted_ytd amount_deducted_ytd, ',
+'					--	case when deduction_type=''EMPLOYEE'' THEN ''CR''',
+'                      --  else ''DR'' end  Debit_Credit,',
+'						wk.location_code',
+'from  hr_rcm_employee b ',
+'join PA_PMG_PAYROLLDTLNEG K ON b.id=k.emp_id',
+'join PA_PMG_PAYROLLDEDUCTIONNEG a on k.id=a.pay_slipno',
+'join hr_hcf_orgstructuredtl x on x.id = b.orgdtl_id',
+'join Pa_Pcf_Deductioncode d on d.EXPENSE_CODE=a.EXPENSE_CODE',
+'join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'and d.org_id=:APP_ORG_ID)',
+'group by COA_CODE,UNIT_NAME, DESCRIPTION,emp_id,orgdtl_id,account_code,account_code_emplr,DEDUCTION_TYPE,location_code',
+'',
+') x ',
+') group by ACCOUNT_NAME,BR,trim(GL)'))
+,p_plug_source_type=>'NATIVE_IR'
+,p_prn_content_disposition=>'ATTACHMENT'
+,p_prn_units=>'INCHES'
+,p_prn_paper_size=>'LETTER'
+,p_prn_width=>11
+,p_prn_height=>8.5
+,p_prn_orientation=>'HORIZONTAL'
+,p_prn_page_header_font_color=>'#000000'
+,p_prn_page_header_font_family=>'Helvetica'
+,p_prn_page_header_font_weight=>'normal'
+,p_prn_page_header_font_size=>'12'
+,p_prn_page_footer_font_color=>'#000000'
+,p_prn_page_footer_font_family=>'Helvetica'
+,p_prn_page_footer_font_weight=>'normal'
+,p_prn_page_footer_font_size=>'12'
+,p_prn_header_bg_color=>'#EEEEEE'
+,p_prn_header_font_color=>'#000000'
+,p_prn_header_font_family=>'Helvetica'
+,p_prn_header_font_weight=>'bold'
+,p_prn_header_font_size=>'10'
+,p_prn_body_bg_color=>'#FFFFFF'
+,p_prn_body_font_color=>'#000000'
+,p_prn_body_font_family=>'Helvetica'
+,p_prn_body_font_weight=>'normal'
+,p_prn_body_font_size=>'10'
+,p_prn_border_width=>.5
+,p_prn_page_header_alignment=>'CENTER'
+,p_prn_page_footer_alignment=>'CENTER'
+,p_prn_border_color=>'#666666'
+);
+wwv_flow_imp_page.create_worksheet(
+ p_id=>wwv_flow_imp.id(433623071236770163)
+,p_max_row_count=>'1000000'
+,p_pagination_type=>'ROWS_X_TO_Y'
+,p_pagination_display_pos=>'BOTTOM_RIGHT'
+,p_report_list_mode=>'TABS'
+,p_lazy_loading=>false
+,p_show_detail_link=>'N'
+,p_show_notify=>'Y'
+,p_download_formats=>'CSV:HTML:XLSX:PDF'
+,p_enable_mail_download=>'Y'
+,p_owner=>'LMORALES@INNOSYSGY.COM'
+,p_internal_uid=>244727803126145529
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(433623231895770164)
+,p_db_column_name=>'ACCOUNT_NAME'
+,p_display_order=>10
+,p_column_identifier=>'A'
+,p_column_label=>'Account Name'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(433623288458770165)
+,p_db_column_name=>'BK'
+,p_display_order=>20
+,p_column_identifier=>'B'
+,p_column_label=>'Bk'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(433623396691770166)
+,p_db_column_name=>'BR'
+,p_display_order=>30
+,p_column_identifier=>'C'
+,p_column_label=>'Br'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(433623546065770167)
+,p_db_column_name=>'CCY'
+,p_display_order=>40
+,p_column_identifier=>'D'
+,p_column_label=>'Ccy'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(433623578834770168)
+,p_db_column_name=>'GL'
+,p_display_order=>50
+,p_column_identifier=>'E'
+,p_column_label=>'Gl'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(433623722235770169)
+,p_db_column_name=>'CC'
+,p_display_order=>60
+,p_column_identifier=>'F'
+,p_column_label=>'Cc'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(433623806939770170)
+,p_db_column_name=>'DR_CR'
+,p_display_order=>70
+,p_column_identifier=>'G'
+,p_column_label=>'Dr Cr'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(433623906015770171)
+,p_db_column_name=>'DEBIT_AMOUNT'
+,p_display_order=>80
+,p_column_identifier=>'H'
+,p_column_label=>'Debit Amount'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(433624034766770172)
+,p_db_column_name=>'CREDIT_AMOUNT'
+,p_display_order=>90
+,p_column_identifier=>'I'
+,p_column_label=>'Credit Amount'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(433624094843770173)
+,p_db_column_name=>'D_C'
+,p_display_order=>100
+,p_column_identifier=>'J'
+,p_column_label=>'D C'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_rpt(
+ p_id=>wwv_flow_imp.id(551287841443401313)
+,p_application_user=>'APXWS_DEFAULT'
+,p_report_seq=>10
+,p_report_alias=>'3623926'
+,p_status=>'PUBLIC'
+,p_is_default=>'Y'
+,p_report_columns=>'ACCOUNT_NAME:BK:BR:CCY:GL:CC:DR_CR:DEBIT_AMOUNT:CREDIT_AMOUNT:D_C'
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(433622112616770153)
+,p_plug_name=>'Journal report'
+,p_parent_plug_id=>wwv_flow_imp.id(433620471162770137)
+,p_region_template_options=>'#DEFAULT#:t-IRR-region--hideHeader js-addHiddenHeadingRoleDesc'
+,p_component_template_options=>'#DEFAULT#'
+,p_plug_template=>2100526641005906379
+,p_plug_display_sequence=>30
+,p_plug_display_point=>'SUB_REGIONS'
+,p_query_type=>'SQL'
+,p_plug_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'---************ DEDITS ***********',
+'',
+'--Allowance',
+'select COA_CODE,UNIT_NAME, ''Income Statement'' type_account,initcap(DESCRIPTION) DESCRIPTION, sum(income_amount) Debits, sum(income_amount_ytd) income_amount_ytd, ''DR'' Debit_Credit, 0 Credit from ',
+'(select  distinct a.id, COA_CODE,UNIT_NAME, cast(''Allowance'' as nvarchar2(100)) DESCRIPTION, a.income_amount income_amount, a.income_amount_ytd income_amount_ytd, ''DR'' Debit_Credit',
+'from hr_rcm_employee b join pa_pmg_payrolldtl c on b.id = c.emp_id',
+'join hr_hcf_orgstructuredtl x on x.id = c.orgdtl_id',
+'join PA_PMG_PAYROLLINCOME a on c.id=a.pay_slipno',
+'join PA_PCF_INCOMECODE e on trim(e.INCOME_CODE)=trim(a.INCOME_CODE)',
+'where earnings_period_id = :P6002_PAID_EARNINGS_PERIOD',
+'and e.org_id=:APP_ORG_ID',
+'and income_amount >0 ',
+'and upper(a.INCOME_TYPE)=''ALLOWANCE''',
+'--and a.TAXABLE=1',
+')',
+'group by COA_CODE, UNIT_NAME, DESCRIPTION',
+'',
+'union',
+'--Overtime',
+'select COA_CODE,UNIT_NAME, ''Income Statement'' type_account, initcap(DESCRIPTION) DESCRIPTION, sum(income_amount) Debits, sum(income_amount_ytd) income_amount_ytd, ''DR'' Debit_Credit, 0 Credit from ',
+'(select  distinct a.id, COA_CODE,UNIT_NAME, cast(''Overtime'' as nvarchar2(100)) DESCRIPTION, a.income_amount income_amount, a.income_amount_ytd income_amount_ytd, ''DR'' Debit_Credit',
+'from hr_rcm_employee b join pa_pmg_payrolldtl c on b.id = c.emp_id',
+'join hr_hcf_orgstructuredtl x on x.id = c.orgdtl_id',
+'join PA_PMG_PAYROLLINCOME a on c.id=a.pay_slipno',
+'join PA_PCF_INCOMECODE e on e.INCOME_CODE=a.INCOME_CODE',
+'where earnings_period_id = :P6002_PAID_EARNINGS_PERIOD',
+'and e.org_id=:APP_ORG_ID',
+'and income_amount >0 ',
+'and a.INCOME_CODE in (select INCOME_CODE from PA_PCF_INCOMECODE ic where upper(ic.DESCRIPTION) like ''%OVERTIME%'' and ic.ORG_ID=:APP_ORG_ID)',
+')',
+'group by COA_CODE, UNIT_NAME, DESCRIPTION',
+'',
+'',
+'union ',
+'--personal rate',
+'select x.COA_CODE,x.UNIT_NAME, ''Income Statement'' type_account,  cast(''Basic Pay''  as nvarchar2(100)) DESCRIPTION, sum(time_tax_earnings)+ sum(time_nontax_earnings) ',
+'- case when :APP_ORG_ID = 32661 then sum(nvl(get_overtime_cb(k.id),0)) ',
+'else nvl(fn_adhocPayment(:P6002_PAID_EARNINGS_PERIOD,  x.COA_CODE),0) end ',
+'Debits,',
+'sum(time_tax_earnings_YTD) time_tax_earnings_ytd, ''DR'' Debit_Credit, 0 Credit',
+'from hr_rcm_employee b ',
+'join pa_pmg_payrolldtl K ON b.id=k.emp_id',
+'join hr_hcf_orgstructuredtl x on x.id = k.orgdtl_id',
+'where k.earnings_period_id = :P6002_PAID_EARNINGS_PERIOD',
+'and k.compute_gross_hist=''BASIC_PAY''',
+'and k.org_id = :APP_ORG_ID',
+'group by x.COA_CODE,x.UNIT_NAME,  cast(''Basic Pay''  as nvarchar2(100)),k.earnings_period_id',
+'',
+'union',
+'--employers deductions only',
+'',
+'select COA_CODE,UNIT_NAME, ''Income Statement'' type_account,DESCRIPTION, sum(amount_deducted) Debits, sum(amount_deducted_ytd) amount_deducted_ytd, ''DR'' Debit_Credit, 0 Credit',
+'from',
+'(select distinct a.id, COA_CODE,UNIT_NAME, cast(''Employer Medical'' as nvarchar2(100)) DESCRIPTION, a.amount_deducted amount_deducted, amount_deducted_ytd amount_deducted_ytd, ''DR'' Debit_Credit',
+'from  hr_rcm_employee b join pa_pmg_payrolldtl K ON b.id=k.emp_id',
+'join pa_pmg_payrolldeduction a on k.id=a.pay_slipno',
+'join hr_hcf_orgstructuredtl x on x.id = k.orgdtl_id',
+'join Pa_Pcf_Deductioncode d on d.EXPENSE_CODE=a.EXPENSE_CODE',
+'where earnings_period_id= :P6002_PAID_EARNINGS_PERIOD',
+'and A.DEDUCTION_TYPE=''EMPLOYER''',
+'and amount_deducted >0',
+'and a.EXPENSE_CODE=''MED''',
+'and d.org_id =:APP_ORG_ID',
+')',
+'group by COA_CODE,UNIT_NAME, DESCRIPTION',
+'',
+'--NIS-ER',
+'union',
+'select COA_CODE,UNIT_NAME, ''Income Statement'' type_account,  cast(''NIS Employer''  as nvarchar2(100))  DESCRIPTION, sum(nis_employer) Debits,  sum(nis_employer_YTD) nis_employer_YTD, ''DR'' Debit_Credit, 0 Credit',
+'from hr_rcm_employee b join pa_pmg_payrolldtl K ON b.id=k.emp_id',
+'join hr_hcf_orgstructuredtl x on x.id = k.orgdtl_id',
+'where earnings_period_id = :P6002_PAID_EARNINGS_PERIOD',
+'and k.org_id =:APP_ORG_ID',
+'group by COA_CODE,UNIT_NAME,  cast(''NIS Employer''  as nvarchar2(100)) ',
+'',
+'',
+'---************ CREDITS ***********',
+'union ',
+'',
+'select COA_CODE,UNIT_NAME, ''Balance Sheet'' type_account, DESCRIPTION, 0 Debits, sum(amount_deducted_ytd) amount_deducted_ytd, ''CR'' Debit_Credit, sum(amount_deducted) Credit from (',
+'select distinct a.id, COA_CODE,UNIT_NAME, cast(''Payroll & Benefits - Medical Insurance'' as nvarchar2(100)) DESCRIPTION, a.amount_deducted amount_deducted, a.amount_deducted_ytd amount_deducted_ytd, ''CR'' Debit_Credit',
+'from  hr_rcm_employee b join pa_pmg_payrolldtl K ON b.id=k.emp_id',
+'join pa_pmg_payrolldeduction a on k.id=a.pay_slipno',
+'join hr_hcf_orgstructuredtl x on x.id = k.orgdtl_id',
+'join Pa_Pcf_Deductioncode d on trim(d.EXPENSE_CODE)=trim(a.EXPENSE_CODE)',
+'where earnings_period_id = :P6002_PAID_EARNINGS_PERIOD',
+'and d.org_id=:APP_ORG_ID',
+'and amount_deducted >0',
+'and a.EXPENSE_CODE=''MED'')',
+'group by COA_CODE,UNIT_NAME,  DESCRIPTION',
+'',
+'',
+'--NETPAY',
+'union',
+'',
+'select COA_CODE,UNIT_NAME,''Balance Sheet'' type_account, cast(''Net Liability Account''  as nvarchar2(100))  DESCRIPTION, 0 Debits,  sum(net_pay_YTD) net_pay_TD, ''CR'' Debit_Credit, sum(',
+'TIME_TAX_EARNINGS+TIME_NONTAX_EARNINGS+ALLOWANCE_TAXABLE+ALLOWANCE_NONTAXABLE+MISC_TAX_PAYMENT - case when tax_amount<0 then 0 else tax_amount end-NIS_EMPLOYEE-MEDICAL_SUM',
+') Credit',
+'from hr_rcm_employee b join pa_pmg_payrolldtl K ON b.id=k.emp_id',
+'join hr_hcf_orgstructuredtl x on x.id = k.orgdtl_id',
+'where earnings_period_id = :P6002_PAID_EARNINGS_PERIOD',
+'and k.org_id = :APP_ORG_ID',
+'group by COA_CODE,UNIT_NAME, cast(''Net Liability Account''  as nvarchar2(100))',
+'',
+'--PAYE',
+'union',
+'select COA_CODE,UNIT_NAME,''Balance Sheet'' type_account, cast(''PAYE''  as nvarchar2(100))  DESCRIPTION, 0 Debits,  sum(tax_amount_YTD) net_pay_TD, ''CR'' Debit_Credit, sum(case when tax_amount<0 then 0 else tax_amount end) Credit',
+'from hr_rcm_employee b join pa_pmg_payrolldtl K ON b.id=k.emp_id',
+'join hr_hcf_orgstructuredtl x on x.id = k.orgdtl_id',
+'where earnings_period_id = :P6002_PAID_EARNINGS_PERIOD',
+'and k.org_id = :APP_ORG_ID',
+'group by COA_CODE,UNIT_NAME, cast(''PAYE''  as nvarchar2(100))',
+'',
+'',
+'--NIS',
+'union',
+'select COA_CODE,UNIT_NAME,''Balance Sheet'' type_account, cast(''NIS Control Account''  as nvarchar2(100))  DESCRIPTION, 0 Debits,  sum(nis_employee_YTD) net_pay_TD, ''CR'' Debit_Credit, sum(nis_employee+nis_employer) Credit',
+'from hr_rcm_employee b join pa_pmg_payrolldtl K ON b.id=k.emp_id',
+'join hr_hcf_orgstructuredtl x on x.id = k.orgdtl_id',
+'where earnings_period_id = :P6002_PAID_EARNINGS_PERIOD',
+'and k.org_id = :APP_ORG_ID',
+'group by COA_CODE,UNIT_NAME, cast(''NIS Control Account''  as nvarchar2(100))',
+' '))
+,p_plug_source_type=>'NATIVE_IR'
+,p_prn_content_disposition=>'ATTACHMENT'
+,p_prn_units=>'INCHES'
+,p_prn_paper_size=>'LETTER'
+,p_prn_width=>11
+,p_prn_height=>8.5
+,p_prn_orientation=>'HORIZONTAL'
+,p_prn_page_header_font_color=>'#000000'
+,p_prn_page_header_font_family=>'Helvetica'
+,p_prn_page_header_font_weight=>'normal'
+,p_prn_page_header_font_size=>'12'
+,p_prn_page_footer_font_color=>'#000000'
+,p_prn_page_footer_font_family=>'Helvetica'
+,p_prn_page_footer_font_weight=>'normal'
+,p_prn_page_footer_font_size=>'12'
+,p_prn_header_bg_color=>'#EEEEEE'
+,p_prn_header_font_color=>'#000000'
+,p_prn_header_font_family=>'Helvetica'
+,p_prn_header_font_weight=>'bold'
+,p_prn_header_font_size=>'10'
+,p_prn_body_bg_color=>'#FFFFFF'
+,p_prn_body_font_color=>'#000000'
+,p_prn_body_font_family=>'Helvetica'
+,p_prn_body_font_weight=>'normal'
+,p_prn_body_font_size=>'10'
+,p_prn_border_width=>.5
+,p_prn_page_header_alignment=>'CENTER'
+,p_prn_page_footer_alignment=>'CENTER'
+,p_prn_border_color=>'#666666'
+);
+wwv_flow_imp_page.create_worksheet(
+ p_id=>wwv_flow_imp.id(433622176580770154)
+,p_max_row_count=>'1000000'
+,p_pagination_type=>'ROWS_X_TO_Y'
+,p_pagination_display_pos=>'BOTTOM_RIGHT'
+,p_report_list_mode=>'TABS'
+,p_lazy_loading=>false
+,p_show_detail_link=>'N'
+,p_show_notify=>'Y'
+,p_download_formats=>'CSV:HTML:XLSX:PDF'
+,p_enable_mail_download=>'Y'
+,p_owner=>'LMORALES@INNOSYSGY.COM'
+,p_internal_uid=>244726908470145520
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(433622308944770155)
+,p_db_column_name=>'COA_CODE'
+,p_display_order=>10
+,p_column_identifier=>'A'
+,p_column_label=>'Coa Code'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(433622417619770156)
+,p_db_column_name=>'UNIT_NAME'
+,p_display_order=>20
+,p_column_identifier=>'B'
+,p_column_label=>'Unit Name'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(433622543183770157)
+,p_db_column_name=>'TYPE_ACCOUNT'
+,p_display_order=>30
+,p_column_identifier=>'C'
+,p_column_label=>'Type Account'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(433622661322770158)
+,p_db_column_name=>'DESCRIPTION'
+,p_display_order=>40
+,p_column_identifier=>'D'
+,p_column_label=>'Description'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(433622758629770159)
+,p_db_column_name=>'DEBITS'
+,p_display_order=>50
+,p_column_identifier=>'E'
+,p_column_label=>'Debits'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(433622798780770160)
+,p_db_column_name=>'INCOME_AMOUNT_YTD'
+,p_display_order=>60
+,p_column_identifier=>'F'
+,p_column_label=>'Income Amount Ytd'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(433622896239770161)
+,p_db_column_name=>'DEBIT_CREDIT'
+,p_display_order=>70
+,p_column_identifier=>'G'
+,p_column_label=>'Debit Credit'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(433622977274770162)
+,p_db_column_name=>'CREDIT'
+,p_display_order=>80
+,p_column_identifier=>'H'
+,p_column_label=>'Credit'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_rpt(
+ p_id=>wwv_flow_imp.id(551288380208401422)
+,p_application_user=>'APXWS_DEFAULT'
+,p_report_seq=>10
+,p_report_alias=>'3623932'
+,p_status=>'PUBLIC'
+,p_is_default=>'Y'
+,p_report_columns=>'COA_CODE:UNIT_NAME:TYPE_ACCOUNT:DESCRIPTION:DEBITS:INCOME_AMOUNT_YTD:DEBIT_CREDIT:CREDIT'
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(433624232137770174)
+,p_plug_name=>'Net Payroll Liability'
+,p_parent_plug_id=>wwv_flow_imp.id(433620471162770137)
+,p_region_template_options=>'#DEFAULT#:t-IRR-region--hideHeader js-addHiddenHeadingRoleDesc'
+,p_component_template_options=>'#DEFAULT#'
+,p_plug_template=>2100526641005906379
+,p_plug_display_sequence=>40
+,p_plug_display_point=>'SUB_REGIONS'
+,p_query_type=>'SQL'
+,p_plug_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'---************ DEDITS ***********',
+'',
+'--NETPAY',
+'select COA_CODE,UNIT_NAME,''Balance Sheet'' type_account, cast(''Net Pay''  as nvarchar2(100))  DESCRIPTION, sum(net_pay) Debits,  sum(net_pay_YTD) net_pay_TD, ''CR'' Debit_Credit, 0 Credit',
+'from hr_rcm_employee b join pa_pmg_payrolldtl K ON b.id=k.emp_id',
+'join hr_hcf_orgstructuredtl x on x.id = k.orgdtl_id',
+'where earnings_period_id = :P6002_PAID_EARNINGS_PERIOD',
+'group by COA_CODE,UNIT_NAME, cast(''Net Pay''  as nvarchar2(100))',
+'',
+'---************ CREDITS ***********',
+'union ',
+'',
+'select COA_CODE,UNIT_NAME, ''Balance Sheet'' type_account, cast(initcap(DESCRIPTION) as nvarchar2(100)) DESCRIPTION, 0 Debits, sum(amount_deducted_ytd) amount_deducted_ytd, ''CR'' Debit_Credit, sum(amount_deducted) Credit from (',
+'select distinct a.id, COA_CODE,UNIT_NAME, initcap(d.DESCRIPTION||'' ''||DEDUCTION_TYPE) DESCRIPTION, a.amount_deducted amount_deducted, a.amount_deducted_ytd amount_deducted_ytd, ''CR'' Debit_Credit',
+'from  hr_rcm_employee b join pa_pmg_payrolldtl K ON b.id=k.emp_id',
+'join pa_pmg_payrolldeduction a on k.id=a.pay_slipno',
+'join hr_hcf_orgstructuredtl x on x.id = k.orgdtl_id',
+'join Pa_Pcf_Deductioncode d on trim(d.EXPENSE_CODE)=trim(a.EXPENSE_CODE)',
+'where earnings_period_id = :P6002_PAID_EARNINGS_PERIOD',
+'and d.org_id=:APP_ORG_ID',
+'and amount_deducted >0',
+')',
+'group by COA_CODE,UNIT_NAME,  DESCRIPTION'))
+,p_plug_source_type=>'NATIVE_IR'
+,p_prn_content_disposition=>'ATTACHMENT'
+,p_prn_units=>'INCHES'
+,p_prn_paper_size=>'LETTER'
+,p_prn_width=>11
+,p_prn_height=>8.5
+,p_prn_orientation=>'HORIZONTAL'
+,p_prn_page_header_font_color=>'#000000'
+,p_prn_page_header_font_family=>'Helvetica'
+,p_prn_page_header_font_weight=>'normal'
+,p_prn_page_header_font_size=>'12'
+,p_prn_page_footer_font_color=>'#000000'
+,p_prn_page_footer_font_family=>'Helvetica'
+,p_prn_page_footer_font_weight=>'normal'
+,p_prn_page_footer_font_size=>'12'
+,p_prn_header_bg_color=>'#EEEEEE'
+,p_prn_header_font_color=>'#000000'
+,p_prn_header_font_family=>'Helvetica'
+,p_prn_header_font_weight=>'bold'
+,p_prn_header_font_size=>'10'
+,p_prn_body_bg_color=>'#FFFFFF'
+,p_prn_body_font_color=>'#000000'
+,p_prn_body_font_family=>'Helvetica'
+,p_prn_body_font_weight=>'normal'
+,p_prn_body_font_size=>'10'
+,p_prn_border_width=>.5
+,p_prn_page_header_alignment=>'CENTER'
+,p_prn_page_footer_alignment=>'CENTER'
+,p_prn_border_color=>'#666666'
+);
+wwv_flow_imp_page.create_worksheet(
+ p_id=>wwv_flow_imp.id(433624668960770179)
+,p_max_row_count=>'1000000'
+,p_pagination_type=>'ROWS_X_TO_Y'
+,p_pagination_display_pos=>'BOTTOM_RIGHT'
+,p_report_list_mode=>'TABS'
+,p_lazy_loading=>false
+,p_show_detail_link=>'N'
+,p_show_notify=>'Y'
+,p_download_formats=>'CSV:HTML:XLSX:PDF'
+,p_enable_mail_download=>'Y'
+,p_owner=>'LMORALES@INNOSYSGY.COM'
+,p_internal_uid=>244729400850145545
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(433624852814770180)
+,p_db_column_name=>'COA_CODE'
+,p_display_order=>10
+,p_column_identifier=>'A'
+,p_column_label=>'Coa Code'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(433624886137770181)
+,p_db_column_name=>'UNIT_NAME'
+,p_display_order=>20
+,p_column_identifier=>'B'
+,p_column_label=>'Unit Name'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(433624989079770182)
+,p_db_column_name=>'TYPE_ACCOUNT'
+,p_display_order=>30
+,p_column_identifier=>'C'
+,p_column_label=>'Type Account'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(433625105940770183)
+,p_db_column_name=>'DESCRIPTION'
+,p_display_order=>40
+,p_column_identifier=>'D'
+,p_column_label=>'Description'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(433625259438770184)
+,p_db_column_name=>'DEBITS'
+,p_display_order=>50
+,p_column_identifier=>'E'
+,p_column_label=>'Debits'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(551259457697340935)
+,p_db_column_name=>'NET_PAY_TD'
+,p_display_order=>60
+,p_column_identifier=>'F'
+,p_column_label=>'Net Pay Td'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(551259514490340936)
+,p_db_column_name=>'DEBIT_CREDIT'
+,p_display_order=>70
+,p_column_identifier=>'G'
+,p_column_label=>'Debit Credit'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(551259611716340937)
+,p_db_column_name=>'CREDIT'
+,p_display_order=>80
+,p_column_identifier=>'H'
+,p_column_label=>'Credit'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_rpt(
+ p_id=>wwv_flow_imp.id(551289005131401458)
+,p_application_user=>'APXWS_DEFAULT'
+,p_report_seq=>10
+,p_report_alias=>'3623938'
+,p_status=>'PUBLIC'
+,p_is_default=>'Y'
+,p_report_columns=>'COA_CODE:UNIT_NAME:TYPE_ACCOUNT:DESCRIPTION:DEBITS:NET_PAY_TD:DEBIT_CREDIT:CREDIT'
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(433624292194770175)
+,p_plug_name=>'Payroll Deductions Report'
+,p_parent_plug_id=>wwv_flow_imp.id(433620471162770137)
+,p_region_template_options=>'#DEFAULT#:t-IRR-region--hideHeader js-addHiddenHeadingRoleDesc'
+,p_component_template_options=>'#DEFAULT#'
+,p_plug_template=>2100526641005906379
+,p_plug_display_sequence=>50
+,p_plug_display_point=>'SUB_REGIONS'
+,p_query_type=>'SQL'
+,p_plug_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'select distinct ad.remarks, ',
+'                k.emp_company_no_hist, ',
+'                k.first_name_hist||'' ''||k.surname_hist name, ',
+'                a.id, ',
+'                COA_CODE,UNIT_NAME, ',
+'                initcap(d.DESCRIPTION||'' ''||a.DEDUCTION_TYPE) DESCRIPTION, ',
+'                a.amount_deducted amount_deducted, ',
+'                ''CR'' Debit_Credit,',
+'                INITCAP(PKG_GLOBAL_FNTS.GET_LOOKUP_COL(ep.EMPLOYMENT_CLASS_ID,''TABLE_VALUE''))||'' ''||ep.PAYMENT_TYPE||'' ''||EARNINGS_TYPE||'' ''||initcap(replace(ep.compute_gross,''_'','' '')) earning_period',
+'                --, a.account_code_cr',
+'from  hr_rcm_employee b ',
+'join pa_pmg_payrolldtl K ON b.id=k.emp_id',
+'join pa_pmg_payrolldeduction a on k.id=a.pay_slipno',
+'join pa_pcf_admindeduction ad on ad.id=a.ADM_DEDUCTION_ID',
+'join hr_hcf_orgstructuredtl x on x.id = k.orgdtl_id',
+'join PA_PCF_EARNINGPERIOD ep on ep.id=k.earnings_period_id',
+'join Pa_Pcf_Deductioncode d on trim(d.EXPENSE_CODE)=trim(a.EXPENSE_CODE)',
+'where earnings_period_id = :P6002_PAID_EARNINGS_PERIOD',
+'and d.org_id=:APP_ORG_ID',
+'and amount_deducted >0'))
+,p_plug_source_type=>'NATIVE_IR'
+,p_prn_content_disposition=>'ATTACHMENT'
+,p_prn_units=>'INCHES'
+,p_prn_paper_size=>'LETTER'
+,p_prn_width=>11
+,p_prn_height=>8.5
+,p_prn_orientation=>'HORIZONTAL'
+,p_prn_page_header_font_color=>'#000000'
+,p_prn_page_header_font_family=>'Helvetica'
+,p_prn_page_header_font_weight=>'normal'
+,p_prn_page_header_font_size=>'12'
+,p_prn_page_footer_font_color=>'#000000'
+,p_prn_page_footer_font_family=>'Helvetica'
+,p_prn_page_footer_font_weight=>'normal'
+,p_prn_page_footer_font_size=>'12'
+,p_prn_header_bg_color=>'#EEEEEE'
+,p_prn_header_font_color=>'#000000'
+,p_prn_header_font_family=>'Helvetica'
+,p_prn_header_font_weight=>'bold'
+,p_prn_header_font_size=>'10'
+,p_prn_body_bg_color=>'#FFFFFF'
+,p_prn_body_font_color=>'#000000'
+,p_prn_body_font_family=>'Helvetica'
+,p_prn_body_font_weight=>'normal'
+,p_prn_body_font_size=>'10'
+,p_prn_border_width=>.5
+,p_prn_page_header_alignment=>'CENTER'
+,p_prn_page_footer_alignment=>'CENTER'
+,p_prn_border_color=>'#666666'
+);
+wwv_flow_imp_page.create_worksheet(
+ p_id=>wwv_flow_imp.id(551259695079340938)
+,p_max_row_count=>'1000000'
+,p_pagination_type=>'ROWS_X_TO_Y'
+,p_pagination_display_pos=>'BOTTOM_RIGHT'
+,p_report_list_mode=>'TABS'
+,p_lazy_loading=>false
+,p_show_detail_link=>'N'
+,p_show_notify=>'Y'
+,p_download_formats=>'CSV:HTML:XLSX:PDF'
+,p_enable_mail_download=>'Y'
+,p_owner=>'LMORALES@INNOSYSGY.COM'
+,p_internal_uid=>362364426968716304
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(551259773930340939)
+,p_db_column_name=>'REMARKS'
+,p_display_order=>10
+,p_column_identifier=>'A'
+,p_column_label=>'Remarks'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(551259946703340940)
+,p_db_column_name=>'EMP_COMPANY_NO_HIST'
+,p_display_order=>20
+,p_column_identifier=>'B'
+,p_column_label=>'Emp Company No Hist'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(551260000472340941)
+,p_db_column_name=>'NAME'
+,p_display_order=>30
+,p_column_identifier=>'C'
+,p_column_label=>'Name'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(551260100086340942)
+,p_db_column_name=>'ID'
+,p_display_order=>40
+,p_column_identifier=>'D'
+,p_column_label=>'Id'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(551260235572340943)
+,p_db_column_name=>'COA_CODE'
+,p_display_order=>50
+,p_column_identifier=>'E'
+,p_column_label=>'Coa Code'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(551260287766340944)
+,p_db_column_name=>'UNIT_NAME'
+,p_display_order=>60
+,p_column_identifier=>'F'
+,p_column_label=>'Unit Name'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(551260428414340945)
+,p_db_column_name=>'DESCRIPTION'
+,p_display_order=>70
+,p_column_identifier=>'G'
+,p_column_label=>'Description'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(551260515862340946)
+,p_db_column_name=>'AMOUNT_DEDUCTED'
+,p_display_order=>80
+,p_column_identifier=>'H'
+,p_column_label=>'Amount Deducted'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(551260587724340947)
+,p_db_column_name=>'DEBIT_CREDIT'
+,p_display_order=>90
+,p_column_identifier=>'I'
+,p_column_label=>'Debit Credit'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(551260728961340948)
+,p_db_column_name=>'EARNING_PERIOD'
+,p_display_order=>100
+,p_column_identifier=>'J'
+,p_column_label=>'Earning Period'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_rpt(
+ p_id=>wwv_flow_imp.id(551289752466401470)
+,p_application_user=>'APXWS_DEFAULT'
+,p_report_seq=>10
+,p_report_alias=>'3623945'
+,p_status=>'PUBLIC'
+,p_is_default=>'Y'
+,p_report_columns=>'REMARKS:EMP_COMPANY_NO_HIST:NAME:ID:COA_CODE:UNIT_NAME:DESCRIPTION:AMOUNT_DEDUCTED:DEBIT_CREDIT:EARNING_PERIOD'
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(433624376891770176)
+,p_plug_name=>'Medical Scheme Contribution'
+,p_parent_plug_id=>wwv_flow_imp.id(433620471162770137)
+,p_region_template_options=>'#DEFAULT#:t-IRR-region--hideHeader js-addHiddenHeadingRoleDesc'
+,p_component_template_options=>'#DEFAULT#'
+,p_plug_template=>2100526641005906379
+,p_plug_display_sequence=>60
+,p_plug_display_point=>'SUB_REGIONS'
+,p_query_type=>'SQL'
+,p_plug_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'select ',
+'o.coa_code||'' ''||o.unit_name coa,',
+'pa.emp_company_no_hist,',
+'INITCAP(pa.first_name_hist||'' ''||pa.surname_hist) name,',
+'(select sum(AMOUNT_DEDUCTED) from PA_PMG_PAYROLLDEDUCTION where PAY_SLIPNO=pa.id and DEDUCTION_TYPE=''EMPLOYEE'' and EXPENSE_CODE=''MED'') med_employee,',
+'(select sum(AMOUNT_DEDUCTED) from PA_PMG_PAYROLLDEDUCTION where PAY_SLIPNO=pa.id and DEDUCTION_TYPE=''EMPLOYER'' and EXPENSE_CODE=''MED'') med_employer,',
+'(select sum(AMOUNT_DEDUCTED) from PA_PMG_PAYROLLDEDUCTION where PAY_SLIPNO=pa.id and EXPENSE_CODE=''MED'') total,',
+'(select sum(AMOUNT_DEDUCTED) from PA_PMG_PAYROLLDEDUCTION where PAY_SLIPNO=pa.id and DEDUCTION_TYPE=''EMPLOYEE'' and EXPENSE_CODE=''MED'') payroll',
+'from',
+'pa_pmg_payrolldtl pa',
+'join HR_HCF_ORGSTRUCTUREDTL o on o.id=pa.orgdtl_id',
+'where ',
+'pa.earnings_period_id=:P6002_PAID_EARNINGS_PERIOD',
+'and exists (select 1 from PA_PMG_PAYROLLDEDUCTION where PAY_SLIPNO=pa.id and EXPENSE_CODE=''MED'')'))
+,p_plug_source_type=>'NATIVE_IR'
+,p_prn_content_disposition=>'ATTACHMENT'
+,p_prn_units=>'INCHES'
+,p_prn_paper_size=>'LETTER'
+,p_prn_width=>11
+,p_prn_height=>8.5
+,p_prn_orientation=>'HORIZONTAL'
+,p_prn_page_header_font_color=>'#000000'
+,p_prn_page_header_font_family=>'Helvetica'
+,p_prn_page_header_font_weight=>'normal'
+,p_prn_page_header_font_size=>'12'
+,p_prn_page_footer_font_color=>'#000000'
+,p_prn_page_footer_font_family=>'Helvetica'
+,p_prn_page_footer_font_weight=>'normal'
+,p_prn_page_footer_font_size=>'12'
+,p_prn_header_bg_color=>'#EEEEEE'
+,p_prn_header_font_color=>'#000000'
+,p_prn_header_font_family=>'Helvetica'
+,p_prn_header_font_weight=>'bold'
+,p_prn_header_font_size=>'10'
+,p_prn_body_bg_color=>'#FFFFFF'
+,p_prn_body_font_color=>'#000000'
+,p_prn_body_font_family=>'Helvetica'
+,p_prn_body_font_weight=>'normal'
+,p_prn_body_font_size=>'10'
+,p_prn_border_width=>.5
+,p_prn_page_header_alignment=>'CENTER'
+,p_prn_page_footer_alignment=>'CENTER'
+,p_prn_border_color=>'#666666'
+);
+wwv_flow_imp_page.create_worksheet(
+ p_id=>wwv_flow_imp.id(551260820534340949)
+,p_max_row_count=>'1000000'
+,p_pagination_type=>'ROWS_X_TO_Y'
+,p_pagination_display_pos=>'BOTTOM_RIGHT'
+,p_report_list_mode=>'TABS'
+,p_lazy_loading=>false
+,p_show_detail_link=>'N'
+,p_show_notify=>'Y'
+,p_download_formats=>'CSV:HTML:XLSX:PDF'
+,p_enable_mail_download=>'Y'
+,p_owner=>'LMORALES@INNOSYSGY.COM'
+,p_internal_uid=>362365552423716315
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(551260915787340950)
+,p_db_column_name=>'COA'
+,p_display_order=>10
+,p_column_identifier=>'A'
+,p_column_label=>'Coa'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(551261064707340951)
+,p_db_column_name=>'EMP_COMPANY_NO_HIST'
+,p_display_order=>20
+,p_column_identifier=>'B'
+,p_column_label=>'Emp Company No Hist'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(551261140435340952)
+,p_db_column_name=>'NAME'
+,p_display_order=>30
+,p_column_identifier=>'C'
+,p_column_label=>'Name'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(551261261364340953)
+,p_db_column_name=>'MED_EMPLOYEE'
+,p_display_order=>40
+,p_column_identifier=>'D'
+,p_column_label=>'Med Employee'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(551261311440340954)
+,p_db_column_name=>'MED_EMPLOYER'
+,p_display_order=>50
+,p_column_identifier=>'E'
+,p_column_label=>'Med Employer'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(551261385177340955)
+,p_db_column_name=>'TOTAL'
+,p_display_order=>60
+,p_column_identifier=>'F'
+,p_column_label=>'Total'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(551261535758340956)
+,p_db_column_name=>'PAYROLL'
+,p_display_order=>70
+,p_column_identifier=>'G'
+,p_column_label=>'Payroll'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_rpt(
+ p_id=>wwv_flow_imp.id(551290324206401482)
+,p_application_user=>'APXWS_DEFAULT'
+,p_report_seq=>10
+,p_report_alias=>'3623951'
+,p_status=>'PUBLIC'
+,p_is_default=>'Y'
+,p_report_columns=>'COA:EMP_COMPANY_NO_HIST:NAME:MED_EMPLOYEE:MED_EMPLOYER:TOTAL:PAYROLL'
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(433624551166770177)
+,p_plug_name=>'Income Codes'
+,p_parent_plug_id=>wwv_flow_imp.id(433620471162770137)
+,p_region_template_options=>'#DEFAULT#:t-IRR-region--hideHeader js-addHiddenHeadingRoleDesc'
+,p_component_template_options=>'#DEFAULT#'
+,p_plug_template=>2100526641005906379
+,p_plug_display_sequence=>70
+,p_plug_display_point=>'SUB_REGIONS'
+,p_query_type=>'SQL'
+,p_plug_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'select distinct',
+'       INNOCODE,',
+'       INNO_DESCRIPTION',
+'  from GTT_ALLOW_MAPPING'))
+,p_plug_source_type=>'NATIVE_IR'
+,p_prn_content_disposition=>'ATTACHMENT'
+,p_prn_units=>'INCHES'
+,p_prn_paper_size=>'LETTER'
+,p_prn_width=>11
+,p_prn_height=>8.5
+,p_prn_orientation=>'HORIZONTAL'
+,p_prn_page_header_font_color=>'#000000'
+,p_prn_page_header_font_family=>'Helvetica'
+,p_prn_page_header_font_weight=>'normal'
+,p_prn_page_header_font_size=>'12'
+,p_prn_page_footer_font_color=>'#000000'
+,p_prn_page_footer_font_family=>'Helvetica'
+,p_prn_page_footer_font_weight=>'normal'
+,p_prn_page_footer_font_size=>'12'
+,p_prn_header_bg_color=>'#EEEEEE'
+,p_prn_header_font_color=>'#000000'
+,p_prn_header_font_family=>'Helvetica'
+,p_prn_header_font_weight=>'bold'
+,p_prn_header_font_size=>'10'
+,p_prn_body_bg_color=>'#FFFFFF'
+,p_prn_body_font_color=>'#000000'
+,p_prn_body_font_family=>'Helvetica'
+,p_prn_body_font_weight=>'normal'
+,p_prn_body_font_size=>'10'
+,p_prn_border_width=>.5
+,p_prn_page_header_alignment=>'CENTER'
+,p_prn_page_footer_alignment=>'CENTER'
+,p_prn_border_color=>'#666666'
+);
+wwv_flow_imp_page.create_worksheet(
+ p_id=>wwv_flow_imp.id(551261632791340957)
+,p_max_row_count=>'1000000'
+,p_pagination_type=>'ROWS_X_TO_Y'
+,p_pagination_display_pos=>'BOTTOM_RIGHT'
+,p_report_list_mode=>'TABS'
+,p_lazy_loading=>false
+,p_show_detail_link=>'N'
+,p_show_notify=>'Y'
+,p_download_formats=>'CSV:HTML:XLSX:PDF'
+,p_enable_mail_download=>'Y'
+,p_owner=>'LMORALES@INNOSYSGY.COM'
+,p_internal_uid=>362366364680716323
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(551261697020340958)
+,p_db_column_name=>'INNOCODE'
+,p_display_order=>10
+,p_column_identifier=>'A'
+,p_column_label=>'Innocode'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(551261798389340959)
+,p_db_column_name=>'INNO_DESCRIPTION'
+,p_display_order=>20
+,p_column_identifier=>'B'
+,p_column_label=>'Inno Description'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_rpt(
+ p_id=>wwv_flow_imp.id(551291017524401492)
+,p_application_user=>'APXWS_DEFAULT'
+,p_report_seq=>10
+,p_report_alias=>'3623958'
+,p_status=>'PUBLIC'
+,p_is_default=>'Y'
+,p_report_columns=>'INNOCODE:INNO_DESCRIPTION'
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(433624632662770178)
+,p_plug_name=>'FMS Journal Report'
+,p_parent_plug_id=>wwv_flow_imp.id(433620471162770137)
+,p_region_template_options=>'#DEFAULT#:t-IRR-region--hideHeader js-addHiddenHeadingRoleDesc'
+,p_plug_template=>2100526641005906379
+,p_plug_display_sequence=>80
+,p_plug_display_point=>'SUB_REGIONS'
+,p_query_type=>'SQL'
+,p_plug_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'-- select       ACCOUNT_NAME, ',
+'-- 						 to_char(max(BK)) BK, ',
+'-- 						 TO_CHAR(BR) BR, ',
+'-- 						 max(CCY) CCY, ',
+'--                          trim(GL) GL, ',
+'-- 						 max(CC) CC, ',
+'-- 						 max(DR_CR) DR_CR, ',
+'-- 						 sum(DEBIT_AMOUNT) DEBIT_AMOUNT, ',
+'-- 						 sum(CREDIT_AMOUNT) CREDIT_AMOUNT, ',
+'-- 						 max(D_C) D_C',
+'--                from (',
+'--  select  x.account_code GL,',
+'-- 				 x.coa_code CC, ',
+'-- 				 x.description ACCOUNT_NAME, ',
+'-- 				 x.income_amount ALL_AMOUNT, ',
+'-- 				 x.Code_Type DR_CR, ',
+'-- 				 ''GYD'' CCY,',
+'-- 				 ''01'' BK,',
+'-- 				 to_char(case when length(location_code) = 1 then ''00''||location_code ',
+'-- 				      when length(location_code) = 2 then ''0''||location_code',
+'-- 							else location_code end) BR,',
+'-- 				 case when UPPER(x.debit_credit) = ''DR'' THEN ''D''',
+'-- 						  when UPPER(x.debit_credit) = ''CR'' THEN ''C'' END D_C,',
+'-- 				 case when UPPER(x.debit_credit) = ''DR'' THEN INCOME_AMOUNT ELSE 0 END DEBIT_AMOUNT,',
+'-- 				 case when UPPER(x.debit_credit) = ''CR'' THEN INCOME_AMOUNT ELSE 0 END CREDIT_AMOUNT,',
+'--  row_number() over (partition by emp_id,unit_name, COA_CODE, debit_credit,orgdtl_id order by emp_id ) as seqnum,',
+'--                 x.emp_id',
+'--  from (',
+' ',
+' ',
+'',
+'-- ***************************************** DEBITS ******************************************',
+'',
+'',
+'select ',
+'	''DR'' Code_Type,',
+'    to_char(account_code) CODE,',
+'    POSITION_NAME,',
+'	cast(initcap(DESCRIPTION) as nvarchar2(100)) Account_Name, ',
+'			 sum(income_amount) Amount, ',
+'			 sum(income_amount_ytd) income_amount_ytd',
+'    ',
+'from',
+'		(select distinct a.id,',
+'						''DR'' Code_Type,',
+'						e.account_code, ',
+'                        POSITION_NAME, ',
+'						initcap(e.DESCRIPTION) DESCRIPTION, ',
+'						a.income_amount income_amount, ',
+'						a.income_amount_ytd income_amount_ytd, ',
+'						wk.location_code',
+'		from hr_rcm_employee b ',
+'		join pa_pmg_payrolldtl c on b.id = c.emp_id',
+'		join hr_hcf_orgstructuredtl x on x.id = c.orgdtl_id',
+'		join PA_PMG_PAYROLLINCOME a on c.id=a.pay_slipno',
+'		join PA_PCF_INCOMECODE e on e.INCOME_CODE=a.INCOME_CODE',
+'		JOIN PA_PCF_EARNINGPERIOD ep on ep.id = c.earnings_period_id ',
+'		join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'		where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'		and c.org_id=:APP_ORG_ID and e.org_id=:APP_ORG_ID',
+'		and (c.compute_gross_hist !=''BASIC_PAY'' or earnings_type = ''SUPPL'' or e.id !=6004))',
+'group by DESCRIPTION,account_code, POSITION_NAME',
+'',
+'',
+'union ',
+'--personal rate',
+'select * ',
+'from(',
+'		select ',
+'            nvl(',
+'                sal.GL_CODE,''10-01'') CODE,',
+'				''DR'' Code_Type,',
+'                POSITION_NAME, ',
+'				case when nvl(sal.GL_CODE,''500701000000'') = ''500901000000'' then cast(''Basic Salary - Security''  as nvarchar2(100))',
+'                when nvl(sal.GL_CODE,''500701000000'') = ''500933000000'' then cast(''Basic Salary - Director''  as nvarchar2(100))',
+'                     else cast(''Basic Salary''  as nvarchar2(100)) end Account_Name, ',
+'                sum(time_tax_earnings) + sum(time_nontax_earnings) - case when :APP_ORG_ID = 32661 then sum(nvl(get_overtime_cb(k.id),0)) ',
+'                     else nvl(fn_adhocPayment(:P6002_PAID_EARNINGS_PERIOD,  x.COA_CODE),0) end ',
+'                     Amount,  ',
+'			    sum(time_tax_earnings_YTD) time_tax_earnings_ytd',
+'                ',
+'',
+'		from hr_rcm_employee b ',
+'		join pa_pmg_payrolldtl K ON b.id=k.emp_id',
+'        join hr_rcm_salary sal on sal.emp_id = k.emp_id',
+'		join hr_hcf_orgstructuredtl x on x.id = k.orgdtl_id',
+'		join pa_pcf_earningperiod w on w.id = k.earnings_period_id',
+'		join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'		where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'		and k.compute_gross_hist=''BASIC_PAY''',
+'		and earnings_type = ''RG''',
+'		and k.org_id=:APP_ORG_ID',
+'        and ((sal.start_date <= k.period_start and (sal.end_Date is null or sal.end_Date >= k.period_end)) or',
+'        (sal.start_date between k.period_start and k.period_end))',
+'		group by x.COA_CODE,cast(''Basic Salary'' as nvarchar2(100)) , POSITION_NAME ,sal.GL_CODE)',
+'',
+'union',
+'--employers deductions only',
+'',
+'select ',
+'	''DR'' Code_Type,',
+'    to_char(ACCOUNT_CODE) CODE,',
+'	POSITION_NAME, ',
+'	cast(initcap(DESCRIPTION) as nvarchar2(100)) Account_Name, ',
+'	sum(amount_deducted) Amount, ',
+'	sum(amount_deducted_ytd) amount_deducted_ytd',
+'	',
+'',
+'from',
+'		(select distinct a.id,',
+'						''DR'' Code_Type,',
+'						--case when d.expense_code = ''PENSION DEDUCTION'' then cast(d.ACCOUNT_CODE as nvarchar2(100)) else cast(d.account_code_emplr as nvarchar2(100)) end',
+'                        d.account_code_emplr  ACCOUNT_CODE,',
+'                        POSITION_NAME,',
+'						initcap(d.DESCRIPTION||'' ''||DEDUCTION_TYPE) DESCRIPTION , ',
+'						a.amount_deducted amount_deducted, ',
+'						amount_deducted_ytd amount_deducted_ytd, ',
+'						wk.location_code',
+'		from  hr_rcm_employee b ',
+'		join pa_pmg_payrolldtl K ON b.id=k.emp_id',
+'		join pa_pmg_payrolldeduction a on k.id=a.pay_slipno',
+'		join hr_hcf_orgstructuredtl x on x.id = k.orgdtl_id',
+'		join Pa_Pcf_Deductioncode d on d.EXPENSE_CODE=a.EXPENSE_CODE',
+'		join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'		where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'		and A.DEDUCTION_TYPE=''EMPLOYER''',
+'		and k.org_id=:APP_ORG_ID)',
+'group by DESCRIPTION,ACCOUNT_CODE, POSITION_NAME',
+'',
+'-- --NIS-ER',
+'union',
+'',
+'select',
+'	''DR'' Code_Type,',
+'    ''5150-090''  CODE,--''210008000000''',
+'    POSITION_NAME,',
+'	cast(''NIS Employer''  as nvarchar2(100)) Account_Name, ',
+'	sum(nis_employer) Amount,  ',
+'	sum(nis_employer_YTD) nis_employer_YTD',
+'	',
+'from hr_rcm_employee b ',
+'join pa_pmg_payrolldtl K ON b.id=k.emp_id',
+'join hr_hcf_orgstructuredtl x on x.id = k.orgdtl_id',
+'join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'and k.org_id=:APP_ORG_ID',
+'group by cast(''NIS Employer''  as nvarchar2(100)) , POSITION_NAME',
+'',
+'union',
+'',
+'',
+'-- --NETPAY negative pay',
+'select ',
+'	''DR'' Debit_Credit,',
+'    ''2340-NEG'' CODE,',
+'    k.POSITION_NAME,',
+'	cast(''NETPAY negative pay''  as nvarchar2(100))  Account_Name, ',
+'	sum(net_pay)*-1 Amount,  ',
+'	sum(net_pay) net_pay_TD ',
+'	',
+'from hr_rcm_employee b ',
+'join hr_rcm_individual ind on ind.id=b.ind_id',
+'join PA_PMG_PAYROLLDTLNEG K ON b.id=k.emp_id',
+'join hr_hcf_orgstructuredtl x on x.id = b.orgdtl_id',
+'join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'group by cast(''NETPAY negative pay''  as nvarchar2(100)),BANK_ACCOUNT_NO, k.POSITION_NAME',
+'',
+'union',
+'',
+'--personal rate negative pay',
+'',
+'select * ',
+'from(',
+'		select ',
+'			''DR'' Code_Type,',
+'            nvl(sal.GL_CODE,''10-01'') CODE,',
+'            k.POSITION_NAME,',
+'			case when nvl(sal.GL_CODE,''500701000000'') = ''500901000000'' then cast(''Basic Salary - Security''  as nvarchar2(100))',
+'                     when nvl(sal.GL_CODE,''500701000000'') = ''500933000000'' then cast(''Basic Salary - Director''  as nvarchar2(100))',
+'                     else cast(''Basic Salary''  as nvarchar2(100)) end Account_Name, ',
+'			sum(time_tax_earnings) + sum(time_nontax_earnings) - sum(nvl(get_overtime_cb_negative(k.id),0)) Amount,-- nvl(fn_adhocPayment(:P6002_PAID_EARNINGS_PERIOD,  x.COA_CODE),0) ',
+'	       	sum(time_tax_earnings) time_tax_earnings_ytd ',
+'            ',
+'',
+'		from hr_rcm_employee b ',
+'		join PA_PMG_PAYROLLDTLNEG K ON b.id=k.emp_id',
+'        join hr_rcm_salary sal on sal.emp_id = k.emp_id',
+'		join hr_hcf_orgstructuredtl x on x.id = b.orgdtl_id',
+'		join pa_pcf_earningperiod w on w.id = k.earnings_period_id',
+'		join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'		where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'          and sal.start_date<w.end_date',
+'        and ',
+'        (sal.end_date is null or sal.end_date BETWEEN w.start_date and w.end_date)',
+'		group by cast(''Basic Salary'' as nvarchar2(100)), k.POSITION_NAME, sal.GL_CODE)',
+'',
+'',
+'-- --NIS-ER -negative pay',
+'-- union',
+'',
+'-- select ',
+'-- 	''DR'' Code_Type,',
+'--     ''??????''  CODE,--''210008000000''',
+'-- 	POSITION_NAME, ',
+'-- 	cast(''NIS Employer''  as nvarchar2(100)) Account_Name, ',
+'-- 	sum(nis_employer) Amount,  ',
+'-- 	sum(nis_employer) nis_employer_YTD',
+'	',
+'-- from hr_rcm_employee b ',
+'-- join PA_PMG_PAYROLLDTLNEG K ON b.id=k.emp_id',
+'-- join hr_hcf_orgstructuredtl x on x.id = b.orgdtl_id',
+'-- join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'-- where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'-- group by  cast(''NIS Employer - negative pay''  as nvarchar2(100)) , POSITION_NAME',
+'',
+'',
+'union ',
+'--income negative pay',
+'select ',
+'	''DR'' Code_Type,',
+'    to_char(account_code) CODE,',
+'	POSITION_NAME, ',
+'			 cast(initcap(DESCRIPTION) as nvarchar2(100)) Account_Name, ',
+'			 sum(income_amount) Amount, ',
+'			 sum(income_amount_ytd) income_amount_ytd',
+'	        ',
+'',
+'from',
+'		(select distinct a.id,',
+'			e.account_code, ',
+'	        c.POSITION_NAME POSITION_NAME, ',
+'			initcap(e.DESCRIPTION) DESCRIPTION, ',
+'			a.income_amount income_amount, ',
+'			a.income_amount_ytd income_amount_ytd, ',
+'			wk.location_code',
+'		from hr_rcm_employee b ',
+'		join PA_PMG_PAYROLLDTLNEG c on b.id = c.emp_id',
+'		join hr_hcf_orgstructuredtl x on x.id = b.orgdtl_id',
+'		join PA_PMG_PAYROLLINCOMENEG a on c.id=a.pay_slipno',
+'		join PA_PCF_INCOMECODE e on e.INCOME_CODE=a.INCOME_CODE',
+'		JOIN PA_PCF_EARNINGPERIOD ep on ep.id = c.earnings_period_id ',
+'		join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'		where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'		and e.org_id=:APP_ORG_ID',
+'		)',
+'group by DESCRIPTION, account_code,POSITION_NAME',
+'',
+'',
+'union',
+'--employers deductions only negative pay',
+'',
+'select ',
+'	''DR'' Code_Type,',
+'    to_char(ACCOUNT_CODE) CODE,',
+'	POSITION_NAME, ',
+'	cast(initcap(DESCRIPTION) as nvarchar2(100)) Account_Name, ',
+'	sum(amount_deducted) amount_deducted, ',
+'	sum(amount_deducted_ytd) amount_deducted_ytd',
+'	',
+'',
+'from',
+'		(select distinct a.id,',
+'					--	case when d.expense_code = ''PENSION DEDUCTION'' then cast(d.ACCOUNT_CODE as nvarchar2(100)) else d.account_code end',
+'            d.account_code_emplr ACCOUNT_CODE, ',
+'	        k.POSITION_NAME, ',
+'						initcap(d.DESCRIPTION||'' ''||DEDUCTION_TYPE) DESCRIPTION , ',
+'						a.amount_deducted amount_deducted, ',
+'						amount_deducted_ytd amount_deducted_ytd, ',
+'						''DR'' Code_Type,',
+'						wk.location_code',
+'		from  hr_rcm_employee b ',
+'		join PA_PMG_PAYROLLDTLNEG K ON b.id=k.emp_id',
+'		join PA_PMG_PAYROLLDEDUCTIONNEG a on k.id=a.pay_slipno',
+'		join hr_hcf_orgstructuredtl x on x.id = b.orgdtl_id',
+'		join Pa_Pcf_Deductioncode d on d.EXPENSE_CODE=a.EXPENSE_CODE',
+'		join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'		where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'		and A.DEDUCTION_TYPE=''EMPLOYER''',
+'		)',
+'group by DESCRIPTION,ACCOUNT_CODE,POSITION_NAME',
+'',
+'',
+'union',
+'-- ---  ***************************************** Amount ******************************************',
+'-- union ',
+'-- /*',
+'-- select to_char(account_code) account_code,',
+'-- 			 orgdtl_id,',
+'-- 			 emp_id,',
+'-- 			 COA_CODE,',
+'-- 			 UNIT_NAME, ',
+'-- 			 DESCRIPTION , ',
+'-- 			 sum(amount_deducted) amount_deducted, ',
+'-- 			 sum(amount_deducted_ytd) amount_deducted_ytd, ',
+'-- 			 ''CR'' Code_Type,',
+'-- 			 location_code',
+'-- from',
+'-- 		(select distinct a.id,',
+'-- 						d.account_code, ',
+'-- 						x.COA_CODE,',
+'-- 						UNIT_NAME, ',
+'-- 						k.emp_id,',
+'-- 						k.orgdtl_id,',
+'-- 						initcap(d.DESCRIPTION||'' ''||DEDUCTION_TYPE) DESCRIPTION , ',
+'-- 						a.amount_deducted amount_deducted, ',
+'-- 						a.amount_deducted_ytd amount_deducted_ytd, ',
+'-- 						''CR'' Code_Type,',
+'-- 						wk.location_code',
+'-- 		from  hr_rcm_employee b ',
+'-- 		join pa_pmg_payrolldtl K ON b.id=k.emp_id',
+'-- 		join pa_pmg_payrolldeduction a on k.id=a.pay_slipno',
+'-- 		join hr_hcf_orgstructuredtl x on x.id = k.orgdtl_id',
+'-- 		join Pa_Pcf_Deductioncode d on d.EXPENSE_CODE=a.EXPENSE_CODE',
+'-- 		join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'-- 		where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'-- 		and k.org_id=:APP_ORG_ID and d.org_id=:APP_ORG_ID)',
+'-- group by COA_CODE,UNIT_NAME, DESCRIPTION,emp_id,orgdtl_id,account_code,location_code',
+'-- */',
+'select  ',
+'    ''CR'' Code_Type,',
+'    case when deduction_type=''EMPLOYEE'' THEN to_char(account_code) else to_char(account_code)  end CODE,',
+'    POSITION_NAME,',
+'	cast(initcap(DESCRIPTION) as nvarchar2(100)) Account_Name , ',
+'	sum(amount_deducted) Amount, ',
+'	sum(amount_deducted_ytd) amount_deducted_ytd',
+'    ',
+'from',
+'		(select distinct a.id,',
+'        ''CR'' Code_Type,',
+'		d.account_code,',
+'        b.POSITION_NAME,',
+'        DEDUCTION_TYPE,',
+'		initcap(d.DESCRIPTION) DESCRIPTION, ',
+'		a.amount_deducted amount_deducted, ',
+'		a.amount_deducted_ytd amount_deducted_ytd',
+'from  hr_rcm_employee b ',
+'join pa_pmg_payrolldtl K ON b.id=k.emp_id',
+'join pa_pmg_payrolldeduction a on k.id=a.pay_slipno',
+'join hr_hcf_orgstructuredtl x on x.id = k.orgdtl_id',
+'join Pa_Pcf_Deductioncode d on d.EXPENSE_CODE=a.EXPENSE_CODE',
+'join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'and k.org_id=:APP_ORG_ID and d.org_id=:APP_ORG_ID)',
+'group by DESCRIPTION, account_code, DEDUCTION_TYPE, POSITION_NAME',
+'',
+'',
+'-- --NETPAY',
+'union',
+'',
+'select       ',
+'    ''CR'' Code_Type,',
+'    ''2340'' CODE,',
+'    POSITION_NAME,',
+'	cast(''NETPAY''  as nvarchar2(100))  Account_Name, ',
+'	sum(net_pay) Amount,  ',
+'	sum(net_pay_YTD) net_pay_TD',
+'    ',
+'from hr_rcm_employee b ',
+'join hr_rcm_individual ind on ind.id=b.ind_id',
+'join pa_pmg_payrolldtl K ON b.id=k.emp_id',
+'join hr_hcf_orgstructuredtl x on x.id = k.orgdtl_id',
+'join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'and k.org_id=:APP_ORG_ID',
+'group by x.COA_CODE,UNIT_NAME, cast(''NETPAY''  as nvarchar2(100)),BANK_ACCOUNT_NO, 	POSITION_NAME',
+'',
+'',
+'-- --PAYE',
+'union',
+'',
+'select ',
+'    ''CR'' Code_Type,',
+'    ''302'' CODE,',
+'    POSITION_NAME,',
+'	cast(''PAYE''  as nvarchar2(100))  Account_Name, ',
+'	sum(case when tax_amount<0 then 0 else tax_amount end) Amount,  ',
+'	sum(tax_amount_YTD) net_pay_TD',
+'    ',
+'from hr_rcm_employee b ',
+'join pa_pmg_payrolldtl K ON b.id=k.emp_id',
+'join hr_hcf_orgstructuredtl x on x.id = k.orgdtl_id',
+'join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'and k.org_id=:APP_ORG_ID',
+'group by cast(''PAYE''  as nvarchar2(100)), 	POSITION_NAME',
+'',
+'',
+'-- --NIS',
+'union',
+'',
+'select',
+'	''CR'' Code_Type,',
+'    ''00-00'' CODE,',
+'    POSITION_NAME,',
+'	cast(''NIS Employee''  as nvarchar2(100))  Account_Name, ',
+'	sum(nis_employee) Amount,',
+'	sum(nis_employee_YTD) net_pay_TD',
+'	',
+'from hr_rcm_employee b ',
+'join pa_pmg_payrolldtl K ON b.id=k.emp_id',
+'join hr_hcf_orgstructuredtl x on x.id = k.orgdtl_id',
+'join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'and k.org_id=:APP_ORG_ID',
+'group by cast(''NIS Employee''  as nvarchar2(100)), POSITION_NAME',
+'',
+'',
+'-- --NIS-ER',
+'union',
+'',
+'select  ',
+'	''CR'' Code_Type,',
+'    ''5150-090'' CODE,',
+'    POSITION_NAME,',
+'    cast(''NIS Employer''  as nvarchar2(100))  Account_Name, ',
+'	sum(nis_employer) Amount,  ',
+'	sum(nis_employer_YTD) net_pay_TD',
+'	',
+'from hr_rcm_employee b ',
+'join pa_pmg_payrolldtl K ON b.id=k.emp_id',
+'join hr_hcf_orgstructuredtl x on x.id = k.orgdtl_id',
+'join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'and k.org_id=:APP_ORG_ID',
+'group by cast(''NIS Employer''  as nvarchar2(100)) , POSITION_NAME',
+'',
+'-- --PAYE -negative pay',
+'union',
+'',
+'select ',
+'	''CR'' Code_Type,',
+'    ''302-NEG'' CODE,',
+'    k.POSITION_NAME,',
+'	cast(''PAYE - negative pay''  as nvarchar2(100))  Account_Name, ',
+'	sum(case when tax_amount<0 then 0 else tax_amount end) Amount,  ',
+'	sum(case when tax_amount<0 then 0 else tax_amount end) net_pay_TD',
+'	',
+'from hr_rcm_employee b ',
+'join PA_PMG_PAYROLLDTLNEG K ON b.id=k.emp_id',
+'join hr_hcf_orgstructuredtl x on x.id = b.orgdtl_id',
+'join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'group by cast(''PAYE - negative pay''  as nvarchar2(100)), k.POSITION_NAME',
+'',
+'',
+'-- --NIS negative pay',
+'union',
+'',
+'select ',
+'	''CR'' Code_Type,',
+'    ''00-00-NEG'' CODE,',
+'    k.POSITION_NAME,',
+'	cast(''NIS Employee''  as nvarchar2(100))  Account_Name, ',
+'	sum(nis_employee) Amount,  ',
+'	sum(nis_employee) net_pay_TD',
+'	',
+'from hr_rcm_employee b ',
+'join PA_PMG_PAYROLLDTLNEG K ON b.id=k.emp_id',
+'join hr_hcf_orgstructuredtl x on x.id = b.orgdtl_id',
+'join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'group by cast(''NIS Employee - negative pay''  as nvarchar2(100)), k.POSITION_NAME',
+'',
+'-- --NIS-ER',
+'-- union',
+'',
+'-- select  ''210008000000'' account_code,--''500714000000''',
+'-- 			 b.orgdtl_id, ',
+'-- 			 k.emp_id,',
+'-- 			 x.COA_CODE,',
+'-- 			 UNIT_NAME, ',
+'-- 			 cast(''NIS Employer''  as nvarchar2(100))  Account_Name, ',
+'-- 			 sum(nis_employer) net_pay,  ',
+'-- 			 sum(nis_employer) net_pay_TD, ',
+'-- 			 ''CR'' Code_Type,',
+'-- 			 wk.location_code',
+'-- from hr_rcm_employee b ',
+'-- join PA_PMG_PAYROLLDTLNEG K ON b.id=k.emp_id',
+'-- join hr_hcf_orgstructuredtl x on x.id = b.orgdtl_id',
+'-- join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'-- where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'-- group by x.COA_CODE,UNIT_NAME, cast(''NIS Employer''  as nvarchar2(100)) ,k.emp_id,b.orgdtl_id,wk.location_code',
+'',
+'',
+'-- ---Amount deduction  negative pay',
+'union ',
+'',
+'select  ',
+'    ''CR'' Code_Type,',
+'    case when deduction_type=''EMPLOYEE'' THEN to_char(account_code) ',
+'                else to_char(account_code) end CODE,  ',
+'    POSITION_NAME,            ',
+'	cast(initcap(DESCRIPTION) as nvarchar2(100)) Account_Name , ',
+'	sum(amount_deducted) Amount, ',
+'	sum(amount_deducted_ytd) amount_deducted_ytd ',
+'		--	case when deduction_type=''EMPLOYEE'' THEN ''DR''',
+'        --            else ''CR'' end   Code_Type,',
+'	',
+'from',
+'		(select distinct a.id,',
+'						d.account_code, ',
+'                        DEDUCTION_TYPE,',
+'                        k.POSITION_NAME,',
+'						initcap(d.DESCRIPTION||'' ''||DEDUCTION_TYPE) DESCRIPTION , ',
+'						a.amount_deducted amount_deducted, ',
+'						a.amount_deducted_ytd amount_deducted_ytd, ',
+'					--	case when deduction_type=''EMPLOYEE'' THEN ''CR''',
+'                      --  else ''DR'' end  Code_Type,',
+'						wk.location_code',
+'from  hr_rcm_employee b ',
+'join PA_PMG_PAYROLLDTLNEG K ON b.id=k.emp_id',
+'join PA_PMG_PAYROLLDEDUCTIONNEG a on k.id=a.pay_slipno',
+'join hr_hcf_orgstructuredtl x on x.id = b.orgdtl_id',
+'join Pa_Pcf_Deductioncode d on d.EXPENSE_CODE=a.EXPENSE_CODE',
+'join hr_hcf_worklocation wk on wk.id=b.wklocation_id',
+'where earnings_period_id =:P6002_PAID_EARNINGS_PERIOD',
+'and d.org_id=:APP_ORG_ID)',
+'group by DESCRIPTION,account_code,DEDUCTION_TYPE,POSITION_NAME',
+'',
+'',
+'',
+'',
+'',
+'',
+'',
+'',
+'',
+'',
+'',
+'',
+'',
+'',
+'',
+'',
+'',
+'',
+'',
+'',
+'',
+'',
+'',
+'-- ) x ',
+'-- ) group by ACCOUNT_NAME,BR,trim(GL)'))
+,p_plug_source_type=>'NATIVE_IR'
+,p_prn_content_disposition=>'ATTACHMENT'
+,p_prn_units=>'INCHES'
+,p_prn_paper_size=>'LETTER'
+,p_prn_width=>11
+,p_prn_height=>8.5
+,p_prn_orientation=>'HORIZONTAL'
+,p_prn_page_header_font_color=>'#000000'
+,p_prn_page_header_font_family=>'Helvetica'
+,p_prn_page_header_font_weight=>'normal'
+,p_prn_page_header_font_size=>'12'
+,p_prn_page_footer_font_color=>'#000000'
+,p_prn_page_footer_font_family=>'Helvetica'
+,p_prn_page_footer_font_weight=>'normal'
+,p_prn_page_footer_font_size=>'12'
+,p_prn_header_bg_color=>'#EEEEEE'
+,p_prn_header_font_color=>'#000000'
+,p_prn_header_font_family=>'Helvetica'
+,p_prn_header_font_weight=>'bold'
+,p_prn_header_font_size=>'10'
+,p_prn_body_bg_color=>'#FFFFFF'
+,p_prn_body_font_color=>'#000000'
+,p_prn_body_font_family=>'Helvetica'
+,p_prn_body_font_weight=>'normal'
+,p_prn_body_font_size=>'10'
+,p_prn_border_width=>.5
+,p_prn_page_header_alignment=>'CENTER'
+,p_prn_page_footer_alignment=>'CENTER'
+,p_prn_border_color=>'#666666'
+);
+wwv_flow_imp_page.create_worksheet(
+ p_id=>wwv_flow_imp.id(551261960062340960)
+,p_max_row_count=>'1000000'
+,p_pagination_type=>'ROWS_X_TO_Y'
+,p_pagination_display_pos=>'BOTTOM_RIGHT'
+,p_report_list_mode=>'TABS'
+,p_lazy_loading=>false
+,p_show_detail_link=>'N'
+,p_show_notify=>'Y'
+,p_download_formats=>'CSV:HTML:XLSX:PDF'
+,p_enable_mail_download=>'Y'
+,p_owner=>'LMORALES@INNOSYSGY.COM'
+,p_internal_uid=>362366691951716326
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(551262058608340961)
+,p_db_column_name=>'CODE_TYPE'
+,p_display_order=>10
+,p_column_identifier=>'A'
+,p_column_label=>'Code Type'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(551262144561340962)
+,p_db_column_name=>'CODE'
+,p_display_order=>20
+,p_column_identifier=>'B'
+,p_column_label=>'Code'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(551262230527340963)
+,p_db_column_name=>'POSITION_NAME'
+,p_display_order=>30
+,p_column_identifier=>'C'
+,p_column_label=>'Position Name'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(551262285201340964)
+,p_db_column_name=>'ACCOUNT_NAME'
+,p_display_order=>40
+,p_column_identifier=>'D'
+,p_column_label=>'Account Name'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(551262430630340965)
+,p_db_column_name=>'AMOUNT'
+,p_display_order=>50
+,p_column_identifier=>'E'
+,p_column_label=>'Amount'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(551262522451340966)
+,p_db_column_name=>'INCOME_AMOUNT_YTD'
+,p_display_order=>60
+,p_column_identifier=>'F'
+,p_column_label=>'Income Amount Ytd'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_rpt(
+ p_id=>wwv_flow_imp.id(551291706564401498)
+,p_application_user=>'APXWS_DEFAULT'
+,p_report_seq=>10
+,p_report_alias=>'3623965'
+,p_status=>'PUBLIC'
+,p_is_default=>'Y'
+,p_report_columns=>'CODE_TYPE:CODE:POSITION_NAME:ACCOUNT_NAME:AMOUNT:INCOME_AMOUNT_YTD'
+);
 wwv_flow_imp_page.create_page_button(
  p_id=>wwv_flow_imp.id(3498246072078374894)
 ,p_button_sequence=>10
@@ -1945,7 +5015,6 @@ wwv_flow_imp_page.create_page_button(
 ,p_button_is_hot=>'Y'
 ,p_button_image_alt=>'Preview'
 ,p_button_position=>'EDIT'
-,p_button_alignment=>'RIGHT'
 ,p_warn_on_unsaved_changes=>null
 ,p_icon_css_classes=>'fa-file-pdf-o'
 ,p_security_scheme=>wwv_flow_imp.id(3585334160394360204)
@@ -2059,7 +5128,7 @@ wwv_flow_imp_page.create_page_item(
 ,p_name=>'P6002_REPORT_ID'
 ,p_item_sequence=>60
 ,p_item_plug_id=>wwv_flow_imp.id(3619972626246118145)
-,p_item_default=>'6171'
+,p_item_default=>'6364'
 ,p_display_as=>'NATIVE_HIDDEN'
 ,p_encrypt_session_state_yn=>'N'
 ,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
@@ -2355,6 +5424,22 @@ wwv_flow_imp_page.create_page_da_action(
 'begin',
 '',
 '',
+'--select replace(report_location,''/reports/'') into v_report_path from report where id= :P6002_REPORT_ID;',
+'--v_report_path:=''/reports/''||v_report_path;',
+'',
+'/*v_url_2 :=''f?p=&APP_ID.:403:&APP_SESSION.::NO:403:P403_PARAMETERS,P403_REPORT_PATH:''||''|EARNINGS_PERIOD_ID=''||:p6002_earnings_period||''|IN_ORG_ID=''||:p6002_organisation||''|SEARCH_OPTION=''||:p6002_search_option||''|SUPPRESS_DETAILS=''||:p6002_suppress'
+||'_details||''|SESSION_ID=''||:app_session||'',''||v_report_path;',
+'',
+':p6002_parameters:=''&EARNINGS_PERIOD_ID=''||:p6002_earnings_period||''&IN_ORG_ID=''||:p6002_organisation||''&SEARCH_OPTION=''||:p6002_search_option||''&SUPPRESS_DETAILS=''||:p6002_suppress_details||''&SESSION_ID=''||:app_session;',
+'',
+'',
+'v_url_1 :=pkg_reports.fn_build_report_url(:P402_REPORT_ID)||:P402_PARAMATERS;',
+'v_url_2 :=replace(:P402_PARAMATERS,''&'',''-'');*/',
+'--||:APP_ORG_ID||',
+'',
+'--v_url_1:=''http://apps4.innosysgy.com:8082/Report/showPDF?p2=''||v_report_path||''-EARNINGS_PERIOD_ID=''||:P6002_PAID_EARNINGS_PERIOD||''-DEPARTMENT_ID=''||:P6002_DEPARTMENT_ID||''-IN_ORG_ID=''||:APP_ORG_ID||''-SESSION_ID=''||:APP_SESSION;',
+'',
+'',
 'select ',
 '    TABLE_VALUE ',
 '    || ''&p2='' ',
@@ -2363,7 +5448,9 @@ wwv_flow_imp_page.create_page_da_action(
 'where upper(VALUE_DESCRIPTION)=''JASPERSERVER URL'' ',
 'and org_id=pkg_global_fnts.fn_shareRefOrg(:APP_ORG_SHR_DED);',
 '',
-'v_url_1 := v_url_1  || ''-EARNINGS_PERIOD_ID=''||:P6002_PAID_EARNINGS_PERIOD||''-DEPARTMENT_ID=''||:P6002_DEPARTMENT_ID||''-IN_ORG_ID=''||:APP_ORG_ID||''-SESSION_ID=''||:APP_SESSION;',
+'v_url_1 := v_url_1  || ''-EARNINGS_PERIOD_ID=''||:P6002_PAID_EARNINGS_PERIOD||''-DEPARTMENT_ID=''||:P6002_DEPARTMENT_ID||''-IN_ORG_ID=''||:APP_ORG_ID||''-SESSION_ID=''||:APP_SESSION; ',
+' ',
+'',
 '',
 ':P402_PARAMATERS:=null;',
 '',
@@ -2381,16 +5468,7 @@ wwv_flow_imp_page.create_page_da_action(
 ,p_action_sequence=>30
 ,p_execute_on_page_init=>'N'
 ,p_action=>'NATIVE_JAVASCRIPT_CODE'
-,p_attribute_01=>wwv_flow_string.join(wwv_flow_t_varchar2(
-'// window.open(document.getElementById(''P6002_URL'').value,''popUpWindow'',''height=400,width=900,left=50,top=50,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=yes,directories=no, status=yes'');',
-'',
-'',
-'',
-'var win = window.open(''&P6002_URL.'',''popUpWindow'',''height=300,width=900,left=50,top=50,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=yes,directories=no, status=yes'');',
-'',
-'if (window.focus) {win.focus();}',
-'',
-''))
+,p_attribute_01=>'window.open(document.getElementById(''P6002_URL'').value,''popUpWindow'',''height=400,width=900,left=50,top=50,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=yes,directories=no, status=yes'');'
 );
 wwv_flow_imp_page.create_page_process(
  p_id=>wwv_flow_imp.id(3498246760368374895)

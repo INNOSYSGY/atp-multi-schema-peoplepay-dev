@@ -5,7 +5,7 @@ begin
 --   Manifest End
 wwv_flow_imp.component_begin (
  p_version_yyyy_mm_dd=>'2024.11.30'
-,p_release=>'24.2.8'
+,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
 ,p_default_id_offset=>188895268110624634
@@ -6240,6 +6240,25 @@ wwv_flow_imp_page.create_page_validation(
 ,p_validation2=>'PLSQL'
 ,p_validation_type=>'FUNC_BODY_RETURNING_ERR_TEXT'
 ,p_validation_condition=>'CREATE, CREATE_AGAIN, SAVE'
+,p_validation_condition_type=>'REQUEST_IN_CONDITION'
+,p_error_display_location=>'INLINE_WITH_FIELD_AND_NOTIFICATION'
+);
+wwv_flow_imp_page.create_page_validation(
+ p_id=>wwv_flow_imp.id(206211707465772027)
+,p_validation_name=>'chk_NIS_RegNo'
+,p_validation_sequence=>81
+,p_validation=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'BEGIN',
+'    IF LENGTH(TRIM(:P1311_NIS_REG_NO)) > 6 THEN',
+'        RETURN FALSE;',
+'    ELSE',
+'        RETURN TRUE;',
+'    END IF;',
+'END;'))
+,p_validation2=>'PLSQL'
+,p_validation_type=>'FUNC_BODY_RETURNING_BOOLEAN'
+,p_error_message=>'Your NIS Reg No. is more than 6 characters. Please fix/update.'
+,p_validation_condition=>'CREATE,SAVE'
 ,p_validation_condition_type=>'REQUEST_IN_CONDITION'
 ,p_error_display_location=>'INLINE_WITH_FIELD_AND_NOTIFICATION'
 );

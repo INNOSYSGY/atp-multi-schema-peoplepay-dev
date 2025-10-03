@@ -5,7 +5,7 @@ begin
 --   Manifest End
 wwv_flow_imp.component_begin (
  p_version_yyyy_mm_dd=>'2024.11.30'
-,p_release=>'24.2.8'
+,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
 ,p_default_id_offset=>188895268110624634
@@ -882,7 +882,7 @@ wwv_flow_imp_page.create_page_item(
 'JOIN HR_HCF_POSITION B ON B.ID = x.POSITION_ID',
 'JOIN HR_HCF_WORKLOCATION C ON C.ID = x.WKLOCATION_ID',
 'where X.ID not in (:P1429_EMPLOYEE, :P1429_FROM_EMPLOYEE)',
-'AND ORG_ID =:APP_ORG_ID'';',
+'AND X.ORG_ID =:APP_ORG_ID'';',
 '',
 'end if;',
 '	'))
@@ -1087,7 +1087,7 @@ wwv_flow_imp_page.create_page_item(
 'return',
 '  ''select EMPLOYEE||''''(no.:''''||EMP_COMPANY_NO||'''')'''' a, id B',
 'from VW_EMPLOYEEALL X',
-'AND ORG_ID =:APP_ORG_ID'';',
+'WHERE ORG_ID =:APP_ORG_ID'';',
 '',
 'end if;',
 '	'))

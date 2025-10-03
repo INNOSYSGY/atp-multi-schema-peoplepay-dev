@@ -5,7 +5,7 @@ begin
 --   Manifest End
 wwv_flow_imp.component_begin (
  p_version_yyyy_mm_dd=>'2024.11.30'
-,p_release=>'24.2.8'
+,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
 ,p_default_id_offset=>188895268110624634
@@ -5876,7 +5876,8 @@ wwv_flow_imp_page.create_page_item(
 ,p_read_only_when=>wwv_flow_string.join(wwv_flow_t_varchar2(
 'SELECT 1',
 'FROM PA_PMG_PAYROLLHD',
-'WHERE earnings_period_id=:P1241_ID'))
+'WHERE earnings_period_id=:P1241_ID',
+'and pay_status != ''OP'''))
 ,p_read_only_when_type=>'EXISTS'
 ,p_field_template=>2526760615038828570
 ,p_item_template_options=>'#DEFAULT#'
@@ -5933,7 +5934,8 @@ wwv_flow_imp_page.create_page_item(
 ,p_read_only_when=>wwv_flow_string.join(wwv_flow_t_varchar2(
 'SELECT 1',
 'FROM PA_PMG_PAYROLLHD',
-'WHERE earnings_period_id=:P1241_ID'))
+'WHERE earnings_period_id=:P1241_ID',
+'and pay_status != ''OP'''))
 ,p_read_only_when_type=>'EXISTS'
 ,p_field_template=>2526760615038828570
 ,p_item_template_options=>'#DEFAULT#'

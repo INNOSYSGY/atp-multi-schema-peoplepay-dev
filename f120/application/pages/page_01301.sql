@@ -5,7 +5,7 @@ begin
 --   Manifest End
 wwv_flow_imp.component_begin (
  p_version_yyyy_mm_dd=>'2024.11.30'
-,p_release=>'24.2.8'
+,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
 ,p_default_id_offset=>188895268110624634
@@ -1301,9 +1301,35 @@ wwv_flow_imp_page.create_page_branch(
 ,p_branch_sequence=>4
 );
 wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(199800526968167640)
+,p_name=>'P1301_SEQ_NO'
+,p_source_data_type=>'NUMBER'
+,p_item_sequence=>510
+,p_item_plug_id=>wwv_flow_imp.id(4541050453970326897)
+,p_item_source_plug_id=>wwv_flow_imp.id(4541050453970326897)
+,p_item_default=>'0'
+,p_prompt=>'Seq No.'
+,p_source=>'SEQ_NO'
+,p_source_type=>'REGION_SOURCE_COLUMN'
+,p_display_as=>'NATIVE_NUMBER_FIELD'
+,p_cSize=>1
+,p_tag_css_classes=>'DISPLAY_ONLY'
+,p_begin_on_new_line=>'N'
+,p_begin_on_new_field=>'N'
+,p_field_template=>2318601014859922299
+,p_item_css_classes=>'u-bold'
+,p_item_template_options=>'#DEFAULT#'
+,p_is_persistent=>'N'
+,p_help_text=>'Current number of employees that hold this position'
+,p_encrypt_session_state_yn=>'N'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'number_alignment', 'center',
+  'virtual_keyboard', 'decimal')).to_clob
+);
+wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(308068363738695064)
 ,p_name=>'P1301_RETURN_VALUE'
-,p_item_sequence=>650
+,p_item_sequence=>660
 ,p_item_plug_id=>wwv_flow_imp.id(4541050453970326897)
 ,p_display_as=>'NATIVE_HIDDEN'
 ,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
@@ -1711,7 +1737,7 @@ wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(3183571756032777644)
 ,p_name=>'P1301_REPORT_TO_TECH'
 ,p_source_data_type=>'NUMBER'
-,p_item_sequence=>510
+,p_item_sequence=>530
 ,p_item_plug_id=>wwv_flow_imp.id(4541050453970326897)
 ,p_item_source_plug_id=>wwv_flow_imp.id(4541050453970326897)
 ,p_prompt=>'Report To Tech'
@@ -1757,7 +1783,7 @@ wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(3183572690014777645)
 ,p_name=>'P1301_REPORT_TO'
 ,p_source_data_type=>'NUMBER'
-,p_item_sequence=>520
+,p_item_sequence=>540
 ,p_item_plug_id=>wwv_flow_imp.id(4541050453970326897)
 ,p_item_source_plug_id=>wwv_flow_imp.id(4541050453970326897)
 ,p_prompt=>'Report To Admin'
@@ -1803,7 +1829,7 @@ wwv_flow_imp_page.create_page_item(
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(3183573548690777646)
 ,p_name=>'P1301_POINTS'
-,p_item_sequence=>530
+,p_item_sequence=>550
 ,p_item_plug_id=>wwv_flow_imp.id(4541050453970326897)
 ,p_use_cache_before_default=>'NO'
 ,p_item_default=>'0'
@@ -1819,7 +1845,7 @@ wwv_flow_imp_page.create_page_item(
 ,p_name=>'P1301_START_DATE'
 ,p_source_data_type=>'DATE'
 ,p_is_required=>true
-,p_item_sequence=>540
+,p_item_sequence=>560
 ,p_item_plug_id=>wwv_flow_imp.id(4541050453970326897)
 ,p_item_source_plug_id=>wwv_flow_imp.id(4541050453970326897)
 ,p_prompt=>'Start Date'
@@ -1844,7 +1870,7 @@ wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(3183574368065777647)
 ,p_name=>'P1301_END_DATE'
 ,p_source_data_type=>'DATE'
-,p_item_sequence=>550
+,p_item_sequence=>570
 ,p_item_plug_id=>wwv_flow_imp.id(4541050453970326897)
 ,p_item_source_plug_id=>wwv_flow_imp.id(4541050453970326897)
 ,p_prompt=>'End Date'
@@ -1870,7 +1896,7 @@ wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(3183574728341777647)
 ,p_name=>'P1301_TRANSACTION_TYPE_ID'
 ,p_source_data_type=>'NUMBER'
-,p_item_sequence=>560
+,p_item_sequence=>580
 ,p_item_plug_id=>wwv_flow_imp.id(4541050453970326897)
 ,p_item_source_plug_id=>wwv_flow_imp.id(4541050453970326897)
 ,p_prompt=>'Transaction Type'
@@ -1904,7 +1930,7 @@ wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(3183575195771777648)
 ,p_name=>'P1301_STATUS'
 ,p_source_data_type=>'VARCHAR2'
-,p_item_sequence=>570
+,p_item_sequence=>590
 ,p_item_plug_id=>wwv_flow_imp.id(4541050453970326897)
 ,p_item_source_plug_id=>wwv_flow_imp.id(4541050453970326897)
 ,p_prompt=>'Status'
@@ -1940,7 +1966,7 @@ wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(3183575510611777648)
 ,p_name=>'P1301_DESCRIPTION'
 ,p_source_data_type=>'VARCHAR2'
-,p_item_sequence=>580
+,p_item_sequence=>600
 ,p_item_plug_id=>wwv_flow_imp.id(4541050453970326897)
 ,p_item_source_plug_id=>wwv_flow_imp.id(4541050453970326897)
 ,p_prompt=>'Description(Skills and Ability)'
@@ -1965,7 +1991,7 @@ wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(3183575949150777649)
 ,p_name=>'P1301_DESCRIPTION_DTL_STATUS'
 ,p_source_data_type=>'VARCHAR2'
-,p_item_sequence=>590
+,p_item_sequence=>610
 ,p_item_plug_id=>wwv_flow_imp.id(4541050453970326897)
 ,p_item_source_plug_id=>wwv_flow_imp.id(4541050453970326897)
 ,p_item_default=>'KEYED'
@@ -1989,7 +2015,7 @@ wwv_flow_imp_page.create_page_item(
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(3183577566254777650)
 ,p_name=>'P1301_STD_DETAIL_KEY'
-,p_item_sequence=>610
+,p_item_sequence=>620
 ,p_item_plug_id=>wwv_flow_imp.id(4541050453970326897)
 ,p_use_cache_before_default=>'NO'
 ,p_source=>'STD_DETAIL_KEY'
@@ -2002,7 +2028,7 @@ wwv_flow_imp_page.create_page_item(
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(3183577961456777651)
 ,p_name=>'P1301_ORG_STRUCTURE_ID'
-,p_item_sequence=>620
+,p_item_sequence=>630
 ,p_item_plug_id=>wwv_flow_imp.id(4541050453970326897)
 ,p_use_cache_before_default=>'NO'
 ,p_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
@@ -2018,7 +2044,7 @@ wwv_flow_imp_page.create_page_item(
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(3183578391846777651)
 ,p_name=>'P1301_COMENT_SWITCH'
-,p_item_sequence=>630
+,p_item_sequence=>640
 ,p_item_plug_id=>wwv_flow_imp.id(4541050453970326897)
 ,p_item_default=>'0'
 ,p_prompt=>'Add Workflow Notes'
@@ -2036,7 +2062,7 @@ wwv_flow_imp_page.create_page_item(
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(3183579187131777652)
 ,p_name=>'P1301_WORK_FLOW_COMMENT'
-,p_item_sequence=>640
+,p_item_sequence=>650
 ,p_item_plug_id=>wwv_flow_imp.id(4541050453970326897)
 ,p_prompt=>'<font color="purple" size="2"><b>  Work Flow Notes</b> </font>'
 ,p_display_as=>'NATIVE_TEXTAREA'

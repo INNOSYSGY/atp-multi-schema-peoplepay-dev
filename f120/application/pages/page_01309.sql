@@ -5,7 +5,7 @@ begin
 --   Manifest End
 wwv_flow_imp.component_begin (
  p_version_yyyy_mm_dd=>'2024.11.30'
-,p_release=>'24.2.8'
+,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
 ,p_default_id_offset=>188895268110624634
@@ -75,7 +75,7 @@ wwv_flow_imp_page.create_report_region(
 ,p_template=>2664334895415463485
 ,p_display_sequence=>40
 ,p_region_template_options=>'#DEFAULT#:t-Region--noPadding:is-collapsed:t-Region--accent2:t-Region--scrollBody'
-,p_component_template_options=>'#DEFAULT#:t-Report--altRowsDefault:t-Report--rowHighlight'
+,p_component_template_options=>'#DEFAULT#:t-Report--stretch:t-Report--altRowsDefault:t-Report--rowHighlight'
 ,p_source_type=>'NATIVE_SQL_REPORT'
 ,p_query_type=>'SQL'
 ,p_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
@@ -514,7 +514,6 @@ wwv_flow_imp_page.create_region_column(
 ,p_source_type=>'DB_COLUMN'
 ,p_source_expression=>'ENTRY_DATE'
 ,p_data_type=>'DATE'
-,p_session_state_data_type=>'VARCHAR2'
 ,p_is_query_only=>false
 ,p_item_type=>'NATIVE_DATE_PICKER_APEX'
 ,p_heading=>'Entry Date'
@@ -523,15 +522,13 @@ wwv_flow_imp_page.create_region_column(
 ,p_value_alignment=>'CENTER'
 ,p_value_css_classes=>'is-readonly'
 ,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
-  'appearance_and_behavior', 'MONTH-PICKER:YEAR-PICKER:TODAY-BUTTON',
-  'days_outside_month', 'VISIBLE',
   'display_as', 'POPUP',
   'max_date', 'NONE',
   'min_date', 'NONE',
   'multiple_months', 'N',
-  'show_on', 'FOCUS',
   'show_time', 'N',
   'use_defaults', 'Y')).to_clob
+,p_format_mask=>'DD-MON-YYYY HH:MIPM'
 ,p_is_required=>true
 ,p_enable_filter=>true
 ,p_filter_is_required=>false
