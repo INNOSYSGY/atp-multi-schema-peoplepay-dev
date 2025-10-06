@@ -39,7 +39,9 @@ jobs:
       APP_ID: ${{ vars.APP_ID }}
       WKSPACE: ${{ vars.WKSPACE }}
       SCHEMA: ${{ vars.SCHEMA }}      
-      USER: ${{ github.actor }}     
+      USER: ${{ github.actor }}   
+      APP_EXPORT: ${{ vars.APP_EXPORT }}   
+      
 
 
     # Dynamically set the environment based on the branch name
