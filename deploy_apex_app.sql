@@ -9,6 +9,6 @@ begin
 end;
 /
 REM Then install the application by running its exported SQL script
-REM For "split" export run @f112/install.sql 
-REM or @f112/install_component.sql instead
-@f112/install.sql
+REM For "split" export run @f120/install.sql 
+REM or @f120/install_component.sql instead
+@f120/install.sql
