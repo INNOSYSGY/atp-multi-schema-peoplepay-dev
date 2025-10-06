@@ -60,11 +60,11 @@ jobs:
           # These secrets are populated from the GitHub Environment you configured
           GITHUB_TOKEN: ${{ secrets.TOK }}
           DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
-          ENVIRONMENT: ${{ job.environment }}
+          ENVIRONMENT: ${{ GITHUB_BRANCH }}
           DB_URL: ${{ vars.DB_URL }}
           DB_USER: ${{ vars.DB_USER }}
           APP_ID: ${{ vars.APP_ID }}
         run: |
           echo "${{ vars.ATP_WALLET_DEV }}" | base64 --decode > Wallet_DEVENV.zip
-          #sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @deploy_apex_app.sql
+          sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @deploy_apex_app.sql
 
