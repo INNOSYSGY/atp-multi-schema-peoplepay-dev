@@ -1,7 +1,11 @@
 REM First setup the installation context in the target environment
 begin
     apex_application_install.set_workspace('PPLPAYV8_AUTO');
+<<<<<<< HEAD
+    apex_application_install.set_application_id('$APP_ID');
+=======
     apex_application_install.set_application_id('$GITHUB_USER - $APP_ID');
+>>>>>>> staging
     apex_application_install.generate_offset();
     apex_application_install.set_schema('TEMPLATE_APPV8');
     apex_application_install.set_application_name( p_application_name => 'Multi Schema PeoplePay - $GITHUB_USER - $ENVIRONMENT - $APP_ID' );
