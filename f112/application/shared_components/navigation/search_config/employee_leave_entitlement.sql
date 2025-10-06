@@ -5,7 +5,7 @@ begin
 --   Manifest End
 wwv_flow_imp.component_begin (
  p_version_yyyy_mm_dd=>'2024.11.30'
-,p_release=>'24.2.7'
+,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>112
 ,p_default_id_offset=>115784133856313705
@@ -30,6 +30,7 @@ wwv_flow_imp_shared.create_search_config(
 'join HR_RCM_EMPLEAVEENTITLE empleave on C.ID=empleave.EMP_ID',
 'join HR_LV_LEAVETYPE leavetype on leavetype.id = to_number(empleave.LEAVE_TYPE_id)',
 'where ind_org_id = :APP_ORG_ID',
+'and c.date_separated is null',
 'and empleave.start_date <= current_date',
 'and (empleave.end_date is null or empleave.end_date > current_date)',
 'and exists (select 1',
@@ -49,7 +50,7 @@ wwv_flow_imp_shared.create_search_config(
 ,p_badge_column_name=>'BADGE'
 ,p_icon_source_type=>'INITIALS'
 ,p_icon_css_classes=>'fa-sign-out'
-,p_version_scn=>41799874162737
+,p_version_scn=>45054066923913
 );
 wwv_flow_imp.component_end;
 end;

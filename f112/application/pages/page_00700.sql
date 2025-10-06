@@ -5,7 +5,7 @@ begin
 --   Manifest End
 wwv_flow_imp.component_begin (
  p_version_yyyy_mm_dd=>'2024.11.30'
-,p_release=>'24.2.7'
+,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>112
 ,p_default_id_offset=>115784133856313705
@@ -5908,7 +5908,7 @@ wwv_flow_imp_page.create_page_validation(
 'and exists (select 1',
 '            from APP_MODULE b',
 '            where a.APP_MODULE_ID=b.id',
-'            and upper(MODULE_NAME)=''RECRUITMENT''',
+'            and upper(MODULE_NAME)=''EMPLOYEE MANAGEMENT''',
 '            and trunc(b.START_DATE) <= trunc(current_date)',
 '            and (b.END_DATE is null or trunc(b.END_DATE) >= trunc(current_date))',
 '            );',

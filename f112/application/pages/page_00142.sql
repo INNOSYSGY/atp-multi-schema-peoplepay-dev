@@ -1,0 +1,363 @@
+prompt --application/pages/page_00142
+begin
+--   Manifest
+--     PAGE: 00142
+--   Manifest End
+wwv_flow_imp.component_begin (
+ p_version_yyyy_mm_dd=>'2024.11.30'
+,p_release=>'24.2.9'
+,p_default_workspace_id=>31592798490575853
+,p_default_application_id=>112
+,p_default_id_offset=>115784133856313705
+,p_default_owner=>'TEMPLATE_APPV8'
+);
+wwv_flow_imp_page.create_page(
+ p_id=>142
+,p_name=>'rptPriorInfoss'
+,p_alias=>'RPTPRIORINFOSS'
+,p_step_title=>'PRIER INTERACTIVE REPORT'
+,p_autocomplete_on_off=>'OFF'
+,p_group_id=>wwv_flow_imp.id(3297885021596700624)
+,p_page_template_options=>'#DEFAULT#'
+,p_protection_level=>'C'
+,p_page_component_map=>'18'
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(60485447206218543)
+,p_plug_name=>'Interactive report '
+,p_region_template_options=>'#DEFAULT#:t-Region--accent14:t-Region--scrollBody'
+,p_component_template_options=>'#DEFAULT#'
+,p_plug_template=>4072358936313175081
+,p_plug_display_sequence=>40
+,p_query_type=>'TABLE'
+,p_query_table=>'PA_PCF_PRIOR_AS_AT_VALUES'
+,p_include_rowid_column=>false
+,p_plug_source_type=>'NATIVE_IR'
+,p_prn_content_disposition=>'ATTACHMENT'
+,p_prn_units=>'INCHES'
+,p_prn_paper_size=>'LETTER'
+,p_prn_width=>11
+,p_prn_height=>8.5
+,p_prn_orientation=>'HORIZONTAL'
+,p_prn_page_header_font_color=>'#000000'
+,p_prn_page_header_font_family=>'Helvetica'
+,p_prn_page_header_font_weight=>'normal'
+,p_prn_page_header_font_size=>'12'
+,p_prn_page_footer_font_color=>'#000000'
+,p_prn_page_footer_font_family=>'Helvetica'
+,p_prn_page_footer_font_weight=>'normal'
+,p_prn_page_footer_font_size=>'12'
+,p_prn_header_bg_color=>'#EEEEEE'
+,p_prn_header_font_color=>'#000000'
+,p_prn_header_font_family=>'Helvetica'
+,p_prn_header_font_weight=>'bold'
+,p_prn_header_font_size=>'10'
+,p_prn_body_bg_color=>'#FFFFFF'
+,p_prn_body_font_color=>'#000000'
+,p_prn_body_font_family=>'Helvetica'
+,p_prn_body_font_weight=>'normal'
+,p_prn_body_font_size=>'10'
+,p_prn_border_width=>.5
+,p_prn_page_header_alignment=>'CENTER'
+,p_prn_page_footer_alignment=>'CENTER'
+,p_prn_border_color=>'#666666'
+);
+wwv_flow_imp_page.create_worksheet(
+ p_id=>wwv_flow_imp.id(60485590217218544)
+,p_max_row_count=>'1000000'
+,p_pagination_type=>'ROWS_X_TO_Y'
+,p_pagination_display_pos=>'BOTTOM_RIGHT'
+,p_report_list_mode=>'TABS'
+,p_lazy_loading=>false
+,p_show_detail_link=>'N'
+,p_show_notify=>'Y'
+,p_download_formats=>'CSV:HTML:XLSX:PDF'
+,p_enable_mail_download=>'Y'
+,p_owner=>'EEITOKPAH@INNOSYSGY.COM'
+,p_internal_uid=>159108545446052746
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(60485730855218545)
+,p_db_column_name=>'ID'
+,p_display_order=>10
+,p_is_primary_key=>'Y'
+,p_column_identifier=>'A'
+,p_column_label=>'Id'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(60485773500218546)
+,p_db_column_name=>'EMP_ID'
+,p_display_order=>20
+,p_column_identifier=>'B'
+,p_column_label=>'Emp Id'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(60485900603218547)
+,p_db_column_name=>'AS_AT_DATE'
+,p_display_order=>30
+,p_column_identifier=>'C'
+,p_column_label=>'As At Date'
+,p_column_type=>'DATE'
+,p_heading_alignment=>'LEFT'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(60486002236218548)
+,p_db_column_name=>'EXPENSE_ID'
+,p_display_order=>40
+,p_column_identifier=>'D'
+,p_column_label=>'Expense Id'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(63393426284749099)
+,p_db_column_name=>'REMARKS'
+,p_display_order=>50
+,p_column_identifier=>'E'
+,p_column_label=>'Remarks'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(63393521260749100)
+,p_db_column_name=>'ENTRY_DATE'
+,p_display_order=>60
+,p_column_identifier=>'F'
+,p_column_label=>'Entry Date'
+,p_column_type=>'DATE'
+,p_heading_alignment=>'LEFT'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(63393595853749101)
+,p_db_column_name=>'ENTERED_BY'
+,p_display_order=>70
+,p_column_identifier=>'G'
+,p_column_label=>'Entered By'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(63393719899749102)
+,p_db_column_name=>'LAST_CHANGED_DATE'
+,p_display_order=>80
+,p_column_identifier=>'H'
+,p_column_label=>'Last Changed Date'
+,p_column_type=>'DATE'
+,p_heading_alignment=>'LEFT'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(63393754505749103)
+,p_db_column_name=>'LAST_CHANGED_BY'
+,p_display_order=>90
+,p_column_identifier=>'I'
+,p_column_label=>'Last Changed By'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(63393939712749104)
+,p_db_column_name=>'DATE_JOINED'
+,p_display_order=>100
+,p_column_identifier=>'J'
+,p_column_label=>'Date Joined'
+,p_column_type=>'DATE'
+,p_heading_alignment=>'LEFT'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(63393962591749105)
+,p_db_column_name=>'EMPLOYEE_CONTRIBUTION_AS_AT'
+,p_display_order=>110
+,p_column_identifier=>'K'
+,p_column_label=>'Employee Contribution As At'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(63394080418749106)
+,p_db_column_name=>'EMPLOYER_CONTRIBUTION_AS_AT'
+,p_display_order=>120
+,p_column_identifier=>'L'
+,p_column_label=>'Employer Contribution As At'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(63394230798749107)
+,p_db_column_name=>'ADDITIONAL_VOLUNTARY_AS_AT'
+,p_display_order=>130
+,p_column_identifier=>'M'
+,p_column_label=>'Additional Voluntary As At'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(63394312732749108)
+,p_db_column_name=>'TOTAL_CREDITED_INTEREST_AS_AT'
+,p_display_order=>140
+,p_column_identifier=>'N'
+,p_column_label=>'Total Credited Interest As At'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(63394392810749109)
+,p_db_column_name=>'TOTAL_ACCUMULATED_ACCOUNT_BALANCE_AS_AT'
+,p_display_order=>150
+,p_column_identifier=>'O'
+,p_column_label=>'Total Accumulated Account Balance As At'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(63394472176749110)
+,p_db_column_name=>'EMPLOYEE_CONTRIBUTION_CURR'
+,p_display_order=>160
+,p_column_identifier=>'P'
+,p_column_label=>'Employee Contribution Curr'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(63394624325749111)
+,p_db_column_name=>'EMPLOYER_CONTRIBUTION_CURR'
+,p_display_order=>170
+,p_column_identifier=>'Q'
+,p_column_label=>'Employer Contribution Curr'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(63394661465749112)
+,p_db_column_name=>'ADDITIONAL_VOLUNTARY_CURR'
+,p_display_order=>180
+,p_column_identifier=>'R'
+,p_column_label=>'Additional Voluntary Curr'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(63394750825749113)
+,p_db_column_name=>'TOTAL_CREDITED_INTEREST_CURR'
+,p_display_order=>190
+,p_column_identifier=>'S'
+,p_column_label=>'Total Credited Interest Curr'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(63394888990749114)
+,p_db_column_name=>'TOTAL_ACCUMULATED_ACCOUNT_BALANCE_CURR'
+,p_display_order=>200
+,p_column_identifier=>'T'
+,p_column_label=>'Total Accumulated Account Balance Curr'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(63395011610749115)
+,p_db_column_name=>'ORG_ID'
+,p_display_order=>210
+,p_column_identifier=>'U'
+,p_column_label=>'Org Id'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(63395126851749116)
+,p_db_column_name=>'GRAND_TOTAL'
+,p_display_order=>220
+,p_column_identifier=>'V'
+,p_column_label=>'Grand Total'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_rpt(
+ p_id=>wwv_flow_imp.id(63405803338751105)
+,p_application_user=>'APXWS_DEFAULT'
+,p_report_seq=>10
+,p_report_alias=>'1620288'
+,p_status=>'PUBLIC'
+,p_is_default=>'Y'
+,p_report_columns=>'ID:EMP_ID:AS_AT_DATE:EXPENSE_ID:REMARKS:ENTRY_DATE:ENTERED_BY:LAST_CHANGED_DATE:LAST_CHANGED_BY:DATE_JOINED:EMPLOYEE_CONTRIBUTION_AS_AT:EMPLOYER_CONTRIBUTION_AS_AT:ADDITIONAL_VOLUNTARY_AS_AT:TOTAL_CREDITED_INTEREST_AS_AT:TOTAL_ACCUMULATED_ACCOUNT_BAL'
+||'ANCE_AS_AT:EMPLOYEE_CONTRIBUTION_CURR:EMPLOYER_CONTRIBUTION_CURR:ADDITIONAL_VOLUNTARY_CURR:TOTAL_CREDITED_INTEREST_CURR:TOTAL_ACCUMULATED_ACCOUNT_BALANCE_CURR:ORG_ID:GRAND_TOTAL'
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(63392663829744938)
+,p_plug_name=>'Breadcrumb'
+,p_region_template_options=>'#DEFAULT#:t-BreadcrumbRegion--useBreadcrumbTitle'
+,p_component_template_options=>'#DEFAULT#'
+,p_plug_template=>2531463326621247859
+,p_plug_display_sequence=>10
+,p_plug_display_point=>'REGION_POSITION_01'
+,p_menu_id=>wwv_flow_imp.id(10460765779079194647)
+,p_plug_source_type=>'NATIVE_BREADCRUMB'
+,p_menu_template_id=>4072363345357175094
+);
+wwv_flow_imp_page.create_page_button(
+ p_id=>wwv_flow_imp.id(63395215509749117)
+,p_button_sequence=>10
+,p_button_plug_id=>wwv_flow_imp.id(60485447206218543)
+,p_button_name=>'ADD_NEW_2'
+,p_button_action=>'SUBMIT'
+,p_button_template_options=>'#DEFAULT#'
+,p_button_template_id=>4072362960822175091
+,p_button_image_alt=>'ADD NEW'
+,p_button_position=>'EDIT'
+);
+wwv_flow_imp_page.create_page_branch(
+ p_id=>wwv_flow_imp.id(63395318424749118)
+,p_branch_name=>'ADD _NEW_2'
+,p_branch_action=>'f?p=&APP_ID.:85:&SESSION.::&DEBUG.:85::&success_msg=#SUCCESS_MSG#'
+,p_branch_point=>'BEFORE_COMPUTATION'
+,p_branch_type=>'REDIRECT_URL'
+,p_branch_when_button_id=>wwv_flow_imp.id(63395215509749117)
+,p_branch_sequence=>10
+);
+wwv_flow_imp.component_end;
+end;
+/

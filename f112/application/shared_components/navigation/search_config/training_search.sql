@@ -5,7 +5,7 @@ begin
 --   Manifest End
 wwv_flow_imp.component_begin (
  p_version_yyyy_mm_dd=>'2024.11.30'
-,p_release=>'24.2.7'
+,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>112
 ,p_default_id_offset=>115784133856313705
@@ -30,6 +30,7 @@ wwv_flow_imp_shared.create_search_config(
 'join HR_RCM_TRAINING train on C.ID=train.EMP_ID',
 'join HR_HCF_organisation org on org.id = train.TRAINING_AGENCY',
 'where ind_org_id = :APP_ORG_ID',
+'and c.date_separated is null',
 'and TRAIN_START_DATE <= current_date',
 'and (train.TRAIN_end_DATE is null or TRAIN_end_DATE > current_date)',
 'and exists (select 1',
@@ -47,7 +48,7 @@ wwv_flow_imp_shared.create_search_config(
 ,p_description_column_name=>'DESCRIPTION'
 ,p_badge_column_name=>'BADGE'
 ,p_icon_source_type=>'INITIALS'
-,p_version_scn=>41799874557087
+,p_version_scn=>45054070118239
 );
 wwv_flow_imp.component_end;
 end;

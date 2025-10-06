@@ -1,22 +1,40 @@
-name: Deploy APEX App with SQLcl
+name: Deploy APEX Application
 
 on:
-  workflow_dispatch:  # Allow manual triggering
-  #schedule:
-    # Run the workflow every day at midnight UTC
-    #- cron: '0 23 * * 5'
-env:
-  GITHUB_USER: ${{ github.actor }}
-  GITHUB_BRANCH: ${{ github.ref_name }}
-  GITHUB_BRANCH_REF: ${{ github.ref }}
-  DEPLOY_TIMESTAMP: ${{ github.run_id }}
+  # Allow manual triggering
+  workflow_dispatch:  
+    inputs:
+      # git-ref:
+      #   description: 'Git commit SHA or tag to deploy (for rollbacks)'
+      #   required: false
+      #   default: ''
+      branch:
+        description: 'The branch to deploy from'
+        required: true
+        default: 'develop' # Default to the development branch for convenience
+
+  # Trigger the workflow on pushes to these specific branches
+  push:
+    branches:
+      - main
+      - staging
+      - develop
+# env:
+#   GITHUB_USER: ${{ github.actor }}
+#   GITHUB_BRANCH: ${{ github.ref_name }}
+#   GITHUB_BRANCH_REF: ${{ github.ref }}
+#   DEPLOY_TIMESTAMP: ${{ github.run_id }}
   
 permissions:
   contents: write  # Grant write permissions to the GITHUB_TOKEN
 
 jobs:
-  export:
+  deploy-to-apex:
     runs-on: ubuntu-latest
+
+    # Dynamically set the environment based on the branch name
+    environment:
+      name: ${{ (github.ref_name == 'main' && 'Production') || (github.ref_name == 'staging' && 'Staging') || 'Development' }}
 
     steps:
       # Checkout the repository
@@ -37,23 +55,16 @@ jobs:
           unzip -o sqlcl-latest.zip
           echo "$(pwd)/sqlcl/bin" >> $GITHUB_PATH
 
-      - name: Pull changes from Repo
+      - name: Deploy APEX App Operation
         env:
+          # These secrets are populated from the GitHub Environment you configured
           GITHUB_TOKEN: ${{ secrets.TOK }}
-        run: |
-          git config --global user.name "Leonardo Cuyar"
-          git config --global user.email "leo.cuyar@gmail.com"
-          git pull origin ${{ github.event.inputs.branch-name }}
-          ls -al
-          
-      - name: Deploy APEX App
-        env:
-          DB_URL: ${{ secrets.DB_URL }}
-          DB_USER: ${{ secrets.DB_USER }}
           DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
-          APEX_APP_ID: ${{ secrets.APEX_APP_EXPORT_ID }}
+          ENVIRONMENT: ${{ job.environment }}
+          DB_URL: ${{ vars.DB_URL }}
+          DB_USER: ${{ vars.DB_USER }}
           APP_ID: ${{ vars.APP_ID }}
         run: |
           echo "${{ vars.ATP_WALLET_DEV }}" | base64 --decode > Wallet_DEVENV.zip
-          sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @deploy_apex_app.sql
+          #sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @deploy_apex_app.sql
 

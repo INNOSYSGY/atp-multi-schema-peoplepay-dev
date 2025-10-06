@@ -890,6 +890,7 @@ prompt --install
 @@application/pages/page_00061.sql
 @@application/pages/page_00062.sql
 @@application/pages/page_00064.sql
+@@application/pages/page_00065.sql
 @@application/pages/page_00066.sql
 @@application/pages/page_00067.sql
 @@application/pages/page_00069.sql
@@ -955,7 +956,9 @@ prompt --install
 @@application/pages/page_00137.sql
 @@application/pages/page_00138.sql
 @@application/pages/page_00139.sql
+@@application/pages/page_00142.sql
 @@application/pages/page_00146.sql
+@@application/pages/page_00147.sql
 @@application/pages/page_00150.sql
 @@application/pages/page_00156.sql
 @@application/pages/page_00157.sql

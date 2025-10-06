@@ -5,7 +5,7 @@ begin
 --   Manifest End
 wwv_flow_imp.component_begin (
  p_version_yyyy_mm_dd=>'2024.11.30'
-,p_release=>'24.2.7'
+,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>112
 ,p_default_id_offset=>115784133856313705
@@ -8023,7 +8023,7 @@ wwv_flow_imp_page.create_page_branch(
 wwv_flow_imp_page.create_page_branch(
  p_id=>wwv_flow_imp.id(3324573611136901395)
 ,p_branch_name=>'posting_branch'
-,p_branch_action=>'f?p=&APP_ID.:12980:&SESSION.::&DEBUG.:12980:P12980_EARNINGS_PERIOD_ID,P12980_PAY_BATCH_ID:&P1251_EARNINGS_PERIOD_ID.,&P1251_ID.'
+,p_branch_action=>'f?p=&APP_ID.:1298:&SESSION.::&DEBUG.:1298:P1298_EARNINGS_PERIOD_ID,P1298_PAY_BATCH_ID:&P1251_EARNINGS_PERIOD_ID.,&P1251_ID.'
 ,p_branch_point=>'AFTER_PROCESSING'
 ,p_branch_type=>'REDIRECT_URL'
 ,p_branch_when_button_id=>wwv_flow_imp.id(3324602773132901455)

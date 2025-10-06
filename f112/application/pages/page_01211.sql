@@ -5,7 +5,7 @@ begin
 --   Manifest End
 wwv_flow_imp.component_begin (
  p_version_yyyy_mm_dd=>'2024.11.30'
-,p_release=>'24.2.7'
+,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>112
 ,p_default_id_offset=>115784133856313705
@@ -2222,6 +2222,7 @@ wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(3323654332801899829)
 ,p_name=>'P1211_START_DATE'
 ,p_source_data_type=>'DATE'
+,p_is_required=>true
 ,p_item_sequence=>660
 ,p_item_plug_id=>wwv_flow_imp.id(3236622858581362068)
 ,p_item_source_plug_id=>wwv_flow_imp.id(3236622858581362068)

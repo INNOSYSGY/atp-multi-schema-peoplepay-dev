@@ -5,7 +5,7 @@ begin
 --   Manifest End
 wwv_flow_imp.component_begin (
  p_version_yyyy_mm_dd=>'2024.11.30'
-,p_release=>'24.2.7'
+,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>112
 ,p_default_id_offset=>115784133856313705
@@ -910,7 +910,7 @@ wwv_flow_imp_page.create_page_plug(
 '    HR_RCM_INDIVIDUAL A',
 '    JOIN HR_RCM_ADDRESS B ON B.IND_ID = A.ID',
 '    left outer join hr_rcm_employee c on c.ind_id=a.id',
-'WHERE IND_ORG_ID=:APP_ORG_SHR_DED   ',
+'WHERE IND_ORG_ID in (:APP_ORG_ID,:APP_ORG_SHR_DED) ',
 '   AND ( :P1261_SEARCH_COMP =1 or b.ind_id = :P1261_ID)'))
 ,p_plug_source_type=>'NATIVE_IR'
 ,p_ajax_items_to_submit=>'P1261_ID,P1261_SEARCH_COMP'
@@ -1411,7 +1411,7 @@ wwv_flow_imp_page.create_page_plug(
 '           FROM HR_RCM_INDIVIDUAL IND',
 '           WHERE IND.ID =HR_RCM_NATIDENTIFIER.IND_ID',
 '           AND :P1261_SEARCH_COMP_NAT=1',
-'           AND IND_ORG_ID = :APP_ORG_SHR_DED)',
+'           AND IND_ORG_ID in (:APP_ORG_ID,:APP_ORG_SHR_DED))',
 '   )',
 'order by ID_TYPE, ISSUE_DATE  desc',
 '',
@@ -1675,7 +1675,7 @@ wwv_flow_imp_page.create_page_plug(
 '           FROM HR_RCM_INDIVIDUAL IND',
 '           WHERE IND.ID =EQ.IND_ID',
 '           AND :P1261_SEARCH_COMP_QUAL=1',
-'           AND IND_ORG_ID = :APP_ORG_SHR_DED)',
+'           AND IND_ORG_ID in (:APP_ORG_ID,:APP_ORG_SHR_DED))',
 '   )',
 'order by EXAM_BODY , Q_YEAR  desc',
 ''))
@@ -1945,7 +1945,7 @@ wwv_flow_imp_page.create_page_plug(
 '           FROM HR_RCM_INDIVIDUAL IND',
 '           WHERE IND.ID =HR_RCM_EMPHISTORY.IND_ID',
 '           AND :P1261_SEARCH_COMP_PAST=1',
-'           AND IND_ORG_ID = :APP_ORG_SHR_DED)',
+'           AND IND_ORG_ID in (:APP_ORG_ID,:APP_ORG_SHR_DED))',
 '   )',
 'order by ORGANISATION , FROM_DATE desc'))
 ,p_plug_source_type=>'NATIVE_IR'
@@ -2221,7 +2221,7 @@ wwv_flow_imp_page.create_page_plug(
 '           FROM HR_RCM_INDIVIDUAL IND',
 '           WHERE IND.ID =HR_RCM_HOBBY.IND_ID',
 '           AND :P1261_SEARCH_COMP_EXT=1',
-'           AND IND_ORG_ID = :APP_ORG_SHR_DED)',
+'           AND IND_ORG_ID in (:APP_ORG_ID,:APP_ORG_SHR_DED))',
 '   )',
 'order by HOBBIES, DATE_STARTED  desc'))
 ,p_plug_source_type=>'NATIVE_IR'
@@ -2474,7 +2474,7 @@ wwv_flow_imp_page.create_page_plug(
 '           FROM HR_RCM_INDIVIDUAL IND',
 '           WHERE IND.ID =HR_RCM_REFERENCE.IND_ID',
 '           AND :P1261_SEARCH_COMP_REF=1',
-'           AND IND_ORG_ID = :APP_ORG_SHR_DED)',
+'           AND IND_ORG_ID in (:APP_ORG_ID,:APP_ORG_SHR_DED))',
 '   )',
 'order by REF_DATE desc'))
 ,p_plug_source_type=>'NATIVE_IR'
@@ -6891,8 +6891,7 @@ wwv_flow_imp_page.create_page_item(
 ,p_item_sequence=>30
 ,p_item_plug_id=>wwv_flow_imp.id(3106814392586310862)
 ,p_item_source_plug_id=>wwv_flow_imp.id(2722436906644757850)
-,p_use_cache_before_default=>'NO'
-,p_item_default=>':APP_ORG_ID'
+,p_item_default=>':APP_ORG_SHR_DED'
 ,p_item_default_type=>'EXPRESSION'
 ,p_item_default_language=>'PLSQL'
 ,p_source=>'IND_ORG_ID'

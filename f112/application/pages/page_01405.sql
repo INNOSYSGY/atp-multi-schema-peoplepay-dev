@@ -5,7 +5,7 @@ begin
 --   Manifest End
 wwv_flow_imp.component_begin (
  p_version_yyyy_mm_dd=>'2024.11.30'
-,p_release=>'24.2.7'
+,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>112
 ,p_default_id_offset=>115784133856313705
@@ -1928,7 +1928,6 @@ wwv_flow_imp_page.create_region_column(
 ,p_source_type=>'DB_COLUMN'
 ,p_source_expression=>'FORM_NAME'
 ,p_data_type=>'VARCHAR2'
-,p_session_state_data_type=>'VARCHAR2'
 ,p_is_query_only=>false
 ,p_item_type=>'NATIVE_POPUP_LOV'
 ,p_heading=>'Form Name'
@@ -1955,7 +1954,7 @@ wwv_flow_imp_page.create_region_column(
 'and exists(select 1',
 '           from APP_MODULE x',
 '           where upper(trim(b.page_group)) = trim(x.module_name)',
-'           and module_name = ''RECRUITMENT''',
+'           and module_name = ''EMPLOYEE MANAGEMENT''',
 '           )',
 'order by 1'))
 ,p_lov_display_extra=>true

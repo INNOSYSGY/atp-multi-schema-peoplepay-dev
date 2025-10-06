@@ -5,7 +5,7 @@ begin
 --   Manifest End
 wwv_flow_imp.component_begin (
  p_version_yyyy_mm_dd=>'2024.11.30'
-,p_release=>'24.2.7'
+,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>112
 ,p_default_id_offset=>115784133856313705
@@ -6004,7 +6004,7 @@ wwv_flow_imp_page.create_page_item(
 'and exists (select 1',
 '            from hr_rcm_employee w',
 '            where TRIM(upper(W.PAYMENT_TYPE))=TRIM(upper(B.PAYMENT_TYPE))',
-'            and B.ORG_ID = pkg_global_fnts.fn_shareRefOrg(w.ORG_ID)',
+'            and B.ORG_ID = w.ORG_ID',
 '            AND w.ORG_ID =:P1241_ORG_ID     ',
 '            )'))
 ,p_lov_cascade_parent_items=>'P1241_COMPANY_YEAR_ID,P1241_ORG_ID'

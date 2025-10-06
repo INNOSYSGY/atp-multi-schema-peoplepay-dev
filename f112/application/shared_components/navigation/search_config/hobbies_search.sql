@@ -5,7 +5,7 @@ begin
 --   Manifest End
 wwv_flow_imp.component_begin (
  p_version_yyyy_mm_dd=>'2024.11.30'
-,p_release=>'24.2.7'
+,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>112
 ,p_default_id_offset=>115784133856313705
@@ -29,6 +29,7 @@ wwv_flow_imp_shared.create_search_config(
 'from hr_rcm_individual a join HR_RCM_HOBBY b on b.ind_id=a.id',
 'left outer join hr_rcm_employee c on a.id=c.ind_id',
 'where ind_org_id = :APP_ORG_ID',
+'and c.date_separated is null',
 'and b.DATE_STARTED <= current_date',
 'and (b.DATE_STOPPED is null or b.DATE_STOPPED > current_date)and exists (select 1',
 '            from vw_useraccess ua',
@@ -42,7 +43,7 @@ wwv_flow_imp_shared.create_search_config(
 ,p_subtitle_column_name=>'SUBTITLE'
 ,p_description_column_name=>'DESCRIPTION'
 ,p_icon_source_type=>'INITIALS'
-,p_version_scn=>41799874265869
+,p_version_scn=>45054067572766
 );
 wwv_flow_imp.component_end;
 end;

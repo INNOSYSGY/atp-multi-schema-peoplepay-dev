@@ -5,7 +5,7 @@ begin
 --   Manifest End
 wwv_flow_imp.component_begin (
  p_version_yyyy_mm_dd=>'2024.11.30'
-,p_release=>'24.2.7'
+,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>112
 ,p_default_id_offset=>115784133856313705
@@ -82,7 +82,7 @@ wwv_flow_imp_page.create_page_item(
 '            hr_hcf_guides a ',
 '            join APP_MODULE b on a.module = b.id ',
 '        where ',
-'            b.module_name = ''RECRUITMENT'')'))
+'            b.module_name = ''EMPLOYEE MANAGEMENT'')'))
 ,p_source_type=>'QUERY'
 ,p_display_as=>'NATIVE_HIDDEN'
 ,p_encrypt_session_state_yn=>'N'
@@ -119,7 +119,7 @@ wwv_flow_imp_page.create_page_da_action(
 '            hr_hcf_guides a ',
 '            join APP_MODULE b on a.module = b.id ',
 '        where ',
-'            b.module_name = ''RECRUITMENT'');',
+'            b.module_name = ''EMPLOYEE MANAGEMENT'');',
 '',
 '',
 ':GUIDE_ID := :P9953_ID;',

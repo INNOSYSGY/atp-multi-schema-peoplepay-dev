@@ -5,7 +5,7 @@ begin
 --   Manifest End
 wwv_flow_imp.component_begin (
  p_version_yyyy_mm_dd=>'2024.11.30'
-,p_release=>'24.2.7'
+,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>112
 ,p_default_id_offset=>115784133856313705
@@ -30,6 +30,7 @@ wwv_flow_imp_shared.create_search_config(
 '   ''No.''||emp_company_no badge',
 'FROM  HR_RCM_INDIVIDUAL A left outer join hr_rcm_employee b on a.id = b.ind_id',
 'where ind_org_id= :APP_ORG_ID ',
+'and b.date_separated is null',
 'and exists (select 1',
 '            from vw_useraccess ua',
 '            where ua.org_id = b.org_id',
@@ -45,7 +46,7 @@ wwv_flow_imp_shared.create_search_config(
 ,p_description_column_name=>'DESCRIPTION'
 ,p_icon_source_type=>'STATIC_CLASS'
 ,p_icon_css_classes=>'fa-user-check'
-,p_version_scn=>41799874271740
+,p_version_scn=>45054067679928
 );
 wwv_flow_imp.component_end;
 end;

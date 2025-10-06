@@ -5,7 +5,7 @@ begin
 --   Manifest End
 wwv_flow_imp.component_begin (
  p_version_yyyy_mm_dd=>'2024.11.30'
-,p_release=>'24.2.7'
+,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>112
 ,p_default_id_offset=>115784133856313705
@@ -580,7 +580,11 @@ wwv_flow_imp_page.create_page_plug(
 'wklocation_id,',
 'V.appointment_end_date,',
 'PKG_GLOBAL_FNTS.fn_calcage(date_employed,trunc(current_date)) yrs_srv,',
-'CASE when "INCLUDE_PAYROLL"=''Y'' then ''Yes'' else ''No'' end "INCLUDE_PAYROLL"',
+'CASE when "INCLUDE_PAYROLL"=''Y'' then ''Yes'' else ''No'' end "INCLUDE_PAYROLL",',
+'pkg_global_fnts.fn_hourlyrate(v.id,sysdate) hourly_rate,',
+'pkg_global_fnts.fn_personalrate(v.id,sysdate) personal_rate,',
+'pkg_global_fnts.fn_getsysadditionSum(v.id) Other_sys_all,',
+'pkg_global_fnts.fn_personalrate(v.id,sysdate) + pkg_global_fnts.fn_getsysadditionSum(v.id) Gross',
 ',(Select ''Level: ''||Unit_Level||'' ''|| Unit_Name||'' ''||value_description A',
 'from hr_hcf_orgstructuredtl m join hr_hcf_lookup n on m.classification=n.id',
 'join hr_hcf_position c on  m.id=c.orgdtl_id',
@@ -1272,6 +1276,66 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_column_alignment=>'RIGHT'
 ,p_use_as_row_header=>'N'
 );
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(121258261281654236)
+,p_db_column_name=>'HOURLY_RATE'
+,p_display_order=>670
+,p_column_identifier=>'BR'
+,p_column_label=>'Hourly Rate'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_format_mask=>'FML999G999G999G999G990D00'
+,p_display_condition_type=>'EXPRESSION'
+,p_display_condition=>':G_PARSING_SCHEMA = ''GAFOORS'''
+,p_display_condition2=>'PLSQL'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(121258373338654237)
+,p_db_column_name=>'PERSONAL_RATE'
+,p_display_order=>680
+,p_column_identifier=>'BS'
+,p_column_label=>'Personal Rate'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_format_mask=>'FML999G999G999G999G990D00'
+,p_display_condition_type=>'EXPRESSION'
+,p_display_condition=>':G_PARSING_SCHEMA = ''GAFOORS'''
+,p_display_condition2=>'PLSQL'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(121258449423654238)
+,p_db_column_name=>'OTHER_SYS_ALL'
+,p_display_order=>690
+,p_column_identifier=>'BT'
+,p_column_label=>'Other Sys All'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_format_mask=>'FML999G999G999G999G990D00'
+,p_display_condition_type=>'EXPRESSION'
+,p_display_condition=>':G_PARSING_SCHEMA = ''GAFOORS'''
+,p_display_condition2=>'PLSQL'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(121258528516654239)
+,p_db_column_name=>'GROSS'
+,p_display_order=>700
+,p_column_identifier=>'BU'
+,p_column_label=>'Gross'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_format_mask=>'FML999G999G999G999G990D00'
+,p_display_condition_type=>'EXPRESSION'
+,p_display_condition=>':G_PARSING_SCHEMA = ''GAFOORS'''
+,p_display_condition2=>'PLSQL'
+,p_use_as_row_header=>'N'
+);
 wwv_flow_imp_page.create_worksheet_rpt(
  p_id=>wwv_flow_imp.id(3286409329074827036)
 ,p_application_user=>'APXWS_ALTERNATIVE'
@@ -1304,12 +1368,12 @@ wwv_flow_imp_page.create_worksheet_rpt(
 ,p_status=>'PUBLIC'
 ,p_is_default=>'Y'
 ,p_display_rows=>15
-,p_report_columns=>'ORG_STRUCTURE:POSITION_ID:EMP_COMPANY_NO:IND_ID:DATE_EMPLOYED:EMPLOYMENT_CLASS:PAYMENT_TYPE:YRS_SRV:WKLOCATION_ID:EMP_GRADE_ID:APPOINTMENT_END_DATE:SHIFT_ID:EMPLOYMENT_TYPE_ID:UNION_CODE:UNION_JOIN_DATE:IND_LINK:'
+,p_report_columns=>'ORG_STRUCTURE:POSITION_ID:EMP_COMPANY_NO:IND_ID:DATE_EMPLOYED:EMPLOYMENT_CLASS:PAYMENT_TYPE:YRS_SRV:WKLOCATION_ID:EMP_GRADE_ID:APPOINTMENT_END_DATE:SHIFT_ID:EMPLOYMENT_TYPE_ID:UNION_CODE:UNION_JOIN_DATE:PERSONAL_RATE:OTHER_SYS_ALL:GROSS:IND_LINK:'
 ,p_break_on=>'ORG_STRUCTURE:POSITION_ID:0:0:0'
 ,p_break_enabled_on=>'ORG_STRUCTURE:POSITION_ID:0:0:0'
 );
 wwv_flow_imp_page.create_worksheet_condition(
- p_id=>wwv_flow_imp.id(129366499552257300)
+ p_id=>wwv_flow_imp.id(173970597898689697)
 ,p_report_id=>wwv_flow_imp.id(3304921565984802851)
 ,p_condition_type=>'FILTER'
 ,p_allow_delete=>'Y'
