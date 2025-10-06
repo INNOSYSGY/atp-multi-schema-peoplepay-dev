@@ -31,6 +31,15 @@ permissions:
 jobs:
   deploy-to-apex:
     runs-on: ubuntu-latest
+    
+    env:
+      ENVIRONMENT: ${{ github.ref_name }}
+      DB_URL: ${{ vars.DB_URL }}
+      DB_USER: ${{ vars.DB_USER }}
+      APP_ID: ${{ vars.APP_ID }}
+      WKSPACE: ${{ vars.WKSPACE }}
+      SCHEMA: ${{ vars.SCHEMA }}      
+
 
     # Dynamically set the environment based on the branch name
     environment:
@@ -40,6 +49,16 @@ jobs:
       # Checkout the repository
       - name: Checkout code
         uses: actions/checkout@v3
+
+      - name: 1. Substitute variables into SQL script
+        run: |
+          # Reads the template and outputs a processed file
+          envsubst < deploy_apex_app.sql.template > deploy_apex_app.sql
+
+          echo "--- Generated SQL Script ---"
+          cat deploy_apex_app.sql
+          echo "--------------------------"
+
 
       # Set up Java (required for SQLcl)
       - name: Set up Java
