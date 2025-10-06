@@ -60,7 +60,7 @@ jobs:
           # These secrets are populated from the GitHub Environment you configured
           GITHUB_TOKEN: ${{ secrets.TOK }}
           DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
-          ENVIRONMENT: ${{ GITHUB_BRANCH }}
+          ENVIRONMENT: ${{ github.ref_name }}
           DB_URL: ${{ vars.DB_URL }}
           DB_USER: ${{ vars.DB_USER }}
           APP_ID: ${{ vars.APP_ID }}
