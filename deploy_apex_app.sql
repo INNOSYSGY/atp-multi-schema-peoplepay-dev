@@ -1,14 +1,14 @@
 REM First setup the installation context in the target environment
 begin
-    apex_application_install.set_workspace('$WKSPACE');
-    apex_application_install.set_application_id('$GITHUB_USER - $APP_ID');
-    apex_application_install.generate_offset();
-    apex_application_install.set_schema('$SCHEMA');
-    apex_application_install.set_application_name( p_application_name => 'Multi Schema PeoplePay - $GITHUB_USER - $ENVIRONMENT - $APP_ID' );
-    apex_application_install.set_application_alias('MULTI-SCHEMA-PEOPLEPAY-DEPLOY-TESTS');  -- set same alias as create app before
+    apex_application_install.set_workspace('${{WKSPACE}}');
+    -- apex_application_install.set_application_id($GITHUB_USER || ' - ' || $APP_ID);
+    -- apex_application_install.generate_offset();
+    -- apex_application_install.set_schema($SCHEMA);
+    -- apex_application_install.set_application_name( p_application_name => 'Multi Schema PeoplePay ' || - $GITHUB_USER - $ENVIRONMENT - $APP_ID );
+    -- apex_application_install.set_application_alias('MULTI-SCHEMA-PEOPLEPAY-DEPLOY-TESTS');  -- set same alias as create app before
 end;
 /
 REM Then install the application by running its exported SQL script
 REM For "split" export run @f120/install.sql 
 REM or @f120/install_component.sql instead
-@f120/install.sql
+-- @f120/install.sql
