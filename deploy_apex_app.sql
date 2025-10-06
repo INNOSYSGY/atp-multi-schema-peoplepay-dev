@@ -4,7 +4,7 @@ begin
     apex_application_install.set_application_id('$GITHUB_USER - $APP_ID');
     apex_application_install.generate_offset();
     apex_application_install.set_schema('TEMPLATE_APPV8');
-    apex_application_install.set_application_name( p_application_name => 'Multi Schema PeoplePay - $GITHUB_USER - $GITHUB_BRANCH' );
+    apex_application_install.set_application_name( p_application_name => 'Multi Schema PeoplePay - $GITHUB_USER - $ENVIRONMENT - $APP_ID' );
     apex_application_install.set_application_alias('MULTI-SCHEMA-PEOPLEPAY-DEPLOY-TESTS');  -- set same alias as create app before
 end;
 /
