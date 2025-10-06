@@ -1,6 +1,6 @@
 REM First setup the installation context in the target environment
 begin
-    apex_application_install.set_workspace('${{WKSPACE}}');
+    apex_application_install.set_workspace('${WKSPACE}');
     -- apex_application_install.set_application_id($GITHUB_USER || ' - ' || $APP_ID);
     -- apex_application_install.generate_offset();
     -- apex_application_install.set_schema($SCHEMA);
