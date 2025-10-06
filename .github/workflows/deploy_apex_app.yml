@@ -12,7 +12,7 @@ on:
         description: 'The branch to deploy from'
         required: true
         default: 'develop' # Default to the development branch for convenience
-        
+
   # Trigger the workflow on pushes to these specific branches
   push:
     branches:
@@ -63,8 +63,8 @@ jobs:
           DB_URL: ${{ vars.DB_URL }}
           DB_USER: ${{ vars.DB_USER }}
           DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
-          APEX_APP_ID: ${{ vars.APP_ID }}
+          APP_ID: ${{ vars.APP_ID }}
         run: |
           echo "${{ vars.ATP_WALLET_DEV }}" | base64 --decode > Wallet_DEVENV.zip
-          sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @deploy_apex_app.sql
+          #sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @deploy_apex_app.sql
 
