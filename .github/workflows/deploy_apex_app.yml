@@ -64,6 +64,8 @@ jobs:
           DB_URL: ${{ vars.DB_URL }}
           DB_USER: ${{ vars.DB_USER }}
           APP_ID: ${{ vars.APP_ID }}
+          WKSPACE: ${{ vars.WKSPACE }}
+          SCHEMA: ${{ vars.SCHEMA }}
         run: |
           echo "${{ vars.ATP_WALLET_DEV }}" | base64 --decode > Wallet_DEVENV.zip
           sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @deploy_apex_app.sql
