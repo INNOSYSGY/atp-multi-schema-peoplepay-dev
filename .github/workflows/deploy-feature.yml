@@ -76,7 +76,7 @@ jobs:
               DBMS_OUTPUT.put_line('Successfully set alias for App ID ' || l_application_id || ' to: ${APEX_APP_ALIAS}');
           END;
           /
-EOF
+          EOF
 
           # 4. Execute the script to set the alias
           echo "Setting application alias..."
