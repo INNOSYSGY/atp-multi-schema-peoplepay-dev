@@ -67,7 +67,7 @@ jobs:
                   DBMS_OUTPUT.put_line('No application found with alias ${APEX_APP_ALIAS}. Nothing to do.');
           END;
           /
-EOF
+          EOF
           
           # 3. Execute the cleanup script
 
