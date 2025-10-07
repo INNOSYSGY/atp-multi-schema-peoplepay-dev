@@ -1,0 +1,85 @@
+name: Deploy APEX Feature Branch
+
+# This workflow runs ONLY on pushes to branches matching 'feature/**'
+on:
+  push:
+    branches:
+      - 'feature/**'
+  # Allow manual runs for redeploying a feature branch
+  workflow_dispatch:
+
+jobs:
+  deploy-feature-app:
+    runs-on: ubuntu-latest
+    
+    # All feature branches will use the 'development' environment and its secrets
+    environment:
+      name: development
+      
+    steps:
+      - name: Checkout Repository Code
+        uses: actions/checkout@v4
+
+      - name: Setup SQLcl
+        run: |
+          wget https://download.oracle.com/otn_software/java/sqlcl/sqlcl-latest.zip
+          unzip sqlcl-latest.zip
+          echo "$(pwd)/sqlcl/bin" >> $GITHUB_PATH
+
+      - name: Deploy to APEX and Set Alias
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOK }}
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+          ENVIRONMENT: ${{ github.ref_name }}
+          DB_URL: ${{ vars.DB_URL }}
+          DB_USER: ${{ vars.DB_USER }}
+          APP_ID: ${{ vars.APP_ID }}
+          WKSPACE: ${{ vars.WKSPACE }}
+          SCHEMA: ${{ vars.SCHEMA }}
+          APP_EXPORT: ${{ vars.APP_EXPORT }}
+
+
+        run: |
+          # 1. Sanitize the branch name to create a valid and clean alias
+          # e.g., 'feature/new-user-auth' becomes 'FEAT-NEW-USER-AUTH'
+          BRANCH_SLUG=$(echo "${{ github.ref_name }}" | sed 's/\//-/g' | tr '[:lower:]' '[:upper:]')
+          export APEX_APP_ALIAS="F${BRANCH_SLUG}" # The final alias, e.g., FFEAT-NEW-USER-AUTH
+          
+          echo " Branch: ${{ github.ref_name }}"
+          echo " Generated APEX Alias: $APEX_APP_ALIAS"
+          
+          # 2. Deploy the application using the standard export file
+          echo "Deploying f120.sql..."
+          echo "${{ vars.ATP_WALLET_DEV }}" | base64 --decode > Wallet_DEVENV.zip
+          sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @deploy_apex_app.sql
+          
+          # 3. Create a temporary SQL script to set the alias
+          # This connects to the DB and updates the alias for the app we just deployed
+          cat > set_alias.sql <<EOF
+          DECLARE
+              l_workspace_id NUMBER;
+              l_application_id NUMBER;
+          BEGIN
+              -- Find the workspace ID and the application ID from the export file
+              l_workspace_id := apex_util.find_workspace('$WKSPACE'); -- IMPORTANT: Set your workspace name
+              l_application_id := $APP_ID; -- Assumes you have the app ID as a secret, e.g., 101
+
+              -- Set the security group ID for the current session
+              apex_util.set_security_group_id(p_security_group_id => l_workspace_id);
+          
+              -- Set the application alias
+              apex_application_install.set_application_alias(
+                  p_application_id => l_application_id,
+                  p_application_alias => '${APEX_APP_ALIAS}'
+              );
+              COMMIT;
+              DBMS_OUTPUT.put_line('Successfully set alias for App ID ' || l_application_id || ' to: ${APEX_APP_ALIAS}');
+          END;
+          /
+EOF
+
+          # 4. Execute the script to set the alias
+          echo "Setting application alias..."
+          sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @set_alias.sql
+
+          echo "Feature branch deployment complete. Access it via alias: $APEX_APP_ALIAS"
