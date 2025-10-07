@@ -14,11 +14,11 @@ on:
         default: 'develop' # Default to the development branch for convenience
 
   # Trigger the workflow on pushes to these specific branches
-  push:
-    branches:
-      - main
-      - staging
-      - develop
+  # push:
+  #   branches:
+  #     - main
+  #     - staging
+  #     - develop
 # env:
 #   GITHUB_USER: ${{ github.actor }}
 #   GITHUB_BRANCH: ${{ github.ref_name }}
