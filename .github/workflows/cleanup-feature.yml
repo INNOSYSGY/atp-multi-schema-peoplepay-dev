@@ -4,7 +4,7 @@ name: Cleanup APEX Feature Branch
 on:
   delete:
     branches:
-      - 'feature/**'
+      - 'wc-**'
 
 jobs:
   cleanup-feature-app:
@@ -17,8 +17,8 @@ jobs:
       # No need to check out code, we just need the branch name
       - name: Setup SQLcl
         run: |
-          wget https://download.oracle.com/otn_software/java/sqlcl/sqlcl-latest.zip
-          unzip sqlcl-latest.zip
+          wget https://download.oracle.com/otn_software/java/sqldeveloper/sqlcl-latest.zip
+          unzip -o sqlcl-latest.zip
           echo "$(pwd)/sqlcl/bin" >> $GITHUB_PATH
 
       - name: Find and Remove APEX Application
@@ -73,3 +73,5 @@ jobs:
 
           echo "${{ vars.ATP_WALLET_DEV }}" | base64 --decode > Wallet_DEVENV.zip
           sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @remove_app.sql
+
+
