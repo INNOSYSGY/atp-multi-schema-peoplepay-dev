@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
     inputs:
       branch_name:
-        description: 'The feature branch to export from (e.g., feature/my-new-form)'
+        description: 'The feature branch to export from (e.g., wc-**)'
         required: true
 
 jobs:
