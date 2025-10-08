@@ -4,7 +4,7 @@ name: Cleanup APEX Feature Branch
 on:
   delete:
     branches:
-      - 'feature/**'
+      - 'wc-**'
 
 jobs:
   cleanup-feature-app:
@@ -73,3 +73,4 @@ jobs:
 
           echo "${{ vars.ATP_WALLET_DEV }}" | base64 --decode > Wallet_DEVENV.zip
           sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @remove_app.sql
+
