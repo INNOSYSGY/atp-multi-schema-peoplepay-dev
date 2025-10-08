@@ -20,19 +20,19 @@ jobs:
       name: development
       
     steps:
-      - name: 📝 Checkout the specific feature branch
+      - name: Checkout the specific feature branch
         uses: actions/checkout@v4
         with:
           # Check out the branch the developer specified in the input
           ref: ${{ github.event.inputs.branch_name }}
 
-      - name: 📦 Setup SQLcl
+      - name: Setup SQLcl
         run: |
           wget https://download.oracle.com/otn_software/java/sqldeveloper/sqlcl-latest.zip
           unzip -o sqlcl-latest.zip
           echo "$(pwd)/sqlcl/bin" >> $GITHUB_PATH
           
-      - name: 🚀 Find App ID and Export from APEX
+      - name: Find App ID and Export from APEX
         id: apex_export
         env:
           GITHUB_TOKEN: ${{ secrets.TOK }}
@@ -51,7 +51,7 @@ jobs:
           BRANCH_SLUG=$(echo "${{ github.event.inputs.branch_name }}" | sed 's/\//-/g' | tr '[:lower:]' '[:upper:]')
           export APEX_APP_ALIAS="F-${BRANCH_SLUG}"
           
-          echo "🔎 Looking for application with alias: $APEX_APP_ALIAS"
+          echo "Looking for application with alias: $APEX_APP_ALIAS"
 
           echo "${{ vars.ATP_WALLET_DEV }}" | base64 --decode > Wallet_DEVENV.zip
           
@@ -87,7 +87,7 @@ jobs:
           apex export -applicationid $APP_ID -overwrite-files;
           EOF
           
-          echo "✅ Export complete."
+          echo "Export complete."
 
       - name: 💾 Commit and Push updated application file
         run: |
@@ -103,7 +103,7 @@ jobs:
           #   git add apex-app/f101.sql
           #   git commit -m "chore(APEX): Export changes from App Builder" -m "Exported by ${{ github.actor }} from branch ${{ github.event.inputs.branch_name }}"
           #   git push
-          #   echo "✅ Changes have been pushed to the branch."
+          #   echo "Changes have been pushed to the branch."
           # else
           #   echo "No changes detected in f101.sql. Nothing to commit."
           # fi
