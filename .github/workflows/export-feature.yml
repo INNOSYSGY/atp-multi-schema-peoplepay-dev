@@ -1,0 +1,109 @@
+name: Export APEX Feature Branch to Git
+
+# This workflow is triggered MANUALLY by the developer
+on:
+  workflow_dispatch:
+    inputs:
+      branch_name:
+        description: 'The feature branch to export from (e.g., feature/my-new-form)'
+        required: true
+
+jobs:
+  export-and-commit:
+    runs-on: ubuntu-latest
+    
+    # This workflow needs permission to write back to the repository
+    permissions:
+      contents: write
+      
+    environment:
+      name: development
+      
+    steps:
+      - name: Checkout the specific feature branch
+        uses: actions/checkout@v4
+        with:
+          # Check out the branch the developer specified in the input
+          ref: ${{ github.event.inputs.branch_name }}
+
+      - name: Setup SQLcl
+        run: |
+          wget https://download.oracle.com/otn_software/java/sqldeveloper/sqlcl-latest.zip
+          unzip -o sqlcl-latest.zip
+          echo "$(pwd)/sqlcl/bin" >> $GITHUB_PATH
+          
+      - name: Find App ID and Export from APEX
+        id: apex_export
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOK }}
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+          ENVIRONMENT: ${{ github.ref_name }}
+          DB_URL: ${{ vars.DB_URL }}
+          DB_USER: ${{ vars.DB_USER }}
+          APP_ID: ${{ vars.APP_ID }}
+          WKSPACE: ${{ vars.WKSPACE }}
+          SCHEMA: ${{ vars.SCHEMA }}
+          APP_EXPORT: ${{ vars.APP_EXPORT }}
+          
+        run: |
+          # 1. Recreate the exact same alias that was used for deployment
+          # This assumes you are using the App Alias strategy
+          BRANCH_SLUG=$(echo "${{ github.event.inputs.branch_name }}" | sed 's/\//-/g' | tr '[:lower:]' '[:upper:]')
+          export APEX_APP_ALIAS="F-${BRANCH_SLUG}"
+          
+          echo "Looking for application with alias: $APEX_APP_ALIAS"
+
+          echo "${{ vars.ATP_WALLET_DEV }}" | base64 --decode > Wallet_DEVENV.zip
+          
+          # 2. Find the application ID using its alias
+
+           @export_apex_app.sql
+          
+          APP_ID=$(sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL <<EOF
+          SET FEEDBACK OFF HEADING OFF PAGESIZE 0
+          SELECT application_id FROM apex_applications WHERE alias = '${APEX_APP_ALIAS}' AND workspace = '${WKSPACE}';
+          EOF
+          )
+          
+          if [ -z "$APP_ID" ]; then
+            echo "::error::Could not find a deployed APEX application with alias ${APEX_APP_ALIAS}."
+            exit 1
+          fi
+          
+          echo "Found App ID: $APP_ID. Exporting to apex-app/f101.sql..."
+          
+          # 3. Use SQLcl's APEX EXPORT command to overwrite the file in the repo
+          sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL <<EOF
+          set long 100000
+          SET LINESIZE 200
+          SET TRIMSPOOL ON
+          SET HEAD OFF
+          SET PAGESIZE 0
+          SET FEEDBACK OFF
+          SET VERIFY OFF
+          SET ECHO OFF
+
+          apex export -applicationid $APP_ID  -split  -overwrite-files -expSupportingObjects Y -expType APPLICATION_SOURCE ;
+          apex export -applicationid $APP_ID -overwrite-files;
+          EOF
+          
+          echo "Export complete."
+
+      - name: 💾 Commit and Push updated application file
+        run: |
+          git config --global user.name "Leonardo Cuyar"
+          git config --global user.email "leo.cuyar@gmail.com"
+          git add .
+          git commit -m "Feature branch export"
+          git push
+          
+          # Check if the export actually changed the file
+          # if ! git diff --quiet f120.sql; then
+          #   echo "Changes detected in f101.sql. Committing to branch..."
+          #   git add apex-app/f101.sql
+          #   git commit -m "chore(APEX): Export changes from App Builder" -m "Exported by ${{ github.actor }} from branch ${{ github.event.inputs.branch_name }}"
+          #   git push
+          #   echo "Changes have been pushed to the branch."
+          # else
+          #   echo "No changes detected in f101.sql. Nothing to commit."
+          # fi
