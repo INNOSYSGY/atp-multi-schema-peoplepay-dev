@@ -38,8 +38,14 @@ jobs:
           SCHEMA: ${{ vars.SCHEMA }}
           APP_EXPORT: ${{ vars.APP_EXPORT }}
 
-
         run: |
+
+          echo "--- Generated app deploy SQL Script ---"
+          # Reads the template and outputs a processed file
+          envsubst < deploy_apex_app.sql.template > deploy_apex_app.sql
+          cat deploy_apex_app.sql
+          echo "--------------------------"
+          
           # 1. Sanitize the branch name to create a valid and clean alias
           # e.g., 'feature/new-user-auth' becomes 'FEAT-NEW-USER-AUTH'
           BRANCH_SLUG=$(echo "${{ github.ref_name }}" | sed 's/\//-/g' | tr '[:lower:]' '[:upper:]')
