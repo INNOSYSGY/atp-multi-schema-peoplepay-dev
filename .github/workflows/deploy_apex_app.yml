@@ -62,6 +62,7 @@ jobs:
           cat deploy_apex_app.sql
           echo "--------------------------"
 
+      
 
       # Set up Java (required for SQLcl)
       - name: Set up Java
@@ -89,6 +90,11 @@ jobs:
           WKSPACE: ${{ vars.WKSPACE }}
           SCHEMA: ${{ vars.SCHEMA }}
         run: |
+          BRANCH_SLUG=$(echo "${{ github.ref_name }}" | sed 's/\//-/g' | tr '[:lower:]' '[:upper:]')
+          export APEX_APP_ALIAS="F-${BRANCH_SLUG}" # The final alias, e.g., F-FEAT-NEW-USER-AUTH
+          
+          echo "🌿 Branch: ${{ github.ref_name }}"
+          echo "🏷️  Generated APEX Alias: $APEX_APP_ALIAS"
           echo "${{ vars.ATP_WALLET_DEV }}" | base64 --decode > Wallet_DEVENV.zip
           sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @deploy_apex_app.sql
 
