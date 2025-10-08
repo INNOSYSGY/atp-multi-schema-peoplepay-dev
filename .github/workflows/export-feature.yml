@@ -57,8 +57,6 @@ jobs:
           
           # 2. Find the application ID using its alias
 
-           @export_apex_app.sql
-          
           APP_ID=$(sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL <<EOF
           SET FEEDBACK OFF HEADING OFF PAGESIZE 0
           SELECT application_id FROM apex_applications WHERE alias = '${APEX_APP_ALIAS}' AND workspace = '${WKSPACE}';
