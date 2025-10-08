@@ -4,7 +4,7 @@ name: Deploy APEX Feature Branch
 on:
   push:
     branches:
-      - 'feature/**'
+      - 'wc-**'
   # Allow manual runs for redeploying a feature branch
   workflow_dispatch:
 
@@ -58,4 +58,5 @@ jobs:
           echo "Deploying f120.sql..."
           echo "${{ vars.ATP_WALLET_DEV }}" | base64 --decode > Wallet_DEVENV.zip
           sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @deploy_apex_app.sql
+
 
