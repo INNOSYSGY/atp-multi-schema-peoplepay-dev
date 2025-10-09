@@ -85,14 +85,7 @@ jobs:
           
           export APP_ID=$(sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @deploy.sql)
 
-          echo "APP_ID: $APP_ID"
-          
-          exit
-          
-          if [ -z "$APP_ID" ]; then
-            echo "::error::Failed to get or create an App ID from the database."
-            exit 1
-          fi
+          echo "Branch APP_ID: $APP_ID"
 
           # 1. Sanitize the branch name to create a valid and clean alias
           # e.g., 'feature/new-user-auth' becomes 'FEAT-NEW-USER-AUTH'
@@ -111,6 +104,7 @@ jobs:
           # 2. Deploy the application using the standard export file
           echo "Deploying $APP_EXPORT.sql..."
           sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @deploy_apex_app.sql
+
 
 
 
