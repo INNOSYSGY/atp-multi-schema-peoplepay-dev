@@ -8,11 +8,11 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_shared.create_template(
- p_id=>wwv_flow_imp.id(3496479392658643588)
+ p_id=>wwv_flow_imp.id(3718304082847829154)
 ,p_theme_id=>42
 ,p_name=>'Peoplepay Landing Page'
 ,p_internal_name=>'PEOPLEPAY_LANDING_PAGE'
@@ -30,8 +30,8 @@ wwv_flow_imp_shared.create_template(
 ,p_grid_type=>'TABLE'
 );
 wwv_flow_imp_shared.create_page_tmpl_display_point(
- p_id=>wwv_flow_imp.id(431893860418614356)
-,p_page_template_id=>wwv_flow_imp.id(3496479392658643588)
+ p_id=>wwv_flow_imp.id(653718550607799922)
+,p_page_template_id=>wwv_flow_imp.id(3718304082847829154)
 ,p_name=>'Page Body'
 ,p_placeholder=>'BODY'
 ,p_has_grid_support=>true

@@ -8,24 +8,24 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_shared.create_list_of_values(
- p_id=>wwv_flow_imp.id(3632626297498596674)
+ p_id=>wwv_flow_imp.id(3854450987687782240)
 ,p_lov_name=>'DATA_LOAD_OPTION'
-,p_lov_query=>'.'||wwv_flow_imp.id(3632626297498596674)||'.'
+,p_lov_query=>'.'||wwv_flow_imp.id(3854450987687782240)||'.'
 ,p_location=>'STATIC'
 ,p_version_scn=>1
 );
 wwv_flow_imp_shared.create_static_lov_data(
- p_id=>wwv_flow_imp.id(3632625946306596672)
+ p_id=>wwv_flow_imp.id(3854450636495782238)
 ,p_lov_disp_sequence=>10
 ,p_lov_disp_value=>'Upload file, comma separated (*.csv) or tab delimited'
 ,p_lov_return_value=>'UPLOAD'
 );
 wwv_flow_imp_shared.create_static_lov_data(
- p_id=>wwv_flow_imp.id(3632625536120596671)
+ p_id=>wwv_flow_imp.id(3854450226309782237)
 ,p_lov_disp_sequence=>20
 ,p_lov_disp_value=>'Copy and Paste'
 ,p_lov_return_value=>'PASTE'

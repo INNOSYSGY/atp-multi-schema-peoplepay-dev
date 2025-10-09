@@ -8,7 +8,7 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_page.create_page(
@@ -17,13 +17,13 @@ wwv_flow_imp_page.create_page(
 ,p_alias=>'9963-RPTATTENDANCEGUIDE'
 ,p_step_title=>'Attendance Guide'
 ,p_autocomplete_on_off=>'OFF'
-,p_group_id=>wwv_flow_imp.id(3603893806588392776)
+,p_group_id=>wwv_flow_imp.id(3825718496777578342)
 ,p_page_template_options=>'#DEFAULT#'
-,p_required_role=>wwv_flow_imp.id(3576746621450314215)
+,p_required_role=>wwv_flow_imp.id(3798571311639499781)
 ,p_page_component_map=>'17'
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(7378393059860605103)
+ p_id=>wwv_flow_imp.id(7600217750049790669)
 ,p_plug_name=>'View Attendance Management Guide'
 ,p_region_name=>'view_pdf'
 ,p_region_template_options=>'#DEFAULT#:t-Region--scrollBody'
@@ -40,7 +40,7 @@ wwv_flow_imp_page.create_page_plug(
   'output_as', 'HTML')).to_clob
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(7378394065024605113)
+ p_id=>wwv_flow_imp.id(7600218755213790679)
 ,p_plug_name=>'New'
 ,p_region_template_options=>'#DEFAULT#'
 ,p_plug_template=>4501440665235496320
@@ -51,9 +51,9 @@ wwv_flow_imp_page.create_page_plug(
   'output_as', 'HTML')).to_clob
 );
 wwv_flow_imp_page.create_page_button(
- p_id=>wwv_flow_imp.id(449479343466125628)
+ p_id=>wwv_flow_imp.id(671304033655311194)
 ,p_button_sequence=>10
-,p_button_plug_id=>wwv_flow_imp.id(7378394065024605113)
+,p_button_plug_id=>wwv_flow_imp.id(7600218755213790679)
 ,p_button_name=>'SHOW_GUIDE'
 ,p_button_action=>'SUBMIT'
 ,p_button_template_options=>'#DEFAULT#'
@@ -65,10 +65,10 @@ wwv_flow_imp_page.create_page_button(
 ,p_button_condition_type=>'NEVER'
 );
 wwv_flow_imp_page.create_page_item(
- p_id=>wwv_flow_imp.id(449478654167125627)
+ p_id=>wwv_flow_imp.id(671303344356311193)
 ,p_name=>'P9963_ID'
 ,p_item_sequence=>10
-,p_item_plug_id=>wwv_flow_imp.id(7378393059860605103)
+,p_item_plug_id=>wwv_flow_imp.id(7600217750049790669)
 ,p_use_cache_before_default=>'NO'
 ,p_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
 'select ',
@@ -91,7 +91,7 @@ wwv_flow_imp_page.create_page_item(
   'value_protected', 'Y')).to_clob
 );
 wwv_flow_imp_page.create_page_da_event(
- p_id=>wwv_flow_imp.id(475624988573438464)
+ p_id=>wwv_flow_imp.id(697449678762624030)
 ,p_name=>'ShowPDF'
 ,p_event_sequence=>10
 ,p_bind_type=>'bind'
@@ -99,8 +99,8 @@ wwv_flow_imp_page.create_page_da_event(
 ,p_bind_event_type=>'ready'
 );
 wwv_flow_imp_page.create_page_da_action(
- p_id=>wwv_flow_imp.id(475625327326438474)
-,p_event_id=>wwv_flow_imp.id(475624988573438464)
+ p_id=>wwv_flow_imp.id(697450017515624040)
+,p_event_id=>wwv_flow_imp.id(697449678762624030)
 ,p_event_result=>'TRUE'
 ,p_action_sequence=>10
 ,p_execute_on_page_init=>'N'
@@ -134,8 +134,8 @@ wwv_flow_imp_page.create_page_da_action(
 ,p_wait_for_result=>'Y'
 );
 wwv_flow_imp_page.create_page_da_action(
- p_id=>wwv_flow_imp.id(475625883551438475)
-,p_event_id=>wwv_flow_imp.id(475624988573438464)
+ p_id=>wwv_flow_imp.id(697450573740624041)
+,p_event_id=>wwv_flow_imp.id(697449678762624030)
 ,p_event_result=>'TRUE'
 ,p_action_sequence=>20
 ,p_execute_on_page_init=>'N'
@@ -155,7 +155,7 @@ wwv_flow_imp_page.create_page_da_action(
 '$("#view_pdf").append(preview);'))
 );
 wwv_flow_imp_page.create_page_process(
- p_id=>wwv_flow_imp.id(449479736350125628)
+ p_id=>wwv_flow_imp.id(671304426539311194)
 ,p_process_sequence=>10
 ,p_process_point=>'BEFORE_HEADER'
 ,p_process_type=>'NATIVE_PLSQL'
@@ -166,7 +166,7 @@ wwv_flow_imp_page.create_page_process(
 'END;'))
 ,p_process_clob_language=>'PLSQL'
 ,p_error_display_location=>'INLINE_IN_NOTIFICATION'
-,p_process_when_button_id=>wwv_flow_imp.id(449479343466125628)
+,p_process_when_button_id=>wwv_flow_imp.id(671304033655311194)
 ,p_internal_uid=>27687743152129054
 );
 wwv_flow_imp.component_end;

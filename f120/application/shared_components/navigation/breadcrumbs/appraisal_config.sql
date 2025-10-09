@@ -8,16 +8,16 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_shared.create_menu(
- p_id=>wwv_flow_imp.id(3588202460945862907)
+ p_id=>wwv_flow_imp.id(3810027151135048473)
 ,p_name=>'Appraisal Config'
 );
 wwv_flow_imp_shared.create_menu_option(
- p_id=>wwv_flow_imp.id(3588201441631849203)
-,p_parent_id=>wwv_flow_imp.id(3588201959734856072)
+ p_id=>wwv_flow_imp.id(3810026131821034769)
+,p_parent_id=>wwv_flow_imp.id(3810026649924041638)
 ,p_short_name=>'Salary Application'
 ,p_link=>'f?p=&APP_ID.:2010:&SESSION.::&DEBUG.:::'
 ,p_page_id=>2010

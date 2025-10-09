@@ -8,7 +8,7 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_page.create_page(
@@ -16,24 +16,24 @@ wwv_flow_imp_page.create_page(
 ,p_name=>'rptCoVIR'
 ,p_step_title=>'Company Vehicle Accident Report'
 ,p_autocomplete_on_off=>'OFF'
-,p_group_id=>wwv_flow_imp.id(3476032493501017931)
+,p_group_id=>wwv_flow_imp.id(3697857183690203497)
 ,p_page_template_options=>'#DEFAULT#'
 ,p_page_component_map=>'18'
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(3468036228579113211)
+ p_id=>wwv_flow_imp.id(3689860918768298777)
 ,p_plug_name=>'Breadcrumb'
 ,p_region_template_options=>'#DEFAULT#:t-BreadcrumbRegion--useBreadcrumbTitle'
 ,p_component_template_options=>'#DEFAULT#'
 ,p_plug_template=>2531463326621247859
 ,p_plug_display_sequence=>1
 ,p_plug_display_point=>'REGION_POSITION_01'
-,p_menu_id=>wwv_flow_imp.id(10766773638420877516)
+,p_menu_id=>wwv_flow_imp.id(10988598328610063082)
 ,p_plug_source_type=>'NATIVE_BREADCRUMB'
 ,p_menu_template_id=>4072363345357175094
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(3593032324843447247)
+ p_id=>wwv_flow_imp.id(3814857015032632813)
 ,p_plug_name=>'Listing of <b> Vehicle Accident Report </b>'
 ,p_region_template_options=>'#DEFAULT#:t-Region--scrollBody'
 ,p_plug_template=>4072358936313175081
@@ -54,7 +54,7 @@ wwv_flow_imp_page.create_page_plug(
 ,p_plug_source_type=>'NATIVE_IR'
 );
 wwv_flow_imp_page.create_worksheet(
- p_id=>wwv_flow_imp.id(3593032478961447247)
+ p_id=>wwv_flow_imp.id(3814857169150632813)
 ,p_name=>'rptCoVIR'
 ,p_max_row_count=>'1000000'
 ,p_max_row_count_message=>'The maximum row count for this report is #MAX_ROW_COUNT# rows.  Please apply a filter to reduce the number of records in your query.'
@@ -75,7 +75,7 @@ wwv_flow_imp_page.create_worksheet(
 ,p_internal_uid=>206917529409912557
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3469807618254361415)
+ p_id=>wwv_flow_imp.id(3691632308443546981)
 ,p_db_column_name=>'ID'
 ,p_display_order=>1
 ,p_column_identifier=>'A'
@@ -88,7 +88,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3469807223823361413)
+ p_id=>wwv_flow_imp.id(3691631914012546979)
 ,p_db_column_name=>'ACC_REF_NUMBER'
 ,p_display_order=>2
 ,p_column_identifier=>'B'
@@ -99,7 +99,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3469806500641361412)
+ p_id=>wwv_flow_imp.id(3691631190830546978)
 ,p_db_column_name=>'DEPARTMENT_UNIT'
 ,p_display_order=>4
 ,p_column_identifier=>'D'
@@ -107,12 +107,12 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_column_type=>'STRING'
 ,p_display_text_as=>'LOV_ESCAPE_SC'
 ,p_heading_alignment=>'LEFT'
-,p_rpt_named_lov=>wwv_flow_imp.id(3632491032568373420)
+,p_rpt_named_lov=>wwv_flow_imp.id(3854315722757558986)
 ,p_rpt_show_filter_lov=>'1'
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3469806064826361412)
+ p_id=>wwv_flow_imp.id(3691630755015546978)
 ,p_db_column_name=>'VEHI_OWNERSHIP'
 ,p_display_order=>5
 ,p_column_identifier=>'E'
@@ -122,7 +122,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3469783252989361392)
+ p_id=>wwv_flow_imp.id(3691607943178546958)
 ,p_db_column_name=>'STATUS'
 ,p_display_order=>62
 ,p_column_identifier=>'BJ'
@@ -132,7 +132,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3469782815118361392)
+ p_id=>wwv_flow_imp.id(3691607505307546958)
 ,p_db_column_name=>'ENTERED_BY'
 ,p_display_order=>63
 ,p_column_identifier=>'BK'
@@ -142,7 +142,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3469782475923361392)
+ p_id=>wwv_flow_imp.id(3691607166112546958)
 ,p_db_column_name=>'ENTRY_DATE'
 ,p_display_order=>64
 ,p_column_identifier=>'BL'
@@ -153,7 +153,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3539685494872859855)
+ p_id=>wwv_flow_imp.id(3761510185062045421)
 ,p_db_column_name=>'REGION'
 ,p_display_order=>74
 ,p_column_identifier=>'BV'
@@ -162,7 +162,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_rpt(
- p_id=>wwv_flow_imp.id(3593061512112461932)
+ p_id=>wwv_flow_imp.id(3814886202301647498)
 ,p_application_user=>'APXWS_DEFAULT'
 ,p_report_seq=>10
 ,p_report_alias=>'748222'
@@ -171,9 +171,9 @@ wwv_flow_imp_page.create_worksheet_rpt(
 ,p_report_columns=>'ID:ACC_REF_NUMBER:DEPARTMENT_UNIT:VEHI_OWNERSHIP:STATUS:ENTERED_BY:ENTRY_DATE'
 );
 wwv_flow_imp_page.create_page_button(
- p_id=>wwv_flow_imp.id(3469780158919361390)
+ p_id=>wwv_flow_imp.id(3691604849108546956)
 ,p_button_sequence=>20
-,p_button_plug_id=>wwv_flow_imp.id(3468036228579113211)
+,p_button_plug_id=>wwv_flow_imp.id(3689860918768298777)
 ,p_button_name=>'CANCEL'
 ,p_button_action=>'REDIRECT_PAGE'
 ,p_button_template_options=>'#DEFAULT#:t-Button--primary:t-Button--iconRight'
@@ -185,9 +185,9 @@ wwv_flow_imp_page.create_page_button(
 ,p_icon_css_classes=>'fa-hand-o-left'
 );
 wwv_flow_imp_page.create_page_button(
- p_id=>wwv_flow_imp.id(3469779761265361389)
+ p_id=>wwv_flow_imp.id(3691604451454546955)
 ,p_button_sequence=>30
-,p_button_plug_id=>wwv_flow_imp.id(3468036228579113211)
+,p_button_plug_id=>wwv_flow_imp.id(3689860918768298777)
 ,p_button_name=>'CREATE'
 ,p_button_action=>'REDIRECT_PAGE'
 ,p_button_template_options=>'#DEFAULT#:t-Button--success:t-Button--iconRight'

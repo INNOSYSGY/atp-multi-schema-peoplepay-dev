@@ -8,7 +8,7 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_page.create_page(
@@ -16,7 +16,7 @@ wwv_flow_imp_page.create_page(
 ,p_name=>'frmLeaveCalendar_dash'
 ,p_step_title=>'Leave Calendar'
 ,p_autocomplete_on_off=>'OFF'
-,p_group_id=>wwv_flow_imp.id(3603893274889387588)
+,p_group_id=>wwv_flow_imp.id(3825717965078573154)
 ,p_inline_css=>wwv_flow_string.join(wwv_flow_t_varchar2(
 '.legend-list {list-style: none; margin: 0;}',
 '.legend.fc-event { display: inline-block; padding: 0 4px; width: 72px; text-align: center; }'))
@@ -24,7 +24,7 @@ wwv_flow_imp_page.create_page(
 ,p_page_component_map=>'08'
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(3534978625529401582)
+ p_id=>wwv_flow_imp.id(3756803315718587148)
 ,p_plug_name=>'Legend'
 ,p_region_template_options=>'#DEFAULT#:is-expanded:t-Region--scrollBody'
 ,p_plug_template=>2664334895415463485
@@ -48,7 +48,7 @@ wwv_flow_imp_page.create_page_plug(
   'output_as', 'HTML')).to_clob
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(3535255277404729511)
+ p_id=>wwv_flow_imp.id(3757079967593915077)
 ,p_plug_name=>'Employee Leave Calendar (select filter options above, Navigate to specific month)'
 ,p_region_template_options=>'#DEFAULT#:t-Region--scrollBody'
 ,p_escape_on_http_output=>'Y'
@@ -99,7 +99,7 @@ wwv_flow_imp_page.create_page_plug(
   'view_edit_link', '&APP_URL_LINK.')).to_clob
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(3535713221429301569)
+ p_id=>wwv_flow_imp.id(3757537911618487135)
 ,p_plug_name=>'Filter Bar'
 ,p_region_template_options=>'#DEFAULT#:is-collapsed:t-Region--accent5:t-Region--scrollBody'
 ,p_plug_template=>2664334895415463485
@@ -110,10 +110,10 @@ wwv_flow_imp_page.create_page_plug(
   'output_as', 'HTML')).to_clob
 );
 wwv_flow_imp_page.create_page_item(
- p_id=>wwv_flow_imp.id(3590224339504921702)
+ p_id=>wwv_flow_imp.id(3812049029694107268)
 ,p_name=>'P10006_END'
 ,p_item_sequence=>30
-,p_item_plug_id=>wwv_flow_imp.id(3535713221429301569)
+,p_item_plug_id=>wwv_flow_imp.id(3757537911618487135)
 ,p_item_default=>'ADD_MONTHS(TRUNC (current_date ,''YEAR''),12)-1'
 ,p_item_default_type=>'EXPRESSION'
 ,p_item_default_language=>'PLSQL'
@@ -137,10 +137,10 @@ wwv_flow_imp_page.create_page_item(
   'use_defaults', 'Y')).to_clob
 );
 wwv_flow_imp_page.create_page_item(
- p_id=>wwv_flow_imp.id(3590224710408921702)
+ p_id=>wwv_flow_imp.id(3812049400598107268)
 ,p_name=>'P10006_START'
 ,p_item_sequence=>20
-,p_item_plug_id=>wwv_flow_imp.id(3535713221429301569)
+,p_item_plug_id=>wwv_flow_imp.id(3757537911618487135)
 ,p_item_default=>'TRUNC(current_date,''YEAR'') '
 ,p_item_default_type=>'EXPRESSION'
 ,p_item_default_language=>'PLSQL'
@@ -164,10 +164,10 @@ wwv_flow_imp_page.create_page_item(
   'use_defaults', 'Y')).to_clob
 );
 wwv_flow_imp_page.create_page_item(
- p_id=>wwv_flow_imp.id(3590225558385921703)
+ p_id=>wwv_flow_imp.id(3812050248575107269)
 ,p_name=>'P10006_EMPLOYEE'
 ,p_item_sequence=>10
-,p_item_plug_id=>wwv_flow_imp.id(3535713221429301569)
+,p_item_plug_id=>wwv_flow_imp.id(3757537911618487135)
 ,p_prompt=>'Employee'
 ,p_display_as=>'NATIVE_POPUP_LOV'
 ,p_lov=>wwv_flow_string.join(wwv_flow_t_varchar2(
@@ -197,7 +197,7 @@ wwv_flow_imp_page.create_page_item(
   'min_chars', '0')).to_clob
 );
 wwv_flow_imp_page.create_page_da_event(
- p_id=>wwv_flow_imp.id(3590223352007921699)
+ p_id=>wwv_flow_imp.id(3812048042197107265)
 ,p_name=>'refresh_calendar'
 ,p_event_sequence=>10
 ,p_triggering_element_type=>'ITEM'
@@ -207,14 +207,14 @@ wwv_flow_imp_page.create_page_da_event(
 ,p_bind_event_type=>'change'
 );
 wwv_flow_imp_page.create_page_da_action(
- p_id=>wwv_flow_imp.id(3590222854333921699)
-,p_event_id=>wwv_flow_imp.id(3590223352007921699)
+ p_id=>wwv_flow_imp.id(3812047544523107265)
+,p_event_id=>wwv_flow_imp.id(3812048042197107265)
 ,p_event_result=>'TRUE'
 ,p_action_sequence=>10
 ,p_execute_on_page_init=>'N'
 ,p_action=>'NATIVE_REFRESH'
 ,p_affected_elements_type=>'REGION'
-,p_affected_region_id=>wwv_flow_imp.id(3535255277404729511)
+,p_affected_region_id=>wwv_flow_imp.id(3757079967593915077)
 ,p_attribute_01=>'N'
 );
 wwv_flow_imp.component_end;

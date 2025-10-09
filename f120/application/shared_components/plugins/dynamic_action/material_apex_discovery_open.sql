@@ -8,11 +8,11 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_shared.create_plugin(
- p_id=>wwv_flow_imp.id(3546643111165017963)
+ p_id=>wwv_flow_imp.id(3768467801354203529)
 ,p_plugin_type=>'DYNAMIC ACTION'
 ,p_name=>'MATERIAL.APEX.DISCOVERY.OPEN'
 ,p_display_name=>'Material APEX - Feature Discovery - Open'
@@ -55,8 +55,8 @@ wwv_flow_imp_shared.create_plugin(
 ,p_version_identifier=>'1.0.0'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3546642827515017961)
-,p_plugin_id=>wwv_flow_imp.id(3546643111165017963)
+ p_id=>wwv_flow_imp.id(3768467517704203527)
+,p_plugin_id=>wwv_flow_imp.id(3768467801354203529)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>1
 ,p_display_sequence=>35
@@ -66,8 +66,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_is_translatable=>false
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3546642462139017961)
-,p_plugin_id=>wwv_flow_imp.id(3546643111165017963)
+ p_id=>wwv_flow_imp.id(3768467152328203527)
+,p_plugin_id=>wwv_flow_imp.id(3768467801354203529)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>2
 ,p_display_sequence=>20
@@ -77,8 +77,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_is_translatable=>false
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3546641994007017961)
-,p_plugin_id=>wwv_flow_imp.id(3546643111165017963)
+ p_id=>wwv_flow_imp.id(3768466684196203527)
+,p_plugin_id=>wwv_flow_imp.id(3768467801354203529)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>3
 ,p_display_sequence=>30
@@ -88,8 +88,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_is_translatable=>false
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3546641688551017961)
-,p_plugin_id=>wwv_flow_imp.id(3546643111165017963)
+ p_id=>wwv_flow_imp.id(3768466378740203527)
+,p_plugin_id=>wwv_flow_imp.id(3768467801354203529)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>4
 ,p_display_sequence=>40

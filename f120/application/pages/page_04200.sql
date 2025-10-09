@@ -8,7 +8,7 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_page.create_page(
@@ -23,7 +23,7 @@ wwv_flow_imp_page.create_page(
 ,p_page_component_map=>'16'
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(3612078710749592657)
+ p_id=>wwv_flow_imp.id(3833903400938778223)
 ,p_plug_name=>'Buttons'
 ,p_region_template_options=>'#DEFAULT#'
 ,p_plug_template=>2126429139436695430
@@ -35,7 +35,7 @@ wwv_flow_imp_page.create_page_plug(
   'output_as', 'HTML')).to_clob
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(3612078908180592659)
+ p_id=>wwv_flow_imp.id(3833903598369778225)
 ,p_plug_name=>'Reset Account'
 ,p_region_template_options=>'#DEFAULT#:t-Form--large:t-Form--stretchInputs:t-Form--labelsAbove'
 ,p_plug_template=>4501440665235496320
@@ -46,9 +46,9 @@ wwv_flow_imp_page.create_page_plug(
   'output_as', 'HTML')).to_clob
 );
 wwv_flow_imp_page.create_page_button(
- p_id=>wwv_flow_imp.id(3612078524325592655)
+ p_id=>wwv_flow_imp.id(3833903214514778221)
 ,p_button_sequence=>20
-,p_button_plug_id=>wwv_flow_imp.id(3612078710749592657)
+,p_button_plug_id=>wwv_flow_imp.id(3833903400938778223)
 ,p_button_name=>'SUBMIT'
 ,p_button_action=>'SUBMIT'
 ,p_button_template_options=>'#DEFAULT#:t-Button--warning'
@@ -58,9 +58,9 @@ wwv_flow_imp_page.create_page_button(
 ,p_button_alignment=>'RIGHT'
 );
 wwv_flow_imp_page.create_page_button(
- p_id=>wwv_flow_imp.id(3612078647523592656)
+ p_id=>wwv_flow_imp.id(3833903337712778222)
 ,p_button_sequence=>10
-,p_button_plug_id=>wwv_flow_imp.id(3612078710749592657)
+,p_button_plug_id=>wwv_flow_imp.id(3833903400938778223)
 ,p_button_name=>'CANCEL'
 ,p_button_action=>'DEFINED_BY_DA'
 ,p_button_template_options=>'#DEFAULT#'
@@ -71,10 +71,10 @@ wwv_flow_imp_page.create_page_button(
 ,p_warn_on_unsaved_changes=>null
 );
 wwv_flow_imp_page.create_page_item(
- p_id=>wwv_flow_imp.id(3612078821939592658)
+ p_id=>wwv_flow_imp.id(3833903512128778224)
 ,p_name=>'P4200_EMAIL'
 ,p_item_sequence=>10
-,p_item_plug_id=>wwv_flow_imp.id(3612078908180592659)
+,p_item_plug_id=>wwv_flow_imp.id(3833903598369778225)
 ,p_prompt=>'Enter Your Email Address To Reset Your Account Password'
 ,p_display_as=>'NATIVE_TEXT_FIELD'
 ,p_cSize=>30
@@ -88,25 +88,25 @@ wwv_flow_imp_page.create_page_item(
   'trim_spaces', 'BOTH')).to_clob
 );
 wwv_flow_imp_page.create_page_da_event(
- p_id=>wwv_flow_imp.id(3612078455226592654)
+ p_id=>wwv_flow_imp.id(3833903145415778220)
 ,p_name=>'Cancel Dialog'
 ,p_event_sequence=>10
 ,p_triggering_element_type=>'BUTTON'
-,p_triggering_button_id=>wwv_flow_imp.id(3612078647523592656)
+,p_triggering_button_id=>wwv_flow_imp.id(3833903337712778222)
 ,p_bind_type=>'bind'
 ,p_execution_type=>'IMMEDIATE'
 ,p_bind_event_type=>'click'
 );
 wwv_flow_imp_page.create_page_da_action(
- p_id=>wwv_flow_imp.id(3612078329826592653)
-,p_event_id=>wwv_flow_imp.id(3612078455226592654)
+ p_id=>wwv_flow_imp.id(3833903020015778219)
+,p_event_id=>wwv_flow_imp.id(3833903145415778220)
 ,p_event_result=>'TRUE'
 ,p_action_sequence=>10
 ,p_execute_on_page_init=>'N'
 ,p_action=>'NATIVE_DIALOG_CANCEL'
 );
 wwv_flow_imp_page.create_page_process(
- p_id=>wwv_flow_imp.id(3612078074189592651)
+ p_id=>wwv_flow_imp.id(3833902764378778217)
 ,p_process_sequence=>10
 ,p_process_point=>'AFTER_SUBMIT'
 ,p_process_type=>'NATIVE_PLSQL'
@@ -116,11 +116,11 @@ wwv_flow_imp_page.create_page_process(
 'IN_EMAIL => :P4200_EMAIL);'))
 ,p_process_clob_language=>'PLSQL'
 ,p_error_display_location=>'INLINE_IN_NOTIFICATION'
-,p_process_when_button_id=>wwv_flow_imp.id(3612078524325592655)
+,p_process_when_button_id=>wwv_flow_imp.id(3833903214514778221)
 ,p_internal_uid=>3190286080991596077
 );
 wwv_flow_imp_page.create_page_process(
- p_id=>wwv_flow_imp.id(3612078260230592652)
+ p_id=>wwv_flow_imp.id(3833902950419778218)
 ,p_process_sequence=>20
 ,p_process_point=>'AFTER_SUBMIT'
 ,p_process_type=>'NATIVE_CLOSE_WINDOW'

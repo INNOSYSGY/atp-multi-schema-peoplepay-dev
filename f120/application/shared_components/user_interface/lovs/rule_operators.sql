@@ -8,54 +8,54 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_shared.create_list_of_values(
- p_id=>wwv_flow_imp.id(435816658744104791)
+ p_id=>wwv_flow_imp.id(657641348933290357)
 ,p_lov_name=>'RULE_OPERATORS'
-,p_lov_query=>'.'||wwv_flow_imp.id(435816658744104791)||'.'
+,p_lov_query=>'.'||wwv_flow_imp.id(657641348933290357)||'.'
 ,p_location=>'STATIC'
 ,p_version_scn=>1
 );
 wwv_flow_imp_shared.create_static_lov_data(
- p_id=>wwv_flow_imp.id(435817060859104791)
+ p_id=>wwv_flow_imp.id(657641751048290357)
 ,p_lov_disp_sequence=>1
 ,p_lov_disp_value=>'BETWEEN'
 ,p_lov_return_value=>'BETWEEN'
 );
 wwv_flow_imp_shared.create_static_lov_data(
- p_id=>wwv_flow_imp.id(435817476543104792)
+ p_id=>wwv_flow_imp.id(657642166732290358)
 ,p_lov_disp_sequence=>2
 ,p_lov_disp_value=>'>'
 ,p_lov_return_value=>'>'
 );
 wwv_flow_imp_shared.create_static_lov_data(
- p_id=>wwv_flow_imp.id(435817814778104792)
+ p_id=>wwv_flow_imp.id(657642504967290358)
 ,p_lov_disp_sequence=>3
 ,p_lov_disp_value=>'>='
 ,p_lov_return_value=>'>='
 );
 wwv_flow_imp_shared.create_static_lov_data(
- p_id=>wwv_flow_imp.id(435818218711104792)
+ p_id=>wwv_flow_imp.id(657642908900290358)
 ,p_lov_disp_sequence=>4
 ,p_lov_disp_value=>'<'
 ,p_lov_return_value=>'<'
 );
 wwv_flow_imp_shared.create_static_lov_data(
- p_id=>wwv_flow_imp.id(435818647292104792)
+ p_id=>wwv_flow_imp.id(657643337481290358)
 ,p_lov_disp_sequence=>5
 ,p_lov_disp_value=>'='
 ,p_lov_return_value=>'='
 );
 wwv_flow_imp_shared.create_static_lov_data(
- p_id=>wwv_flow_imp.id(435819025987104792)
+ p_id=>wwv_flow_imp.id(657643716176290358)
 ,p_lov_disp_sequence=>5
 ,p_lov_disp_value=>'>='
 ,p_lov_return_value=>'>='
 );
 wwv_flow_imp_shared.create_static_lov_data(
- p_id=>wwv_flow_imp.id(435819473819104793)
+ p_id=>wwv_flow_imp.id(657644164008290359)
 ,p_lov_disp_sequence=>7
 ,p_lov_disp_value=>'NOT BETWEEN'
 ,p_lov_return_value=>'NOT BETWEEN'

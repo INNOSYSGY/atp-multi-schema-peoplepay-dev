@@ -8,7 +8,7 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_page.create_page(
@@ -17,7 +17,7 @@ wwv_flow_imp_page.create_page(
 ,p_page_mode=>'MODAL'
 ,p_step_title=>'About this Page'
 ,p_autocomplete_on_off=>'OFF'
-,p_group_id=>wwv_flow_imp.id(3584896301505629885)
+,p_group_id=>wwv_flow_imp.id(3806720991694815451)
 ,p_inline_css=>wwv_flow_string.join(wwv_flow_t_varchar2(
 '.page_help{',
 '    border: 1px solid black;',
@@ -40,7 +40,7 @@ wwv_flow_imp_page.create_page(
 ,p_page_component_map=>'10'
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(3473729939464536038)
+ p_id=>wwv_flow_imp.id(3695554629653721604)
 ,p_plug_name=>'Help for Page '
 ,p_region_template_options=>'#DEFAULT#'
 ,p_component_template_options=>'#DEFAULT#'
@@ -101,10 +101,10 @@ wwv_flow_imp_page.create_page_plug(
 ,p_plug_source_type=>'NATIVE_PLSQL'
 );
 wwv_flow_imp_page.create_page_item(
- p_id=>wwv_flow_imp.id(3473730000268536039)
+ p_id=>wwv_flow_imp.id(3695554690457721605)
 ,p_name=>'P133_PAGE_ID'
 ,p_item_sequence=>10
-,p_item_plug_id=>wwv_flow_imp.id(3473729939464536038)
+,p_item_plug_id=>wwv_flow_imp.id(3695554629653721604)
 ,p_display_as=>'NATIVE_HIDDEN'
 ,p_encrypt_session_state_yn=>'N'
 ,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(

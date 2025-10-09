@@ -8,7 +8,7 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_page.create_page(
@@ -18,14 +18,14 @@ wwv_flow_imp_page.create_page(
 ,p_reload_on_submit=>'A'
 ,p_warn_on_unsaved_changes=>'N'
 ,p_autocomplete_on_off=>'OFF'
-,p_group_id=>wwv_flow_imp.id(3603893479523389715)
+,p_group_id=>wwv_flow_imp.id(3825718169712575281)
 ,p_page_template_options=>'#DEFAULT#'
 ,p_protection_level=>'C'
 ,p_help_text=>'No help is available for this page.'
 ,p_page_component_map=>'04'
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(3667598178484645646)
+ p_id=>wwv_flow_imp.id(3889422868673831212)
 ,p_plug_name=>'Region Display Selector'
 ,p_region_template_options=>'#DEFAULT#'
 ,p_plug_template=>4501440665235496320
@@ -39,7 +39,7 @@ wwv_flow_imp_page.create_page_plug(
   'remember_selection', 'SESSION')).to_clob
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(3667598284398645647)
+ p_id=>wwv_flow_imp.id(3889422974587831213)
 ,p_plug_name=>'Discipline Bubble'
 ,p_region_template_options=>'#DEFAULT#:t-Region--scrollBody'
 ,p_escape_on_http_output=>'Y'
@@ -51,8 +51,8 @@ wwv_flow_imp_page.create_page_plug(
 ,p_plug_query_num_rows=>15
 );
 wwv_flow_imp_page.create_jet_chart(
- p_id=>wwv_flow_imp.id(3584950641534874596)
-,p_region_id=>wwv_flow_imp.id(3667598284398645647)
+ p_id=>wwv_flow_imp.id(3806775331724060162)
+,p_region_id=>wwv_flow_imp.id(3889422974587831213)
 ,p_chart_type=>'bubble'
 ,p_title=>'Classifications of Disciplinary Actions'
 ,p_height=>'400'
@@ -89,8 +89,8 @@ wwv_flow_imp_page.create_jet_chart(
 ,p_show_gauge_value=>true
 );
 wwv_flow_imp_page.create_jet_chart_series(
- p_id=>wwv_flow_imp.id(3584949020398874592)
-,p_chart_id=>wwv_flow_imp.id(3584950641534874596)
+ p_id=>wwv_flow_imp.id(3806773710588060158)
+,p_chart_id=>wwv_flow_imp.id(3806775331724060162)
 ,p_seq=>10
 ,p_name=>'Disciplinary Actions'
 ,p_data_source_type=>'SQL'
@@ -118,8 +118,8 @@ wwv_flow_imp_page.create_jet_chart_series(
 ,p_link_target_type=>'REDIRECT_URL'
 );
 wwv_flow_imp_page.create_jet_chart_axis(
- p_id=>wwv_flow_imp.id(3584950257547874593)
-,p_chart_id=>wwv_flow_imp.id(3584950641534874596)
+ p_id=>wwv_flow_imp.id(3806774947737060159)
+,p_chart_id=>wwv_flow_imp.id(3806775331724060162)
 ,p_axis=>'x'
 ,p_is_rendered=>'on'
 ,p_title=>'Count of Occurence'
@@ -143,8 +143,8 @@ wwv_flow_imp_page.create_jet_chart_axis(
 ,p_zoom_order_years=>false
 );
 wwv_flow_imp_page.create_jet_chart_axis(
- p_id=>wwv_flow_imp.id(3584949627430874593)
-,p_chart_id=>wwv_flow_imp.id(3584950641534874596)
+ p_id=>wwv_flow_imp.id(3806774317620060159)
+,p_chart_id=>wwv_flow_imp.id(3806775331724060162)
 ,p_axis=>'y'
 ,p_is_rendered=>'on'
 ,p_title=>'Total Basic Earnings'
@@ -167,7 +167,7 @@ wwv_flow_imp_page.create_jet_chart_axis(
 ,p_zoom_order_years=>false
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(5425816471408514950)
+ p_id=>wwv_flow_imp.id(5647641161597700516)
 ,p_plug_name=>'Filter'
 ,p_region_template_options=>'#DEFAULT#:t-ButtonRegion--noPadding:t-ButtonRegion--noUI'
 ,p_plug_template=>2126429139436695430
@@ -177,10 +177,10 @@ wwv_flow_imp_page.create_page_plug(
   'output_as', 'HTML')).to_clob
 );
 wwv_flow_imp_page.create_page_item(
- p_id=>wwv_flow_imp.id(3584946829084874577)
+ p_id=>wwv_flow_imp.id(3806771519274060143)
 ,p_name=>'P10008_FILTER'
 ,p_item_sequence=>10
-,p_item_plug_id=>wwv_flow_imp.id(5425816471408514950)
+,p_item_plug_id=>wwv_flow_imp.id(5647641161597700516)
 ,p_item_default=>'5000'
 ,p_prompt=>'Start Filter'
 ,p_display_as=>'NATIVE_SELECT_LIST'
@@ -200,10 +200,10 @@ wwv_flow_imp_page.create_page_item(
   'page_action_on_selection', 'NONE')).to_clob
 );
 wwv_flow_imp_page.create_page_item(
- p_id=>wwv_flow_imp.id(3586134222169035527)
+ p_id=>wwv_flow_imp.id(3807958912358221093)
 ,p_name=>'P10008_FILTER_1'
 ,p_item_sequence=>20
-,p_item_plug_id=>wwv_flow_imp.id(5425816471408514950)
+,p_item_plug_id=>wwv_flow_imp.id(5647641161597700516)
 ,p_item_default=>'5000'
 ,p_prompt=>'End Filter'
 ,p_display_as=>'NATIVE_SELECT_LIST'
@@ -222,7 +222,7 @@ wwv_flow_imp_page.create_page_item(
   'page_action_on_selection', 'NONE')).to_clob
 );
 wwv_flow_imp_page.create_page_da_event(
- p_id=>wwv_flow_imp.id(3584945094189874565)
+ p_id=>wwv_flow_imp.id(3806769784379060131)
 ,p_name=>'Refresh on salary change'
 ,p_event_sequence=>10
 ,p_triggering_element_type=>'ITEM'
@@ -232,14 +232,14 @@ wwv_flow_imp_page.create_page_da_event(
 ,p_bind_event_type=>'change'
 );
 wwv_flow_imp_page.create_page_da_action(
- p_id=>wwv_flow_imp.id(3586134148728035526)
-,p_event_id=>wwv_flow_imp.id(3584945094189874565)
+ p_id=>wwv_flow_imp.id(3807958838917221092)
+,p_event_id=>wwv_flow_imp.id(3806769784379060131)
 ,p_event_result=>'TRUE'
 ,p_action_sequence=>20
 ,p_execute_on_page_init=>'N'
 ,p_action=>'NATIVE_REFRESH'
 ,p_affected_elements_type=>'REGION'
-,p_affected_region_id=>wwv_flow_imp.id(3667598284398645647)
+,p_affected_region_id=>wwv_flow_imp.id(3889422974587831213)
 ,p_attribute_01=>'N'
 );
 wwv_flow_imp.component_end;

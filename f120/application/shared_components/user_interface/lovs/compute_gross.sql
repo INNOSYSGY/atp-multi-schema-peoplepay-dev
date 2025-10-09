@@ -8,36 +8,36 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_shared.create_list_of_values(
- p_id=>wwv_flow_imp.id(3628710815723471759)
+ p_id=>wwv_flow_imp.id(3850535505912657325)
 ,p_lov_name=>'COMPUTE_GROSS'
-,p_lov_query=>'.'||wwv_flow_imp.id(3628710815723471759)||'.'
+,p_lov_query=>'.'||wwv_flow_imp.id(3850535505912657325)||'.'
 ,p_location=>'STATIC'
 ,p_version_scn=>1
 );
 wwv_flow_imp_shared.create_static_lov_data(
- p_id=>wwv_flow_imp.id(3628711083142471762)
+ p_id=>wwv_flow_imp.id(3850535773331657328)
 ,p_lov_disp_sequence=>1
 ,p_lov_disp_value=>'Basic Pay'
 ,p_lov_return_value=>'BASIC_PAY'
 );
 wwv_flow_imp_shared.create_static_lov_data(
- p_id=>wwv_flow_imp.id(3628711462899471764)
+ p_id=>wwv_flow_imp.id(3850536153088657330)
 ,p_lov_disp_sequence=>2
 ,p_lov_disp_value=>'Hourly Rate'
 ,p_lov_return_value=>'HOURLY_RATE'
 );
 wwv_flow_imp_shared.create_static_lov_data(
- p_id=>wwv_flow_imp.id(3628711880023471764)
+ p_id=>wwv_flow_imp.id(3850536570212657330)
 ,p_lov_disp_sequence=>3
 ,p_lov_disp_value=>'Daily Rate'
 ,p_lov_return_value=>'DAILY_RATE'
 );
 wwv_flow_imp_shared.create_static_lov_data(
- p_id=>wwv_flow_imp.id(3628721480544758342)
+ p_id=>wwv_flow_imp.id(3850546170733943908)
 ,p_lov_disp_sequence=>4
 ,p_lov_disp_value=>'Piece Rate'
 ,p_lov_return_value=>'PIECE_RATE'

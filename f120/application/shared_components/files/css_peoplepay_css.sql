@@ -8,7 +8,7 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp.g_varchar2_table := wwv_flow_imp.empty_varchar2_table;
@@ -17,7 +17,7 @@ wwv_flow_imp.g_varchar2_table(2) := '682D434B45203E206469762E742D466F726D2D696E7
 wwv_flow_imp.g_varchar2_table(3) := '0A7D0D0A0D0A2E646973706C61795F6F6E6C797B20200D0A20202020706F696E7465722D6576656E74733A206E6F6E653B0D0A202020206261636B67726F756E642D636F6C6F723A2077686974653B0D0A20202020666F6E742D73697A653A313570783B';
 wwv_flow_imp.g_varchar2_table(4) := '0D0A20202020666F6E742D7765696768743A626F6C643B0D0A7D';
 wwv_flow_imp_shared.create_app_static_file(
- p_id=>wwv_flow_imp.id(3473956854424136551)
+ p_id=>wwv_flow_imp.id(3695781544613322117)
 ,p_file_name=>'css/peoplepay.css'
 ,p_mime_type=>'text/css'
 ,p_file_charset=>'utf-8'

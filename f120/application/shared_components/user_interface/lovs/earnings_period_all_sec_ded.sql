@@ -8,11 +8,11 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_shared.create_list_of_values(
- p_id=>wwv_flow_imp.id(3299087578121827326)
+ p_id=>wwv_flow_imp.id(3520912268311012892)
 ,p_lov_name=>'EARNINGS_PERIOD_ALL_SEC_DED'
 ,p_lov_query=>wwv_flow_string.join(wwv_flow_t_varchar2(
 'select earn_description,id,Earn_pay_status,A.START_PAID_FOR,A.END_PAID_FOR',
@@ -34,7 +34,7 @@ wwv_flow_imp_shared.create_list_of_values(
 ,p_version_scn=>1
 );
 wwv_flow_imp_shared.create_list_of_values_cols(
- p_id=>wwv_flow_imp.id(3299087823927827329)
+ p_id=>wwv_flow_imp.id(3520912514117012895)
 ,p_query_column_name=>'ID'
 ,p_display_sequence=>10
 ,p_data_type=>'NUMBER'
@@ -42,28 +42,28 @@ wwv_flow_imp_shared.create_list_of_values_cols(
 ,p_is_searchable=>'N'
 );
 wwv_flow_imp_shared.create_list_of_values_cols(
- p_id=>wwv_flow_imp.id(3299089017338827331)
+ p_id=>wwv_flow_imp.id(3520913707528012897)
 ,p_query_column_name=>'START_PAID_FOR'
 ,p_heading=>'Start Paid For'
 ,p_display_sequence=>10
 ,p_data_type=>'DATE'
 );
 wwv_flow_imp_shared.create_list_of_values_cols(
- p_id=>wwv_flow_imp.id(3299089446909827331)
+ p_id=>wwv_flow_imp.id(3520914137099012897)
 ,p_query_column_name=>'END_PAID_FOR'
 ,p_heading=>'End Paid For'
 ,p_display_sequence=>20
 ,p_data_type=>'DATE'
 );
 wwv_flow_imp_shared.create_list_of_values_cols(
- p_id=>wwv_flow_imp.id(3299088283216827330)
+ p_id=>wwv_flow_imp.id(3520912973406012896)
 ,p_query_column_name=>'EARN_DESCRIPTION'
 ,p_heading=>'Earn Description'
 ,p_display_sequence=>21
 ,p_data_type=>'VARCHAR2'
 );
 wwv_flow_imp_shared.create_list_of_values_cols(
- p_id=>wwv_flow_imp.id(3299088658378827330)
+ p_id=>wwv_flow_imp.id(3520913348568012896)
 ,p_query_column_name=>'EARN_PAY_STATUS'
 ,p_heading=>'Earn Pay Status'
 ,p_display_sequence=>30

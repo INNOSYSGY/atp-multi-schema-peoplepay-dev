@@ -8,11 +8,11 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_shared.create_plugin(
- p_id=>wwv_flow_imp.id(1830590408190138807)
+ p_id=>wwv_flow_imp.id(2052415098379324373)
 ,p_plugin_type=>'ITEM TYPE'
 ,p_name=>'COM.FOS.RANGE_SLIDER'
 ,p_display_name=>'FOS - Range Slider'
@@ -400,8 +400,8 @@ wwv_flow_imp_shared.create_plugin(
 ,p_files_version=>1976
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(1830590662064138813)
-,p_plugin_id=>wwv_flow_imp.id(1830590408190138807)
+ p_id=>wwv_flow_imp.id(2052415352253324379)
+,p_plugin_id=>wwv_flow_imp.id(2052415098379324373)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>1
 ,p_display_sequence=>10
@@ -416,24 +416,24 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'The type of the slider - sets the data-type of the values the slider will be handling.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(1830591511310138814)
-,p_plugin_attribute_id=>wwv_flow_imp.id(1830590662064138813)
+ p_id=>wwv_flow_imp.id(2052416201499324380)
+,p_plugin_attribute_id=>wwv_flow_imp.id(2052415352253324379)
 ,p_display_sequence=>10
 ,p_display_value=>'Number'
 ,p_return_value=>'number'
 ,p_help_text=>'The slider will represent <i>Number</i> values.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(1830591017248138814)
-,p_plugin_attribute_id=>wwv_flow_imp.id(1830590662064138813)
+ p_id=>wwv_flow_imp.id(2052415707437324380)
+,p_plugin_attribute_id=>wwv_flow_imp.id(2052415352253324379)
 ,p_display_sequence=>20
 ,p_display_value=>'Date'
 ,p_return_value=>'date'
 ,p_help_text=>'The slider will represent <i>Date</i> values.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(1830592031143138815)
-,p_plugin_id=>wwv_flow_imp.id(1830590408190138807)
+ p_id=>wwv_flow_imp.id(2052416721332324381)
+,p_plugin_id=>wwv_flow_imp.id(2052415098379324373)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>2
 ,p_display_sequence=>20
@@ -448,24 +448,24 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'The number of handles/knobs (draggable heads which indicate and change the value) of the slider.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(1830615221635145231)
-,p_plugin_attribute_id=>wwv_flow_imp.id(1830592031143138815)
+ p_id=>wwv_flow_imp.id(2052439911824330797)
+,p_plugin_attribute_id=>wwv_flow_imp.id(2052416721332324381)
 ,p_display_sequence=>10
 ,p_display_value=>'Single'
 ,p_return_value=>'1'
 ,p_help_text=>'The slider''s <i>getValue()</i> will return only one value (string).'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(1830615618026145745)
-,p_plugin_attribute_id=>wwv_flow_imp.id(1830592031143138815)
+ p_id=>wwv_flow_imp.id(2052440308215331311)
+,p_plugin_attribute_id=>wwv_flow_imp.id(2052416721332324381)
 ,p_display_sequence=>20
 ,p_display_value=>'Double'
 ,p_return_value=>'2'
 ,p_help_text=>'The slider''s <i>getValue()</i> will return a colon-separated string of two values.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(1830592395408138815)
-,p_plugin_id=>wwv_flow_imp.id(1830590408190138807)
+ p_id=>wwv_flow_imp.id(2052417085597324381)
+,p_plugin_id=>wwv_flow_imp.id(2052415098379324373)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>3
 ,p_display_sequence=>30
@@ -475,15 +475,15 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_is_required=>true
 ,p_supported_component_types=>'APEX_APPLICATION_PAGE_ITEMS:APEX_APPL_PAGE_IG_COLUMNS'
 ,p_is_translatable=>false
-,p_depending_on_attribute_id=>wwv_flow_imp.id(1830590662064138813)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(2052415352253324379)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'EQUALS'
 ,p_depending_on_expression=>'number'
 ,p_help_text=>'The minimum value of the slider.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(1830592815946138815)
-,p_plugin_id=>wwv_flow_imp.id(1830590408190138807)
+ p_id=>wwv_flow_imp.id(2052417506135324381)
+,p_plugin_id=>wwv_flow_imp.id(2052415098379324373)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>4
 ,p_display_sequence=>40
@@ -493,15 +493,15 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_is_required=>true
 ,p_supported_component_types=>'APEX_APPLICATION_PAGE_ITEMS:APEX_APPL_PAGE_IG_COLUMNS'
 ,p_is_translatable=>false
-,p_depending_on_attribute_id=>wwv_flow_imp.id(1830590662064138813)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(2052415352253324379)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'EQUALS'
 ,p_depending_on_expression=>'number'
 ,p_help_text=>'The maximum value of the slider.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(1830601097691138818)
-,p_plugin_id=>wwv_flow_imp.id(1830590408190138807)
+ p_id=>wwv_flow_imp.id(2052425787880324384)
+,p_plugin_id=>wwv_flow_imp.id(2052415098379324373)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>5
 ,p_display_sequence=>50
@@ -511,7 +511,7 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_is_required=>true
 ,p_supported_component_types=>'APEX_APPLICATION_PAGE_ITEMS:APEX_APPL_PAGE_IG_COLUMNS'
 ,p_is_translatable=>true
-,p_depending_on_attribute_id=>wwv_flow_imp.id(1830590662064138813)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(2052415352253324379)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'EQUALS'
 ,p_depending_on_expression=>'date'
@@ -519,8 +519,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ||'r Globalization) EXACTLY.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(1830601522927138818)
-,p_plugin_id=>wwv_flow_imp.id(1830590408190138807)
+ p_id=>wwv_flow_imp.id(2052426213116324384)
+,p_plugin_id=>wwv_flow_imp.id(2052415098379324373)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>6
 ,p_display_sequence=>60
@@ -530,7 +530,7 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_is_required=>true
 ,p_supported_component_types=>'APEX_APPLICATION_PAGE_ITEMS:APEX_APPL_PAGE_IG_COLUMNS'
 ,p_is_translatable=>true
-,p_depending_on_attribute_id=>wwv_flow_imp.id(1830590662064138813)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(2052415352253324379)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'EQUALS'
 ,p_depending_on_expression=>'date'
@@ -538,8 +538,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ||'r Globalization) EXACTLY.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(1830601925740138818)
-,p_plugin_id=>wwv_flow_imp.id(1830590408190138807)
+ p_id=>wwv_flow_imp.id(2052426615929324384)
+,p_plugin_id=>wwv_flow_imp.id(2052415098379324373)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>7
 ,p_display_sequence=>70
@@ -550,7 +550,7 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_default_value=>'daily'
 ,p_supported_component_types=>'APEX_APPLICATION_PAGE_ITEMS:APEX_APPL_PAGE_IG_COLUMNS'
 ,p_is_translatable=>false
-,p_depending_on_attribute_id=>wwv_flow_imp.id(1830590662064138813)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(2052415352253324379)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'EQUALS'
 ,p_depending_on_expression=>'date'
@@ -563,40 +563,40 @@ wwv_flow_imp_shared.create_plugin_attribute(
 'Next possible value: 2021.02.12 (yyyy.mm.dd)'))
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(1830602374962138818)
-,p_plugin_attribute_id=>wwv_flow_imp.id(1830601925740138818)
+ p_id=>wwv_flow_imp.id(2052427065151324384)
+,p_plugin_attribute_id=>wwv_flow_imp.id(2052426615929324384)
 ,p_display_sequence=>10
 ,p_display_value=>'Daily'
 ,p_return_value=>'daily'
 ,p_help_text=>'The interval you can move the <i>Handle(s)</i> will be <i>1 day</i>.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(1830602819670138819)
-,p_plugin_attribute_id=>wwv_flow_imp.id(1830601925740138818)
+ p_id=>wwv_flow_imp.id(2052427509859324385)
+,p_plugin_attribute_id=>wwv_flow_imp.id(2052426615929324384)
 ,p_display_sequence=>20
 ,p_display_value=>'Weekly'
 ,p_return_value=>'weekly'
 ,p_help_text=>'The interval you can move the <i>Handle(s)</i> will be <i>1 week(7 days)</i>.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(1830603386603138819)
-,p_plugin_attribute_id=>wwv_flow_imp.id(1830601925740138818)
+ p_id=>wwv_flow_imp.id(2052428076792324385)
+,p_plugin_attribute_id=>wwv_flow_imp.id(2052426615929324384)
 ,p_display_sequence=>30
 ,p_display_value=>'Monthly'
 ,p_return_value=>'monthly'
 ,p_help_text=>'The interval you can move the <i>Handle(s)</i> will be <i>1 Month</i>.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(1830603851049138819)
-,p_plugin_attribute_id=>wwv_flow_imp.id(1830601925740138818)
+ p_id=>wwv_flow_imp.id(2052428541238324385)
+,p_plugin_attribute_id=>wwv_flow_imp.id(2052426615929324384)
 ,p_display_sequence=>40
 ,p_display_value=>'Yearly'
 ,p_return_value=>'yearly'
 ,p_help_text=>'The interval you can move the <i>Handle(s)</i> will be <i>1 Year</i>.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(1524355452309776104)
-,p_plugin_id=>wwv_flow_imp.id(1830590408190138807)
+ p_id=>wwv_flow_imp.id(1746180142498961670)
+,p_plugin_id=>wwv_flow_imp.id(2052415098379324373)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>8
 ,p_display_sequence=>80
@@ -607,7 +607,7 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_default_value=>'1'
 ,p_supported_component_types=>'APEX_APPLICATION_PAGE_ITEMS:APEX_APPL_PAGE_IG_COLUMNS'
 ,p_is_translatable=>false
-,p_depending_on_attribute_id=>wwv_flow_imp.id(1830590662064138813)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(2052415352253324379)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'EQUALS'
 ,p_depending_on_expression=>'number'
@@ -617,8 +617,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 'The user will be unable to set the value of the slider in-between these steps by dragging the handle(s).'))
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(1830594449593138816)
-,p_plugin_id=>wwv_flow_imp.id(1830590408190138807)
+ p_id=>wwv_flow_imp.id(2052419139782324382)
+,p_plugin_id=>wwv_flow_imp.id(2052415098379324373)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>9
 ,p_display_sequence=>90
@@ -633,24 +633,24 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'The orientation of the range slider.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(1830594799052138816)
-,p_plugin_attribute_id=>wwv_flow_imp.id(1830594449593138816)
+ p_id=>wwv_flow_imp.id(2052419489241324382)
+,p_plugin_attribute_id=>wwv_flow_imp.id(2052419139782324382)
 ,p_display_sequence=>10
 ,p_display_value=>'Horizontal'
 ,p_return_value=>'horizontal'
 ,p_help_text=>'The item will be rendered horizontally, the <i>Handle(s)</i> can be moved sideway, left-and-right.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(1830595339640138816)
-,p_plugin_attribute_id=>wwv_flow_imp.id(1830594449593138816)
+ p_id=>wwv_flow_imp.id(2052420029829324382)
+,p_plugin_attribute_id=>wwv_flow_imp.id(2052419139782324382)
 ,p_display_sequence=>20
 ,p_display_value=>'Vertical'
 ,p_return_value=>'vertical'
 ,p_help_text=>'The item will be rendered vertically, the <i>Handle(s)</i> can be moved up-and-down.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(1830595863636138816)
-,p_plugin_id=>wwv_flow_imp.id(1830590408190138807)
+ p_id=>wwv_flow_imp.id(2052420553825324382)
+,p_plugin_id=>wwv_flow_imp.id(2052415098379324373)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>10
 ,p_display_sequence=>100
@@ -665,56 +665,56 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'A list of options you can apply on the item.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(1231140792398029627)
-,p_plugin_attribute_id=>wwv_flow_imp.id(1830595863636138816)
+ p_id=>wwv_flow_imp.id(1452965482587215193)
+,p_plugin_attribute_id=>wwv_flow_imp.id(2052420553825324382)
 ,p_display_sequence=>10
 ,p_display_value=>'Enable Ticks'
 ,p_return_value=>'enable-ticks'
 ,p_help_text=>'Shows the tick-markers and their values below (or on the side - in case of vertical orientation) the slider.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(1830598731314138817)
-,p_plugin_attribute_id=>wwv_flow_imp.id(1830595863636138816)
+ p_id=>wwv_flow_imp.id(2052423421503324383)
+,p_plugin_attribute_id=>wwv_flow_imp.id(2052420553825324382)
 ,p_display_sequence=>20
 ,p_display_value=>'Enable Tooltips'
 ,p_return_value=>'enable-tooltip'
 ,p_help_text=>'Displays a tooltip above the handle with its value.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(1830597762356138817)
-,p_plugin_attribute_id=>wwv_flow_imp.id(1830595863636138816)
+ p_id=>wwv_flow_imp.id(2052422452545324383)
+,p_plugin_attribute_id=>wwv_flow_imp.id(2052420553825324382)
 ,p_display_sequence=>30
 ,p_display_value=>'Bind Value to Item(s)'
 ,p_return_value=>'bind-value-to-item'
 ,p_help_text=>'One or two page items can be bound to the slider''s value (based on the handle-count set). Whenever the page item value changes, the page item values will be updated automatically.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(1830596745836138817)
-,p_plugin_attribute_id=>wwv_flow_imp.id(1830595863636138816)
+ p_id=>wwv_flow_imp.id(2052421436025324383)
+,p_plugin_attribute_id=>wwv_flow_imp.id(2052420553825324382)
 ,p_display_sequence=>40
 ,p_display_value=>'Connect Handles'
 ,p_return_value=>'connects-bar'
 ,p_help_text=>'Connect the handles so both can be moved at the same time by dragging the bar between them. This will move both of them the same distance, changing their values but keeping the range between them.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(1830596247636138817)
-,p_plugin_attribute_id=>wwv_flow_imp.id(1830595863636138816)
+ p_id=>wwv_flow_imp.id(2052420937825324383)
+,p_plugin_attribute_id=>wwv_flow_imp.id(2052420553825324382)
 ,p_display_sequence=>50
 ,p_display_value=>'Flip Range'
 ,p_return_value=>'flip-range'
 ,p_help_text=>'It doesn''t constrain/limit the position of a handle based on the other handle. In other words, it allows moving handle 1 beyond handle 2 and/or handle 2 before handle 1.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(630550676105311934)
-,p_plugin_attribute_id=>wwv_flow_imp.id(1830595863636138816)
+ p_id=>wwv_flow_imp.id(852375366294497500)
+,p_plugin_attribute_id=>wwv_flow_imp.id(2052420553825324382)
 ,p_display_sequence=>60
 ,p_display_value=>'Custom Display Format Mask'
 ,p_return_value=>'custom-display-format-mask'
 ,p_help_text=>'You can enter a display format that is different from the value format. This is so you can support displaying week numbers using the WW/IW format and still have an actual "to_date" formattable value returned.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(1830594053983138816)
-,p_plugin_id=>wwv_flow_imp.id(1830590408190138807)
+ p_id=>wwv_flow_imp.id(2052418744172324382)
+,p_plugin_id=>wwv_flow_imp.id(2052415098379324373)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>11
 ,p_display_sequence=>110
@@ -725,7 +725,7 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_default_value=>'5'
 ,p_supported_component_types=>'APEX_APPLICATION_PAGE_ITEMS:APEX_APPL_PAGE_IG_COLUMNS'
 ,p_is_translatable=>false
-,p_depending_on_attribute_id=>wwv_flow_imp.id(1830595863636138816)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(2052420553825324382)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'IN_LIST'
 ,p_depending_on_expression=>'enable-ticks'
@@ -735,8 +735,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 'E.g. if the slider''s minimum value is 0, maximum value is 100 and the number of ticks is 5 then the displayed markers are at values: 0, 25, 50, 75, 100'))
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(1830604302684138819)
-,p_plugin_id=>wwv_flow_imp.id(1830590408190138807)
+ p_id=>wwv_flow_imp.id(2052428992873324385)
+,p_plugin_id=>wwv_flow_imp.id(2052415098379324373)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>12
 ,p_display_sequence=>120
@@ -746,15 +746,15 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_is_required=>false
 ,p_supported_component_types=>'APEX_APPLICATION_PAGE_ITEMS:APEX_APPL_PAGE_IG_COLUMNS'
 ,p_is_translatable=>false
-,p_depending_on_attribute_id=>wwv_flow_imp.id(1830595863636138816)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(2052420553825324382)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'IN_LIST'
 ,p_depending_on_expression=>'bind-value-to-item'
 ,p_help_text=>'Specify the page items to bind their value to the slider''s value. If you are using multiple handles then 2 page items are required. The first item will receive the lower range value and the second item will receive the upper range value.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(1830593227731138816)
-,p_plugin_id=>wwv_flow_imp.id(1830590408190138807)
+ p_id=>wwv_flow_imp.id(2052417917920324382)
+,p_plugin_id=>wwv_flow_imp.id(2052415098379324373)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>13
 ,p_display_sequence=>130
@@ -765,15 +765,15 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_default_value=>'#0076df'
 ,p_supported_component_types=>'APEX_APPLICATION_PAGE_ITEMS:APEX_APPL_PAGE_IG_COLUMNS'
 ,p_is_translatable=>false
-,p_depending_on_attribute_id=>wwv_flow_imp.id(1830595863636138816)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(2052420553825324382)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'IN_LIST'
 ,p_depending_on_expression=>'connects-bar'
 ,p_help_text=>'Sets the color of the range, i.e. the background-color between the two handles.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(630551110895321595)
-,p_plugin_id=>wwv_flow_imp.id(1830590408190138807)
+ p_id=>wwv_flow_imp.id(852375801084507161)
+,p_plugin_id=>wwv_flow_imp.id(2052415098379324373)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>14
 ,p_display_sequence=>140
@@ -782,15 +782,15 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_attribute_type=>'TEXT'
 ,p_is_required=>true
 ,p_is_translatable=>false
-,p_depending_on_attribute_id=>wwv_flow_imp.id(1830595863636138816)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(2052420553825324382)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'IN_LIST'
 ,p_depending_on_expression=>'custom-display-format-mask'
 ,p_help_text=>'<p>Enter the format mask you would like to display on the range slider, the actual values will be returned in the format mask defined for the item.</p>'
 );
 wwv_flow_imp_shared.create_plugin_std_attribute(
- p_id=>wwv_flow_imp.id(1943384713279859200)
-,p_plugin_id=>wwv_flow_imp.id(1830590408190138807)
+ p_id=>wwv_flow_imp.id(2165209403469044766)
+,p_plugin_id=>wwv_flow_imp.id(2052415098379324373)
 ,p_name=>'INIT_JAVASCRIPT_CODE'
 ,p_is_required=>false
 ,p_depending_on_has_to_exist=>true
@@ -834,8 +834,8 @@ unistr('    // Common properties are: { mark: ''.'', thousand: '','', prefix: ''
 ,p_help_text=>'You can use this attribute to define a function that will allow you to change/override the plugin settings. This gives you added flexibility of controlling the settings from a single Javascript function defined in a "Static Application File".'
 );
 wwv_flow_imp_shared.create_plugin_event(
- p_id=>wwv_flow_imp.id(1940054780725285999)
-,p_plugin_id=>wwv_flow_imp.id(1830590408190138807)
+ p_id=>wwv_flow_imp.id(2161879470914471565)
+,p_plugin_id=>wwv_flow_imp.id(2052415098379324373)
 ,p_name=>'fos-rangeslider-change'
 ,p_display_name=>'FOS - Range Slider - Change'
 );
@@ -905,8 +905,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(1830607226671138820)
-,p_plugin_id=>wwv_flow_imp.id(1830590408190138807)
+ p_id=>wwv_flow_imp.id(2052431916860324386)
+,p_plugin_id=>wwv_flow_imp.id(2052415098379324373)
 ,p_file_name=>'css/nouislider-core.css'
 ,p_mime_type=>'text/css'
 ,p_file_charset=>'utf-8'
@@ -998,8 +998,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(1830607628751138820)
-,p_plugin_id=>wwv_flow_imp.id(1830590408190138807)
+ p_id=>wwv_flow_imp.id(2052432318940324386)
+,p_plugin_id=>wwv_flow_imp.id(2052415098379324373)
 ,p_file_name=>'css/nouislider-core.css.map'
 ,p_mime_type=>'application/json'
 ,p_file_charset=>'utf-8'
@@ -1056,8 +1056,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(1830608019085138821)
-,p_plugin_id=>wwv_flow_imp.id(1830590408190138807)
+ p_id=>wwv_flow_imp.id(2052432709274324387)
+,p_plugin_id=>wwv_flow_imp.id(2052415098379324373)
 ,p_file_name=>'css/nouislider-core.min.css'
 ,p_mime_type=>'text/css'
 ,p_file_charset=>'utf-8'
@@ -1087,8 +1087,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(1830608487100138821)
-,p_plugin_id=>wwv_flow_imp.id(1830590408190138807)
+ p_id=>wwv_flow_imp.id(2052433177289324387)
+,p_plugin_id=>wwv_flow_imp.id(2052415098379324373)
 ,p_file_name=>'css/nouislider-pips.css'
 ,p_mime_type=>'text/css'
 ,p_file_charset=>'utf-8'
@@ -1124,8 +1124,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(1830608825936138821)
-,p_plugin_id=>wwv_flow_imp.id(1830590408190138807)
+ p_id=>wwv_flow_imp.id(2052433516125324387)
+,p_plugin_id=>wwv_flow_imp.id(2052415098379324373)
 ,p_file_name=>'css/nouislider-pips.css.map'
 ,p_mime_type=>'application/json'
 ,p_file_charset=>'utf-8'
@@ -1150,8 +1150,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(1830609283043138821)
-,p_plugin_id=>wwv_flow_imp.id(1830590408190138807)
+ p_id=>wwv_flow_imp.id(2052433973232324387)
+,p_plugin_id=>wwv_flow_imp.id(2052415098379324373)
 ,p_file_name=>'css/nouislider-pips.min.css'
 ,p_mime_type=>'text/css'
 ,p_file_charset=>'utf-8'
@@ -1173,8 +1173,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(1830609625278138821)
-,p_plugin_id=>wwv_flow_imp.id(1830590408190138807)
+ p_id=>wwv_flow_imp.id(2052434315467324387)
+,p_plugin_id=>wwv_flow_imp.id(2052415098379324373)
 ,p_file_name=>'css/nouislider-tooltips.css'
 ,p_mime_type=>'text/css'
 ,p_file_charset=>'utf-8'
@@ -1200,8 +1200,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(1830610048971138822)
-,p_plugin_id=>wwv_flow_imp.id(1830590408190138807)
+ p_id=>wwv_flow_imp.id(2052434739160324388)
+,p_plugin_id=>wwv_flow_imp.id(2052415098379324373)
 ,p_file_name=>'css/nouislider-tooltips.css.map'
 ,p_mime_type=>'application/json'
 ,p_file_charset=>'utf-8'
@@ -1222,8 +1222,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(1830610448681138822)
-,p_plugin_id=>wwv_flow_imp.id(1830590408190138807)
+ p_id=>wwv_flow_imp.id(2052435138870324388)
+,p_plugin_id=>wwv_flow_imp.id(2052415098379324373)
 ,p_file_name=>'css/nouislider-tooltips.min.css'
 ,p_mime_type=>'text/css'
 ,p_file_charset=>'utf-8'
@@ -1241,8 +1241,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(1830610829466138822)
-,p_plugin_id=>wwv_flow_imp.id(1830590408190138807)
+ p_id=>wwv_flow_imp.id(2052435519655324388)
+,p_plugin_id=>wwv_flow_imp.id(2052415098379324373)
 ,p_file_name=>'css/style.css'
 ,p_mime_type=>'text/css'
 ,p_file_charset=>'utf-8'
@@ -1263,8 +1263,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(1830611279027138822)
-,p_plugin_id=>wwv_flow_imp.id(1830590408190138807)
+ p_id=>wwv_flow_imp.id(2052435969216324388)
+,p_plugin_id=>wwv_flow_imp.id(2052415098379324373)
 ,p_file_name=>'css/style.css.map'
 ,p_mime_type=>'application/json'
 ,p_file_charset=>'utf-8'
@@ -1282,8 +1282,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(1830611625428138822)
-,p_plugin_id=>wwv_flow_imp.id(1830590408190138807)
+ p_id=>wwv_flow_imp.id(2052436315617324388)
+,p_plugin_id=>wwv_flow_imp.id(2052415098379324373)
 ,p_file_name=>'css/style.min.css'
 ,p_mime_type=>'text/css'
 ,p_file_charset=>'utf-8'
@@ -1516,8 +1516,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(1830612035336138822)
-,p_plugin_id=>wwv_flow_imp.id(1830590408190138807)
+ p_id=>wwv_flow_imp.id(2052436725525324388)
+,p_plugin_id=>wwv_flow_imp.id(2052415098379324373)
 ,p_file_name=>'js/script.js'
 ,p_mime_type=>'application/javascript'
 ,p_file_charset=>'utf-8'
@@ -1618,8 +1618,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(1830612403853138823)
-,p_plugin_id=>wwv_flow_imp.id(1830590408190138807)
+ p_id=>wwv_flow_imp.id(2052437094042324389)
+,p_plugin_id=>wwv_flow_imp.id(2052415098379324373)
 ,p_file_name=>'js/script.js.map'
 ,p_mime_type=>'application/json'
 ,p_file_charset=>'utf-8'
@@ -1681,8 +1681,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(1830612885128138823)
-,p_plugin_id=>wwv_flow_imp.id(1830590408190138807)
+ p_id=>wwv_flow_imp.id(2052437575317324389)
+,p_plugin_id=>wwv_flow_imp.id(2052415098379324373)
 ,p_file_name=>'js/script.min.js'
 ,p_mime_type=>'application/javascript'
 ,p_file_charset=>'utf-8'
@@ -2711,8 +2711,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(1830613211130138823)
-,p_plugin_id=>wwv_flow_imp.id(1830590408190138807)
+ p_id=>wwv_flow_imp.id(2052437901319324389)
+,p_plugin_id=>wwv_flow_imp.id(2052415098379324373)
 ,p_file_name=>'libraries/nouislider.js'
 ,p_mime_type=>'application/javascript'
 ,p_file_charset=>'utf-8'
@@ -3135,8 +3135,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(1830613687882138823)
-,p_plugin_id=>wwv_flow_imp.id(1830590408190138807)
+ p_id=>wwv_flow_imp.id(2052438378071324389)
+,p_plugin_id=>wwv_flow_imp.id(2052415098379324373)
 ,p_file_name=>'libraries/nouislider.js.map'
 ,p_mime_type=>'application/json'
 ,p_file_charset=>'utf-8'
@@ -3419,8 +3419,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(1830614064661138824)
-,p_plugin_id=>wwv_flow_imp.id(1830590408190138807)
+ p_id=>wwv_flow_imp.id(2052438754850324390)
+,p_plugin_id=>wwv_flow_imp.id(2052415098379324373)
 ,p_file_name=>'libraries/nouislider.min.js'
 ,p_mime_type=>'application/javascript'
 ,p_file_charset=>'utf-8'
@@ -4928,8 +4928,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(1942912672073047242)
-,p_plugin_id=>wwv_flow_imp.id(1830590408190138807)
+ p_id=>wwv_flow_imp.id(2164737362262232808)
+,p_plugin_id=>wwv_flow_imp.id(2052415098379324373)
 ,p_file_name=>'libraries/moment.js'
 ,p_mime_type=>'application/javascript'
 ,p_file_charset=>'utf-8'
@@ -5536,8 +5536,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(1942913441429049496)
-,p_plugin_id=>wwv_flow_imp.id(1830590408190138807)
+ p_id=>wwv_flow_imp.id(2164738131618235062)
+,p_plugin_id=>wwv_flow_imp.id(2052415098379324373)
 ,p_file_name=>'libraries/moment.min.js'
 ,p_mime_type=>'application/javascript'
 ,p_file_charset=>'utf-8'
@@ -6422,8 +6422,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(1942913832590049499)
-,p_plugin_id=>wwv_flow_imp.id(1830590408190138807)
+ p_id=>wwv_flow_imp.id(2164738522779235065)
+,p_plugin_id=>wwv_flow_imp.id(2052415098379324373)
 ,p_file_name=>'libraries/moment.js.map'
 ,p_mime_type=>'application/json'
 ,p_file_charset=>'utf-8'
@@ -6532,8 +6532,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(1943379956207751892)
-,p_plugin_id=>wwv_flow_imp.id(1830590408190138807)
+ p_id=>wwv_flow_imp.id(2165204646396937458)
+,p_plugin_id=>wwv_flow_imp.id(2052415098379324373)
 ,p_file_name=>'libraries/wNumb.js'
 ,p_mime_type=>'application/javascript'
 ,p_file_charset=>'utf-8'
@@ -6570,8 +6570,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(1943380786298755003)
-,p_plugin_id=>wwv_flow_imp.id(1830590408190138807)
+ p_id=>wwv_flow_imp.id(2165205476487940569)
+,p_plugin_id=>wwv_flow_imp.id(2052415098379324373)
 ,p_file_name=>'libraries/wNumb.min.js'
 ,p_mime_type=>'application/javascript'
 ,p_file_charset=>'utf-8'
@@ -6625,8 +6625,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(1943381109932755005)
-,p_plugin_id=>wwv_flow_imp.id(1830590408190138807)
+ p_id=>wwv_flow_imp.id(2165205800121940571)
+,p_plugin_id=>wwv_flow_imp.id(2052415098379324373)
 ,p_file_name=>'libraries/wNumb.js.map'
 ,p_mime_type=>'application/json'
 ,p_file_charset=>'utf-8'

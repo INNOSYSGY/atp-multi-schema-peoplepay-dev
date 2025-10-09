@@ -8,11 +8,11 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_shared.create_plugin(
- p_id=>wwv_flow_imp.id(3545750560939917856)
+ p_id=>wwv_flow_imp.id(3767575251129103422)
 ,p_plugin_type=>'REGION TYPE'
 ,p_name=>'COM.ORACLE.APEX.GANTT_CHART'
 ,p_display_name=>'Gantt Chart'
@@ -433,8 +433,8 @@ wwv_flow_imp_shared.create_plugin(
 ,p_files_version=>3
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3545750293510917846)
-,p_plugin_id=>wwv_flow_imp.id(3545750560939917856)
+ p_id=>wwv_flow_imp.id(3767574983700103412)
+,p_plugin_id=>wwv_flow_imp.id(3767575251129103422)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>1
 ,p_display_sequence=>10
@@ -447,8 +447,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'The column from the source query containing the name of the summary element of the Gantt chart.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3545749854673917845)
-,p_plugin_id=>wwv_flow_imp.id(3545750560939917856)
+ p_id=>wwv_flow_imp.id(3767574544863103411)
+,p_plugin_id=>wwv_flow_imp.id(3767575251129103422)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>2
 ,p_display_sequence=>20
@@ -461,8 +461,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'The column from the source query containing the name of the terminal elements.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3545749519826917845)
-,p_plugin_id=>wwv_flow_imp.id(3545750560939917856)
+ p_id=>wwv_flow_imp.id(3767574210016103411)
+,p_plugin_id=>wwv_flow_imp.id(3767575251129103422)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>3
 ,p_display_sequence=>30
@@ -475,8 +475,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'The alternate title for the terminal element. Displayed when the user hovers over the terminal element with the mouse.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3545749027792917845)
-,p_plugin_id=>wwv_flow_imp.id(3545750560939917856)
+ p_id=>wwv_flow_imp.id(3767573717982103411)
+,p_plugin_id=>wwv_flow_imp.id(3767575251129103422)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>4
 ,p_display_sequence=>40
@@ -489,8 +489,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'The CSS class to be applied to the terminal element.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3545748664994917844)
-,p_plugin_id=>wwv_flow_imp.id(3545750560939917856)
+ p_id=>wwv_flow_imp.id(3767573355184103410)
+,p_plugin_id=>wwv_flow_imp.id(3767575251129103422)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>5
 ,p_display_sequence=>50
@@ -503,8 +503,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'The date the terminal element starts on.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3545748308135917844)
-,p_plugin_id=>wwv_flow_imp.id(3545750560939917856)
+ p_id=>wwv_flow_imp.id(3767572998325103410)
+,p_plugin_id=>wwv_flow_imp.id(3767575251129103422)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>6
 ,p_display_sequence=>60
@@ -517,8 +517,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'The date the terminal element ends on.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3545747870314917844)
-,p_plugin_id=>wwv_flow_imp.id(3545750560939917856)
+ p_id=>wwv_flow_imp.id(3767572560504103410)
+,p_plugin_id=>wwv_flow_imp.id(3767575251129103422)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>7
 ,p_display_sequence=>70
@@ -531,8 +531,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'The link target for the summary element.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3545747454221917844)
-,p_plugin_id=>wwv_flow_imp.id(3545750560939917856)
+ p_id=>wwv_flow_imp.id(3767572144411103410)
+,p_plugin_id=>wwv_flow_imp.id(3767575251129103422)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>8
 ,p_display_sequence=>80
@@ -545,8 +545,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'The link target for the terminal element.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3545747022820917843)
-,p_plugin_id=>wwv_flow_imp.id(3545750560939917856)
+ p_id=>wwv_flow_imp.id(3767571713010103409)
+,p_plugin_id=>wwv_flow_imp.id(3767575251129103422)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>9
 ,p_display_sequence=>90
@@ -564,8 +564,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 'Q - Quarterly'))
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3545746660921917842)
-,p_plugin_id=>wwv_flow_imp.id(3545750560939917856)
+ p_id=>wwv_flow_imp.id(3767571351111103408)
+,p_plugin_id=>wwv_flow_imp.id(3767575251129103422)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>10
 ,p_display_sequence=>100
@@ -577,8 +577,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'The name of the page item which contains the start date for the chart. If no page item is provided, or if the page item has no value, the chart will start on the current date.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3545746230401917842)
-,p_plugin_id=>wwv_flow_imp.id(3545750560939917856)
+ p_id=>wwv_flow_imp.id(3767570920591103408)
+,p_plugin_id=>wwv_flow_imp.id(3767575251129103422)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>11
 ,p_display_sequence=>110
@@ -591,8 +591,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'The number of periods to display for each of the different period types, separated by colons. The default value (30:22:18:8) provides for 30 days, 22 weeks, 18 months, and 8 quarters.'
 );
 wwv_flow_imp_shared.create_plugin_std_attribute(
- p_id=>wwv_flow_imp.id(3545745565489917835)
-,p_plugin_id=>wwv_flow_imp.id(3545750560939917856)
+ p_id=>wwv_flow_imp.id(3767570255679103401)
+,p_plugin_id=>wwv_flow_imp.id(3767575251129103422)
 ,p_name=>'SOURCE_SQL'
 ,p_sql_min_column_count=>4
 );
@@ -622,8 +622,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(3545745164444917831)
-,p_plugin_id=>wwv_flow_imp.id(3545750560939917856)
+ p_id=>wwv_flow_imp.id(3767569854634103397)
+,p_plugin_id=>wwv_flow_imp.id(3767575251129103422)
 ,p_file_name=>'com_oracle_apex_gantt_chart.css'
 ,p_mime_type=>'text/css'
 ,p_file_content=>wwv_flow_imp.varchar2_to_blob(wwv_flow_imp.g_varchar2_table)

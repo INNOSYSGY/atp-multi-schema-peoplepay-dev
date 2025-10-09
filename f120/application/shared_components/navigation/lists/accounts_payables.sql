@@ -8,17 +8,17 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_shared.create_list(
- p_id=>wwv_flow_imp.id(3603946425980324725)
+ p_id=>wwv_flow_imp.id(3825771116169510291)
 ,p_name=>'Accounts Payables'
 ,p_list_status=>'PUBLIC'
 ,p_version_scn=>1
 );
 wwv_flow_imp_shared.create_list_item(
- p_id=>wwv_flow_imp.id(3603946205482324725)
+ p_id=>wwv_flow_imp.id(3825770895671510291)
 ,p_list_item_display_sequence=>8
 ,p_list_item_link_text=>'Cheque Books'
 ,p_list_item_link_target=>'f?p=&APP_ID.:104:&SESSION.::&DEBUG.::::'
@@ -26,7 +26,7 @@ wwv_flow_imp_shared.create_list_item(
 ,p_list_item_current_type=>'TARGET_PAGE'
 );
 wwv_flow_imp_shared.create_list_item(
- p_id=>wwv_flow_imp.id(3603944814885324716)
+ p_id=>wwv_flow_imp.id(3825769505074510282)
 ,p_list_item_display_sequence=>20
 ,p_list_item_link_text=>'Contract'
 ,p_list_item_link_target=>'f?p=&APP_ID.:94:&SESSION.::&DEBUG.::::'
@@ -34,7 +34,7 @@ wwv_flow_imp_shared.create_list_item(
 ,p_list_item_current_type=>'TARGET_PAGE'
 );
 wwv_flow_imp_shared.create_list_item(
- p_id=>wwv_flow_imp.id(3603944372765324716)
+ p_id=>wwv_flow_imp.id(3825769062954510282)
 ,p_list_item_display_sequence=>35
 ,p_list_item_link_text=>'Invoices'
 ,p_list_item_link_target=>'f?p=&APP_ID.:114:&SESSION.::&DEBUG.::::'
@@ -42,7 +42,7 @@ wwv_flow_imp_shared.create_list_item(
 ,p_list_item_current_type=>'TARGET_PAGE'
 );
 wwv_flow_imp_shared.create_list_item(
- p_id=>wwv_flow_imp.id(3603943635861324715)
+ p_id=>wwv_flow_imp.id(3825768326050510281)
 ,p_list_item_display_sequence=>40
 ,p_list_item_link_text=>'Expenditure Register'
 ,p_list_item_link_target=>'f?p=&APP_ID.:100:&SESSION.::&DEBUG.::::'

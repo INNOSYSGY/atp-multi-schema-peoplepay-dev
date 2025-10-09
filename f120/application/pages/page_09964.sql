@@ -8,7 +8,7 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_page.create_page(
@@ -21,7 +21,7 @@ wwv_flow_imp_page.create_page(
 ,p_page_component_map=>'17'
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(11694278156538429977)
+ p_id=>wwv_flow_imp.id(11916102846727615543)
 ,p_plug_name=>'View Appraisal Management Guide'
 ,p_region_name=>'view_pdf'
 ,p_region_template_options=>'#DEFAULT#:t-Region--scrollBody'
@@ -38,7 +38,7 @@ wwv_flow_imp_page.create_page_plug(
   'output_as', 'HTML')).to_clob
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(11694279161702429987)
+ p_id=>wwv_flow_imp.id(11916103851891615553)
 ,p_plug_name=>'New'
 ,p_region_template_options=>'#DEFAULT#'
 ,p_plug_template=>4501440665235496320
@@ -49,9 +49,9 @@ wwv_flow_imp_page.create_page_plug(
   'output_as', 'HTML')).to_clob
 );
 wwv_flow_imp_page.create_page_button(
- p_id=>wwv_flow_imp.id(449494304184146291)
+ p_id=>wwv_flow_imp.id(671318994373331857)
 ,p_button_sequence=>10
-,p_button_plug_id=>wwv_flow_imp.id(11694279161702429987)
+,p_button_plug_id=>wwv_flow_imp.id(11916103851891615553)
 ,p_button_name=>'SHOW_GUIDE'
 ,p_button_action=>'SUBMIT'
 ,p_button_template_options=>'#DEFAULT#'
@@ -63,10 +63,10 @@ wwv_flow_imp_page.create_page_button(
 ,p_button_condition_type=>'NEVER'
 );
 wwv_flow_imp_page.create_page_item(
- p_id=>wwv_flow_imp.id(449493660385146291)
+ p_id=>wwv_flow_imp.id(671318350574331857)
 ,p_name=>'P9964_ID'
 ,p_item_sequence=>10
-,p_item_plug_id=>wwv_flow_imp.id(11694278156538429977)
+,p_item_plug_id=>wwv_flow_imp.id(11916102846727615543)
 ,p_use_cache_before_default=>'NO'
 ,p_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
 'select ',
@@ -89,7 +89,7 @@ wwv_flow_imp_page.create_page_item(
   'value_protected', 'Y')).to_clob
 );
 wwv_flow_imp_page.create_page_da_event(
- p_id=>wwv_flow_imp.id(475633099243521961)
+ p_id=>wwv_flow_imp.id(697457789432707527)
 ,p_name=>'ShowPDF'
 ,p_event_sequence=>10
 ,p_bind_type=>'bind'
@@ -97,8 +97,8 @@ wwv_flow_imp_page.create_page_da_event(
 ,p_bind_event_type=>'ready'
 );
 wwv_flow_imp_page.create_page_da_action(
- p_id=>wwv_flow_imp.id(475633561023521962)
-,p_event_id=>wwv_flow_imp.id(475633099243521961)
+ p_id=>wwv_flow_imp.id(697458251212707528)
+,p_event_id=>wwv_flow_imp.id(697457789432707527)
 ,p_event_result=>'TRUE'
 ,p_action_sequence=>10
 ,p_execute_on_page_init=>'N'
@@ -131,8 +131,8 @@ wwv_flow_imp_page.create_page_da_action(
 ,p_wait_for_result=>'Y'
 );
 wwv_flow_imp_page.create_page_da_action(
- p_id=>wwv_flow_imp.id(475633995805521963)
-,p_event_id=>wwv_flow_imp.id(475633099243521961)
+ p_id=>wwv_flow_imp.id(697458685994707529)
+,p_event_id=>wwv_flow_imp.id(697457789432707527)
 ,p_event_result=>'TRUE'
 ,p_action_sequence=>20
 ,p_execute_on_page_init=>'N'
@@ -152,7 +152,7 @@ wwv_flow_imp_page.create_page_da_action(
 '$("#view_pdf").append(preview);'))
 );
 wwv_flow_imp_page.create_page_process(
- p_id=>wwv_flow_imp.id(449494744879146292)
+ p_id=>wwv_flow_imp.id(671319435068331858)
 ,p_process_sequence=>10
 ,p_process_point=>'BEFORE_HEADER'
 ,p_process_type=>'NATIVE_PLSQL'
@@ -163,7 +163,7 @@ wwv_flow_imp_page.create_page_process(
 'END;'))
 ,p_process_clob_language=>'PLSQL'
 ,p_error_display_location=>'INLINE_IN_NOTIFICATION'
-,p_process_when_button_id=>wwv_flow_imp.id(449494304184146291)
+,p_process_when_button_id=>wwv_flow_imp.id(671318994373331857)
 ,p_internal_uid=>27702751681149718
 );
 wwv_flow_imp.component_end;

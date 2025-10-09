@@ -8,11 +8,11 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_shared.create_search_config(
- p_id=>wwv_flow_imp.id(312394572458566963)
+ p_id=>wwv_flow_imp.id(534219262647752529)
 ,p_label=>'Employee_Offence_Actions'
 ,p_static_id=>'employee_offence_actions'
 ,p_search_type=>'SIMPLE'

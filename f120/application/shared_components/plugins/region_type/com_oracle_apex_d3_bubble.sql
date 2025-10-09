@@ -8,11 +8,11 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_shared.create_plugin(
- p_id=>wwv_flow_imp.id(5371020072419590228)
+ p_id=>wwv_flow_imp.id(5592844762608775794)
 ,p_plugin_type=>'REGION TYPE'
 ,p_name=>'COM.ORACLE.APEX.D3.BUBBLE'
 ,p_display_name=>'D3 Bubble Chart'
@@ -334,8 +334,8 @@ wwv_flow_imp_shared.create_plugin(
 ,p_files_version=>163
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3407419915311584713)
-,p_plugin_id=>wwv_flow_imp.id(5371020072419590228)
+ p_id=>wwv_flow_imp.id(3629244605500770279)
+,p_plugin_id=>wwv_flow_imp.id(5592844762608775794)
 ,p_attribute_scope=>'APPLICATION'
 ,p_attribute_sequence=>1
 ,p_display_sequence=>510
@@ -353,8 +353,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 '<p>Note: This setting can be overridden by the ''Min Height'' setting on the region.</p>'))
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3407420241213584713)
-,p_plugin_id=>wwv_flow_imp.id(5371020072419590228)
+ p_id=>wwv_flow_imp.id(3629244931402770279)
+,p_plugin_id=>wwv_flow_imp.id(5592844762608775794)
 ,p_attribute_scope=>'APPLICATION'
 ,p_attribute_sequence=>2
 ,p_display_sequence=>520
@@ -371,8 +371,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 '<p>Note: This setting can be overridden by the ''Maximum Height'' setting on the region.</p>'))
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3407420667624584713)
-,p_plugin_id=>wwv_flow_imp.id(5371020072419590228)
+ p_id=>wwv_flow_imp.id(3629245357813770279)
+,p_plugin_id=>wwv_flow_imp.id(5592844762608775794)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>2
 ,p_display_sequence=>100
@@ -387,36 +387,36 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'<p>Select the color scheme used to render the chart.</p>'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3407421048539584714)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3407420667624584713)
+ p_id=>wwv_flow_imp.id(3629245738728770280)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3629245357813770279)
 ,p_display_sequence=>10
 ,p_display_value=>'Modern'
 ,p_return_value=>'MODERN'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3407421577827584714)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3407420667624584713)
+ p_id=>wwv_flow_imp.id(3629246268016770280)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3629245357813770279)
 ,p_display_sequence=>20
 ,p_display_value=>'Modern 2'
 ,p_return_value=>'MODERN2'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3407422115842584714)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3407420667624584713)
+ p_id=>wwv_flow_imp.id(3629246806031770280)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3629245357813770279)
 ,p_display_sequence=>30
 ,p_display_value=>'Solar'
 ,p_return_value=>'SOLAR'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3407422600265584715)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3407420667624584713)
+ p_id=>wwv_flow_imp.id(3629247290454770281)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3629245357813770279)
 ,p_display_sequence=>40
 ,p_display_value=>'Metro'
 ,p_return_value=>'METRO'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3407423112791584715)
-,p_plugin_id=>wwv_flow_imp.id(5371020072419590228)
+ p_id=>wwv_flow_imp.id(3629247802980770281)
+,p_plugin_id=>wwv_flow_imp.id(5592844762608775794)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>12
 ,p_display_sequence=>10
@@ -429,8 +429,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'Select the column from the region SQL Query that holds the labels for the bubbles.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3407423493186584715)
-,p_plugin_id=>wwv_flow_imp.id(5371020072419590228)
+ p_id=>wwv_flow_imp.id(3629248183375770281)
+,p_plugin_id=>wwv_flow_imp.id(5592844762608775794)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>13
 ,p_display_sequence=>20
@@ -443,8 +443,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'Select the column from the region SQL Query that holds the values for the bubles.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3407423920368584715)
-,p_plugin_id=>wwv_flow_imp.id(5371020072419590228)
+ p_id=>wwv_flow_imp.id(3629248610557770281)
+,p_plugin_id=>wwv_flow_imp.id(5592844762608775794)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>14
 ,p_display_sequence=>40
@@ -457,8 +457,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'Select the column from the region SQL Query that holds the primary key column.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3407424257688584716)
-,p_plugin_id=>wwv_flow_imp.id(5371020072419590228)
+ p_id=>wwv_flow_imp.id(3629248947877770282)
+,p_plugin_id=>wwv_flow_imp.id(5592844762608775794)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>15
 ,p_display_sequence=>50
@@ -471,8 +471,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'Select the column from the region SQL Query that holds the color group for the bubble.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3407424689782584716)
-,p_plugin_id=>wwv_flow_imp.id(5371020072419590228)
+ p_id=>wwv_flow_imp.id(3629249379971770282)
+,p_plugin_id=>wwv_flow_imp.id(5592844762608775794)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>18
 ,p_display_sequence=>30
@@ -491,8 +491,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'<p>Enter a target page to be called when the user clicks a chart entry.</p>'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3407425064045584716)
-,p_plugin_id=>wwv_flow_imp.id(5371020072419590228)
+ p_id=>wwv_flow_imp.id(3629249754234770282)
+,p_plugin_id=>wwv_flow_imp.id(5592844762608775794)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>19
 ,p_display_sequence=>60
@@ -509,29 +509,29 @@ wwv_flow_imp_shared.create_plugin_attribute(
 '<p>Note: Leave all options unchecked to disable the tooltip.</p>'))
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3407425436452584716)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3407425064045584716)
+ p_id=>wwv_flow_imp.id(3629250126641770282)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3629249754234770282)
 ,p_display_sequence=>10
 ,p_display_value=>'Show series name'
 ,p_return_value=>'SERIES'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3407425979624584717)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3407425064045584716)
+ p_id=>wwv_flow_imp.id(3629250669813770283)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3629249754234770282)
 ,p_display_sequence=>20
 ,p_display_value=>'Custom column'
 ,p_return_value=>'CUSTOM'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3407426474920584717)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3407425064045584716)
+ p_id=>wwv_flow_imp.id(3629251165109770283)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3629249754234770282)
 ,p_display_sequence=>30
 ,p_display_value=>'Show Value'
 ,p_return_value=>'VALUE'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3407426954433584717)
-,p_plugin_id=>wwv_flow_imp.id(5371020072419590228)
+ p_id=>wwv_flow_imp.id(3629251644622770283)
+,p_plugin_id=>wwv_flow_imp.id(5592844762608775794)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>20
 ,p_display_sequence=>70
@@ -541,15 +541,15 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_is_required=>true
 ,p_column_data_types=>'VARCHAR2'
 ,p_is_translatable=>false
-,p_depending_on_attribute_id=>wwv_flow_imp.id(3407425064045584716)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(3629249754234770282)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'IN_LIST'
 ,p_depending_on_expression=>'SERIES:CUSTOM:VALUE,SERIES:CUSTOM,CUSTOM:VALUE,CUSTOM'
 ,p_help_text=>'Enter the column from the region SQL Query that holds the custom tooltip values.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3407427420099584718)
-,p_plugin_id=>wwv_flow_imp.id(5371020072419590228)
+ p_id=>wwv_flow_imp.id(3629252110288770284)
+,p_plugin_id=>wwv_flow_imp.id(5592844762608775794)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>21
 ,p_display_sequence=>110
@@ -566,8 +566,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'Enter the minimum height, in pixels, of the chart. Chart width will adapt to the size of the region.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3407427810689584718)
-,p_plugin_id=>wwv_flow_imp.id(5371020072419590228)
+ p_id=>wwv_flow_imp.id(3629252500878770284)
+,p_plugin_id=>wwv_flow_imp.id(5592844762608775794)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>22
 ,p_display_sequence=>120
@@ -584,8 +584,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'The maximum height, in pixels, of the chart. Chart width will adapt to the size of the region.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3407428226312584718)
-,p_plugin_id=>wwv_flow_imp.id(5371020072419590228)
+ p_id=>wwv_flow_imp.id(3629252916501770284)
+,p_plugin_id=>wwv_flow_imp.id(5592844762608775794)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>23
 ,p_display_sequence=>80
@@ -599,22 +599,22 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'Select where the legend is displayed on the chart.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3407428575017584719)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3407428226312584718)
+ p_id=>wwv_flow_imp.id(3629253265206770285)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3629252916501770284)
 ,p_display_sequence=>10
 ,p_display_value=>'Above Chart'
 ,p_return_value=>'TOP'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3407429075008584719)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3407428226312584718)
+ p_id=>wwv_flow_imp.id(3629253765197770285)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3629252916501770284)
 ,p_display_sequence=>20
 ,p_display_value=>'Below Chart'
 ,p_return_value=>'BOTTOM'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3407429579510584719)
-,p_plugin_id=>wwv_flow_imp.id(5371020072419590228)
+ p_id=>wwv_flow_imp.id(3629254269699770285)
+,p_plugin_id=>wwv_flow_imp.id(5592844762608775794)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>24
 ,p_display_sequence=>130
@@ -640,8 +640,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 '- "circle_highlight_radiusplus": Plus factor to increase the bubble on highlight.'))
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3407429977184584719)
-,p_plugin_id=>wwv_flow_imp.id(5371020072419590228)
+ p_id=>wwv_flow_imp.id(3629254667373770285)
+,p_plugin_id=>wwv_flow_imp.id(5592844762608775794)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>25
 ,p_display_sequence=>90
@@ -655,40 +655,40 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'Select how the bubbles are arranged on the chart.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3407430385364584720)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3407429977184584719)
+ p_id=>wwv_flow_imp.id(3629255075553770286)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3629254667373770285)
 ,p_display_sequence=>10
 ,p_display_value=>'D3 Ascending'
 ,p_return_value=>'D3ASCENDING'
 ,p_help_text=>'D3 Ascending sorting function.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3407430909102584720)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3407429977184584719)
+ p_id=>wwv_flow_imp.id(3629255599291770286)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3629254667373770285)
 ,p_display_sequence=>20
 ,p_display_value=>'D3 Descending'
 ,p_return_value=>'D3DESCENDING'
 ,p_help_text=>'D3 Descending sorting function.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3407431329717584720)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3407429977184584719)
+ p_id=>wwv_flow_imp.id(3629256019906770286)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3629254667373770285)
 ,p_display_sequence=>30
 ,p_display_value=>'Ascending'
 ,p_return_value=>'ASCENDING'
 ,p_help_text=>'Sorts bubble from the smallest size on the outside to the biggest in the center.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3407431893746584721)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3407429977184584719)
+ p_id=>wwv_flow_imp.id(3629256583935770287)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3629254667373770285)
 ,p_display_sequence=>40
 ,p_display_value=>'Descending'
 ,p_return_value=>'DESCENDING'
 ,p_help_text=>'Sorts bubbles from the biggest size on the outside to the smallest in the center.'
 );
 wwv_flow_imp_shared.create_plugin_std_attribute(
- p_id=>wwv_flow_imp.id(4095573674292977486)
-,p_plugin_id=>wwv_flow_imp.id(5371020072419590228)
+ p_id=>wwv_flow_imp.id(4317398364482163052)
+,p_plugin_id=>wwv_flow_imp.id(5592844762608775794)
 ,p_name=>'SOURCE_SQL'
 ,p_sql_min_column_count=>4
 ,p_examples=>wwv_flow_string.join(wwv_flow_t_varchar2(
@@ -706,26 +706,26 @@ wwv_flow_imp_shared.create_plugin_std_attribute(
 '</pre>'))
 );
 wwv_flow_imp_shared.create_plugin_event(
- p_id=>wwv_flow_imp.id(3407434337607584723)
-,p_plugin_id=>wwv_flow_imp.id(5371020072419590228)
+ p_id=>wwv_flow_imp.id(3629259027796770289)
+,p_plugin_id=>wwv_flow_imp.id(5592844762608775794)
 ,p_name=>'com_oracle_apex_d3_click'
 ,p_display_name=>'D3Chart_MouseClick'
 );
 wwv_flow_imp_shared.create_plugin_event(
- p_id=>wwv_flow_imp.id(3407434817521584723)
-,p_plugin_id=>wwv_flow_imp.id(5371020072419590228)
+ p_id=>wwv_flow_imp.id(3629259507710770289)
+,p_plugin_id=>wwv_flow_imp.id(5592844762608775794)
 ,p_name=>'com_oracle_apex_d3_initialized'
 ,p_display_name=>'D3Chart_Initialized'
 );
 wwv_flow_imp_shared.create_plugin_event(
- p_id=>wwv_flow_imp.id(3407435132262584724)
-,p_plugin_id=>wwv_flow_imp.id(5371020072419590228)
+ p_id=>wwv_flow_imp.id(3629259822451770290)
+,p_plugin_id=>wwv_flow_imp.id(5592844762608775794)
 ,p_name=>'com_oracle_apex_d3_mouseout'
 ,p_display_name=>'D3Chart_MouseOut'
 );
 wwv_flow_imp_shared.create_plugin_event(
- p_id=>wwv_flow_imp.id(3407435564297584724)
-,p_plugin_id=>wwv_flow_imp.id(5371020072419590228)
+ p_id=>wwv_flow_imp.id(3629260254486770290)
+,p_plugin_id=>wwv_flow_imp.id(5592844762608775794)
 ,p_name=>'com_oracle_apex_d3_mouseover'
 ,p_display_name=>'D3Chart_MouseOver'
 );

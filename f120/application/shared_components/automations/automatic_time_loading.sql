@@ -8,11 +8,11 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_shared.create_automation(
- p_id=>wwv_flow_imp.id(3409032046567881342)
+ p_id=>wwv_flow_imp.id(3630856736757066908)
 ,p_name=>'Automatic Time Loading'
 ,p_static_id=>'timeclock-loading'
 ,p_trigger_type=>'POLLING'
@@ -25,8 +25,8 @@ wwv_flow_imp_shared.create_automation(
 ,p_error_handling_type=>'IGNORE'
 );
 wwv_flow_imp_shared.create_automation_action(
- p_id=>wwv_flow_imp.id(3409032350529881345)
-,p_automation_id=>wwv_flow_imp.id(3409032046567881342)
+ p_id=>wwv_flow_imp.id(3630857040719066911)
+,p_automation_id=>wwv_flow_imp.id(3630856736757066908)
 ,p_name=>'Process Times'
 ,p_execution_sequence=>10
 ,p_action_type=>'NATIVE_PLSQL'

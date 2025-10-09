@@ -8,11 +8,11 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_shared.create_list_of_values(
- p_id=>wwv_flow_imp.id(3632540160018481202)
+ p_id=>wwv_flow_imp.id(3854364850207666768)
 ,p_lov_name=>'INVENTORY_ITEM_PO'
 ,p_lov_query=>wwv_flow_string.join(wwv_flow_t_varchar2(
 'If pkg_global_fnts.status_descript(:P620_STATUS)  like ''COMPLE%'' then ',

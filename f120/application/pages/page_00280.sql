@@ -8,7 +8,7 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_page.create_page(
@@ -20,7 +20,7 @@ wwv_flow_imp_page.create_page(
 '',
 ''))
 ,p_autocomplete_on_off=>'OFF'
-,p_group_id=>wwv_flow_imp.id(3603892462384379471)
+,p_group_id=>wwv_flow_imp.id(3825717152573565037)
 ,p_inline_css=>wwv_flow_string.join(wwv_flow_t_varchar2(
 '.content{',
 '       background-image: url("#WORKSPACE_IMAGES#Recruitment_Process.png");',
@@ -34,7 +34,7 @@ wwv_flow_imp_page.create_page(
 ,p_page_component_map=>'11'
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(4465080737798903946)
+ p_id=>wwv_flow_imp.id(4686905427988089512)
 ,p_plug_name=>'x'
 ,p_region_template_options=>'#DEFAULT#'
 ,p_region_attributes=>'#APP_IMAGES#recruitment flow diagram.png'

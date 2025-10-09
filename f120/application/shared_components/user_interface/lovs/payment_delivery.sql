@@ -8,36 +8,36 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_shared.create_list_of_values(
- p_id=>wwv_flow_imp.id(3632464477973335735)
+ p_id=>wwv_flow_imp.id(3854289168162521301)
 ,p_lov_name=>'PAYMENT_DELIVERY'
-,p_lov_query=>'.'||wwv_flow_imp.id(3632464477973335735)||'.'
+,p_lov_query=>'.'||wwv_flow_imp.id(3854289168162521301)||'.'
 ,p_location=>'STATIC'
 ,p_version_scn=>1
 );
 wwv_flow_imp_shared.create_static_lov_data(
- p_id=>wwv_flow_imp.id(3632464185508335729)
+ p_id=>wwv_flow_imp.id(3854288875697521295)
 ,p_lov_disp_sequence=>1
 ,p_lov_disp_value=>'Full Before Delivery'
 ,p_lov_return_value=>'FBD'
 );
 wwv_flow_imp_shared.create_static_lov_data(
- p_id=>wwv_flow_imp.id(3632463808270335728)
+ p_id=>wwv_flow_imp.id(3854288498459521294)
 ,p_lov_disp_sequence=>2
 ,p_lov_disp_value=>'Partial Before Delivery'
 ,p_lov_return_value=>'PBD'
 );
 wwv_flow_imp_shared.create_static_lov_data(
- p_id=>wwv_flow_imp.id(3632463397130335725)
+ p_id=>wwv_flow_imp.id(3854288087319521291)
 ,p_lov_disp_sequence=>3
 ,p_lov_disp_value=>'Partial After Delivery'
 ,p_lov_return_value=>'PAD'
 );
 wwv_flow_imp_shared.create_static_lov_data(
- p_id=>wwv_flow_imp.id(3632463042393335719)
+ p_id=>wwv_flow_imp.id(3854287732582521285)
 ,p_lov_disp_sequence=>4
 ,p_lov_disp_value=>'Full After Delivery'
 ,p_lov_return_value=>'FAD'

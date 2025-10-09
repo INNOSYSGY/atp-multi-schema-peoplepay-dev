@@ -8,11 +8,11 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_shared.create_list_of_values(
- p_id=>wwv_flow_imp.id(3467475452935831054)
+ p_id=>wwv_flow_imp.id(3689300143125016620)
 ,p_lov_name=>'INVENTORY_ITEM_ONHAND'
 ,p_lov_query=>wwv_flow_string.join(wwv_flow_t_varchar2(
 'IF :P21_LOT_CONTROL_ID IS NULL THEN',
@@ -46,7 +46,7 @@ wwv_flow_imp_shared.create_list_of_values(
 ,p_version_scn=>1
 );
 wwv_flow_imp_shared.create_list_of_values_cols(
- p_id=>wwv_flow_imp.id(3467475085761831054)
+ p_id=>wwv_flow_imp.id(3689299775951016620)
 ,p_query_column_name=>'INVENTORY_ITEM_ID'
 ,p_display_sequence=>10
 ,p_data_type=>'NUMBER'
@@ -54,21 +54,21 @@ wwv_flow_imp_shared.create_list_of_values_cols(
 ,p_is_searchable=>'N'
 );
 wwv_flow_imp_shared.create_list_of_values_cols(
- p_id=>wwv_flow_imp.id(3467474703419831053)
+ p_id=>wwv_flow_imp.id(3689299393609016619)
 ,p_query_column_name=>'ORG_ITEM_DESCRIPTION'
 ,p_heading=>'Org Item Description'
 ,p_display_sequence=>20
 ,p_data_type=>'VARCHAR2'
 );
 wwv_flow_imp_shared.create_list_of_values_cols(
- p_id=>wwv_flow_imp.id(3467474291196831053)
+ p_id=>wwv_flow_imp.id(3689298981386016619)
 ,p_query_column_name=>'CATEGORY_DESC'
 ,p_heading=>'Category Desc'
 ,p_display_sequence=>30
 ,p_data_type=>'VARCHAR2'
 );
 wwv_flow_imp_shared.create_list_of_values_cols(
- p_id=>wwv_flow_imp.id(3467473884877831053)
+ p_id=>wwv_flow_imp.id(3689298575067016619)
 ,p_query_column_name=>'MARKET_PRICE'
 ,p_heading=>'Market Price'
 ,p_display_sequence=>40
@@ -76,42 +76,42 @@ wwv_flow_imp_shared.create_list_of_values_cols(
 ,p_data_type=>'NUMBER'
 );
 wwv_flow_imp_shared.create_list_of_values_cols(
- p_id=>wwv_flow_imp.id(3467473469877831052)
+ p_id=>wwv_flow_imp.id(3689298160067016618)
 ,p_query_column_name=>'TAX_CODE'
 ,p_heading=>'Tax Code'
 ,p_display_sequence=>50
 ,p_data_type=>'VARCHAR2'
 );
 wwv_flow_imp_shared.create_list_of_values_cols(
- p_id=>wwv_flow_imp.id(3467473054098831052)
+ p_id=>wwv_flow_imp.id(3689297744288016618)
 ,p_query_column_name=>'RETURNABLE_FLAG'
 ,p_heading=>'Returnable'
 ,p_display_sequence=>60
 ,p_data_type=>'VARCHAR2'
 );
 wwv_flow_imp_shared.create_list_of_values_cols(
- p_id=>wwv_flow_imp.id(3467472641784831052)
+ p_id=>wwv_flow_imp.id(3689297331974016618)
 ,p_query_column_name=>'PURCHASING_ITEM_FLAG'
 ,p_heading=>'Purchasing'
 ,p_display_sequence=>70
 ,p_data_type=>'VARCHAR2'
 );
 wwv_flow_imp_shared.create_list_of_values_cols(
- p_id=>wwv_flow_imp.id(3467472223523831052)
+ p_id=>wwv_flow_imp.id(3689296913713016618)
 ,p_query_column_name=>'INVENTORY_ITEM_FLAG'
 ,p_heading=>'Inventory'
 ,p_display_sequence=>80
 ,p_data_type=>'VARCHAR2'
 );
 wwv_flow_imp_shared.create_list_of_values_cols(
- p_id=>wwv_flow_imp.id(3467471861805831052)
+ p_id=>wwv_flow_imp.id(3689296551995016618)
 ,p_query_column_name=>'STOCK_ENABLED_FLAG'
 ,p_heading=>'Stockable'
 ,p_display_sequence=>90
 ,p_data_type=>'VARCHAR2'
 );
 wwv_flow_imp_shared.create_list_of_values_cols(
- p_id=>wwv_flow_imp.id(3467471438927831052)
+ p_id=>wwv_flow_imp.id(3689296129117016618)
 ,p_query_column_name=>'TRANS_ENABLED_FLAG'
 ,p_heading=>'Transactable'
 ,p_display_sequence=>100

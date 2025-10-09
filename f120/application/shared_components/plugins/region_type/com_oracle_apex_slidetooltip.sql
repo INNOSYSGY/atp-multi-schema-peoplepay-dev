@@ -8,11 +8,11 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_shared.create_plugin(
- p_id=>wwv_flow_imp.id(4589180498055586401)
+ p_id=>wwv_flow_imp.id(4811005188244771967)
 ,p_plugin_type=>'REGION TYPE'
 ,p_name=>'COM_ORACLE_APEX_SLIDETOOLTIP'
 ,p_display_name=>'Slide Tooltip'
@@ -147,8 +147,8 @@ wwv_flow_imp_shared.create_plugin(
 ,p_files_version=>352
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(5664029143818598905)
-,p_plugin_id=>wwv_flow_imp.id(4589180498055586401)
+ p_id=>wwv_flow_imp.id(5885853834007784471)
+,p_plugin_id=>wwv_flow_imp.id(4811005188244771967)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>1
 ,p_display_sequence=>2
@@ -161,8 +161,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'Select the column from the region SQL Query that holds the icon displayed before the title.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(5664029562599598906)
-,p_plugin_id=>wwv_flow_imp.id(4589180498055586401)
+ p_id=>wwv_flow_imp.id(5885854252788784472)
+,p_plugin_id=>wwv_flow_imp.id(4811005188244771967)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>2
 ,p_display_sequence=>3
@@ -175,8 +175,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'Select the column from the region SQL Query that holds the values displayed in the report.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(5664029918669598906)
-,p_plugin_id=>wwv_flow_imp.id(4589180498055586401)
+ p_id=>wwv_flow_imp.id(5885854608858784472)
+,p_plugin_id=>wwv_flow_imp.id(4811005188244771967)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>3
 ,p_display_sequence=>5
@@ -189,8 +189,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'Select the column from the region SQL Query that holds the value displayed at the end of each row displayed.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(5664030355443598906)
-,p_plugin_id=>wwv_flow_imp.id(4589180498055586401)
+ p_id=>wwv_flow_imp.id(5885855045632784472)
+,p_plugin_id=>wwv_flow_imp.id(4811005188244771967)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>4
 ,p_display_sequence=>1
@@ -204,24 +204,24 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'Select how the report fields are displayed.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(5664031270441598907)
-,p_plugin_attribute_id=>wwv_flow_imp.id(5664030355443598906)
+ p_id=>wwv_flow_imp.id(5885855960630784473)
+,p_plugin_attribute_id=>wwv_flow_imp.id(5885855045632784472)
 ,p_display_sequence=>10
 ,p_display_value=>'Slide'
 ,p_return_value=>'slide'
 ,p_help_text=>'A dropdown indicator is included at end of each record. Pressing this indicator displays the additional fields inline within the report, pushing additional records down.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(5664030754853598906)
-,p_plugin_attribute_id=>wwv_flow_imp.id(5664030355443598906)
+ p_id=>wwv_flow_imp.id(5885855445042784472)
+,p_plugin_attribute_id=>wwv_flow_imp.id(5885855045632784472)
 ,p_display_sequence=>20
 ,p_display_value=>'Tooltip'
 ,p_return_value=>'tooltip'
 ,p_help_text=>'The additional fields are displayed as a tooltip next to the record. The tooltip is displayed when you hover over the record.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(5664031692991598907)
-,p_plugin_id=>wwv_flow_imp.id(4589180498055586401)
+ p_id=>wwv_flow_imp.id(5885856383180784473)
+,p_plugin_id=>wwv_flow_imp.id(4811005188244771967)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>5
 ,p_display_sequence=>4
@@ -234,8 +234,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'<p>Enter a target page to be called when the user clicks a record.</p>'
 );
 wwv_flow_imp_shared.create_plugin_std_attribute(
- p_id=>wwv_flow_imp.id(4047611437582813071)
-,p_plugin_id=>wwv_flow_imp.id(4589180498055586401)
+ p_id=>wwv_flow_imp.id(4269436127771998637)
+,p_plugin_id=>wwv_flow_imp.id(4811005188244771967)
 ,p_name=>'SOURCE_SQL'
 ,p_is_required=>false
 ,p_sql_min_column_count=>1

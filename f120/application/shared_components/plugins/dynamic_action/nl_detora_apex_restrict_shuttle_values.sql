@@ -8,11 +8,11 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_shared.create_plugin(
- p_id=>wwv_flow_imp.id(649021366285699289)
+ p_id=>wwv_flow_imp.id(870846056474884855)
 ,p_plugin_type=>'DYNAMIC ACTION'
 ,p_name=>'NL.DETORA.APEX.RESTRICT_SHUTTLE_VALUES'
 ,p_display_name=>'Restrict Shuttle Values'
@@ -64,8 +64,8 @@ wwv_flow_imp_shared.create_plugin(
 ,p_files_version=>4
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(649021547302706057)
-,p_plugin_id=>wwv_flow_imp.id(649021366285699289)
+ p_id=>wwv_flow_imp.id(870846237491891623)
+,p_plugin_id=>wwv_flow_imp.id(870846056474884855)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>1
 ,p_display_sequence=>10
@@ -106,8 +106,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(665249870988066096)
-,p_plugin_id=>wwv_flow_imp.id(649021366285699289)
+ p_id=>wwv_flow_imp.id(887074561177251662)
+,p_plugin_id=>wwv_flow_imp.id(870846056474884855)
 ,p_file_name=>'apex_restrict_shuttle_values.js'
 ,p_mime_type=>'application/javascript'
 ,p_file_charset=>'utf-8'

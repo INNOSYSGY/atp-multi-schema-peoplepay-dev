@@ -8,17 +8,17 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_shared.create_list(
- p_id=>wwv_flow_imp.id(3559953252966649342)
+ p_id=>wwv_flow_imp.id(3781777943155834908)
 ,p_name=>'Attendance M Quick Menu'
 ,p_list_status=>'PUBLIC'
 ,p_version_scn=>1
 );
 wwv_flow_imp_shared.create_list_item(
- p_id=>wwv_flow_imp.id(3559952912319649341)
+ p_id=>wwv_flow_imp.id(3781777602508834907)
 ,p_list_item_display_sequence=>2
 ,p_list_item_link_text=>'Assign Shift Rotation'
 ,p_list_item_link_target=>'f?p=&APP_ID.:119:&SESSION.::&DEBUG.::::'
@@ -27,7 +27,7 @@ wwv_flow_imp_shared.create_list_item(
 ,p_list_item_current_type=>'TARGET_PAGE'
 );
 wwv_flow_imp_shared.create_list_item(
- p_id=>wwv_flow_imp.id(3559951365564649339)
+ p_id=>wwv_flow_imp.id(3781776055753834905)
 ,p_list_item_display_sequence=>20
 ,p_list_item_link_text=>'Employee Loaded Timesheet'
 ,p_list_item_link_target=>'f?p=&APP_ID.:1371:&SESSION.::&DEBUG.::::'
@@ -36,7 +36,7 @@ wwv_flow_imp_shared.create_list_item(
 ,p_list_item_current_type=>'TARGET_PAGE'
 );
 wwv_flow_imp_shared.create_list_item(
- p_id=>wwv_flow_imp.id(3559950965830649338)
+ p_id=>wwv_flow_imp.id(3781775656019834904)
 ,p_list_item_display_sequence=>30
 ,p_list_item_link_text=>'Employee Timesheet Summary'
 ,p_list_item_link_target=>'f?p=&APP_ID.:139:&SESSION.::&DEBUG.::::'
@@ -45,7 +45,7 @@ wwv_flow_imp_shared.create_list_item(
 ,p_list_item_current_type=>'TARGET_PAGE'
 );
 wwv_flow_imp_shared.create_list_item(
- p_id=>wwv_flow_imp.id(3559950550026649338)
+ p_id=>wwv_flow_imp.id(3781775240215834904)
 ,p_list_item_display_sequence=>40
 ,p_list_item_link_text=>'Load to Payroll'
 ,p_list_item_link_target=>'f?p=&APP_ID.:1:&SESSION.::&DEBUG.::::'
@@ -54,7 +54,7 @@ wwv_flow_imp_shared.create_list_item(
 ,p_list_item_current_type=>'TARGET_PAGE'
 );
 wwv_flow_imp_shared.create_list_item(
- p_id=>wwv_flow_imp.id(3559950093709649338)
+ p_id=>wwv_flow_imp.id(3781774783898834904)
 ,p_list_item_display_sequence=>50
 ,p_list_item_link_text=>'Timesheet Incomes'
 ,p_list_item_link_target=>'f?p=&APP_ID.:162:&SESSION.::&DEBUG.::::'
@@ -63,7 +63,7 @@ wwv_flow_imp_shared.create_list_item(
 ,p_list_item_current_type=>'TARGET_PAGE'
 );
 wwv_flow_imp_shared.create_list_item(
- p_id=>wwv_flow_imp.id(3559949730641649337)
+ p_id=>wwv_flow_imp.id(3781774420830834903)
 ,p_list_item_display_sequence=>60
 ,p_list_item_link_text=>'Timesheet Deductions (Absences)'
 ,p_list_item_link_target=>'f?p=&APP_ID.:94:&SESSION.::&DEBUG.::::'

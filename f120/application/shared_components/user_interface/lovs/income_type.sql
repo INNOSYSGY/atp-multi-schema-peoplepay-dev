@@ -8,42 +8,42 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_shared.create_list_of_values(
- p_id=>wwv_flow_imp.id(3632555947948481225)
+ p_id=>wwv_flow_imp.id(3854380638137666791)
 ,p_lov_name=>'INCOME_TYPE'
-,p_lov_query=>'.'||wwv_flow_imp.id(3632555947948481225)||'.'
+,p_lov_query=>'.'||wwv_flow_imp.id(3854380638137666791)||'.'
 ,p_location=>'STATIC'
 ,p_version_scn=>1
 );
 wwv_flow_imp_shared.create_static_lov_data(
- p_id=>wwv_flow_imp.id(3632555531338481225)
+ p_id=>wwv_flow_imp.id(3854380221527666791)
 ,p_lov_disp_sequence=>1
 ,p_lov_disp_value=>'Allowance'
 ,p_lov_return_value=>'Allowance'
 );
 wwv_flow_imp_shared.create_static_lov_data(
- p_id=>wwv_flow_imp.id(3632555119980481225)
+ p_id=>wwv_flow_imp.id(3854379810169666791)
 ,p_lov_disp_sequence=>2
 ,p_lov_disp_value=>'Benefit'
 ,p_lov_return_value=>'Benefit'
 );
 wwv_flow_imp_shared.create_static_lov_data(
- p_id=>wwv_flow_imp.id(3632554713453481224)
+ p_id=>wwv_flow_imp.id(3854379403642666790)
 ,p_lov_disp_sequence=>3
 ,p_lov_disp_value=>'Incentive'
 ,p_lov_return_value=>'Incentive'
 );
 wwv_flow_imp_shared.create_static_lov_data(
- p_id=>wwv_flow_imp.id(3632554355490481224)
+ p_id=>wwv_flow_imp.id(3854379045679666790)
 ,p_lov_disp_sequence=>4
 ,p_lov_disp_value=>'Refund'
 ,p_lov_return_value=>'Refund'
 );
 wwv_flow_imp_shared.create_static_lov_data(
- p_id=>wwv_flow_imp.id(3632553874740481223)
+ p_id=>wwv_flow_imp.id(3854378564929666789)
 ,p_lov_disp_sequence=>5
 ,p_lov_disp_value=>'Earnings'
 ,p_lov_return_value=>'Earnings'

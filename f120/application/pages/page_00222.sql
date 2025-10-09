@@ -8,7 +8,7 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_page.create_page(
@@ -23,7 +23,7 @@ wwv_flow_imp_page.create_page(
 ,p_page_component_map=>'18'
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(3261478745539926356)
+ p_id=>wwv_flow_imp.id(3483303435729111922)
 ,p_plug_name=>'INC'
 ,p_region_template_options=>'#DEFAULT#'
 ,p_component_template_options=>'#DEFAULT#'
@@ -73,7 +73,7 @@ wwv_flow_imp_page.create_page_plug(
 ,p_prn_border_color=>'#666666'
 );
 wwv_flow_imp_page.create_worksheet(
- p_id=>wwv_flow_imp.id(3261478888937926357)
+ p_id=>wwv_flow_imp.id(3483303579127111923)
 ,p_max_row_count=>'1000000'
 ,p_allow_save_rpt_public=>'Y'
 ,p_pagination_type=>'ROWS_X_TO_Y'
@@ -90,7 +90,7 @@ wwv_flow_imp_page.create_worksheet(
 ,p_internal_uid=>314840689177427405
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(307068115547622312)
+ p_id=>wwv_flow_imp.id(528892805736807878)
 ,p_db_column_name=>'DESCRIPTION'
 ,p_display_order=>10
 ,p_column_identifier=>'AB'
@@ -100,7 +100,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(307067884863622310)
+ p_id=>wwv_flow_imp.id(528892575052807876)
 ,p_db_column_name=>'UNIT_AMOUNT'
 ,p_display_order=>30
 ,p_column_identifier=>'AD'
@@ -112,7 +112,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(307067804801622309)
+ p_id=>wwv_flow_imp.id(528892494990807875)
 ,p_db_column_name=>'LEAVE_DOLLAR_VALUE'
 ,p_display_order=>40
 ,p_column_identifier=>'AE'
@@ -124,7 +124,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(307067490142622306)
+ p_id=>wwv_flow_imp.id(528892180331807872)
 ,p_db_column_name=>'QUANTITY'
 ,p_display_order=>50
 ,p_column_identifier=>'AF'
@@ -135,7 +135,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_rpt(
- p_id=>wwv_flow_imp.id(3264187406065545579)
+ p_id=>wwv_flow_imp.id(3486012096254731145)
 ,p_application_user=>'APXWS_DEFAULT'
 ,p_report_seq=>10
 ,p_report_alias=>'3175493'
@@ -146,38 +146,38 @@ wwv_flow_imp_page.create_worksheet_rpt(
 ,p_count_columns_on_break=>'WORK_DATE'
 );
 wwv_flow_imp_page.create_page_item(
- p_id=>wwv_flow_imp.id(307067579624622307)
+ p_id=>wwv_flow_imp.id(528892269813807873)
 ,p_name=>'P222_EMP_ID'
 ,p_item_sequence=>60
-,p_item_plug_id=>wwv_flow_imp.id(3261478745539926356)
+,p_item_plug_id=>wwv_flow_imp.id(3483303435729111922)
 ,p_display_as=>'NATIVE_HIDDEN'
 ,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
   'value_protected', 'N')).to_clob
 );
 wwv_flow_imp_page.create_page_item(
- p_id=>wwv_flow_imp.id(307067705639622308)
+ p_id=>wwv_flow_imp.id(528892395828807874)
 ,p_name=>'P222_EARNINGS_PERIOD_ID'
 ,p_item_sequence=>50
-,p_item_plug_id=>wwv_flow_imp.id(3261478745539926356)
+,p_item_plug_id=>wwv_flow_imp.id(3483303435729111922)
 ,p_display_as=>'NATIVE_HIDDEN'
 ,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
   'value_protected', 'N')).to_clob
 );
 wwv_flow_imp_page.create_page_item(
- p_id=>wwv_flow_imp.id(3261481972818926388)
+ p_id=>wwv_flow_imp.id(3483306663008111954)
 ,p_name=>'P222_INCOME_CODE'
 ,p_item_sequence=>30
-,p_item_plug_id=>wwv_flow_imp.id(3261478745539926356)
+,p_item_plug_id=>wwv_flow_imp.id(3483303435729111922)
 ,p_display_as=>'NATIVE_HIDDEN'
 ,p_encrypt_session_state_yn=>'N'
 ,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
   'value_protected', 'N')).to_clob
 );
 wwv_flow_imp_page.create_page_item(
- p_id=>wwv_flow_imp.id(3269351344743925855)
+ p_id=>wwv_flow_imp.id(3491176034933111421)
 ,p_name=>'P222_FLAG'
 ,p_item_sequence=>40
-,p_item_plug_id=>wwv_flow_imp.id(3261478745539926356)
+,p_item_plug_id=>wwv_flow_imp.id(3483303435729111922)
 ,p_display_as=>'NATIVE_HIDDEN'
 ,p_encrypt_session_state_yn=>'N'
 ,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(

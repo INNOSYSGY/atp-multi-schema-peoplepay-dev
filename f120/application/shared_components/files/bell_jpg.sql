@@ -8,7 +8,7 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp.g_varchar2_table := wwv_flow_imp.empty_varchar2_table;
@@ -109,7 +109,7 @@ wwv_flow_imp.g_varchar2_table(94) := '756BCE814AA7A3D2DB27E0555C7E2072D94A18EDF6
 wwv_flow_imp.g_varchar2_table(95) := '3240100A2008020080C420210190080940100401018B9C80C46680CC0404A0080202084000404A0080200802020840435A80C90040100401004010104200020250040100401010E6D5000101280200802008020080200802008020080200802008020080';
 wwv_flow_imp.g_varchar2_table(96) := '200802008020080200802008020080203FFFD9';
 wwv_flow_imp_shared.create_app_static_file(
- p_id=>wwv_flow_imp.id(3498459923677963717)
+ p_id=>wwv_flow_imp.id(3720284613867149283)
 ,p_file_name=>'Bell.jpg'
 ,p_mime_type=>'image/jpeg'
 ,p_file_charset=>'utf-8'

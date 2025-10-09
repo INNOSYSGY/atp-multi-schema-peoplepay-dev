@@ -8,7 +8,7 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp.g_varchar2_table := wwv_flow_imp.empty_varchar2_table;
@@ -574,7 +574,7 @@ wwv_flow_imp.g_varchar2_table(559) := '6B65796672616D657320736C6964654F757455707
 wwv_flow_imp.g_varchar2_table(560) := '3B2D7765626B69742D7472616E73666F726D3A7472616E736C617465336428302C2D313030252C30293B7472616E73666F726D3A7472616E736C617465336428302C2D313030252C30297D7D2E736C6964654F757455707B2D7765626B69742D616E696D';
 wwv_flow_imp.g_varchar2_table(561) := '6174696F6E2D6E616D653A736C6964654F757455703B616E696D6174696F6E2D6E616D653A736C6964654F757455707D';
 wwv_flow_imp_shared.create_app_static_file(
- p_id=>wwv_flow_imp.id(3602701095390270104)
+ p_id=>wwv_flow_imp.id(3824525785579455670)
 ,p_file_name=>'css/animate.min.css'
 ,p_mime_type=>'text/css'
 ,p_file_charset=>'utf-8'

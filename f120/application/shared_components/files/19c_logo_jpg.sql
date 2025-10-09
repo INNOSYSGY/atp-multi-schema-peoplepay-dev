@@ -8,7 +8,7 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp.g_varchar2_table := wwv_flow_imp.empty_varchar2_table;
@@ -92,7 +92,7 @@ wwv_flow_imp.g_varchar2_table(77) := '04040404040404040404128080821010104A084040
 wwv_flow_imp.g_varchar2_table(78) := '02020202094108080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808250101010420202094041080808080808010';
 wwv_flow_imp.g_varchar2_table(79) := '104A0202084128080808082104A0202020208404128082104A020202020202020202020840412808083FFFD9';
 wwv_flow_imp_shared.create_app_static_file(
- p_id=>wwv_flow_imp.id(3539870955580470909)
+ p_id=>wwv_flow_imp.id(3761695645769656475)
 ,p_file_name=>'19c_logo.jpg'
 ,p_mime_type=>'image/jpeg'
 ,p_file_charset=>'utf-8'

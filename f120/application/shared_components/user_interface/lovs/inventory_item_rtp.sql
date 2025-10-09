@@ -8,11 +8,11 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_shared.create_list_of_values(
- p_id=>wwv_flow_imp.id(3467285527996343739)
+ p_id=>wwv_flow_imp.id(3689110218185529305)
 ,p_lov_name=>'INVENTORY_ITEM_RTP'
 ,p_lov_query=>wwv_flow_string.join(wwv_flow_t_varchar2(
 ' IF  upper(:P165_ITEM_PARTITION) = ''PHARMACEUTICALS'' THEN',
@@ -74,7 +74,7 @@ wwv_flow_imp_shared.create_list_of_values(
 ,p_version_scn=>1
 );
 wwv_flow_imp_shared.create_list_of_values_cols(
- p_id=>wwv_flow_imp.id(3467285174023327875)
+ p_id=>wwv_flow_imp.id(3689109864212513441)
 ,p_query_column_name=>'ONHAND_ID'
 ,p_display_sequence=>10
 ,p_data_type=>'VARCHAR2'
@@ -82,28 +82,28 @@ wwv_flow_imp_shared.create_list_of_values_cols(
 ,p_is_searchable=>'N'
 );
 wwv_flow_imp_shared.create_list_of_values_cols(
- p_id=>wwv_flow_imp.id(3467284761280327874)
+ p_id=>wwv_flow_imp.id(3689109451469513440)
 ,p_query_column_name=>'ORG_ITEM_DESCRIPTION'
 ,p_heading=>'Org Item Description'
 ,p_display_sequence=>20
 ,p_data_type=>'VARCHAR2'
 );
 wwv_flow_imp_shared.create_list_of_values_cols(
- p_id=>wwv_flow_imp.id(3467284360848327874)
+ p_id=>wwv_flow_imp.id(3689109051037513440)
 ,p_query_column_name=>'CATEGORY_DESC'
 ,p_heading=>'Category Desc'
 ,p_display_sequence=>30
 ,p_data_type=>'VARCHAR2'
 );
 wwv_flow_imp_shared.create_list_of_values_cols(
- p_id=>wwv_flow_imp.id(3467283972451327874)
+ p_id=>wwv_flow_imp.id(3689108662640513440)
 ,p_query_column_name=>'ON_HAND'
 ,p_heading=>'On Hand'
 ,p_display_sequence=>40
 ,p_data_type=>'NUMBER'
 );
 wwv_flow_imp_shared.create_list_of_values_cols(
- p_id=>wwv_flow_imp.id(3467283553751327874)
+ p_id=>wwv_flow_imp.id(3689108243940513440)
 ,p_query_column_name=>'INVENTORY_ITEM_ID'
 ,p_heading=>'Inventory Item Id'
 ,p_display_sequence=>50

@@ -8,22 +8,22 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_shared.create_menu(
- p_id=>wwv_flow_imp.id(3574991116301114303)
+ p_id=>wwv_flow_imp.id(3796815806490299869)
 ,p_name=>'activity'
 );
 wwv_flow_imp_shared.create_menu_option(
- p_id=>wwv_flow_imp.id(3574990512883104290)
-,p_parent_id=>wwv_flow_imp.id(3574990739613107090)
+ p_id=>wwv_flow_imp.id(3796815203072289856)
+,p_parent_id=>wwv_flow_imp.id(3796815429802292656)
 ,p_short_name=>'Create/Edit Activity Attendance Detail'
 ,p_link=>'f?p=&APP_ID.:1437:&SESSION.::&DEBUG.:::'
 ,p_page_id=>1437
 );
 wwv_flow_imp_shared.create_menu_option(
- p_id=>wwv_flow_imp.id(3574990739613107090)
+ p_id=>wwv_flow_imp.id(3796815429802292656)
 ,p_short_name=>'Create/Edit Activity Attendance'
 ,p_link=>'f?p=&APP_ID.:1436:&SESSION.::&DEBUG.:::'
 ,p_page_id=>1436
