@@ -77,6 +77,7 @@ wwv_imp_workspace.create_flow(
 ,p_substitution_value_02=>'http://www.oracle.com/technetwork/developer-tools/apex/index.html'
 ,p_file_prefix => nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
 ,p_files_version=>62
+<<<<<<< HEAD
 ,p_version_scn=>45593435268554
 ,p_print_server_type=>'INSTANCE'
 ,p_file_storage=>'DB'
