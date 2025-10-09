@@ -1,0 +1,32 @@
+prompt --application/shared_components/navigation/breadcrumbs/appraisal
+begin
+--   Manifest
+--     MENU: Appraisal
+--   Manifest End
+wwv_flow_imp.component_begin (
+ p_version_yyyy_mm_dd=>'2024.11.30'
+,p_release=>'24.2.9'
+,p_default_workspace_id=>31592798490575853
+,p_default_application_id=>800
+,p_default_id_offset=>221543258820678920
+,p_default_owner=>'TEMPLATE_APPV8'
+);
+wwv_flow_imp_shared.create_menu(
+ p_id=>wwv_flow_imp.id(3796521698258620135)
+,p_name=>'Appraisal'
+);
+wwv_flow_imp_shared.create_menu_option(
+ p_id=>wwv_flow_imp.id(3854148980631257664)
+,p_short_name=>'Create/Edit Evaluation'
+,p_link=>'f?p=&APP_ID.:1497:&SESSION.::&DEBUG.:::'
+,p_page_id=>1497
+);
+wwv_flow_imp_shared.create_menu_option(
+ p_id=>wwv_flow_imp.id(3854149141285262255)
+,p_short_name=>'Create/Edit Job Objectives'
+,p_link=>'f?p=&APP_ID.:1498:&SESSION.::&DEBUG.:::'
+,p_page_id=>1498
+);
+wwv_flow_imp.component_end;
+end;
+/
