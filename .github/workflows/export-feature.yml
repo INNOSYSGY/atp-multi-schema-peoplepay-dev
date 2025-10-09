@@ -59,7 +59,9 @@ jobs:
           
           cat > get_app_id <<EOF
           SET FEEDBACK OFF HEADING OFF PAGESIZE 0;
-          SELECT application_id FROM apex_applications WHERE alias = '${APEX_APP_ALIAS}' AND workspace = '${WKSPACE}';
+          SELECT apex_app_id 
+          FROM branch_to_app_id_map 
+          WHERE branch_name = '${{ github.event.inputs.branch_name }}';
           EOF
           
           export APP_ID=$(sql -S -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @ get_app_id |  tr -d '[:space:]' | sed 's/SQL>//g')
