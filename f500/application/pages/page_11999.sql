@@ -1,0 +1,536 @@
+prompt --application/pages/page_11999
+begin
+--   Manifest
+--     PAGE: 11999
+--   Manifest End
+wwv_flow_imp.component_begin (
+ p_version_yyyy_mm_dd=>'2024.11.30'
+,p_release=>'24.2.9'
+,p_default_workspace_id=>31592798490575853
+,p_default_application_id=>500
+,p_default_id_offset=>221402556581611694
+,p_default_owner=>'TEMPLATE_APPV8'
+);
+wwv_flow_imp_page.create_page(
+ p_id=>11999
+,p_name=>'rptleavepolicy'
+,p_alias=>'RPTLEAVEPOLICY'
+,p_step_title=>'Listing of Leave Policy'
+,p_autocomplete_on_off=>'OFF'
+,p_group_id=>wwv_flow_imp.id(3825295831470999282)
+,p_page_template_options=>'#DEFAULT#'
+,p_page_component_map=>'18'
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(1562173571312448805)
+,p_plug_name=>'Listing of Leave Policies'
+,p_region_template_options=>'#DEFAULT#'
+,p_plug_template=>2100526641005906379
+,p_plug_display_sequence=>10
+,p_query_type=>'TABLE'
+,p_query_table=>'HR_LV_LEAVEPOLICY'
+,p_query_where=>'org_id = :APP_ORG_ID'
+,p_include_rowid_column=>false
+,p_plug_source_type=>'NATIVE_IR'
+,p_prn_content_disposition=>'ATTACHMENT'
+,p_prn_units=>'INCHES'
+,p_prn_paper_size=>'LETTER'
+,p_prn_width=>11
+,p_prn_height=>8.5
+,p_prn_orientation=>'HORIZONTAL'
+,p_prn_page_header=>'Listing of Leave Policy'
+,p_prn_page_header_font_color=>'#000000'
+,p_prn_page_header_font_family=>'Helvetica'
+,p_prn_page_header_font_weight=>'normal'
+,p_prn_page_header_font_size=>'12'
+,p_prn_page_footer_font_color=>'#000000'
+,p_prn_page_footer_font_family=>'Helvetica'
+,p_prn_page_footer_font_weight=>'normal'
+,p_prn_page_footer_font_size=>'12'
+,p_prn_header_bg_color=>'#EEEEEE'
+,p_prn_header_font_color=>'#000000'
+,p_prn_header_font_family=>'Helvetica'
+,p_prn_header_font_weight=>'bold'
+,p_prn_header_font_size=>'10'
+,p_prn_body_bg_color=>'#FFFFFF'
+,p_prn_body_font_color=>'#000000'
+,p_prn_body_font_family=>'Helvetica'
+,p_prn_body_font_weight=>'normal'
+,p_prn_body_font_size=>'10'
+,p_prn_border_width=>.5
+,p_prn_page_header_alignment=>'CENTER'
+,p_prn_page_footer_alignment=>'CENTER'
+,p_prn_border_color=>'#666666'
+);
+wwv_flow_imp_page.create_worksheet(
+ p_id=>wwv_flow_imp.id(1562173529172448805)
+,p_name=>'rptleavepolicy'
+,p_max_row_count_message=>'The maximum row count for this report is #MAX_ROW_COUNT# rows.  Please apply a filter to reduce the number of records in your query.'
+,p_no_data_found_message=>'No data found.'
+,p_allow_save_rpt_public=>'Y'
+,p_pagination_type=>'ROWS_X_TO_Y'
+,p_pagination_display_pos=>'BOTTOM_RIGHT'
+,p_show_display_row_count=>'Y'
+,p_report_list_mode=>'TABS'
+,p_lazy_loading=>false
+,p_show_detail_link=>'C'
+,p_show_rows_per_page=>'N'
+,p_show_notify=>'Y'
+,p_download_formats=>'CSV:HTML:XLSX:PDF'
+,p_enable_mail_download=>'Y'
+,p_detail_link=>'f?p=&APP_ID.:11998:&SESSION.::&DEBUG.:11998:P11998_ID:#ID#'
+,p_detail_link_text=>'<img src="#IMAGE_PREFIX#app_ui/img/icons/apex-edit-pencil-alt.png" class="apex-edit-pencil-alt" alt="">'
+,p_owner=>'JAY.KHAN'
+,p_internal_uid=>918978979392840537
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(1562173145877448800)
+,p_db_column_name=>'ID'
+,p_display_order=>1
+,p_column_identifier=>'A'
+,p_column_label=>'Id'
+,p_column_type=>'NUMBER'
+,p_display_text_as=>'WITHOUT_MODIFICATION'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(1577599062720363960)
+,p_db_column_name=>'LV_POLICY_NAME'
+,p_display_order=>13
+,p_column_identifier=>'I'
+,p_column_label=>'Lv Policy Name'
+,p_column_type=>'STRING'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(1577599158397363961)
+,p_db_column_name=>'LV_ACCRUAL_START'
+,p_display_order=>23
+,p_column_identifier=>'H'
+,p_column_label=>'Lv Accrual Start'
+,p_column_type=>'STRING'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(1577599040000363959)
+,p_db_column_name=>'LV_POLICY_DESC'
+,p_display_order=>33
+,p_column_identifier=>'J'
+,p_column_label=>'Lv Policy Desc'
+,p_column_type=>'STRING'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(1577598941194363958)
+,p_db_column_name=>'LV_POLICY_CODE'
+,p_display_order=>43
+,p_column_identifier=>'K'
+,p_column_label=>'Lv Policy Code'
+,p_column_type=>'STRING'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(1562172312893448796)
+,p_db_column_name=>'AUTO_LEAVE_CREATE_MV'
+,p_display_order=>53
+,p_column_identifier=>'C'
+,p_column_label=>'Auto Leave Create Mv'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(1562171909880448796)
+,p_db_column_name=>'CREATED'
+,p_display_order=>63
+,p_column_identifier=>'D'
+,p_column_label=>'Created'
+,p_column_type=>'DATE'
+,p_heading_alignment=>'LEFT'
+,p_tz_dependent=>'Y'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(1562171479973448795)
+,p_db_column_name=>'CREATED_BY'
+,p_display_order=>73
+,p_column_identifier=>'E'
+,p_column_label=>'Created By'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(1562171075569448794)
+,p_db_column_name=>'UPDATED'
+,p_display_order=>83
+,p_column_identifier=>'F'
+,p_column_label=>'Updated'
+,p_column_type=>'DATE'
+,p_heading_alignment=>'LEFT'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(1562170745565448793)
+,p_db_column_name=>'UPDATED_BY'
+,p_display_order=>93
+,p_column_identifier=>'G'
+,p_column_label=>'Updated By'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(565955792663467364)
+,p_db_column_name=>'ORG_ID'
+,p_display_order=>103
+,p_column_identifier=>'L'
+,p_column_label=>'Org Id'
+,p_column_type=>'NUMBER'
+,p_display_text_as=>'HIDDEN_ESCAPE_SC'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(565955895858467365)
+,p_db_column_name=>'QUANTITY'
+,p_display_order=>113
+,p_column_identifier=>'M'
+,p_column_label=>'Quantity'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(565956007218467366)
+,p_db_column_name=>'USE_MONDAY'
+,p_display_order=>123
+,p_column_identifier=>'N'
+,p_column_label=>'Use Monday'
+,p_column_type=>'STRING'
+,p_display_text_as=>'HIDDEN_ESCAPE_SC'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(565956112510467367)
+,p_db_column_name=>'USE_TUESDAY'
+,p_display_order=>133
+,p_column_identifier=>'O'
+,p_column_label=>'Use Tuesday'
+,p_column_type=>'STRING'
+,p_display_text_as=>'HIDDEN_ESCAPE_SC'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(565956160078467368)
+,p_db_column_name=>'USE_WEDNESDAY'
+,p_display_order=>143
+,p_column_identifier=>'P'
+,p_column_label=>'Use Wednesday'
+,p_column_type=>'STRING'
+,p_display_text_as=>'HIDDEN_ESCAPE_SC'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(565956240825467369)
+,p_db_column_name=>'USE_THURSDAY'
+,p_display_order=>153
+,p_column_identifier=>'Q'
+,p_column_label=>'Use Thursday'
+,p_column_type=>'STRING'
+,p_display_text_as=>'HIDDEN_ESCAPE_SC'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(565956365770467370)
+,p_db_column_name=>'USE_FRIDAY'
+,p_display_order=>163
+,p_column_identifier=>'R'
+,p_column_label=>'Use Friday'
+,p_column_type=>'STRING'
+,p_display_text_as=>'HIDDEN_ESCAPE_SC'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(565956496427467371)
+,p_db_column_name=>'USE_SATURDAY'
+,p_display_order=>173
+,p_column_identifier=>'S'
+,p_column_label=>'Use Saturday'
+,p_column_type=>'STRING'
+,p_display_text_as=>'HIDDEN_ESCAPE_SC'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(565956523453467372)
+,p_db_column_name=>'USE_SUNDAY'
+,p_display_order=>183
+,p_column_identifier=>'T'
+,p_column_label=>'Use Sunday'
+,p_column_type=>'STRING'
+,p_display_text_as=>'HIDDEN_ESCAPE_SC'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(565956647847467373)
+,p_db_column_name=>'ACCESSIBLE_AFTER'
+,p_display_order=>193
+,p_column_identifier=>'U'
+,p_column_label=>'Accessible After'
+,p_column_type=>'NUMBER'
+,p_display_text_as=>'HIDDEN_ESCAPE_SC'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(565956792403467374)
+,p_db_column_name=>'USE_ROSTER_OR_CALENDAR'
+,p_display_order=>203
+,p_column_identifier=>'V'
+,p_column_label=>'Use Roster Or Calendar'
+,p_column_type=>'STRING'
+,p_display_text_as=>'HIDDEN_ESCAPE_SC'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(565956834928467375)
+,p_db_column_name=>'CARRY_FORWARD'
+,p_display_order=>213
+,p_column_identifier=>'W'
+,p_column_label=>'Carry Forward'
+,p_column_type=>'STRING'
+,p_display_text_as=>'HIDDEN_ESCAPE_SC'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(565956939053467376)
+,p_db_column_name=>'AUTO_VERIFY'
+,p_display_order=>223
+,p_column_identifier=>'X'
+,p_column_label=>'Auto Verify'
+,p_column_type=>'STRING'
+,p_display_text_as=>'HIDDEN_ESCAPE_SC'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(565957105797467377)
+,p_db_column_name=>'INCOME_CODE_ID'
+,p_display_order=>233
+,p_column_identifier=>'Y'
+,p_column_label=>'Income Code Id'
+,p_column_type=>'STRING'
+,p_display_text_as=>'HIDDEN_ESCAPE_SC'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(565957164840467378)
+,p_db_column_name=>'DEDUCTION_CODE_ID'
+,p_display_order=>243
+,p_column_identifier=>'Z'
+,p_column_label=>'Deduction Code Id'
+,p_column_type=>'STRING'
+,p_display_text_as=>'HIDDEN_ESCAPE_SC'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(565957301366467379)
+,p_db_column_name=>'LEAVE_EARNED_CONTROL'
+,p_display_order=>253
+,p_column_identifier=>'AA'
+,p_column_label=>'Leave Earned Control'
+,p_column_type=>'STRING'
+,p_display_text_as=>'HIDDEN_ESCAPE_SC'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(565957392157467380)
+,p_db_column_name=>'USE_HOLIDAYS'
+,p_display_order=>263
+,p_column_identifier=>'AB'
+,p_column_label=>'Use Holidays'
+,p_column_type=>'STRING'
+,p_display_text_as=>'HIDDEN_ESCAPE_SC'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(565957513171467381)
+,p_db_column_name=>'UNIT'
+,p_display_order=>273
+,p_column_identifier=>'AC'
+,p_column_label=>'Unit'
+,p_column_type=>'STRING'
+,p_display_text_as=>'HIDDEN_ESCAPE_SC'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(565957605694467382)
+,p_db_column_name=>'QUOTA_CONTROL'
+,p_display_order=>283
+,p_column_identifier=>'AD'
+,p_column_label=>'Quota Control'
+,p_column_type=>'NUMBER'
+,p_display_text_as=>'HIDDEN_ESCAPE_SC'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(565957663845467383)
+,p_db_column_name=>'MAKE_EDITABLE'
+,p_display_order=>293
+,p_column_identifier=>'AE'
+,p_column_label=>'Make Editable'
+,p_column_type=>'STRING'
+,p_display_text_as=>'HIDDEN_ESCAPE_SC'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(565957726598467384)
+,p_db_column_name=>'ALLOW_LEAVE_OVERDRAFT'
+,p_display_order=>303
+,p_column_identifier=>'AF'
+,p_column_label=>'Allow Leave Overdraft'
+,p_column_type=>'NUMBER'
+,p_display_text_as=>'HIDDEN_ESCAPE_SC'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(565957871714467385)
+,p_db_column_name=>'MAX_ACCUMMULATE'
+,p_display_order=>313
+,p_column_identifier=>'AG'
+,p_column_label=>'Max Accummulate'
+,p_column_type=>'NUMBER'
+,p_display_text_as=>'HIDDEN_ESCAPE_SC'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(565957992044467386)
+,p_db_column_name=>'MAX_CARRYFORWARD'
+,p_display_order=>323
+,p_column_identifier=>'AH'
+,p_column_label=>'Max Carryforward'
+,p_column_type=>'NUMBER'
+,p_display_text_as=>'HIDDEN_ESCAPE_SC'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(565958028994467387)
+,p_db_column_name=>'LEAVE_OVERDRAFT'
+,p_display_order=>333
+,p_column_identifier=>'AI'
+,p_column_label=>'Leave Overdraft'
+,p_column_type=>'NUMBER'
+,p_display_text_as=>'HIDDEN_ESCAPE_SC'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(565958210407467388)
+,p_db_column_name=>'MAX_CARRY_FORWARD'
+,p_display_order=>343
+,p_column_identifier=>'AJ'
+,p_column_label=>'Max Carry Forward'
+,p_column_type=>'NUMBER'
+,p_display_text_as=>'HIDDEN_ESCAPE_SC'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(565958244019467389)
+,p_db_column_name=>'YR_END_EVALUATION_DATE'
+,p_display_order=>353
+,p_column_identifier=>'AK'
+,p_column_label=>'Yr End Evaluation Date'
+,p_column_type=>'STRING'
+,p_display_text_as=>'HIDDEN_ESCAPE_SC'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(565958414969467390)
+,p_db_column_name=>'CUSTOM_EV_DATE'
+,p_display_order=>363
+,p_column_identifier=>'AL'
+,p_column_label=>'Custom Ev Date'
+,p_column_type=>'DATE'
+,p_display_text_as=>'HIDDEN_ESCAPE_SC'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(565958437845467391)
+,p_db_column_name=>'CF_RULE_OPTION'
+,p_display_order=>373
+,p_column_identifier=>'AM'
+,p_column_label=>'Cf Rule Option'
+,p_column_type=>'STRING'
+,p_display_text_as=>'HIDDEN_ESCAPE_SC'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(565958571712467392)
+,p_db_column_name=>'DAYS_REQUESTED_LIMIT'
+,p_display_order=>383
+,p_column_identifier=>'AN'
+,p_column_label=>'Days Requested Limit'
+,p_column_type=>'NUMBER'
+,p_display_text_as=>'HIDDEN_ESCAPE_SC'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(565958645819467393)
+,p_db_column_name=>'START_DATE'
+,p_display_order=>393
+,p_column_identifier=>'AO'
+,p_column_label=>'Start Date'
+,p_column_type=>'DATE'
+,p_heading_alignment=>'LEFT'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(565958750389467394)
+,p_db_column_name=>'END_DATE'
+,p_display_order=>403
+,p_column_identifier=>'AP'
+,p_column_label=>'End Date'
+,p_column_type=>'DATE'
+,p_heading_alignment=>'LEFT'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_rpt(
+ p_id=>wwv_flow_imp.id(1562017855590600578)
+,p_application_user=>'APXWS_DEFAULT'
+,p_report_seq=>10
+,p_report_alias=>'6009390'
+,p_status=>'PUBLIC'
+,p_is_default=>'Y'
+,p_report_columns=>'LV_POLICY_CODE:LV_POLICY_NAME:LV_POLICY_DESC:QUANTITY:START_DATE:END_DATE:CREATED:UPDATED:UPDATED_BY:'
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(1562174199343448814)
+,p_plug_name=>'Breadcrumb'
+,p_region_template_options=>'#DEFAULT#:t-BreadcrumbRegion--compactTitle:t-BreadcrumbRegion--useBreadcrumbTitle'
+,p_component_template_options=>'#DEFAULT#'
+,p_plug_template=>2531463326621247859
+,p_plug_display_sequence=>10
+,p_plug_display_point=>'REGION_POSITION_01'
+,p_menu_id=>wwv_flow_imp.id(10988176195002489210)
+,p_plug_source_type=>'NATIVE_BREADCRUMB'
+,p_menu_template_id=>4072363345357175094
+);
+wwv_flow_imp_page.create_page_button(
+ p_id=>wwv_flow_imp.id(656965988630611893)
+,p_button_sequence=>10
+,p_button_plug_id=>wwv_flow_imp.id(1562174199343448814)
+,p_button_name=>'CREATE_POLICY'
+,p_button_action=>'REDIRECT_PAGE'
+,p_button_template_options=>'#DEFAULT#'
+,p_button_template_id=>4072362960822175091
+,p_button_is_hot=>'Y'
+,p_button_image_alt=>'Create Policy'
+,p_button_position=>'CREATE'
+,p_button_alignment=>'RIGHT'
+,p_button_redirect_url=>'f?p=&APP_ID.:11998:&SESSION.::&DEBUG.:11998::'
+);
+wwv_flow_imp.component_end;
+end;
+/

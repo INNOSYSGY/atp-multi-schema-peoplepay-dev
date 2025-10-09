@@ -13,6 +13,10 @@ jobs:
   export:
     runs-on: ubuntu-latest
 
+    # Dynamically set the environment based on the branch name
+    environment:
+      name: ${{ (github.ref_name == 'main' && 'Production') || (github.ref_name == 'staging' && 'Staging') || 'Development' }}
+      
     steps:
       # Checkout the repository
       - name: Checkout code
@@ -38,13 +42,20 @@ jobs:
           DB_URL: ${{ secrets.DB_URL }}
           DB_USER: ${{ secrets.DB_USER }}
           DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
-          APEX_APP_ID: ${{ secrets.APEX_APP_EXPORT_ID }}
+          APEX_APP_ID: ${{ secrets.APP_ID }}
           #ATP_WALLET_ERP: ${{ ATP_WALLET_ERP }}
         run: |
           echo "${{ vars.ATP_WALLET_DEV }}" | base64 --decode > Wallet_DEVENV.zip
+
+          echo "--- Generated app export SQL Script ---"
+          # Reads the template and outputs a processed file
+          envsubst < export_apex_app.sql.template > export_apex_app.sql
+          cat export_apex_app.sql
+          echo "--------------------------"
+          
           sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @export_apex_app.sql
 
-                # Commit and push the exported schema file (optional)
+              
       - name: Commit and Push Changes
         env:
           GITHUB_TOKEN: ${{ secrets.TOK }}

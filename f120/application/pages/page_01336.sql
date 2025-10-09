@@ -738,7 +738,7 @@ wwv_flow_imp_page.create_page_da_event(
 ,p_name=>'dy_set_shift_hours'
 ,p_event_sequence=>10
 ,p_triggering_element_type=>'ITEM'
-,p_triggering_element=>'P1336_END_TIME,P1336_START_TIME,P1336_LESS_LUNCH_HOUR'
+,p_triggering_element=>'P1336_END_TIME,P1336_START_TIME,P1336_LESS_LUNCH_HOUR,P1336_LUNCH_HOUR'
 ,p_bind_type=>'bind'
 ,p_execution_type=>'IMMEDIATE'
 ,p_bind_event_type=>'change'

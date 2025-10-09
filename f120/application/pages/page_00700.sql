@@ -5212,17 +5212,33 @@ wwv_flow_imp_page.create_page_item(
 ,p_prompt=>'Grade'
 ,p_source=>'OLD_GRADE'
 ,p_source_type=>'REGION_SOURCE_COLUMN'
-,p_display_as=>'NATIVE_TEXT_FIELD'
-,p_cSize=>30
+,p_display_as=>'NATIVE_SELECT_LIST'
+,p_lov=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'select  a.grade_description',
+'        || ''(''',
+'        || a.grade_code',
+'        || '') as at ''',
+'        || a.effective_fromdate a,',
+'        a.id',
+'from hr_hcf_positiongrade   a ',
+'WHERE exists (',
+'        select 1',
+'        from',
+'            hr_hcf_job j',
+'        where',
+'            org_id = :APP_ORG_SHR_DED',
+'        and j.job_grade_id = a.id',
+'            )',
+'ORDER BY 1'))
+,p_lov_display_null=>'YES'
+,p_cHeight=>1
 ,p_field_template=>2318601014859922299
 ,p_item_template_options=>'#DEFAULT#:t-Form-fieldContainer--stretchInputs'
 ,p_is_persistent=>'N'
+,p_lov_display_extra=>'YES'
 ,p_encrypt_session_state_yn=>'N'
 ,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
-  'disabled', 'N',
-  'submit_when_enter_pressed', 'N',
-  'subtype', 'TEXT',
-  'trim_spaces', 'BOTH')).to_clob
+  'page_action_on_selection', 'NONE')).to_clob
 );
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(3725888497377212285)
@@ -5234,17 +5250,29 @@ wwv_flow_imp_page.create_page_item(
 ,p_prompt=>'Grade Point'
 ,p_source=>'OLD_GRADE_POINT'
 ,p_source_type=>'REGION_SOURCE_COLUMN'
-,p_display_as=>'NATIVE_TEXT_FIELD'
-,p_cSize=>30
+,p_display_as=>'NATIVE_SELECT_LIST'
+,p_lov=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'select  ''Point: ''||a.point || ''-'' || ''$''||trim(to_char(a.point_amount,''999,999,999'')), a.point',
+'from hr_hcf_positiongradepoint   a ',
+'WHERE end_date is null',
+'  and a.position_grade_id = (',
+'        select',
+'            j.job_grade_id',
+'        from',
+'            hr_hcf_job j',
+'        where',
+'            j.id = :P700_JOB_NAME',
+'             )',
+'ORDER BY point'))
+,p_lov_display_null=>'YES'
+,p_cHeight=>1
 ,p_field_template=>2318601014859922299
 ,p_item_template_options=>'#DEFAULT#:t-Form-fieldContainer--stretchInputs'
 ,p_is_persistent=>'N'
+,p_lov_display_extra=>'YES'
 ,p_encrypt_session_state_yn=>'N'
 ,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
-  'disabled', 'N',
-  'submit_when_enter_pressed', 'N',
-  'subtype', 'TEXT',
-  'trim_spaces', 'BOTH')).to_clob
+  'page_action_on_selection', 'NONE')).to_clob
 );
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(3725888904770212285)
@@ -6302,8 +6330,7 @@ wwv_flow_imp_page.create_page_da_action(
 ,p_attribute_01=>'SQL_STATEMENT'
 ,p_attribute_03=>wwv_flow_string.join(wwv_flow_t_varchar2(
 ' SELECT ',
-'    grade_description||''(''||grade_code||'') as at ''||EFFECTIVE_FROMDATE,',
-'    ''Point ''||s.grade_point||'': ''||trim(to_char(s.PERSONAL_RATE,''$999,999,999,999''))',
+'    pg.id',
 '    FROM',
 '    hr_rcm_employee emp ',
 '    join hr_hcf_position pos',
