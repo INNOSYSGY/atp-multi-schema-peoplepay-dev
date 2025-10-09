@@ -27,44 +27,40 @@ jobs:
           ENVIRONMENT: ${{ github.ref_name }}
           DB_URL: ${{ vars.DB_URL }}
           DB_USER: ${{ vars.DB_USER }}
-          APP_ID: ${{ vars.APP_ID }}
           WKSPACE: ${{ vars.WKSPACE }}
-          APP_EXPORT: ${{ vars.APP_EXPORT }}
         run: |
-          # 1. Recreate the exact same alias that was used for deployment
-          # github.ref contains the deleted branch name in a delete event
-          BRANCH_SLUG=$(echo "${{ github.ref }}" | sed 's/\//-/g' | tr '[:lower:]' '[:upper:]')
-          export APEX_APP_ALIAS="F${BRANCH_SLUG}"
-          
-          echo "Branch deleted: ${{ github.ref }}"
-          echo "Looking for application with alias: $APEX_APP_ALIAS"
+          # github.ref contains the deleted branch name
+          DELETED_BRANCH="${{ github.ref }}"
+          echo "🗑️ Branch deleted: $DELETED_BRANCH"
 
           # 2. Create a temporary SQL script to find and remove the application
-          cat > remove_app.sql <<EOF
+          cat > cleanup.sql <<EOF
+          SET SERVEROUTPUT ON;
           DECLARE
-              l_workspace_id NUMBER;
-              l_application_id NUMBER;
+              v_branch_name VARCHAR2(255) := '${DELETED_BRANCH}';
+              v_app_id NUMBER;
           BEGIN
-              l_workspace_id := apex_util.find_workspace('$WKSPACE'); -- IMPORTANT: Set your workspace name
-              apex_util.set_security_group_id(p_security_group_id => l_workspace_id);
+              -- Find the app_id for the deleted branch
+              SELECT apex_app_id INTO v_app_id
+              FROM branch_to_app_id_map
+              WHERE branch_name = v_branch_name;
 
-              -- Find the application ID using its alias
-              SELECT application_id INTO l_application_id
-              FROM apex_applications
-              WHERE alias = '${APEX_APP_ALIAS}'
-              AND workspace_id = l_workspace_id;
-
-              IF l_application_id IS NOT NULL THEN
-                  -- If found, remove the application
-                  apex_instance_admin.remove_application(p_application_id => l_application_id);
+              IF v_app_id IS NOT NULL THEN
+                  DBMS_OUTPUT.PUT_LINE('Found App ID ' || v_app_id || ' for branch ' || v_branch_name || '. Removing...');
+                  -- Remove the APEX application
+                  apex_instance_admin.remove_application(p_application_id => v_app_id);
+                  
+                  -- Remove the entry from our mapping table
+                  DELETE FROM branch_to_app_id_map WHERE branch_name = v_branch_name;
+                  
                   COMMIT;
-                  DBMS_OUTPUT.put_line('Successfully removed application ID ' || l_application_id || ' with alias ${APEX_APP_ALIAS}.');
+                  DBMS_OUTPUT.PUT_LINE('Cleanup successful.');
               ELSE
-                  DBMS_OUTPUT.put_line('No application found with alias ${APEX_APP_ALIAS}. Nothing to do.');
+                  DBMS_OUTPUT.PUT_LINE('No mapping found for branch ' || v_branch_name || '. Nothing to do.');
               END IF;
           EXCEPTION
               WHEN NO_DATA_FOUND THEN
-                  DBMS_OUTPUT.put_line('No application found with alias ${APEX_APP_ALIAS}. Nothing to do.');
+                  DBMS_OUTPUT.PUT_LINE('No mapping found for branch ' || v_branch_name || '. Nothing to do.');
           END;
           /
           EOF
@@ -72,6 +68,7 @@ jobs:
           # 3. Execute the cleanup script
 
           echo "${{ vars.ATP_WALLET_DEV }}" | base64 --decode > Wallet_DEVENV.zip
-          sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @remove_app.sql
+          sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @cleanup.sql
+
 
 
