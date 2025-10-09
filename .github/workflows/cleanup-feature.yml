@@ -30,16 +30,17 @@ jobs:
           WKSPACE: ${{ vars.WKSPACE }}
         run: |
           # github.ref contains the deleted branch name
-          DELETED_BRANCH="${{ github.ref }}"
+          DELETED_BRANCH="${{ github.ref_name }}"
           echo "🗑️ Branch deleted: $DELETED_BRANCH"
 
           # 2. Create a temporary SQL script to find and remove the application
           cat > cleanup.sql <<EOF
           SET SERVEROUTPUT ON;
           DECLARE
-              v_branch_name VARCHAR2(255) := '${DELETED_BRANCH}';
+              v_branch_name VARCHAR2(255) ;
               v_app_id NUMBER;
           BEGIN
+              v_branch_name := '${DELETED_BRANCH}'; 
               -- Find the app_id for the deleted branch
               SELECT apex_app_id INTO v_app_id
               FROM branch_to_app_id_map
@@ -69,6 +70,7 @@ jobs:
 
           echo "${{ vars.ATP_WALLET_DEV }}" | base64 --decode > Wallet_DEVENV.zip
           sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @cleanup.sql
+
 
 
 
