@@ -70,8 +70,12 @@ jobs:
           /
           EOF
           
-          APP_ID=$(sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @deploy.sql)
+          export APP_ID=$(sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @deploy.sql)
 
+          echo "APP_ID: $APP_ID"
+          
+          exit
+          
           if [ -z "$APP_ID" ]; then
             echo "::error::Failed to get or create an App ID from the database."
             exit 1
@@ -94,6 +98,7 @@ jobs:
           # 2. Deploy the application using the standard export file
           echo "Deploying $APP_EXPORT.sql..."
           sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @deploy_apex_app.sql
+
 
 
 
