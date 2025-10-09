@@ -68,7 +68,8 @@ jobs:
               DBMS_OUTPUT.PUT_LINE(v_app_id);
           END;
           /
-          EOF
+          EOF 
+          )
 
           # 1. Sanitize the branch name to create a valid and clean alias
           # e.g., 'feature/new-user-auth' becomes 'FEAT-NEW-USER-AUTH'
@@ -87,6 +88,7 @@ jobs:
           # 2. Deploy the application using the standard export file
           echo "Deploying $APP_EXPORT.sql..."
           sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @deploy_apex_app.sql
+
 
 
 
