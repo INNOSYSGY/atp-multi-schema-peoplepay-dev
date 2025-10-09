@@ -83,11 +83,8 @@ jobs:
           /
           EOF
           
-          sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @deploy.sql
-          
-          #export APP_ID=$(sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @deploy.sql)
+          export APP_ID=$(sql -S -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @deploy.sql)
 
-          exit 
           
           if [ "$APP_ID" == "" ];then
             echo "No APP_ID, exiting ..."
@@ -96,6 +93,9 @@ jobs:
           
           echo "Branch APP_ID: $APP_ID"
 
+          echo "Debug exit point"
+          exit 
+          
           # 1. Sanitize the branch name to create a valid and clean alias
           # e.g., 'feature/new-user-auth' becomes 'FEAT-NEW-USER-AUTH'
           BRANCH_SLUG=$(echo "${{ github.ref_name }}" | sed 's/\//-/g' | tr '[:lower:]' '[:upper:]')
@@ -113,6 +113,7 @@ jobs:
           # 2. Deploy the application using the standard export file
           echo "Deploying $APP_EXPORT.sql..."
           sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @deploy_apex_app.sql
+
 
 
 
