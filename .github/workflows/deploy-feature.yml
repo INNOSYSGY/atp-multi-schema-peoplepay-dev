@@ -46,7 +46,7 @@ jobs:
 
           # This SQL script uses a MERGE statement for atomic "get or create" logic.
           # It outputs the final app_id using dbms_output, which we capture.
-          APP_ID=$(sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL <<EOF
+          APP_ID=$(sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL <<'EOF'
           SET SERVEROUTPUT ON;
           SET FEEDBACK OFF;
           DECLARE
@@ -71,10 +71,15 @@ jobs:
           EOF 
           )
 
+          if [ -z "$APP_ID" ]; then
+            echo "::error::Failed to get or create an App ID from the database."
+            exit 1
+          fi
+
           # 1. Sanitize the branch name to create a valid and clean alias
           # e.g., 'feature/new-user-auth' becomes 'FEAT-NEW-USER-AUTH'
           BRANCH_SLUG=$(echo "${{ github.ref_name }}" | sed 's/\//-/g' | tr '[:lower:]' '[:upper:]')
-          export APEX_APP_ALIAS="F${BRANCH_SLUG}" # The final alias, e.g., FFEAT-NEW-USER-AUTH
+          export APEX_APP_ALIAS="F-${BRANCH_SLUG}" # The final alias, e.g., FFEAT-NEW-USER-AUTH
           
           echo " Branch: ${{ github.ref_name }}"
           echo " Generated APEX Alias: $APEX_APP_ALIAS"
@@ -88,6 +93,7 @@ jobs:
           # 2. Deploy the application using the standard export file
           echo "Deploying $APP_EXPORT.sql..."
           sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @deploy_apex_app.sql
+
 
 
 
