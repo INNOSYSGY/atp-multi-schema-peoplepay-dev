@@ -57,7 +57,7 @@ jobs:
           
           # 2.  using its alias
           
-          cat get_app_id <<EOF
+          cat > get_app_id <<EOF
           SET FEEDBACK OFF HEADING OFF PAGESIZE 0
           SELECT application_id FROM apex_applications WHERE alias = '${APEX_APP_ALIAS}' AND workspace = '${WKSPACE}';
           EOF
