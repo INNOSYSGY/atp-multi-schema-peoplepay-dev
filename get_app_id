@@ -1,0 +1,4 @@
+SET FEEDBACK OFF HEADING OFF PAGESIZE 0;
+SELECT apex_app_id 
+FROM branch_to_app_id_map 
+WHERE branch_name = 'develop';
