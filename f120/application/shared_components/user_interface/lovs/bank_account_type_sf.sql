@@ -8,11 +8,11 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_shared.create_list_of_values(
- p_id=>wwv_flow_imp.id(442881821795219268)
+ p_id=>wwv_flow_imp.id(664706511984404834)
 ,p_lov_name=>'BANK_ACCOUNT_TYPE_SF'
 ,p_lov_query=>'select VALUE_DESCRIPTION||''(''||TABLE_VALUE||'')'' a , TABLE_VALUE b from HR_HCF_LOOKUP where table_name=''TBLBANKACCOUNTTYPE'' AND ORG_ID =:APP_ORG_ID'
 ,p_source_type=>'SQL'

@@ -8,11 +8,11 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_shared.create_load_table(
- p_id=>wwv_flow_imp.id(3582730907055837996)
+ p_id=>wwv_flow_imp.id(3804555597245023562)
 ,p_name=>'load_salary'
 ,p_owner=>'#OWNER#'
 ,p_table_name=>'HR_RCM_SALARY'
@@ -23,8 +23,8 @@ wwv_flow_imp_shared.create_load_table(
 ,p_skip_validation=>'N'
 );
 wwv_flow_imp_shared.create_load_table_lookup(
- p_id=>wwv_flow_imp.id(3582730591430837995)
-,p_load_table_id=>wwv_flow_imp.id(3582730907055837996)
+ p_id=>wwv_flow_imp.id(3804555281620023561)
+,p_load_table_id=>wwv_flow_imp.id(3804555597245023562)
 ,p_load_column_name=>'EMP_ID'
 ,p_lookup_owner=>'#OWNER#'
 ,p_lookup_table_name=>'HR_RCM_EMPLOYEE'
@@ -34,8 +34,8 @@ wwv_flow_imp_shared.create_load_table_lookup(
 ,p_insert_new_value=>'N'
 );
 wwv_flow_imp_shared.create_load_table_rule(
- p_id=>wwv_flow_imp.id(3582730244718837994)
-,p_load_table_id=>wwv_flow_imp.id(3582730907055837996)
+ p_id=>wwv_flow_imp.id(3804554934908023560)
+,p_load_table_id=>wwv_flow_imp.id(3804555597245023562)
 ,p_load_column_name=>'PAYMENT_MODE'
 ,p_rule_name=>'up_pay_mode'
 ,p_rule_type=>'TO_UPPER_CASE'

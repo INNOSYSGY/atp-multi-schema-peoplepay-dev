@@ -8,11 +8,11 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_shared.create_plugin(
- p_id=>wwv_flow_imp.id(3503873292504838569)
+ p_id=>wwv_flow_imp.id(3725697982694024135)
 ,p_plugin_type=>'REGION TYPE'
 ,p_name=>'APEX.D3.ORGANIZATION.CHART'
 ,p_display_name=>'APEX D3 Organization Chart'
@@ -80,8 +80,8 @@ wwv_flow_imp_shared.create_plugin(
 ,p_files_version=>1179
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3503873562521838577)
-,p_plugin_id=>wwv_flow_imp.id(3503873292504838569)
+ p_id=>wwv_flow_imp.id(3725698252711024143)
+,p_plugin_id=>wwv_flow_imp.id(3725697982694024135)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>1
 ,p_display_sequence=>10
@@ -157,8 +157,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 '  <dd>color of the node text</dd>'))
 );
 wwv_flow_imp_shared.create_plugin_std_attribute(
- p_id=>wwv_flow_imp.id(3503874306950838590)
-,p_plugin_id=>wwv_flow_imp.id(3503873292504838569)
+ p_id=>wwv_flow_imp.id(3725698997140024156)
+,p_plugin_id=>wwv_flow_imp.id(3725697982694024135)
 ,p_name=>'SOURCE_SQL'
 ,p_default_value=>wwv_flow_string.join(wwv_flow_t_varchar2(
 'SELECT',
@@ -228,8 +228,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(3503874682536838610)
-,p_plugin_id=>wwv_flow_imp.id(3503873292504838569)
+ p_id=>wwv_flow_imp.id(3725699372726024176)
+,p_plugin_id=>wwv_flow_imp.id(3725697982694024135)
 ,p_file_name=>'LICENSE'
 ,p_mime_type=>'application/octet-stream'
 ,p_file_charset=>'utf-8'
@@ -291,8 +291,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(3503875066364838615)
-,p_plugin_id=>wwv_flow_imp.id(3503873292504838569)
+ p_id=>wwv_flow_imp.id(3725699756554024181)
+,p_plugin_id=>wwv_flow_imp.id(3725697982694024135)
 ,p_file_name=>'LICENSE4LIBS'
 ,p_mime_type=>'application/octet-stream'
 ,p_file_charset=>'utf-8'
@@ -308,8 +308,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(3503875413895838619)
-,p_plugin_id=>wwv_flow_imp.id(3503873292504838569)
+ p_id=>wwv_flow_imp.id(3725700104085024185)
+,p_plugin_id=>wwv_flow_imp.id(3725697982694024135)
 ,p_file_name=>'d3orgchart.pkgd.min.css'
 ,p_mime_type=>'text/css'
 ,p_file_charset=>'utf-8'
@@ -1960,8 +1960,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(3503875841689838619)
-,p_plugin_id=>wwv_flow_imp.id(3503873292504838569)
+ p_id=>wwv_flow_imp.id(3725700531879024185)
+,p_plugin_id=>wwv_flow_imp.id(3725697982694024135)
 ,p_file_name=>'d3orgchart.pkgd.min.js'
 ,p_mime_type=>'text/javascript'
 ,p_file_charset=>'utf-8'

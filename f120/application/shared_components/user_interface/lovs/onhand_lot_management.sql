@@ -8,11 +8,11 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_shared.create_list_of_values(
- p_id=>wwv_flow_imp.id(3467324101639698257)
+ p_id=>wwv_flow_imp.id(3689148791828883823)
 ,p_lov_name=>'ONHAND_LOT_MANAGEMENT'
 ,p_lov_query=>wwv_flow_string.join(wwv_flow_t_varchar2(
 'if :P21_ONHAND_ID is null then',
@@ -56,7 +56,7 @@ wwv_flow_imp_shared.create_list_of_values(
 ,p_version_scn=>1
 );
 wwv_flow_imp_shared.create_list_of_values_cols(
- p_id=>wwv_flow_imp.id(3467323521195694979)
+ p_id=>wwv_flow_imp.id(3689148211384880545)
 ,p_query_column_name=>'ID'
 ,p_display_sequence=>10
 ,p_data_type=>'NUMBER'
@@ -64,28 +64,28 @@ wwv_flow_imp_shared.create_list_of_values_cols(
 ,p_is_searchable=>'N'
 );
 wwv_flow_imp_shared.create_list_of_values_cols(
- p_id=>wwv_flow_imp.id(3467323289723694979)
+ p_id=>wwv_flow_imp.id(3689147979912880545)
 ,p_query_column_name=>'BATCH_NO'
 ,p_heading=>'Batch No'
 ,p_display_sequence=>20
 ,p_data_type=>'VARCHAR2'
 );
 wwv_flow_imp_shared.create_list_of_values_cols(
- p_id=>wwv_flow_imp.id(3467322811378694979)
+ p_id=>wwv_flow_imp.id(3689147501567880545)
 ,p_query_column_name=>'SHELF_LIFE_DAYS'
 ,p_heading=>'Shelf Life Days'
 ,p_display_sequence=>30
 ,p_data_type=>'NUMBER'
 );
 wwv_flow_imp_shared.create_list_of_values_cols(
- p_id=>wwv_flow_imp.id(3467322418677694979)
+ p_id=>wwv_flow_imp.id(3689147108866880545)
 ,p_query_column_name=>'SHELF_LIFE_GRACE'
 ,p_heading=>'Shelf Life Grace'
 ,p_display_sequence=>40
 ,p_data_type=>'NUMBER'
 );
 wwv_flow_imp_shared.create_list_of_values_cols(
- p_id=>wwv_flow_imp.id(3467322075300694978)
+ p_id=>wwv_flow_imp.id(3689146765489880544)
 ,p_query_column_name=>'RECEIPT_DATE'
 ,p_heading=>'Receipt Date'
 ,p_display_sequence=>50

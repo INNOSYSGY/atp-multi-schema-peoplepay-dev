@@ -8,11 +8,11 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_shared.create_plugin(
- p_id=>wwv_flow_imp.id(56726711879746553499)
+ p_id=>wwv_flow_imp.id(56948536569935739065)
 ,p_plugin_type=>'DYNAMIC ACTION'
 ,p_name=>'APEX.SWEET.ALERT'
 ,p_display_name=>'APEX SweetAlert Confirm'
@@ -90,8 +90,8 @@ wwv_flow_imp_shared.create_plugin(
 ,p_files_version=>1383
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(56726712131667553501)
-,p_plugin_id=>wwv_flow_imp.id(56726711879746553499)
+ p_id=>wwv_flow_imp.id(56948536821856739067)
+,p_plugin_id=>wwv_flow_imp.id(56948536569935739065)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>1
 ,p_display_sequence=>10
@@ -116,7 +116,7 @@ wwv_flow_imp_shared.create_plugin_attribute(
 '   "focusCancel": true',
 '}'))
 ,p_is_translatable=>true
-,p_depending_on_attribute_id=>wwv_flow_imp.id(3810620905042258950)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(4032445595231444516)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'EQUALS'
 ,p_depending_on_expression=>'ATTRIBUTES'
@@ -191,8 +191,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 '  <dl>'))
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(56727586035267845098)
-,p_plugin_id=>wwv_flow_imp.id(56726711879746553499)
+ p_id=>wwv_flow_imp.id(56949410725457030664)
+,p_plugin_id=>wwv_flow_imp.id(56948536569935739065)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>2
 ,p_display_sequence=>21
@@ -200,15 +200,15 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_attribute_type=>'PAGE ITEM'
 ,p_is_required=>true
 ,p_is_translatable=>false
-,p_depending_on_attribute_id=>wwv_flow_imp.id(33794855231018953738)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(34016679921208139304)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'EQUALS'
 ,p_depending_on_expression=>'item'
 ,p_help_text=>'Set item where compare value should be read from'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(58976141386171059999)
-,p_plugin_id=>wwv_flow_imp.id(56726711879746553499)
+ p_id=>wwv_flow_imp.id(59197966076360245565)
+,p_plugin_id=>wwv_flow_imp.id(56948536569935739065)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>3
 ,p_display_sequence=>30
@@ -220,8 +220,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'This value determines whether all texts that the plug-in inserts into the page should be escaped. This is necessary if texts come from user input or insecure sources to prevent XSS.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3810620905042258950)
-,p_plugin_id=>wwv_flow_imp.id(56726711879746553499)
+ p_id=>wwv_flow_imp.id(4032445595231444516)
+,p_plugin_id=>wwv_flow_imp.id(56948536569935739065)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>4
 ,p_display_sequence=>1
@@ -234,22 +234,22 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'Set if ConfigJSON is read from item on runtime or is static defined by Dynamic Action Attributes.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3810632062039258218)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3810620905042258950)
+ p_id=>wwv_flow_imp.id(4032456752228443784)
+,p_plugin_attribute_id=>wwv_flow_imp.id(4032445595231444516)
 ,p_display_sequence=>10
 ,p_display_value=>'Attributes'
 ,p_return_value=>'ATTRIBUTES'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3810633954429259300)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3810620905042258950)
+ p_id=>wwv_flow_imp.id(4032458644618444866)
+,p_plugin_attribute_id=>wwv_flow_imp.id(4032445595231444516)
 ,p_display_sequence=>20
 ,p_display_value=>'Item'
 ,p_return_value=>'ITEM'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3810653362106264910)
-,p_plugin_id=>wwv_flow_imp.id(56726711879746553499)
+ p_id=>wwv_flow_imp.id(4032478052295450476)
+,p_plugin_id=>wwv_flow_imp.id(56948536569935739065)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>5
 ,p_display_sequence=>10
@@ -257,15 +257,15 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_attribute_type=>'PAGE ITEM'
 ,p_is_required=>true
 ,p_is_translatable=>false
-,p_depending_on_attribute_id=>wwv_flow_imp.id(3810620905042258950)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(4032445595231444516)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'EQUALS'
 ,p_depending_on_expression=>'ITEM'
 ,p_help_text=>'Define an item where ConfigJSON is read from. The item is read on client on runtime.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(33794855231018953738)
-,p_plugin_id=>wwv_flow_imp.id(56726711879746553499)
+ p_id=>wwv_flow_imp.id(34016679921208139304)
+,p_plugin_id=>wwv_flow_imp.id(56948536569935739065)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>6
 ,p_display_sequence=>20
@@ -278,32 +278,32 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'Set which value should be compared'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(33794968799520955989)
-,p_plugin_attribute_id=>wwv_flow_imp.id(33794855231018953738)
+ p_id=>wwv_flow_imp.id(34016793489710141555)
+,p_plugin_attribute_id=>wwv_flow_imp.id(34016679921208139304)
 ,p_display_sequence=>10
 ,p_display_value=>'Page Item'
 ,p_return_value=>'item'
 ,p_help_text=>'Compare value from Item Value'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(33794972889839961628)
-,p_plugin_attribute_id=>wwv_flow_imp.id(33794855231018953738)
+ p_id=>wwv_flow_imp.id(34016797580029147194)
+,p_plugin_attribute_id=>wwv_flow_imp.id(34016679921208139304)
 ,p_display_sequence=>20
 ,p_display_value=>'Random String'
 ,p_return_value=>'random'
 ,p_help_text=>'Compare Value from random string'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(33794492690101310612)
-,p_plugin_attribute_id=>wwv_flow_imp.id(33794855231018953738)
+ p_id=>wwv_flow_imp.id(34016317380290496178)
+,p_plugin_attribute_id=>wwv_flow_imp.id(34016679921208139304)
 ,p_display_sequence=>30
 ,p_display_value=>'Static Value'
 ,p_return_value=>'static'
 ,p_help_text=>'Compare Value from static string'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(33795166402763432841)
-,p_plugin_id=>wwv_flow_imp.id(56726711879746553499)
+ p_id=>wwv_flow_imp.id(34016991092952618407)
+,p_plugin_id=>wwv_flow_imp.id(56948536569935739065)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>7
 ,p_display_sequence=>22
@@ -312,7 +312,7 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_is_required=>true
 ,p_default_value=>'123456'
 ,p_is_translatable=>true
-,p_depending_on_attribute_id=>wwv_flow_imp.id(33794855231018953738)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(34016679921208139304)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'EQUALS'
 ,p_depending_on_expression=>'static'
@@ -337,8 +337,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(34957066817447027554)
-,p_plugin_id=>wwv_flow_imp.id(56726711879746553499)
+ p_id=>wwv_flow_imp.id(35178891507636213120)
+,p_plugin_id=>wwv_flow_imp.id(56948536569935739065)
 ,p_file_name=>'LICENSE'
 ,p_mime_type=>'application/octet-stream'
 ,p_file_charset=>'utf-8'
@@ -460,8 +460,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(34957067083926027556)
-,p_plugin_id=>wwv_flow_imp.id(56726711879746553499)
+ p_id=>wwv_flow_imp.id(35178891774115213122)
+,p_plugin_id=>wwv_flow_imp.id(56948536569935739065)
 ,p_file_name=>'LICENSE4LIBS'
 ,p_mime_type=>'application/octet-stream'
 ,p_file_charset=>'utf-8'
@@ -481,8 +481,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(34957368679023028393)
-,p_plugin_id=>wwv_flow_imp.id(56726711879746553499)
+ p_id=>wwv_flow_imp.id(35179193369212213959)
+,p_plugin_id=>wwv_flow_imp.id(56948536569935739065)
 ,p_file_name=>'sweetalert.pkgd.min.css'
 ,p_mime_type=>'text/css'
 ,p_file_charset=>'utf-8'
@@ -1896,8 +1896,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(34957369835957028394)
-,p_plugin_id=>wwv_flow_imp.id(56726711879746553499)
+ p_id=>wwv_flow_imp.id(35179194526146213960)
+,p_plugin_id=>wwv_flow_imp.id(56948536569935739065)
 ,p_file_name=>'sweetalert.pkgd.min.js'
 ,p_mime_type=>'text/javascript'
 ,p_file_charset=>'utf-8'

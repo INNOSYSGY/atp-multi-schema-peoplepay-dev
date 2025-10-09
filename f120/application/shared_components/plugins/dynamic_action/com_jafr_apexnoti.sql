@@ -8,11 +8,11 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_shared.create_plugin(
- p_id=>wwv_flow_imp.id(3516621888418418614)
+ p_id=>wwv_flow_imp.id(3738446578607604180)
 ,p_plugin_type=>'DYNAMIC ACTION'
 ,p_name=>'COM.JAFR.APEXNOTI'
 ,p_display_name=>'ApexNoti 1.0'
@@ -127,8 +127,8 @@ wwv_flow_imp_shared.create_plugin(
 ,p_files_version=>2
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3516627914789479159)
-,p_plugin_id=>wwv_flow_imp.id(3516621888418418614)
+ p_id=>wwv_flow_imp.id(3738452604978664725)
+,p_plugin_id=>wwv_flow_imp.id(3738446578607604180)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>1
 ,p_display_sequence=>10
@@ -142,8 +142,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ||'n, this message is printed in the console.log.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3516628527481480903)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3516627914789479159)
+ p_id=>wwv_flow_imp.id(3738453217670666469)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3738452604978664725)
 ,p_display_sequence=>10
 ,p_display_value=>'Alert'
 ,p_return_value=>'ALERT'
@@ -151,8 +151,8 @@ wwv_flow_imp_shared.create_plugin_attr_value(
 ,p_help_text=>'If chosen the error message will be rendered as a javascript alert message.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3516628945071481969)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3516627914789479159)
+ p_id=>wwv_flow_imp.id(3738453635260667535)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3738452604978664725)
 ,p_display_sequence=>20
 ,p_display_value=>'Console'
 ,p_return_value=>'CONSOLE'
@@ -160,8 +160,8 @@ wwv_flow_imp_shared.create_plugin_attr_value(
 ,p_help_text=>'If chosen the error message will be rendered as a console.log message.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3516630939450593967)
-,p_plugin_id=>wwv_flow_imp.id(3516621888418418614)
+ p_id=>wwv_flow_imp.id(3738455629639779533)
+,p_plugin_id=>wwv_flow_imp.id(3738446578607604180)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>2
 ,p_display_sequence=>20
@@ -172,8 +172,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'Sets the Title attribute for the Notification.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3491937856559926515)
-,p_plugin_id=>wwv_flow_imp.id(3516621888418418614)
+ p_id=>wwv_flow_imp.id(3713762546749112081)
+,p_plugin_id=>wwv_flow_imp.id(3738446578607604180)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>3
 ,p_display_sequence=>30
@@ -189,8 +189,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 'You can also refer to files uploaded in Shared Components => Static Application Files.'))
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3516633977196656872)
-,p_plugin_id=>wwv_flow_imp.id(3516621888418418614)
+ p_id=>wwv_flow_imp.id(3738458667385842438)
+,p_plugin_id=>wwv_flow_imp.id(3738446578607604180)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>4
 ,p_display_sequence=>40
@@ -201,8 +201,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'You can use this attribute to set the notification message also known as the body of the notification popup.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3502872301935005706)
-,p_plugin_id=>wwv_flow_imp.id(3516621888418418614)
+ p_id=>wwv_flow_imp.id(3724696992124191272)
+,p_plugin_id=>wwv_flow_imp.id(3738446578607604180)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>5
 ,p_display_sequence=>50
@@ -216,8 +216,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 'Just to be safe include "http://....." at the beginning of your link.'))
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3502872983813013701)
-,p_plugin_id=>wwv_flow_imp.id(3516621888418418614)
+ p_id=>wwv_flow_imp.id(3724697674002199267)
+,p_plugin_id=>wwv_flow_imp.id(3738446578607604180)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>6
 ,p_display_sequence=>60
@@ -280,8 +280,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(3502864513040920017)
-,p_plugin_id=>wwv_flow_imp.id(3516621888418418614)
+ p_id=>wwv_flow_imp.id(3724689203230105583)
+,p_plugin_id=>wwv_flow_imp.id(3738446578607604180)
 ,p_file_name=>'notification-icon.png'
 ,p_mime_type=>'image/png'
 ,p_file_charset=>'utf-8'

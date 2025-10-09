@@ -8,11 +8,11 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_shared.create_list_of_values(
- p_id=>wwv_flow_imp.id(3540804353158431400)
+ p_id=>wwv_flow_imp.id(3762629043347616966)
 ,p_lov_name=>'MOVEMENT_TYPES_NEW'
 ,p_lov_query=>wwv_flow_string.join(wwv_flow_t_varchar2(
 'select VALUE_DESCRIPTION A,VALUE_DESCRIPTION, ID B',
@@ -31,7 +31,7 @@ wwv_flow_imp_shared.create_list_of_values(
 ,p_version_scn=>1
 );
 wwv_flow_imp_shared.create_list_of_values_cols(
- p_id=>wwv_flow_imp.id(3540805787370443739)
+ p_id=>wwv_flow_imp.id(3762630477559629305)
 ,p_query_column_name=>'B'
 ,p_heading=>'B'
 ,p_display_sequence=>20

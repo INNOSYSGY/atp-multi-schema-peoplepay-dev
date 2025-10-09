@@ -8,7 +8,7 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp.g_varchar2_table := wwv_flow_imp.empty_varchar2_table;
@@ -245,7 +245,7 @@ wwv_flow_imp.g_varchar2_table(230) := 'A8AAAE13161697E6DF4DBD9D7137ED6E5A4F677BF
 wwv_flow_imp.g_varchar2_table(231) := 'E9D705CA1067D5C4A0B2D1703D42434397AF5AB53A322C2C3474FE7C7F372747475653431558F2219CFE2AE9EAD123875ED055162161020282299130010101010121610202020242C204040404048484090808080809131010101010122620202020244C';
 wwv_flow_imp.g_varchar2_table(232) := '4040404040489880808080903001010101817EF8B7000300F150237DA0602AAD0000000049454E44AE426082';
 wwv_flow_imp_shared.create_app_static_file(
- p_id=>wwv_flow_imp.id(3626002885880262698)
+ p_id=>wwv_flow_imp.id(3847827576069448264)
 ,p_file_name=>'mopt-logo.png'
 ,p_mime_type=>'image/png'
 ,p_file_charset=>'utf-8'

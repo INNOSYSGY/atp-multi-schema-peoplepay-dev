@@ -8,7 +8,7 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp.g_varchar2_table := wwv_flow_imp.empty_varchar2_table;
@@ -339,7 +339,7 @@ wwv_flow_imp.g_varchar2_table(324) := 'FA266D8900112002448008A43501324CD2BA7AA87
 wwv_flow_imp.g_varchar2_table(325) := 'C82D026498E4567D93B64480081001224004D29A001926695D3D54382240048800112002B945800C93DCAA6FD29608100122400488405A1320C324ADAB870A470488001120024420B7089061925BF54DDA1201224004880011486B02FF0F3A1F6F44D748';
 wwv_flow_imp.g_varchar2_table(326) := 'B2880000000049454E44AE426082';
 wwv_flow_imp_shared.create_app_static_file(
- p_id=>wwv_flow_imp.id(3624587657386068266)
+ p_id=>wwv_flow_imp.id(3846412347575253832)
 ,p_file_name=>'screen_shot_2018_08_07_at_2_27_10_pm.png'
 ,p_mime_type=>'image/png'
 ,p_file_charset=>'utf-8'

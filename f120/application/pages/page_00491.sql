@@ -8,7 +8,7 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_page.create_page(
@@ -18,27 +18,27 @@ wwv_flow_imp_page.create_page(
 ,p_reload_on_submit=>'A'
 ,p_warn_on_unsaved_changes=>'N'
 ,p_autocomplete_on_off=>'ON'
-,p_group_id=>wwv_flow_imp.id(3584896301505629885)
+,p_group_id=>wwv_flow_imp.id(3806720991694815451)
 ,p_page_template_options=>'#DEFAULT#'
-,p_required_role=>wwv_flow_imp.id(3585334160394360204)
+,p_required_role=>wwv_flow_imp.id(3807158850583545770)
 ,p_protection_level=>'C'
 ,p_help_text=>'No help is available for this page.'
 ,p_page_component_map=>'16'
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(475972716885706784)
+ p_id=>wwv_flow_imp.id(697797407074892350)
 ,p_plug_name=>'Breadcrumb'
 ,p_region_template_options=>'#DEFAULT#:t-BreadcrumbRegion--useBreadcrumbTitle'
 ,p_component_template_options=>'#DEFAULT#'
 ,p_plug_template=>2531463326621247859
 ,p_plug_display_sequence=>30
 ,p_plug_display_point=>'REGION_POSITION_01'
-,p_menu_id=>wwv_flow_imp.id(10766773638420877516)
+,p_menu_id=>wwv_flow_imp.id(10988598328610063082)
 ,p_plug_source_type=>'NATIVE_BREADCRUMB'
 ,p_menu_template_id=>4072363345357175094
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(3531899868402499122)
+ p_id=>wwv_flow_imp.id(3753724558591684688)
 ,p_plug_name=>'Employee'
 ,p_region_template_options=>'#DEFAULT#:t-Region--scrollBody'
 ,p_plug_template=>4072358936313175081
@@ -50,9 +50,9 @@ wwv_flow_imp_page.create_page_plug(
   'show_line_breaks', 'Y')).to_clob
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(3619119826259316565)
+ p_id=>wwv_flow_imp.id(3840944516448502131)
 ,p_plug_name=>'Separate Employee from Source Company'
-,p_parent_plug_id=>wwv_flow_imp.id(3531899868402499122)
+,p_parent_plug_id=>wwv_flow_imp.id(3753724558591684688)
 ,p_region_template_options=>'#DEFAULT#:t-Region--accent2:t-Region--scrollBody'
 ,p_plug_template=>4072358936313175081
 ,p_plug_display_sequence=>10
@@ -62,7 +62,7 @@ wwv_flow_imp_page.create_page_plug(
   'output_as', 'HTML')).to_clob
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(3531900316609503079)
+ p_id=>wwv_flow_imp.id(3753725006798688645)
 ,p_plug_name=>'Mass Employee InterOrganisation Movement (Source -->Destination)'
 ,p_region_template_options=>'#DEFAULT#:t-Region--accent2:t-Region--scrollBody'
 ,p_plug_template=>4072358936313175081
@@ -74,9 +74,9 @@ wwv_flow_imp_page.create_page_plug(
   'show_line_breaks', 'Y')).to_clob
 );
 wwv_flow_imp_page.create_page_button(
- p_id=>wwv_flow_imp.id(3621026729858350532)
+ p_id=>wwv_flow_imp.id(3842851420047536098)
 ,p_button_sequence=>10
-,p_button_plug_id=>wwv_flow_imp.id(3531899868402499122)
+,p_button_plug_id=>wwv_flow_imp.id(3753724558591684688)
 ,p_button_name=>'MOVE_EMPLOYEES'
 ,p_button_action=>'SUBMIT'
 ,p_button_template_options=>'#DEFAULT#'
@@ -85,12 +85,12 @@ wwv_flow_imp_page.create_page_button(
 ,p_button_image_alt=>'Move Employees'
 ,p_button_position=>'EDIT'
 ,p_button_alignment=>'RIGHT'
-,p_security_scheme=>wwv_flow_imp.id(3585334780499360204)
+,p_security_scheme=>wwv_flow_imp.id(3807159470688545770)
 );
 wwv_flow_imp_page.create_page_button(
- p_id=>wwv_flow_imp.id(3621028208874350533)
+ p_id=>wwv_flow_imp.id(3842852899063536099)
 ,p_button_sequence=>10
-,p_button_plug_id=>wwv_flow_imp.id(3531900316609503079)
+,p_button_plug_id=>wwv_flow_imp.id(3753725006798688645)
 ,p_button_name=>'RETURN'
 ,p_button_action=>'REDIRECT_PAGE'
 ,p_button_template_options=>'#DEFAULT#:t-Button--primary'
@@ -101,21 +101,21 @@ wwv_flow_imp_page.create_page_button(
 ,p_button_redirect_url=>'f?p=&APP_ID.:23:&SESSION.::&DEBUG.:::'
 );
 wwv_flow_imp_page.create_page_item(
- p_id=>wwv_flow_imp.id(3423937334601379366)
+ p_id=>wwv_flow_imp.id(3645762024790564932)
 ,p_name=>'P491_SEP_STATUS_CODE'
 ,p_item_sequence=>30
-,p_item_plug_id=>wwv_flow_imp.id(3619119826259316565)
+,p_item_plug_id=>wwv_flow_imp.id(3840944516448502131)
 ,p_display_as=>'NATIVE_HIDDEN'
 ,p_encrypt_session_state_yn=>'N'
 ,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
   'value_protected', 'N')).to_clob
 );
 wwv_flow_imp_page.create_page_item(
- p_id=>wwv_flow_imp.id(3619119617457316563)
+ p_id=>wwv_flow_imp.id(3840944307646502129)
 ,p_name=>'P491_DATE_SEPARATED'
 ,p_is_required=>true
 ,p_item_sequence=>20
-,p_item_plug_id=>wwv_flow_imp.id(3619119826259316565)
+,p_item_plug_id=>wwv_flow_imp.id(3840944516448502131)
 ,p_prompt=>'Date Saparated'
 ,p_display_as=>'NATIVE_DATE_PICKER_APEX'
 ,p_cSize=>12
@@ -135,11 +135,11 @@ wwv_flow_imp_page.create_page_item(
   'use_defaults', 'Y')).to_clob
 );
 wwv_flow_imp_page.create_page_item(
- p_id=>wwv_flow_imp.id(3619119677924316564)
+ p_id=>wwv_flow_imp.id(3840944368113502130)
 ,p_name=>'P491_SEPARATE_STATUS'
 ,p_is_required=>true
 ,p_item_sequence=>10
-,p_item_plug_id=>wwv_flow_imp.id(3619119826259316565)
+,p_item_plug_id=>wwv_flow_imp.id(3840944516448502131)
 ,p_prompt=>'Separate Status'
 ,p_display_as=>'NATIVE_SELECT_LIST'
 ,p_named_lov=>'SEPARATED_STATUS'
@@ -160,11 +160,11 @@ wwv_flow_imp_page.create_page_item(
   'page_action_on_selection', 'NONE')).to_clob
 );
 wwv_flow_imp_page.create_page_item(
- p_id=>wwv_flow_imp.id(3621025898666350532)
+ p_id=>wwv_flow_imp.id(3842850588855536098)
 ,p_name=>'P491_DESTINATION_COMPANY'
 ,p_is_required=>true
 ,p_item_sequence=>20
-,p_item_plug_id=>wwv_flow_imp.id(3531900316609503079)
+,p_item_plug_id=>wwv_flow_imp.id(3753725006798688645)
 ,p_prompt=>'Destination Company'
 ,p_display_as=>'NATIVE_SELECT_LIST'
 ,p_lov=>wwv_flow_string.join(wwv_flow_t_varchar2(
@@ -189,11 +189,11 @@ wwv_flow_imp_page.create_page_item(
   'page_action_on_selection', 'NONE')).to_clob
 );
 wwv_flow_imp_page.create_page_item(
- p_id=>wwv_flow_imp.id(3621027823127350533)
+ p_id=>wwv_flow_imp.id(3842852513316536099)
 ,p_name=>'P491_SOURCE_COMPANY'
 ,p_is_required=>true
 ,p_item_sequence=>10
-,p_item_plug_id=>wwv_flow_imp.id(3531900316609503079)
+,p_item_plug_id=>wwv_flow_imp.id(3753725006798688645)
 ,p_prompt=>'Source Company'
 ,p_display_as=>'NATIVE_SELECT_LIST'
 ,p_lov=>wwv_flow_string.join(wwv_flow_t_varchar2(
@@ -214,11 +214,11 @@ wwv_flow_imp_page.create_page_item(
   'page_action_on_selection', 'NONE')).to_clob
 );
 wwv_flow_imp_page.create_page_item(
- p_id=>wwv_flow_imp.id(3621437390334657734)
+ p_id=>wwv_flow_imp.id(3843262080523843300)
 ,p_name=>'P491_EMPLOYEES'
 ,p_is_required=>true
 ,p_item_sequence=>10
-,p_item_plug_id=>wwv_flow_imp.id(3531899868402499122)
+,p_item_plug_id=>wwv_flow_imp.id(3753724558591684688)
 ,p_prompt=>'Employees'
 ,p_display_as=>'PLUGIN_BE.CTB.SELECT2'
 ,p_lov=>wwv_flow_string.join(wwv_flow_t_varchar2(
@@ -356,7 +356,7 @@ wwv_flow_imp_page.create_page_item(
   'attribute_10', '100%')).to_clob
 );
 wwv_flow_imp_page.create_page_da_event(
- p_id=>wwv_flow_imp.id(3423937367943379367)
+ p_id=>wwv_flow_imp.id(3645762058132564933)
 ,p_name=>'dy_set_sep_status_code'
 ,p_event_sequence=>10
 ,p_triggering_element_type=>'ITEM'
@@ -368,8 +368,8 @@ wwv_flow_imp_page.create_page_da_event(
 ,p_bind_event_type=>'change'
 );
 wwv_flow_imp_page.create_page_da_action(
- p_id=>wwv_flow_imp.id(3423937551372379368)
-,p_event_id=>wwv_flow_imp.id(3423937367943379367)
+ p_id=>wwv_flow_imp.id(3645762241561564934)
+,p_event_id=>wwv_flow_imp.id(3645762058132564933)
 ,p_event_result=>'TRUE'
 ,p_action_sequence=>10
 ,p_execute_on_page_init=>'Y'
@@ -388,7 +388,7 @@ wwv_flow_imp_page.create_page_da_action(
 ,p_wait_for_result=>'Y'
 );
 wwv_flow_imp_page.create_page_process(
- p_id=>wwv_flow_imp.id(3621025466969350517)
+ p_id=>wwv_flow_imp.id(3842850157158536083)
 ,p_process_sequence=>10
 ,p_process_point=>'AFTER_SUBMIT'
 ,p_process_type=>'NATIVE_PLSQL'
@@ -643,7 +643,7 @@ wwv_flow_imp_page.create_page_process(
 'end;'))
 ,p_process_clob_language=>'PLSQL'
 ,p_error_display_location=>'INLINE_IN_NOTIFICATION'
-,p_process_when_button_id=>wwv_flow_imp.id(3621026729858350532)
+,p_process_when_button_id=>wwv_flow_imp.id(3842851420047536098)
 ,p_process_success_message=>'Successful execution of mass movement of employees to new manager.'
 ,p_internal_uid=>3199233473771353943
 );

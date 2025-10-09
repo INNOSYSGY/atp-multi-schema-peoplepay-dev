@@ -8,11 +8,11 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_shared.create_plugin(
- p_id=>wwv_flow_imp.id(3531189446812928073)
+ p_id=>wwv_flow_imp.id(3753014137002113639)
 ,p_plugin_type=>'REGION TYPE'
 ,p_name=>'COM.FOS.SPLITTER'
 ,p_display_name=>'FOS - Splitter'
@@ -437,8 +437,8 @@ wwv_flow_imp_shared.create_plugin(
 ,p_files_version=>649
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3536138383683558286)
-,p_plugin_id=>wwv_flow_imp.id(3531189446812928073)
+ p_id=>wwv_flow_imp.id(3757963073872743852)
+,p_plugin_id=>wwv_flow_imp.id(3753014137002113639)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>1
 ,p_display_sequence=>10
@@ -454,24 +454,24 @@ wwv_flow_imp_shared.create_plugin_attribute(
 '<p><strong>Note:</strong> This option cannot be changed after initialization via Javascript.</p>'))
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3536138732494558286)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3536138383683558286)
+ p_id=>wwv_flow_imp.id(3757963422683743852)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3757963073872743852)
 ,p_display_sequence=>10
 ,p_display_value=>'Horizontal'
 ,p_return_value=>'horizontal'
 ,p_help_text=>'Sub regions are side by side'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3536139257945558287)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3536138383683558286)
+ p_id=>wwv_flow_imp.id(3757963948134743853)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3757963073872743852)
 ,p_display_sequence=>20
 ,p_display_value=>'Vertical'
 ,p_return_value=>'vertical'
 ,p_help_text=>'Sub regions are stacked'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3536139737548558287)
-,p_plugin_id=>wwv_flow_imp.id(3531189446812928073)
+ p_id=>wwv_flow_imp.id(3757964427737743853)
+,p_plugin_id=>wwv_flow_imp.id(3753014137002113639)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>2
 ,p_display_sequence=>20
@@ -485,8 +485,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'<p>This option determines which side the splitter will collapse towards.</p>'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3536140157070558287)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3536139737548558287)
+ p_id=>wwv_flow_imp.id(3757964847259743853)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3757964427737743853)
 ,p_display_sequence=>10
 ,p_display_value=>'To Start (left/top)'
 ,p_return_value=>'begin'
@@ -495,8 +495,8 @@ wwv_flow_imp_shared.create_plugin_attr_value(
 '<p>If the region orientation is Vertical, collapse to the top.</p>'))
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3536140583929558287)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3536139737548558287)
+ p_id=>wwv_flow_imp.id(3757965274118743853)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3757964427737743853)
 ,p_display_sequence=>20
 ,p_display_value=>'To End (right/bottom)'
 ,p_return_value=>'end'
@@ -505,8 +505,8 @@ wwv_flow_imp_shared.create_plugin_attr_value(
 '<p>If the region orientation is Vertical, collapse to the bottom.</p>'))
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3536141111838558288)
-,p_plugin_id=>wwv_flow_imp.id(3531189446812928073)
+ p_id=>wwv_flow_imp.id(3757965802027743854)
+,p_plugin_id=>wwv_flow_imp.id(3753014137002113639)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>3
 ,p_display_sequence=>30
@@ -523,64 +523,64 @@ wwv_flow_imp_shared.create_plugin_attribute(
 '<p><strong>Note:</strong> if the splitter position is not persisted then on window/region resize the splitter position will be repositioned automatically based on this setting.</p>'))
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3536144029075558289)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3536141111838558288)
+ p_id=>wwv_flow_imp.id(3757968719264743855)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3757965802027743854)
 ,p_display_sequence=>10
 ,p_display_value=>'0 (collapsed)'
 ,p_return_value=>'0'
 ,p_help_text=>'Collapsed at the side that collapses'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3536144490839558289)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3536141111838558288)
+ p_id=>wwv_flow_imp.id(3757969181028743855)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3757965802027743854)
 ,p_display_sequence=>20
 ,p_display_value=>'1/4'
 ,p_return_value=>'1/4'
 ,p_help_text=>'A quarter of the way in'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3536141475079558288)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3536141111838558288)
+ p_id=>wwv_flow_imp.id(3757966165268743854)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3757965802027743854)
 ,p_display_sequence=>30
 ,p_display_value=>'1/3'
 ,p_return_value=>'1/3'
 ,p_help_text=>'A third of the way in'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3536141973616558288)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3536141111838558288)
+ p_id=>wwv_flow_imp.id(3757966663805743854)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3757965802027743854)
 ,p_display_sequence=>40
 ,p_display_value=>'1/2 (centered)'
 ,p_return_value=>'1/2'
 ,p_help_text=>'Centered'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3536142529476558288)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3536141111838558288)
+ p_id=>wwv_flow_imp.id(3757967219665743854)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3757965802027743854)
 ,p_display_sequence=>50
 ,p_display_value=>'2/3'
 ,p_return_value=>'2/3'
 ,p_help_text=>'Two thirds of the way in'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3536142990112558288)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3536141111838558288)
+ p_id=>wwv_flow_imp.id(3757967680301743854)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3757965802027743854)
 ,p_display_sequence=>60
 ,p_display_value=>'3/4'
 ,p_return_value=>'3/4'
 ,p_help_text=>'Three quarters of the way in'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3536143516205558288)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3536141111838558288)
+ p_id=>wwv_flow_imp.id(3757968206394743854)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3757965802027743854)
 ,p_display_sequence=>80
 ,p_display_value=>'custom'
 ,p_return_value=>'custom'
 ,p_help_text=>'Dynamically calculated in Javascript'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3536145073250558289)
-,p_plugin_id=>wwv_flow_imp.id(3531189446812928073)
+ p_id=>wwv_flow_imp.id(3757969763439743855)
+,p_plugin_id=>wwv_flow_imp.id(3753014137002113639)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>4
 ,p_display_sequence=>40
@@ -589,7 +589,7 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_attribute_type=>'JAVASCRIPT'
 ,p_is_required=>true
 ,p_is_translatable=>false
-,p_depending_on_attribute_id=>wwv_flow_imp.id(3536141111838558288)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(3757965802027743854)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'EQUALS'
 ,p_depending_on_expression=>'custom'
@@ -601,8 +601,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'<p>Provide the starting position as a Javascript expression that evaluates to a number in pixels.</p>'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3536145429118558289)
-,p_plugin_id=>wwv_flow_imp.id(3531189446812928073)
+ p_id=>wwv_flow_imp.id(3757970119307743855)
+,p_plugin_id=>wwv_flow_imp.id(3753014137002113639)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>5
 ,p_display_sequence=>50
@@ -619,8 +619,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 '<p>If not specified, 60 is used.</p>'))
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3536145846231558289)
-,p_plugin_id=>wwv_flow_imp.id(3531189446812928073)
+ p_id=>wwv_flow_imp.id(3757970536420743855)
+,p_plugin_id=>wwv_flow_imp.id(3753014137002113639)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>6
 ,p_display_sequence=>60
@@ -639,8 +639,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 '<p>This expression will be re-evaluated and reapplied every time the window size changes.</p>'))
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3536146217869558289)
-,p_plugin_id=>wwv_flow_imp.id(3531189446812928073)
+ p_id=>wwv_flow_imp.id(3757970908058743855)
+,p_plugin_id=>wwv_flow_imp.id(3753014137002113639)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>10
 ,p_display_sequence=>100
@@ -654,16 +654,16 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'<p>The splitter has the following options</p>'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3536147585686558290)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3536146217869558289)
+ p_id=>wwv_flow_imp.id(3757972275875743856)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3757970908058743855)
 ,p_display_sequence=>10
 ,p_display_value=>'Can Collapse'
 ,p_return_value=>'can-collapse'
 ,p_help_text=>'Whether the splitter should be collapsable.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3536148659099558290)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3536146217869558289)
+ p_id=>wwv_flow_imp.id(3757973349288743856)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3757970908058743855)
 ,p_display_sequence=>20
 ,p_display_value=>'Continuous Resize'
 ,p_return_value=>'continuous-resize'
@@ -671,24 +671,24 @@ wwv_flow_imp_shared.create_plugin_attr_value(
 ||'e computationally expensive to resize.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3536148102617558290)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3536146217869558289)
+ p_id=>wwv_flow_imp.id(3757972792806743856)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3757970908058743855)
 ,p_display_sequence=>30
 ,p_display_value=>'Drag Over Minimum Size to Collapse'
 ,p_return_value=>'drag-collapse'
 ,p_help_text=>'If enabled, dragging past the minimum size will collapse the splitter. Otherwise the splitter can only be dragged to the minimum size.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3469024238860846467)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3536146217869558289)
+ p_id=>wwv_flow_imp.id(3690848929050032033)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3757970908058743855)
 ,p_display_sequence=>40
 ,p_display_value=>'Lazy Render'
 ,p_return_value=>'lazy-render'
 ,p_help_text=>'<p>check this option when the splitter is within a hidden region on page load e.g. a non-active tab, hidden by a region display selector etc.</p>'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3536874827027899460)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3536146217869558289)
+ p_id=>wwv_flow_imp.id(3758699517217085026)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3757970908058743855)
 ,p_display_sequence=>50
 ,p_display_value=>'Persist State (Local Storage)'
 ,p_return_value=>'persist-state-local'
@@ -697,8 +697,8 @@ wwv_flow_imp_shared.create_plugin_attr_value(
 '<p>This option does not require communication to the database, but it also means that the preference is not carried to other devices and is not user specific.</p>'))
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3536146585450558290)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3536146217869558289)
+ p_id=>wwv_flow_imp.id(3757971275639743856)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3757970908058743855)
 ,p_display_sequence=>60
 ,p_display_value=>'Persist State (User Preference)'
 ,p_return_value=>'persist-state'
@@ -707,24 +707,24 @@ wwv_flow_imp_shared.create_plugin_attr_value(
 '<p>Note that this will require an AJAX call every time the splitter is moved.</p>'))
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3470790504946566993)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3536146217869558289)
+ p_id=>wwv_flow_imp.id(3692615195135752559)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3757970908058743855)
 ,p_display_sequence=>70
 ,p_display_value=>'Resize Jet Charts to Fit Region'
 ,p_return_value=>'responsive-jet-charts'
 ,p_help_text=>'<p>Check this option when you are splitting one or more JET Chart regions and you would like the chart to consume the entire space of the spliced region(s).</p>'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3536147141934558290)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3536146217869558289)
+ p_id=>wwv_flow_imp.id(3757971832123743856)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3757970908058743855)
 ,p_display_sequence=>80
 ,p_display_value=>'Subregion Contains iframe'
 ,p_return_value=>'contains-iframe'
 ,p_help_text=>'Enable if either subregion of the splitter contains an iframe. This ensures to overcome a browser restriction that prohibits dragging an element (the splitter) over an iframe.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3536149111989558291)
-,p_plugin_id=>wwv_flow_imp.id(3531189446812928073)
+ p_id=>wwv_flow_imp.id(3757973802178743857)
+,p_plugin_id=>wwv_flow_imp.id(3753014137002113639)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>15
 ,p_display_sequence=>150
@@ -737,8 +737,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'<p>Toggle this advanced options to have more control over padding, titles, child region selection etc.</p>'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3536149523761558291)
-,p_plugin_id=>wwv_flow_imp.id(3531189446812928073)
+ p_id=>wwv_flow_imp.id(3757974213950743857)
+,p_plugin_id=>wwv_flow_imp.id(3753014137002113639)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>16
 ,p_display_sequence=>160
@@ -747,7 +747,7 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_attribute_type=>'TEXT'
 ,p_is_required=>false
 ,p_is_translatable=>false
-,p_depending_on_attribute_id=>wwv_flow_imp.id(3536149111989558291)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(3757973802178743857)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'EQUALS'
 ,p_depending_on_expression=>'Y'
@@ -759,8 +759,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 '<p>This attribute is intended for non-Universal Theme apps where the page markup might be different. If you are using the Universal Theme, then you should leave this attribute empty.</p>'))
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3536149965764558291)
-,p_plugin_id=>wwv_flow_imp.id(3531189446812928073)
+ p_id=>wwv_flow_imp.id(3757974655953743857)
+,p_plugin_id=>wwv_flow_imp.id(3753014137002113639)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>17
 ,p_display_sequence=>170
@@ -770,15 +770,15 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_is_required=>false
 ,p_unit=>'pixels'
 ,p_is_translatable=>false
-,p_depending_on_attribute_id=>wwv_flow_imp.id(3536149111989558291)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(3757973802178743857)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'EQUALS'
 ,p_depending_on_expression=>'Y'
 ,p_help_text=>'<p>Optional. The number of pixels the splitter moves in each increment when dragging or with the arrow keys. If not specified the splitter can be dragged with single pixel precision.</p>'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3536150305953558291)
-,p_plugin_id=>wwv_flow_imp.id(3531189446812928073)
+ p_id=>wwv_flow_imp.id(3757974996142743857)
+,p_plugin_id=>wwv_flow_imp.id(3753014137002113639)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>18
 ,p_display_sequence=>180
@@ -789,7 +789,7 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_default_value=>'10'
 ,p_unit=>'pixels'
 ,p_is_translatable=>false
-,p_depending_on_attribute_id=>wwv_flow_imp.id(3536149111989558291)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(3757973802178743857)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'EQUALS'
 ,p_depending_on_expression=>'Y'
@@ -798,8 +798,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 '<p>This value will be overridden by Step Size if provided.</p>'))
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3536150685323558291)
-,p_plugin_id=>wwv_flow_imp.id(3531189446812928073)
+ p_id=>wwv_flow_imp.id(3757975375512743857)
+,p_plugin_id=>wwv_flow_imp.id(3753014137002113639)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>19
 ,p_display_sequence=>190
@@ -808,15 +808,15 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_attribute_type=>'TEXT'
 ,p_is_required=>false
 ,p_is_translatable=>true
-,p_depending_on_attribute_id=>wwv_flow_imp.id(3536149111989558291)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(3757973802178743857)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'EQUALS'
 ,p_depending_on_expression=>'Y'
 ,p_help_text=>'<p>This is the title (tooltip) text for the splitter bar. Providing a title for each splitter is helpful for accessibility especially when there are multiple splitters.</p>'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3536151144715558291)
-,p_plugin_id=>wwv_flow_imp.id(3531189446812928073)
+ p_id=>wwv_flow_imp.id(3757975834904743857)
+,p_plugin_id=>wwv_flow_imp.id(3753014137002113639)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>20
 ,p_display_sequence=>200
@@ -825,15 +825,15 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_attribute_type=>'TEXT'
 ,p_is_required=>false
 ,p_is_translatable=>true
-,p_depending_on_attribute_id=>wwv_flow_imp.id(3536149111989558291)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(3757973802178743857)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'EQUALS'
 ,p_depending_on_expression=>'Y'
 ,p_help_text=>'<p>This is the title (tooltip) text for the splitter handle when the splitter is expanded. If not specified a default is provided. This attribute is translatable.</p>'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3536151562630558292)
-,p_plugin_id=>wwv_flow_imp.id(3531189446812928073)
+ p_id=>wwv_flow_imp.id(3757976252819743858)
+,p_plugin_id=>wwv_flow_imp.id(3753014137002113639)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>21
 ,p_display_sequence=>210
@@ -842,15 +842,15 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_attribute_type=>'TEXT'
 ,p_is_required=>false
 ,p_is_translatable=>true
-,p_depending_on_attribute_id=>wwv_flow_imp.id(3536149111989558291)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(3757973802178743857)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'EQUALS'
 ,p_depending_on_expression=>'Y'
 ,p_help_text=>'<p>This is the title (tooltip) text for the splitter handle when the splitter is collapsed. If not specified a default is provided. This attribute is translatable.</p>'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3536151881761558292)
-,p_plugin_id=>wwv_flow_imp.id(3531189446812928073)
+ p_id=>wwv_flow_imp.id(3757976571950743858)
+,p_plugin_id=>wwv_flow_imp.id(3753014137002113639)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>22
 ,p_display_sequence=>220
@@ -859,7 +859,7 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_attribute_type=>'JAVASCRIPT'
 ,p_is_required=>false
 ,p_is_translatable=>false
-,p_depending_on_attribute_id=>wwv_flow_imp.id(3536149111989558291)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(3757973802178743857)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'EQUALS'
 ,p_depending_on_expression=>'Y'
@@ -870,8 +870,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'<p>Execute a function every time the splitter is moved.</p>'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3536152332878558292)
-,p_plugin_id=>wwv_flow_imp.id(3531189446812928073)
+ p_id=>wwv_flow_imp.id(3757977023067743858)
+,p_plugin_id=>wwv_flow_imp.id(3753014137002113639)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>23
 ,p_display_sequence=>230
@@ -882,15 +882,15 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_default_value=>'16'
 ,p_unit=>'pixels'
 ,p_is_translatable=>false
-,p_depending_on_attribute_id=>wwv_flow_imp.id(3536149111989558291)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(3757973802178743857)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'EQUALS'
 ,p_depending_on_expression=>'Y'
 ,p_help_text=>'<p>The padding of the first subregion in pixels. If no value is provided, the default will be 16.</p>'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3536152678926558292)
-,p_plugin_id=>wwv_flow_imp.id(3531189446812928073)
+ p_id=>wwv_flow_imp.id(3757977369115743858)
+,p_plugin_id=>wwv_flow_imp.id(3753014137002113639)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>24
 ,p_display_sequence=>240
@@ -901,15 +901,15 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_default_value=>'16'
 ,p_unit=>'pixels'
 ,p_is_translatable=>false
-,p_depending_on_attribute_id=>wwv_flow_imp.id(3536149111989558291)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(3757973802178743857)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'EQUALS'
 ,p_depending_on_expression=>'Y'
 ,p_help_text=>'<p>The padding of the first subregion in pixels. If no value is provided, the default will be 16.</p>'
 );
 wwv_flow_imp_shared.create_plugin_std_attribute(
- p_id=>wwv_flow_imp.id(3468014647761631394)
-,p_plugin_id=>wwv_flow_imp.id(3531189446812928073)
+ p_id=>wwv_flow_imp.id(3689839337950816960)
+,p_plugin_id=>wwv_flow_imp.id(3753014137002113639)
 ,p_name=>'INIT_JAVASCRIPT_CODE'
 ,p_is_required=>false
 ,p_depending_on_has_to_exist=>true
@@ -925,20 +925,20 @@ wwv_flow_imp_shared.create_plugin_std_attribute(
 ,p_help_text=>'<p>You can use this attribute to define a function that will allow you to change/override the plugin settings. This gives you added flexibility of controlling the settings from a single Javascript function defined in a "Static Application File"</p>'
 );
 wwv_flow_imp_shared.create_plugin_event(
- p_id=>wwv_flow_imp.id(3469738966144201153)
-,p_plugin_id=>wwv_flow_imp.id(3531189446812928073)
+ p_id=>wwv_flow_imp.id(3691563656333386719)
+,p_plugin_id=>wwv_flow_imp.id(3753014137002113639)
 ,p_name=>'fos-splitter-after-render'
 ,p_display_name=>'FOS - Splitter - After Render'
 );
 wwv_flow_imp_shared.create_plugin_event(
- p_id=>wwv_flow_imp.id(3469739626266208288)
-,p_plugin_id=>wwv_flow_imp.id(3531189446812928073)
+ p_id=>wwv_flow_imp.id(3691564316455393854)
+,p_plugin_id=>wwv_flow_imp.id(3753014137002113639)
 ,p_name=>'fos-splitter-after-resize'
 ,p_display_name=>'FOS - Splitter - After Resize'
 );
 wwv_flow_imp_shared.create_plugin_event(
- p_id=>wwv_flow_imp.id(3469739270921203674)
-,p_plugin_id=>wwv_flow_imp.id(3531189446812928073)
+ p_id=>wwv_flow_imp.id(3691563961110389240)
+,p_plugin_id=>wwv_flow_imp.id(3753014137002113639)
 ,p_name=>'fos-splitter-before-render'
 ,p_display_name=>'FOS - Splitter - Before Render'
 );
@@ -1254,8 +1254,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(3468588387860762913)
-,p_plugin_id=>wwv_flow_imp.id(3531189446812928073)
+ p_id=>wwv_flow_imp.id(3690413078049948479)
+,p_plugin_id=>wwv_flow_imp.id(3753014137002113639)
 ,p_file_name=>'libraries/widget.splitter.js'
 ,p_mime_type=>'application/javascript'
 ,p_file_charset=>'utf-8'
@@ -1374,8 +1374,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(3468589821917872504)
-,p_plugin_id=>wwv_flow_imp.id(3531189446812928073)
+ p_id=>wwv_flow_imp.id(3690414512107058070)
+,p_plugin_id=>wwv_flow_imp.id(3753014137002113639)
 ,p_file_name=>'libraries/widget.splitter.min.js'
 ,p_mime_type=>'application/javascript'
 ,p_file_charset=>'utf-8'
@@ -1518,8 +1518,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(3468590147584872506)
-,p_plugin_id=>wwv_flow_imp.id(3531189446812928073)
+ p_id=>wwv_flow_imp.id(3690414837774058072)
+,p_plugin_id=>wwv_flow_imp.id(3753014137002113639)
 ,p_file_name=>'libraries/widget.splitter.js.map'
 ,p_mime_type=>'application/json'
 ,p_file_charset=>'utf-8'
@@ -1537,8 +1537,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(3536163348110558299)
-,p_plugin_id=>wwv_flow_imp.id(3531189446812928073)
+ p_id=>wwv_flow_imp.id(3757988038299743865)
+,p_plugin_id=>wwv_flow_imp.id(3753014137002113639)
 ,p_file_name=>'css/style.css'
 ,p_mime_type=>'text/css'
 ,p_file_charset=>'utf-8'
@@ -1558,8 +1558,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(3536163686337558300)
-,p_plugin_id=>wwv_flow_imp.id(3531189446812928073)
+ p_id=>wwv_flow_imp.id(3757988376526743866)
+,p_plugin_id=>wwv_flow_imp.id(3753014137002113639)
 ,p_file_name=>'css/style.css.map'
 ,p_mime_type=>'application/json'
 ,p_file_charset=>'utf-8'
@@ -1576,8 +1576,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(3536164089698558300)
-,p_plugin_id=>wwv_flow_imp.id(3531189446812928073)
+ p_id=>wwv_flow_imp.id(3757988779887743866)
+,p_plugin_id=>wwv_flow_imp.id(3753014137002113639)
 ,p_file_name=>'css/style.min.css'
 ,p_mime_type=>'text/css'
 ,p_file_charset=>'utf-8'
@@ -1723,8 +1723,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(3536164494625558300)
-,p_plugin_id=>wwv_flow_imp.id(3531189446812928073)
+ p_id=>wwv_flow_imp.id(3757989184814743866)
+,p_plugin_id=>wwv_flow_imp.id(3753014137002113639)
 ,p_file_name=>'js/script.js'
 ,p_mime_type=>'application/javascript'
 ,p_file_charset=>'utf-8'
@@ -1786,8 +1786,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(3536164879187558300)
-,p_plugin_id=>wwv_flow_imp.id(3531189446812928073)
+ p_id=>wwv_flow_imp.id(3757989569376743866)
+,p_plugin_id=>wwv_flow_imp.id(3753014137002113639)
 ,p_file_name=>'js/script.js.map'
 ,p_mime_type=>'application/json'
 ,p_file_charset=>'utf-8'
@@ -1839,8 +1839,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(3536165361819558300)
-,p_plugin_id=>wwv_flow_imp.id(3531189446812928073)
+ p_id=>wwv_flow_imp.id(3757990052008743866)
+,p_plugin_id=>wwv_flow_imp.id(3753014137002113639)
 ,p_file_name=>'js/script.min.js'
 ,p_mime_type=>'application/javascript'
 ,p_file_charset=>'utf-8'

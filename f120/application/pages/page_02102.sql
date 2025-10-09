@@ -8,7 +8,7 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_page.create_page(
@@ -45,7 +45,7 @@ wwv_flow_imp_page.create_page(
 ,p_page_component_map=>'23'
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(3492354221476484993)
+ p_id=>wwv_flow_imp.id(3714178911665670559)
 ,p_plug_name=>'What''s New Slider'
 ,p_region_template_options=>'#DEFAULT#:js-cycle10s:t-Region--carouselSlide:t-Region--removeHeader js-removeLandmark:t-Region--hiddenOverflow'
 ,p_plug_template=>2867287278109674555
@@ -57,9 +57,9 @@ wwv_flow_imp_page.create_page_plug(
   'output_as', 'HTML')).to_clob
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(3492354379695484994)
+ p_id=>wwv_flow_imp.id(3714179069884670560)
 ,p_plug_name=>'Organisational Chart'
-,p_parent_plug_id=>wwv_flow_imp.id(3492354221476484993)
+,p_parent_plug_id=>wwv_flow_imp.id(3714178911665670559)
 ,p_icon_css_classes=>'fa-gantt-chart'
 ,p_region_template_options=>'#DEFAULT#::t-HeroRegion--hideIcon::::::::::'
 ,p_plug_template=>2674017834225413037
@@ -72,9 +72,9 @@ wwv_flow_imp_page.create_page_plug(
   'output_as', 'HTML')).to_clob
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(3492354593574484996)
+ p_id=>wwv_flow_imp.id(3714179283763670562)
 ,p_plug_name=>'Shift Management'
-,p_parent_plug_id=>wwv_flow_imp.id(3492354221476484993)
+,p_parent_plug_id=>wwv_flow_imp.id(3714178911665670559)
 ,p_icon_css_classes=>'fa-rotate-right'
 ,p_region_template_options=>'#DEFAULT#::t-HeroRegion--hideIcon::::::::::'
 ,p_plug_template=>2674017834225413037
@@ -87,9 +87,9 @@ wwv_flow_imp_page.create_page_plug(
   'output_as', 'HTML')).to_clob
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(3492355715578485008)
+ p_id=>wwv_flow_imp.id(3714180405767670574)
 ,p_plug_name=>'New Movemnt UI'
-,p_parent_plug_id=>wwv_flow_imp.id(3492354221476484993)
+,p_parent_plug_id=>wwv_flow_imp.id(3714178911665670559)
 ,p_icon_css_classes=>'fa-folder-pointer'
 ,p_region_template_options=>'#DEFAULT#:t-HeroRegion--hideIcon'
 ,p_plug_template=>2674017834225413037
@@ -102,9 +102,9 @@ wwv_flow_imp_page.create_page_plug(
   'output_as', 'HTML')).to_clob
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(3492355812054485009)
+ p_id=>wwv_flow_imp.id(3714180502243670575)
 ,p_plug_name=>'Employee Creation'
-,p_parent_plug_id=>wwv_flow_imp.id(3492354221476484993)
+,p_parent_plug_id=>wwv_flow_imp.id(3714178911665670559)
 ,p_icon_css_classes=>'fa-user-man'
 ,p_region_template_options=>'#DEFAULT#::t-HeroRegion--hideIcon::::::::::'
 ,p_plug_template=>2674017834225413037
@@ -116,9 +116,9 @@ wwv_flow_imp_page.create_page_plug(
   'output_as', 'HTML')).to_clob
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(3492355936712485010)
+ p_id=>wwv_flow_imp.id(3714180626901670576)
 ,p_plug_name=>'Leave Management'
-,p_parent_plug_id=>wwv_flow_imp.id(3492354221476484993)
+,p_parent_plug_id=>wwv_flow_imp.id(3714178911665670559)
 ,p_icon_css_classes=>'fa-leaf'
 ,p_region_template_options=>'#DEFAULT#::t-HeroRegion--hideIcon::::::::::'
 ,p_plug_template=>2674017834225413037
@@ -130,7 +130,7 @@ wwv_flow_imp_page.create_page_plug(
   'output_as', 'HTML')).to_clob
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(3492354634507484997)
+ p_id=>wwv_flow_imp.id(3714179324696670563)
 ,p_plug_name=>'What''s New in PeoplePay HRMIS'
 ,p_icon_css_classes=>'fa-emoji-big-eyes-smile'
 ,p_region_template_options=>'#DEFAULT#::t-HeroRegion--hideIcon::::::::::'
@@ -142,7 +142,7 @@ wwv_flow_imp_page.create_page_plug(
   'output_as', 'HTML')).to_clob
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(3609257373292498929)
+ p_id=>wwv_flow_imp.id(3831082063481684495)
 ,p_plug_name=>'Whats New for PeoplePay HRMIS'
 ,p_region_template_options=>'#DEFAULT#'
 ,p_plug_template=>2072724515482255512
@@ -167,8 +167,8 @@ wwv_flow_imp_page.create_page_plug(
 ,p_show_total_row_count=>false
 );
 wwv_flow_imp_page.create_card(
- p_id=>wwv_flow_imp.id(368736323525223656)
-,p_region_id=>wwv_flow_imp.id(3609257373292498929)
+ p_id=>wwv_flow_imp.id(590561013714409222)
+,p_region_id=>wwv_flow_imp.id(3831082063481684495)
 ,p_layout_type=>'GRID'
 ,p_title_adv_formatting=>false
 ,p_title_column_name=>'CARD_TITLE'
@@ -179,9 +179,9 @@ wwv_flow_imp_page.create_card(
 ,p_media_adv_formatting=>false
 );
 wwv_flow_imp_page.create_page_button(
- p_id=>wwv_flow_imp.id(368736486098223657)
+ p_id=>wwv_flow_imp.id(590561176287409223)
 ,p_button_sequence=>10
-,p_button_plug_id=>wwv_flow_imp.id(3609257373292498929)
+,p_button_plug_id=>wwv_flow_imp.id(3831082063481684495)
 ,p_button_name=>'SETUP_WHATS_NEW'
 ,p_button_action=>'REDIRECT_PAGE'
 ,p_button_template_options=>'#DEFAULT#'

@@ -8,7 +8,7 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_page.create_page(
@@ -21,7 +21,7 @@ wwv_flow_imp_page.create_page(
 ,p_page_component_map=>'18'
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(3406801233945030609)
+ p_id=>wwv_flow_imp.id(3628625924134216175)
 ,p_plug_name=>'Grade Points with Details'
 ,p_region_template_options=>'#DEFAULT#:t-Region--accent5:t-Region--scrollBody'
 ,p_plug_template=>4072358936313175081
@@ -69,7 +69,7 @@ wwv_flow_imp_page.create_page_plug(
 ,p_prn_border_color=>'#666666'
 );
 wwv_flow_imp_page.create_worksheet(
- p_id=>wwv_flow_imp.id(3406801302167030609)
+ p_id=>wwv_flow_imp.id(3628625992356216175)
 ,p_name=>'gradegradepoint'
 ,p_max_row_count_message=>'The maximum row count for this report is #MAX_ROW_COUNT# rows.  Please apply a filter to reduce the number of records in your query.'
 ,p_no_data_found_message=>'No data found.'
@@ -89,7 +89,7 @@ wwv_flow_imp_page.create_worksheet(
 ,p_internal_uid=>161242235577487550
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3406802951253030617)
+ p_id=>wwv_flow_imp.id(3628627641442216183)
 ,p_db_column_name=>'GDPOIN'
 ,p_display_order=>4
 ,p_column_identifier=>'D'
@@ -100,7 +100,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3406803279469030617)
+ p_id=>wwv_flow_imp.id(3628627969658216183)
 ,p_db_column_name=>'POINT_AMOUNT'
 ,p_display_order=>5
 ,p_column_identifier=>'E'
@@ -112,7 +112,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3406803680727030618)
+ p_id=>wwv_flow_imp.id(3628628370916216184)
 ,p_db_column_name=>'ORG_ID'
 ,p_display_order=>6
 ,p_column_identifier=>'F'
@@ -124,7 +124,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3401531591418161663)
+ p_id=>wwv_flow_imp.id(3623356281607347229)
 ,p_db_column_name=>'GRADE'
 ,p_display_order=>16
 ,p_column_identifier=>'G'
@@ -134,7 +134,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3401531692757161664)
+ p_id=>wwv_flow_imp.id(3623356382946347230)
 ,p_db_column_name=>'INCREMENT_AMOUNT'
 ,p_display_order=>26
 ,p_column_identifier=>'H'
@@ -146,7 +146,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3401531961638161666)
+ p_id=>wwv_flow_imp.id(3623356651827347232)
 ,p_db_column_name=>'GRADE_MINI'
 ,p_display_order=>46
 ,p_column_identifier=>'J'
@@ -158,7 +158,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3401532022572161667)
+ p_id=>wwv_flow_imp.id(3623356712761347233)
 ,p_db_column_name=>'GRADE_MAX'
 ,p_display_order=>56
 ,p_column_identifier=>'K'
@@ -170,7 +170,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_rpt(
- p_id=>wwv_flow_imp.id(3406804312953031114)
+ p_id=>wwv_flow_imp.id(3628629003142216680)
 ,p_application_user=>'APXWS_DEFAULT'
 ,p_report_seq=>10
 ,p_report_alias=>'1612453'

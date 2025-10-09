@@ -8,7 +8,7 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_page.create_page(
@@ -21,7 +21,7 @@ wwv_flow_imp_page.create_page(
 ,p_page_component_map=>'17'
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(10831009940722650198)
+ p_id=>wwv_flow_imp.id(11052834630911835764)
 ,p_plug_name=>'View Medical History Guide'
 ,p_region_name=>'view_pdf'
 ,p_region_template_options=>'#DEFAULT#:t-Region--scrollBody'
@@ -38,7 +38,7 @@ wwv_flow_imp_page.create_page_plug(
   'output_as', 'HTML')).to_clob
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(10831010945886650208)
+ p_id=>wwv_flow_imp.id(11052835636075835774)
 ,p_plug_name=>'New'
 ,p_region_template_options=>'#DEFAULT#'
 ,p_plug_template=>4501440665235496320
@@ -49,9 +49,9 @@ wwv_flow_imp_page.create_page_plug(
   'output_as', 'HTML')).to_clob
 );
 wwv_flow_imp_page.create_page_button(
- p_id=>wwv_flow_imp.id(449491359793143139)
+ p_id=>wwv_flow_imp.id(671316049982328705)
 ,p_button_sequence=>10
-,p_button_plug_id=>wwv_flow_imp.id(10831010945886650208)
+,p_button_plug_id=>wwv_flow_imp.id(11052835636075835774)
 ,p_button_name=>'SHOW_GUIDE'
 ,p_button_action=>'SUBMIT'
 ,p_button_template_options=>'#DEFAULT#'
@@ -63,10 +63,10 @@ wwv_flow_imp_page.create_page_button(
 ,p_button_condition_type=>'NEVER'
 );
 wwv_flow_imp_page.create_page_item(
- p_id=>wwv_flow_imp.id(449490675777143138)
+ p_id=>wwv_flow_imp.id(671315365966328704)
 ,p_name=>'P9954_ID'
 ,p_item_sequence=>10
-,p_item_plug_id=>wwv_flow_imp.id(10831009940722650198)
+,p_item_plug_id=>wwv_flow_imp.id(11052834630911835764)
 ,p_use_cache_before_default=>'NO'
 ,p_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
 'select ',
@@ -89,7 +89,7 @@ wwv_flow_imp_page.create_page_item(
   'value_protected', 'Y')).to_clob
 );
 wwv_flow_imp_page.create_page_da_event(
- p_id=>wwv_flow_imp.id(475631054359505084)
+ p_id=>wwv_flow_imp.id(697455744548690650)
 ,p_name=>'ShowPDF'
 ,p_event_sequence=>10
 ,p_bind_type=>'bind'
@@ -97,8 +97,8 @@ wwv_flow_imp_page.create_page_da_event(
 ,p_bind_event_type=>'ready'
 );
 wwv_flow_imp_page.create_page_da_action(
- p_id=>wwv_flow_imp.id(475631488560505085)
-,p_event_id=>wwv_flow_imp.id(475631054359505084)
+ p_id=>wwv_flow_imp.id(697456178749690651)
+,p_event_id=>wwv_flow_imp.id(697455744548690650)
 ,p_event_result=>'TRUE'
 ,p_action_sequence=>10
 ,p_execute_on_page_init=>'N'
@@ -132,8 +132,8 @@ wwv_flow_imp_page.create_page_da_action(
 ,p_wait_for_result=>'Y'
 );
 wwv_flow_imp_page.create_page_da_action(
- p_id=>wwv_flow_imp.id(475631967179505085)
-,p_event_id=>wwv_flow_imp.id(475631054359505084)
+ p_id=>wwv_flow_imp.id(697456657368690651)
+,p_event_id=>wwv_flow_imp.id(697455744548690650)
 ,p_event_result=>'TRUE'
 ,p_action_sequence=>20
 ,p_execute_on_page_init=>'N'
@@ -153,7 +153,7 @@ wwv_flow_imp_page.create_page_da_action(
 '$("#view_pdf").append(preview);'))
 );
 wwv_flow_imp_page.create_page_process(
- p_id=>wwv_flow_imp.id(449491724755143139)
+ p_id=>wwv_flow_imp.id(671316414944328705)
 ,p_process_sequence=>10
 ,p_process_point=>'BEFORE_HEADER'
 ,p_process_type=>'NATIVE_PLSQL'
@@ -164,7 +164,7 @@ wwv_flow_imp_page.create_page_process(
 'END;'))
 ,p_process_clob_language=>'PLSQL'
 ,p_error_display_location=>'INLINE_IN_NOTIFICATION'
-,p_process_when_button_id=>wwv_flow_imp.id(449491359793143139)
+,p_process_when_button_id=>wwv_flow_imp.id(671316049982328705)
 ,p_internal_uid=>27699731557146565
 );
 wwv_flow_imp.component_end;

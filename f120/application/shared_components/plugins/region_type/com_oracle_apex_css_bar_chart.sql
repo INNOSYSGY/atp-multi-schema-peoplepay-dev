@@ -8,11 +8,11 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_shared.create_plugin(
- p_id=>wwv_flow_imp.id(3631289369395131433)
+ p_id=>wwv_flow_imp.id(3853114059584316999)
 ,p_plugin_type=>'REGION TYPE'
 ,p_name=>'COM.ORACLE.APEX.CSS_BAR_CHART'
 ,p_display_name=>'CSS Bar Chart'
@@ -262,8 +262,8 @@ wwv_flow_imp_shared.create_plugin(
 ,p_files_version=>3
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3631289126507131392)
-,p_plugin_id=>wwv_flow_imp.id(3631289369395131433)
+ p_id=>wwv_flow_imp.id(3853113816696316958)
+,p_plugin_id=>wwv_flow_imp.id(3853114059584316999)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>1
 ,p_display_sequence=>10
@@ -276,36 +276,36 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_lov_type=>'STATIC'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3631287304702131385)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3631289126507131392)
+ p_id=>wwv_flow_imp.id(3853111994891316951)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3853113816696316958)
 ,p_display_sequence=>1
 ,p_display_value=>'Value with absolute bar width'
 ,p_return_value=>'VALUE_ABSOLUTE'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3631287800711131385)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3631289126507131392)
+ p_id=>wwv_flow_imp.id(3853112490900316951)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3853113816696316958)
 ,p_display_sequence=>1
 ,p_display_value=>'Percentage with absolute bar width'
 ,p_return_value=>'PERCENTAGE_ABSOLUT'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3631288291232131386)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3631289126507131392)
+ p_id=>wwv_flow_imp.id(3853112981421316952)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3853113816696316958)
 ,p_display_sequence=>1
 ,p_display_value=>'Value with relative bar width'
 ,p_return_value=>'VALUE_RELATIVE'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3631288784230131386)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3631289126507131392)
+ p_id=>wwv_flow_imp.id(3853113474419316952)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3853113816696316958)
 ,p_display_sequence=>1
 ,p_display_value=>'Percentage with relative bar width'
 ,p_return_value=>'PERCENTAGE_RELATIVE'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3631286793440131380)
-,p_plugin_id=>wwv_flow_imp.id(3631289369395131433)
+ p_id=>wwv_flow_imp.id(3853111483629316946)
+,p_plugin_id=>wwv_flow_imp.id(3853114059584316999)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>2
 ,p_display_sequence=>20
@@ -316,15 +316,15 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_display_length=>10
 ,p_max_length=>40
 ,p_is_translatable=>true
-,p_depending_on_attribute_id=>wwv_flow_imp.id(3631289126507131392)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(3853113816696316958)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'IN_LIST'
 ,p_depending_on_expression=>'VALUE_ABSOLUTE,VALUE_RELATIVE'
 ,p_help_text=>'Specify the prefix which should be added to the displayed value.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3631286440563131380)
-,p_plugin_id=>wwv_flow_imp.id(3631289369395131433)
+ p_id=>wwv_flow_imp.id(3853111130752316946)
+,p_plugin_id=>wwv_flow_imp.id(3853114059584316999)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>3
 ,p_display_sequence=>30
@@ -335,15 +335,15 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_display_length=>10
 ,p_max_length=>40
 ,p_is_translatable=>true
-,p_depending_on_attribute_id=>wwv_flow_imp.id(3631289126507131392)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(3853113816696316958)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'IN_LIST'
 ,p_depending_on_expression=>'VALUE_ABSOLUTE,VALUE_RELATIVE'
 ,p_help_text=>'Specify the postfix which should be added to the displayed value.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3631285987166131379)
-,p_plugin_id=>wwv_flow_imp.id(3631289369395131433)
+ p_id=>wwv_flow_imp.id(3853110677355316945)
+,p_plugin_id=>wwv_flow_imp.id(3853114059584316999)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>9
 ,p_display_sequence=>90
@@ -355,8 +355,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'Specify a comma separated list of page items that will be submitted to the server and thus, available for use from within your region source SQL statement.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3631285637170131379)
-,p_plugin_id=>wwv_flow_imp.id(3631289369395131433)
+ p_id=>wwv_flow_imp.id(3853110327359316945)
+,p_plugin_id=>wwv_flow_imp.id(3853114059584316999)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>10
 ,p_display_sequence=>100
@@ -371,8 +371,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'Defines the maximum number of rows to query and to display.'
 );
 wwv_flow_imp_shared.create_plugin_std_attribute(
- p_id=>wwv_flow_imp.id(3631284272996131343)
-,p_plugin_id=>wwv_flow_imp.id(3631289369395131433)
+ p_id=>wwv_flow_imp.id(3853108963185316909)
+,p_plugin_id=>wwv_flow_imp.id(3853114059584316999)
 ,p_name=>'SOURCE_SQL'
 ,p_is_required=>false
 ,p_sql_min_column_count=>2
@@ -428,8 +428,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(3631283481994131329)
-,p_plugin_id=>wwv_flow_imp.id(3631289369395131433)
+ p_id=>wwv_flow_imp.id(3853108172183316895)
+,p_plugin_id=>wwv_flow_imp.id(3853114059584316999)
 ,p_file_name=>'css_bar_chart.css'
 ,p_mime_type=>'text/css'
 ,p_file_content=>wwv_flow_imp.varchar2_to_blob(wwv_flow_imp.g_varchar2_table)
@@ -464,8 +464,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(3631283956809131334)
-,p_plugin_id=>wwv_flow_imp.id(3631289369395131433)
+ p_id=>wwv_flow_imp.id(3853108646998316900)
+,p_plugin_id=>wwv_flow_imp.id(3853114059584316999)
 ,p_file_name=>'com_oracle_apex_css_bar_chart.js'
 ,p_mime_type=>'text/javascript'
 ,p_file_content=>wwv_flow_imp.varchar2_to_blob(wwv_flow_imp.g_varchar2_table)

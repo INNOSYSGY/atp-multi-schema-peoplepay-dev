@@ -8,11 +8,11 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_shared.create_plugin(
- p_id=>wwv_flow_imp.id(3625138388347248837)
+ p_id=>wwv_flow_imp.id(3846963078536434403)
 ,p_plugin_type=>'ITEM TYPE'
 ,p_name=>'SI_TRTS_AUTONUMERIC'
 ,p_display_name=>'AutoNumeric'
@@ -196,8 +196,8 @@ wwv_flow_imp_shared.create_plugin(
 ,p_files_version=>34
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3625138052936248834)
-,p_plugin_id=>wwv_flow_imp.id(3625138388347248837)
+ p_id=>wwv_flow_imp.id(3846962743125434400)
+,p_plugin_id=>wwv_flow_imp.id(3846963078536434403)
 ,p_attribute_scope=>'APPLICATION'
 ,p_attribute_sequence=>1
 ,p_display_sequence=>10
@@ -212,29 +212,29 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'Default setting in case developer don''t select specific page item.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3625137647456248832)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3625138052936248834)
+ p_id=>wwv_flow_imp.id(3846962337645434398)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3846962743125434400)
 ,p_display_sequence=>10
 ,p_display_value=>'Left'
 ,p_return_value=>'LEFT'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3625137171298248830)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3625138052936248834)
+ p_id=>wwv_flow_imp.id(3846961861487434396)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3846962743125434400)
 ,p_display_sequence=>20
 ,p_display_value=>'Center'
 ,p_return_value=>'CENTER'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3625136684697248830)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3625138052936248834)
+ p_id=>wwv_flow_imp.id(3846961374886434396)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3846962743125434400)
 ,p_display_sequence=>30
 ,p_display_value=>'Right'
 ,p_return_value=>'RIGHT'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3625136201711248829)
-,p_plugin_id=>wwv_flow_imp.id(3625138388347248837)
+ p_id=>wwv_flow_imp.id(3846960891900434395)
+,p_plugin_id=>wwv_flow_imp.id(3846963078536434403)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>1
 ,p_display_sequence=>10
@@ -386,8 +386,8 @@ unistr('   {currencySymbol: " \20AC",'),
 'Or if it''s more appropriate it can also be substitution string. For example &AI_AN_OPTIONS.'))
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3625135807660248828)
-,p_plugin_id=>wwv_flow_imp.id(3625138388347248837)
+ p_id=>wwv_flow_imp.id(3846960497849434394)
+,p_plugin_id=>wwv_flow_imp.id(3846963078536434403)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>2
 ,p_display_sequence=>20
@@ -401,22 +401,22 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'Page item Alignment. In case none selected "Default" setting from application component settings AutoNumeric will be deployed.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3625135331868248828)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3625135807660248828)
+ p_id=>wwv_flow_imp.id(3846960022057434394)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3846960497849434394)
 ,p_display_sequence=>10
 ,p_display_value=>'Left'
 ,p_return_value=>'LEFT'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3625134845171248827)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3625135807660248828)
+ p_id=>wwv_flow_imp.id(3846959535360434393)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3846960497849434394)
 ,p_display_sequence=>20
 ,p_display_value=>'Center'
 ,p_return_value=>'CENTER'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3625134402915248827)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3625135807660248828)
+ p_id=>wwv_flow_imp.id(3846959093104434393)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3846960497849434394)
 ,p_display_sequence=>30
 ,p_display_value=>'Right'
 ,p_return_value=>'RIGHT'
@@ -2414,8 +2414,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(3625130370975248796)
-,p_plugin_id=>wwv_flow_imp.id(3625138388347248837)
+ p_id=>wwv_flow_imp.id(3846955061164434362)
+,p_plugin_id=>wwv_flow_imp.id(3846963078536434403)
 ,p_file_name=>'js/autonumeric.min.js'
 ,p_mime_type=>'application/javascript'
 ,p_file_charset=>'utf-8'
@@ -2466,8 +2466,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(3625130797468248797)
-,p_plugin_id=>wwv_flow_imp.id(3625138388347248837)
+ p_id=>wwv_flow_imp.id(3846955487657434363)
+,p_plugin_id=>wwv_flow_imp.id(3846963078536434403)
 ,p_file_name=>'js/ANinit.min.js'
 ,p_mime_type=>'application/javascript'
 ,p_file_charset=>'utf-8'
@@ -2547,8 +2547,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(3625131181547248798)
-,p_plugin_id=>wwv_flow_imp.id(3625138388347248837)
+ p_id=>wwv_flow_imp.id(3846955871736434364)
+,p_plugin_id=>wwv_flow_imp.id(3846963078536434403)
 ,p_file_name=>'js/ANinit.js.map'
 ,p_mime_type=>'application/octet-stream'
 ,p_file_charset=>'utf-8'
@@ -2617,8 +2617,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(3625131552752248798)
-,p_plugin_id=>wwv_flow_imp.id(3625138388347248837)
+ p_id=>wwv_flow_imp.id(3846956242941434364)
+,p_plugin_id=>wwv_flow_imp.id(3846963078536434403)
 ,p_file_name=>'js/ANinit.js'
 ,p_mime_type=>'application/javascript'
 ,p_file_charset=>'utf-8'
@@ -2635,8 +2635,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(3625131949359248799)
-,p_plugin_id=>wwv_flow_imp.id(3625138388347248837)
+ p_id=>wwv_flow_imp.id(3846956639548434365)
+,p_plugin_id=>wwv_flow_imp.id(3846963078536434403)
 ,p_file_name=>'css/ANinit.min.css'
 ,p_mime_type=>'text/css'
 ,p_file_charset=>'utf-8'
@@ -2658,8 +2658,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(3625132323316248799)
-,p_plugin_id=>wwv_flow_imp.id(3625138388347248837)
+ p_id=>wwv_flow_imp.id(3846957013505434365)
+,p_plugin_id=>wwv_flow_imp.id(3846963078536434403)
 ,p_file_name=>'css/ANinit.css.map'
 ,p_mime_type=>'application/octet-stream'
 ,p_file_charset=>'utf-8'
@@ -2679,8 +2679,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(3625132797552248800)
-,p_plugin_id=>wwv_flow_imp.id(3625138388347248837)
+ p_id=>wwv_flow_imp.id(3846957487741434366)
+,p_plugin_id=>wwv_flow_imp.id(3846963078536434403)
 ,p_file_name=>'css/ANinit.css'
 ,p_mime_type=>'text/css'
 ,p_file_charset=>'utf-8'

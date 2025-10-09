@@ -8,7 +8,7 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_page.create_page(
@@ -19,16 +19,16 @@ wwv_flow_imp_page.create_page(
 ,p_warn_on_unsaved_changes=>'N'
 ,p_first_item=>'AUTO_FIRST_ITEM'
 ,p_autocomplete_on_off=>'ON'
-,p_group_id=>wwv_flow_imp.id(3603893400528388849)
+,p_group_id=>wwv_flow_imp.id(3825718090717574415)
 ,p_step_template=>4072355960268175073
 ,p_page_template_options=>'#DEFAULT#'
-,p_required_role=>wwv_flow_imp.id(3585334160394360204)
+,p_required_role=>wwv_flow_imp.id(3807158850583545770)
 ,p_protection_level=>'C'
 ,p_help_text=>'No help is available for this page.'
 ,p_page_component_map=>'04'
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(4730852345778107009)
+ p_id=>wwv_flow_imp.id(4952677035967292575)
 ,p_plug_name=>'Position Statistics By Employees'
 ,p_region_template_options=>'#DEFAULT#:js-showMaximizeButton::t-Region--hideHeader js-addHiddenHeadingRoleDesc:::t-Region--scrollBody:::::::::'
 ,p_escape_on_http_output=>'Y'
@@ -40,8 +40,8 @@ wwv_flow_imp_page.create_page_plug(
 ,p_plug_query_num_rows=>15
 );
 wwv_flow_imp_page.create_jet_chart(
- p_id=>wwv_flow_imp.id(3590425050207378661)
-,p_region_id=>wwv_flow_imp.id(4730852345778107009)
+ p_id=>wwv_flow_imp.id(3812249740396564227)
+,p_region_id=>wwv_flow_imp.id(4952677035967292575)
 ,p_chart_type=>'bar'
 ,p_title=>'Positions By Employees'
 ,p_height=>'2000'
@@ -78,8 +78,8 @@ wwv_flow_imp_page.create_jet_chart(
 ,p_show_gauge_value=>true
 );
 wwv_flow_imp_page.create_jet_chart_series(
- p_id=>wwv_flow_imp.id(3590424502153378661)
-,p_chart_id=>wwv_flow_imp.id(3590425050207378661)
+ p_id=>wwv_flow_imp.id(3812249192342564227)
+,p_chart_id=>wwv_flow_imp.id(3812249740396564227)
 ,p_seq=>10
 ,p_name=>'Position'
 ,p_data_source_type=>'SQL'
@@ -113,8 +113,8 @@ wwv_flow_imp_page.create_jet_chart_series(
 ,p_threshold_display=>'onIndicator'
 );
 wwv_flow_imp_page.create_jet_chart_axis(
- p_id=>wwv_flow_imp.id(3597590947518467441)
-,p_chart_id=>wwv_flow_imp.id(3590425050207378661)
+ p_id=>wwv_flow_imp.id(3819415637707653007)
+,p_chart_id=>wwv_flow_imp.id(3812249740396564227)
 ,p_axis=>'y'
 ,p_is_rendered=>'on'
 ,p_format_scaling=>'auto'
@@ -134,8 +134,8 @@ wwv_flow_imp_page.create_jet_chart_axis(
 ,p_zoom_order_years=>false
 );
 wwv_flow_imp_page.create_jet_chart_axis(
- p_id=>wwv_flow_imp.id(3597590977724467442)
-,p_chart_id=>wwv_flow_imp.id(3590425050207378661)
+ p_id=>wwv_flow_imp.id(3819415667913653008)
+,p_chart_id=>wwv_flow_imp.id(3812249740396564227)
 ,p_axis=>'x'
 ,p_is_rendered=>'on'
 ,p_format_scaling=>'auto'
@@ -156,7 +156,7 @@ wwv_flow_imp_page.create_jet_chart_axis(
 ,p_zoom_order_years=>false
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(5027125904448716845)
+ p_id=>wwv_flow_imp.id(5248950594637902411)
 ,p_plug_name=>'Organisation Structure by Employees'
 ,p_region_template_options=>'#DEFAULT#:js-showMaximizeButton::t-Region--hideHeader js-addHiddenHeadingRoleDesc:::t-Region--scrollBody:::::::::'
 ,p_escape_on_http_output=>'Y'
@@ -169,8 +169,8 @@ wwv_flow_imp_page.create_page_plug(
 ,p_plug_query_num_rows=>15
 );
 wwv_flow_imp_page.create_jet_chart(
- p_id=>wwv_flow_imp.id(3590426389877378662)
-,p_region_id=>wwv_flow_imp.id(5027125904448716845)
+ p_id=>wwv_flow_imp.id(3812251080066564228)
+,p_region_id=>wwv_flow_imp.id(5248950594637902411)
 ,p_chart_type=>'funnel'
 ,p_title=>'Organisation Structure By Employees'
 ,p_height=>'700'
@@ -219,8 +219,8 @@ wwv_flow_imp_page.create_jet_chart(
 '}'))
 );
 wwv_flow_imp_page.create_jet_chart_series(
- p_id=>wwv_flow_imp.id(3590425942963378662)
-,p_chart_id=>wwv_flow_imp.id(3590426389877378662)
+ p_id=>wwv_flow_imp.id(3812250633152564228)
+,p_chart_id=>wwv_flow_imp.id(3812251080066564228)
 ,p_seq=>10
 ,p_name=>'Tasks'
 ,p_data_source_type=>'SQL'
@@ -250,7 +250,7 @@ wwv_flow_imp_page.create_jet_chart_series(
 ,p_threshold_display=>'onIndicator'
 );
 wwv_flow_imp_page.create_page_da_event(
- p_id=>wwv_flow_imp.id(3590418630565378659)
+ p_id=>wwv_flow_imp.id(3812243320754564225)
 ,p_name=>'Apply Other Threshold'
 ,p_event_sequence=>30
 ,p_triggering_element_type=>'ITEM'
@@ -260,45 +260,45 @@ wwv_flow_imp_page.create_page_da_event(
 ,p_bind_event_type=>'change'
 );
 wwv_flow_imp_page.create_page_da_event(
- p_id=>wwv_flow_imp.id(3590421360552378660)
+ p_id=>wwv_flow_imp.id(3812246050741564226)
 ,p_name=>'Increase'
 ,p_event_sequence=>40
 ,p_triggering_element_type=>'BUTTON'
-,p_triggering_button_id=>wwv_flow_imp.id(3609477986606178582)
+,p_triggering_button_id=>wwv_flow_imp.id(3831302676795364148)
 ,p_bind_type=>'bind'
 ,p_execution_type=>'IMMEDIATE'
 ,p_bind_event_type=>'click'
 );
 wwv_flow_imp_page.create_page_da_action(
- p_id=>wwv_flow_imp.id(3590420790649378659)
-,p_event_id=>wwv_flow_imp.id(3590421360552378660)
+ p_id=>wwv_flow_imp.id(3812245480838564225)
+,p_event_id=>wwv_flow_imp.id(3812246050741564226)
 ,p_event_result=>'TRUE'
 ,p_action_sequence=>10
 ,p_execute_on_page_init=>'N'
 ,p_action=>'NATIVE_JAVASCRIPT_CODE'
 ,p_affected_elements_type=>'REGION'
-,p_affected_region_id=>wwv_flow_imp.id(4730852345778107009)
+,p_affected_region_id=>wwv_flow_imp.id(4952677035967292575)
 ,p_attribute_01=>'$("#pie1_jet").ojChart({legend:{size:''50%''}});'
 );
 wwv_flow_imp_page.create_page_da_event(
- p_id=>wwv_flow_imp.id(3590420421649378659)
+ p_id=>wwv_flow_imp.id(3812245111838564225)
 ,p_name=>'Decrease'
 ,p_event_sequence=>50
 ,p_triggering_element_type=>'BUTTON'
-,p_triggering_button_id=>wwv_flow_imp.id(3745029746824095211)
+,p_triggering_button_id=>wwv_flow_imp.id(3966854437013280777)
 ,p_bind_type=>'bind'
 ,p_execution_type=>'IMMEDIATE'
 ,p_bind_event_type=>'click'
 );
 wwv_flow_imp_page.create_page_da_action(
- p_id=>wwv_flow_imp.id(3590419878153378659)
-,p_event_id=>wwv_flow_imp.id(3590420421649378659)
+ p_id=>wwv_flow_imp.id(3812244568342564225)
+,p_event_id=>wwv_flow_imp.id(3812245111838564225)
 ,p_event_result=>'TRUE'
 ,p_action_sequence=>10
 ,p_execute_on_page_init=>'N'
 ,p_action=>'NATIVE_JAVASCRIPT_CODE'
 ,p_affected_elements_type=>'REGION'
-,p_affected_region_id=>wwv_flow_imp.id(4730852345778107009)
+,p_affected_region_id=>wwv_flow_imp.id(4952677035967292575)
 ,p_attribute_01=>'$("#pie1_jet").ojChart({legend:{size:''30%''}});'
 );
 wwv_flow_imp.component_end;

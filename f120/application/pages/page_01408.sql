@@ -8,7 +8,7 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_page.create_page(
@@ -19,14 +19,14 @@ wwv_flow_imp_page.create_page(
 ,p_warn_on_unsaved_changes=>'N'
 ,p_first_item=>'AUTO_FIRST_ITEM'
 ,p_autocomplete_on_off=>'ON'
-,p_group_id=>wwv_flow_imp.id(3603893191478386678)
+,p_group_id=>wwv_flow_imp.id(3825717881667572244)
 ,p_page_template_options=>'#DEFAULT#'
-,p_required_role=>wwv_flow_imp.id(3576746936103322649)
+,p_required_role=>wwv_flow_imp.id(3798571626292508215)
 ,p_help_text=>'No help is available for this page.'
 ,p_page_component_map=>'18'
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(473067059846332039)
+ p_id=>wwv_flow_imp.id(694891750035517605)
 ,p_plug_name=>'Listing of Employees Not on Health Plan'
 ,p_region_template_options=>'#DEFAULT#:t-Region--accent14:t-Region--hiddenOverflow'
 ,p_component_template_options=>'#DEFAULT#'
@@ -91,7 +91,7 @@ wwv_flow_imp_page.create_page_plug(
 ,p_prn_border_color=>'#666666'
 );
 wwv_flow_imp_page.create_worksheet(
- p_id=>wwv_flow_imp.id(473067122182332040)
+ p_id=>wwv_flow_imp.id(694891812371517606)
 ,p_max_row_count=>'1000000'
 ,p_max_row_count_message=>'The maximum row count for this report is #MAX_ROW_COUNT# rows.  Please apply a filter to reduce the number of records in your query.'
 ,p_no_data_found_message=>'No data found.'
@@ -113,7 +113,7 @@ wwv_flow_imp_page.create_worksheet(
 ,p_internal_uid=>284171854071707406
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(473067220666332041)
+ p_id=>wwv_flow_imp.id(694891910855517607)
 ,p_db_column_name=>'ID'
 ,p_display_order=>10
 ,p_column_identifier=>'A'
@@ -122,7 +122,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(473069854845332067)
+ p_id=>wwv_flow_imp.id(694894545034517633)
 ,p_db_column_name=>'FULL_NAME'
 ,p_display_order=>20
 ,p_column_identifier=>'AA'
@@ -132,7 +132,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(473069947409332068)
+ p_id=>wwv_flow_imp.id(694894637598517634)
 ,p_db_column_name=>'EMPLOYEE_NO'
 ,p_display_order=>30
 ,p_column_identifier=>'AB'
@@ -142,7 +142,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(473069999780332069)
+ p_id=>wwv_flow_imp.id(694894689969517635)
 ,p_db_column_name=>'EMPLOYMENT_STATUS'
 ,p_display_order=>40
 ,p_column_identifier=>'AC'
@@ -152,7 +152,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(473070157384332070)
+ p_id=>wwv_flow_imp.id(694894847573517636)
 ,p_db_column_name=>'PAYMENT_TYPE'
 ,p_display_order=>50
 ,p_column_identifier=>'AD'
@@ -162,7 +162,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(473070252471332071)
+ p_id=>wwv_flow_imp.id(694894942660517637)
 ,p_db_column_name=>'CONFIRMED'
 ,p_display_order=>60
 ,p_column_identifier=>'AE'
@@ -172,7 +172,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(473070325447332072)
+ p_id=>wwv_flow_imp.id(694895015636517638)
 ,p_db_column_name=>'EMPLOYMENT_CLASS'
 ,p_display_order=>70
 ,p_column_identifier=>'AF'
@@ -182,7 +182,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(473070395303332073)
+ p_id=>wwv_flow_imp.id(694895085492517639)
 ,p_db_column_name=>'POSITION_NAME'
 ,p_display_order=>80
 ,p_column_identifier=>'AG'
@@ -192,7 +192,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(473070474802332074)
+ p_id=>wwv_flow_imp.id(694895164991517640)
 ,p_db_column_name=>'ORG_STRUCTURE'
 ,p_display_order=>90
 ,p_column_identifier=>'AH'
@@ -202,7 +202,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(473070611381332075)
+ p_id=>wwv_flow_imp.id(694895301570517641)
 ,p_db_column_name=>'EMPLOYMENT_TYPE_ID'
 ,p_display_order=>100
 ,p_column_identifier=>'AI'
@@ -210,12 +210,12 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_column_type=>'STRING'
 ,p_display_text_as=>'LOV_ESCAPE_SC'
 ,p_heading_alignment=>'LEFT'
-,p_rpt_named_lov=>wwv_flow_imp.id(3004967915660202130)
+,p_rpt_named_lov=>wwv_flow_imp.id(3226792605849387696)
 ,p_rpt_show_filter_lov=>'1'
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_rpt(
- p_id=>wwv_flow_imp.id(473101345123252279)
+ p_id=>wwv_flow_imp.id(694926035312437845)
 ,p_application_user=>'APXWS_DEFAULT'
 ,p_report_seq=>10
 ,p_report_alias=>'2842061'
@@ -227,7 +227,7 @@ wwv_flow_imp_page.create_worksheet_rpt(
 ,p_break_enabled_on=>'ORG_STRUCTURE'
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(473070742502332076)
+ p_id=>wwv_flow_imp.id(694895432691517642)
 ,p_plug_name=>'rs'
 ,p_region_template_options=>'#DEFAULT#'
 ,p_plug_template=>4501440665235496320
@@ -241,19 +241,19 @@ wwv_flow_imp_page.create_page_plug(
   'remember_selection', 'USER')).to_clob
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(3507995248376438509)
+ p_id=>wwv_flow_imp.id(3729819938565624075)
 ,p_plug_name=>'Breadcrumb'
 ,p_region_template_options=>'#DEFAULT#:t-BreadcrumbRegion--compactTitle:t-BreadcrumbRegion--useBreadcrumbTitle'
 ,p_component_template_options=>'#DEFAULT#'
 ,p_plug_template=>2531463326621247859
 ,p_plug_display_sequence=>1
 ,p_plug_display_point=>'REGION_POSITION_01'
-,p_menu_id=>wwv_flow_imp.id(3574996127757344762)
+,p_menu_id=>wwv_flow_imp.id(3796820817946530328)
 ,p_plug_source_type=>'NATIVE_BREADCRUMB'
 ,p_menu_template_id=>4072363345357175094
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(3516207224284276873)
+ p_id=>wwv_flow_imp.id(3738031914473462439)
 ,p_plug_name=>'Employee Medical Plan'
 ,p_region_template_options=>'#DEFAULT#:t-Region--accent14:t-Region--hiddenOverflow'
 ,p_component_template_options=>'#DEFAULT#'
@@ -317,7 +317,7 @@ wwv_flow_imp_page.create_page_plug(
 ,p_plug_display_when_cond2=>'PLSQL'
 );
 wwv_flow_imp_page.create_worksheet(
- p_id=>wwv_flow_imp.id(3516207034742276873)
+ p_id=>wwv_flow_imp.id(3738031724931462439)
 ,p_name=>'Listing of Medical History'
 ,p_max_row_count=>'1000000'
 ,p_max_row_count_message=>'The maximum row count for this report is #MAX_ROW_COUNT# rows.  Please apply a filter to reduce the number of records in your query.'
@@ -338,12 +338,12 @@ wwv_flow_imp_page.create_worksheet(
 ,p_enable_mail_download=>'Y'
 ,p_detail_link=>'f?p=&APP_ID.:1409:&SESSION.::&DEBUG.::P1409_ID,P1409_RETURN_VALUE:#ID#,1408'
 ,p_detail_link_text=>'<img src="#IMAGE_PREFIX#app_ui/img/icons/apex-edit-pencil-alt.png" class="apex-edit-pencil-alt" alt="">'
-,p_detail_link_auth_scheme=>wwv_flow_imp.id(3564348993146001333)
+,p_detail_link_auth_scheme=>wwv_flow_imp.id(3786173683335186899)
 ,p_owner=>'PUR_INV'
 ,p_internal_uid=>136632131404710696
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3607190878763654090)
+ p_id=>wwv_flow_imp.id(3829015568952839656)
 ,p_db_column_name=>'ID'
 ,p_display_order=>1
 ,p_column_identifier=>'A'
@@ -354,7 +354,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3607190523227654088)
+ p_id=>wwv_flow_imp.id(3829015213416839654)
 ,p_db_column_name=>'EMP_ID'
 ,p_display_order=>2
 ,p_column_identifier=>'B'
@@ -362,11 +362,11 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_column_type=>'NUMBER'
 ,p_display_text_as=>'LOV_ESCAPE_SC'
 ,p_static_id=>'EMP_ID'
-,p_rpt_named_lov=>wwv_flow_imp.id(3609631245311822370)
+,p_rpt_named_lov=>wwv_flow_imp.id(3831455935501007936)
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3607190096836654087)
+ p_id=>wwv_flow_imp.id(3829014787025839653)
 ,p_db_column_name=>'SMOKER'
 ,p_display_order=>4
 ,p_column_identifier=>'D'
@@ -377,7 +377,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3607189714326654086)
+ p_id=>wwv_flow_imp.id(3829014404515839652)
 ,p_db_column_name=>'DATE_QUIT_SMOKE'
 ,p_display_order=>5
 ,p_column_identifier=>'E'
@@ -388,7 +388,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3607189299937654086)
+ p_id=>wwv_flow_imp.id(3829013990126839652)
 ,p_db_column_name=>'DRINKER'
 ,p_display_order=>6
 ,p_column_identifier=>'F'
@@ -399,7 +399,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3607188965408654085)
+ p_id=>wwv_flow_imp.id(3829013655597839651)
 ,p_db_column_name=>'DATE_QUIT_DRINK'
 ,p_display_order=>7
 ,p_column_identifier=>'G'
@@ -410,7 +410,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3607188488312654085)
+ p_id=>wwv_flow_imp.id(3829013178501839651)
 ,p_db_column_name=>'DRUG_USER'
 ,p_display_order=>8
 ,p_column_identifier=>'H'
@@ -421,7 +421,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3607188098943654084)
+ p_id=>wwv_flow_imp.id(3829012789132839650)
 ,p_db_column_name=>'DATE_QUIT_DRUG'
 ,p_display_order=>9
 ,p_column_identifier=>'I'
@@ -432,7 +432,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3607187718958654084)
+ p_id=>wwv_flow_imp.id(3829012409147839650)
 ,p_db_column_name=>'MEDICALLY_UNFIT'
 ,p_display_order=>10
 ,p_column_identifier=>'J'
@@ -443,7 +443,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3607187313576654083)
+ p_id=>wwv_flow_imp.id(3829012003765839649)
 ,p_db_column_name=>'DATE_MED_UNFIT'
 ,p_display_order=>11
 ,p_column_identifier=>'K'
@@ -454,7 +454,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3607186954138654078)
+ p_id=>wwv_flow_imp.id(3829011644327839644)
 ,p_db_column_name=>'ENTRY_DATE'
 ,p_display_order=>13
 ,p_column_identifier=>'M'
@@ -465,7 +465,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3607186492034654075)
+ p_id=>wwv_flow_imp.id(3829011182223839641)
 ,p_db_column_name=>'VERIFIED_DATE'
 ,p_display_order=>15
 ,p_column_identifier=>'O'
@@ -476,7 +476,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3607186153912654075)
+ p_id=>wwv_flow_imp.id(3829010844101839641)
 ,p_db_column_name=>'CATEGORY_ID'
 ,p_display_order=>16
 ,p_column_identifier=>'P'
@@ -485,12 +485,12 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_display_text_as=>'LOV_ESCAPE_SC'
 ,p_tz_dependent=>'N'
 ,p_static_id=>'CATEGORY_ID'
-,p_rpt_named_lov=>wwv_flow_imp.id(3632542964779481205)
+,p_rpt_named_lov=>wwv_flow_imp.id(3854367654968666771)
 ,p_rpt_show_filter_lov=>'1'
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3607185671913654074)
+ p_id=>wwv_flow_imp.id(3829010362102839640)
 ,p_db_column_name=>'DATE_HEALTHPLAN_EFFECTIVE'
 ,p_display_order=>17
 ,p_column_identifier=>'Q'
@@ -501,7 +501,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3607185275532654074)
+ p_id=>wwv_flow_imp.id(3829009965721839640)
 ,p_db_column_name=>'DATE_HEALTHPLAN_CLOSE'
 ,p_display_order=>19
 ,p_column_identifier=>'S'
@@ -512,7 +512,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3607184980305654073)
+ p_id=>wwv_flow_imp.id(3829009670494839639)
 ,p_db_column_name=>'LAST_CHANGED_DATE'
 ,p_display_order=>21
 ,p_column_identifier=>'U'
@@ -523,7 +523,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3607184634514654073)
+ p_id=>wwv_flow_imp.id(3829009324703839639)
 ,p_db_column_name=>'HEALTH_PLAN_ID'
 ,p_display_order=>22
 ,p_column_identifier=>'V'
@@ -533,7 +533,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3607184213782654072)
+ p_id=>wwv_flow_imp.id(3829008903971839638)
 ,p_db_column_name=>'ENTERED_BY'
 ,p_display_order=>23
 ,p_column_identifier=>'W'
@@ -544,7 +544,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3607183857138654072)
+ p_id=>wwv_flow_imp.id(3829008547327839638)
 ,p_db_column_name=>'VERIFIED_BY'
 ,p_display_order=>24
 ,p_column_identifier=>'X'
@@ -555,7 +555,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3607183445470654071)
+ p_id=>wwv_flow_imp.id(3829008135659839637)
 ,p_db_column_name=>'KNOWN_AILMENT'
 ,p_display_order=>25
 ,p_column_identifier=>'Y'
@@ -566,7 +566,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3607182974402654071)
+ p_id=>wwv_flow_imp.id(3829007664591839637)
 ,p_db_column_name=>'LAST_CHANGED_BY'
 ,p_display_order=>26
 ,p_column_identifier=>'Z'
@@ -577,7 +577,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3607182578450654071)
+ p_id=>wwv_flow_imp.id(3829007268639839637)
 ,p_db_column_name=>'MACHINE_INSERT'
 ,p_display_order=>27
 ,p_column_identifier=>'AA'
@@ -588,7 +588,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3607182180209654070)
+ p_id=>wwv_flow_imp.id(3829006870398839636)
 ,p_db_column_name=>'MACHINE_UPDATE'
 ,p_display_order=>28
 ,p_column_identifier=>'AB'
@@ -599,7 +599,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3588897578890789533)
+ p_id=>wwv_flow_imp.id(3810722269079975099)
 ,p_db_column_name=>'MEDICAL_TYPE'
 ,p_display_order=>38
 ,p_column_identifier=>'AC'
@@ -608,7 +608,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3625567075764765813)
+ p_id=>wwv_flow_imp.id(3847391765953951379)
 ,p_db_column_name=>'DETAIL_IMG'
 ,p_display_order=>48
 ,p_column_identifier=>'AD'
@@ -619,7 +619,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3632867725180024962)
+ p_id=>wwv_flow_imp.id(3854692415369210528)
 ,p_db_column_name=>'EMP_KEY'
 ,p_display_order=>58
 ,p_column_identifier=>'AE'
@@ -629,7 +629,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_rpt(
- p_id=>wwv_flow_imp.id(3472302510537043253)
+ p_id=>wwv_flow_imp.id(3694127200726228819)
 ,p_application_user=>'APXWS_ALTERNATIVE'
 ,p_name=>'Employee Health Plans'
 ,p_report_seq=>10
@@ -643,8 +643,8 @@ wwv_flow_imp_page.create_worksheet_rpt(
 ,p_break_enabled_on=>'MEDICAL_TYPE:0:0:0:0:0'
 );
 wwv_flow_imp_page.create_worksheet_condition(
- p_id=>wwv_flow_imp.id(3472302167312043248)
-,p_report_id=>wwv_flow_imp.id(3472302510537043253)
+ p_id=>wwv_flow_imp.id(3694126857501228814)
+,p_report_id=>wwv_flow_imp.id(3694127200726228819)
 ,p_condition_type=>'FILTER'
 ,p_allow_delete=>'Y'
 ,p_column_name=>'CATEGORY_ID'
@@ -654,7 +654,7 @@ wwv_flow_imp_page.create_worksheet_condition(
 ,p_enabled=>'Y'
 );
 wwv_flow_imp_page.create_worksheet_rpt(
- p_id=>wwv_flow_imp.id(3482053947522022359)
+ p_id=>wwv_flow_imp.id(3703878637711207925)
 ,p_application_user=>'APXWS_ALTERNATIVE'
 ,p_name=>'NIS Medicals'
 ,p_report_seq=>10
@@ -668,8 +668,8 @@ wwv_flow_imp_page.create_worksheet_rpt(
 ,p_break_enabled_on=>'MEDICAL_TYPE:0:0:0:0:0'
 );
 wwv_flow_imp_page.create_worksheet_condition(
- p_id=>wwv_flow_imp.id(3482053595201022357)
-,p_report_id=>wwv_flow_imp.id(3482053947522022359)
+ p_id=>wwv_flow_imp.id(3703878285390207923)
+,p_report_id=>wwv_flow_imp.id(3703878637711207925)
 ,p_condition_type=>'FILTER'
 ,p_allow_delete=>'Y'
 ,p_column_name=>'MEDICAL_TYPE'
@@ -680,7 +680,7 @@ wwv_flow_imp_page.create_worksheet_condition(
 ,p_enabled=>'Y'
 );
 wwv_flow_imp_page.create_worksheet_rpt(
- p_id=>wwv_flow_imp.id(3482055158437027350)
+ p_id=>wwv_flow_imp.id(3703879848626212916)
 ,p_application_user=>'APXWS_ALTERNATIVE'
 ,p_name=>'Employment Medicals'
 ,p_report_seq=>10
@@ -694,8 +694,8 @@ wwv_flow_imp_page.create_worksheet_rpt(
 ,p_break_enabled_on=>'MEDICAL_TYPE:0:0:0:0:0'
 );
 wwv_flow_imp_page.create_worksheet_condition(
- p_id=>wwv_flow_imp.id(3482054745411027346)
-,p_report_id=>wwv_flow_imp.id(3482055158437027350)
+ p_id=>wwv_flow_imp.id(3703879435600212912)
+,p_report_id=>wwv_flow_imp.id(3703879848626212916)
 ,p_condition_type=>'FILTER'
 ,p_allow_delete=>'Y'
 ,p_column_name=>'MEDICAL_TYPE'
@@ -706,7 +706,7 @@ wwv_flow_imp_page.create_worksheet_condition(
 ,p_enabled=>'Y'
 );
 wwv_flow_imp_page.create_worksheet_rpt(
- p_id=>wwv_flow_imp.id(3516204329327276581)
+ p_id=>wwv_flow_imp.id(3738029019516462147)
 ,p_application_user=>'APXWS_DEFAULT'
 ,p_report_seq=>10
 ,p_report_alias=>'456573'
@@ -719,7 +719,7 @@ wwv_flow_imp_page.create_worksheet_rpt(
 ,p_break_enabled_on=>'MEDICAL_TYPE:0:0:0:0:0'
 );
 wwv_flow_imp_page.create_worksheet_rpt(
- p_id=>wwv_flow_imp.id(3571269125713956015)
+ p_id=>wwv_flow_imp.id(3793093815903141581)
 ,p_application_user=>'APXWS_ALTERNATIVE'
 ,p_name=>'Separated'
 ,p_report_seq=>10
@@ -731,8 +731,8 @@ wwv_flow_imp_page.create_worksheet_rpt(
 ,p_report_columns=>'EMP_ID:HEALTH_PLAN_ID:DATE_HEALTHPLAN_EFFECTIVE:CATEGORY_ID:DATE_HEALTHPLAN_CLOSE::MEDICAL_TYPE'
 );
 wwv_flow_imp_page.create_worksheet_condition(
- p_id=>wwv_flow_imp.id(3571267885349954898)
-,p_report_id=>wwv_flow_imp.id(3571269125713956015)
+ p_id=>wwv_flow_imp.id(3793092575539140464)
+,p_report_id=>wwv_flow_imp.id(3793093815903141581)
 ,p_condition_type=>'FILTER'
 ,p_allow_delete=>'Y'
 ,p_column_name=>'EMP_ID'
@@ -743,7 +743,7 @@ wwv_flow_imp_page.create_worksheet_condition(
 ,p_enabled=>'Y'
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(3588900348791789560)
+ p_id=>wwv_flow_imp.id(3810725038980975126)
 ,p_plug_name=>'Employee Medical Plan Reporting To &APP_USER.'
 ,p_region_template_options=>'#DEFAULT#:t-Region--accent14:t-Region--hiddenOverflow'
 ,p_component_template_options=>'#DEFAULT#'
@@ -852,7 +852,7 @@ wwv_flow_imp_page.create_page_plug(
 ,p_prn_page_footer_alignment=>'CENTER'
 );
 wwv_flow_imp_page.create_worksheet(
- p_id=>wwv_flow_imp.id(3588899976965789557)
+ p_id=>wwv_flow_imp.id(3810724667154975123)
 ,p_max_row_count=>'1000000'
 ,p_max_row_count_message=>'The maximum row count for this report is #MAX_ROW_COUNT# rows.  Please apply a filter to reduce the number of records in your query.'
 ,p_no_data_found_message=>'No data found.'
@@ -870,12 +870,12 @@ wwv_flow_imp_page.create_worksheet(
 ,p_enable_mail_download=>'Y'
 ,p_detail_link=>'f?p=&APP_ID.:1409:&SESSION.::&DEBUG.::P1409_ID:#ID#'
 ,p_detail_link_text=>'<img src="#IMAGE_PREFIX#app_ui/img/icons/apex-edit-pencil-alt.png" class="apex-edit-pencil-alt" alt="">'
-,p_detail_link_auth_scheme=>wwv_flow_imp.id(3564348993146001333)
+,p_detail_link_auth_scheme=>wwv_flow_imp.id(3786173683335186899)
 ,p_owner=>'CLOUD_PROD_DEV'
 ,p_internal_uid=>63939189181198012
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3588899882032789556)
+ p_id=>wwv_flow_imp.id(3810724572221975122)
 ,p_db_column_name=>'ID'
 ,p_display_order=>10
 ,p_column_identifier=>'A'
@@ -885,7 +885,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3588899818260789555)
+ p_id=>wwv_flow_imp.id(3810724508449975121)
 ,p_db_column_name=>'MACHINE_INSERT'
 ,p_display_order=>20
 ,p_column_identifier=>'B'
@@ -895,7 +895,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3588899703185789554)
+ p_id=>wwv_flow_imp.id(3810724393374975120)
 ,p_db_column_name=>'MACHINE_UPDATE'
 ,p_display_order=>30
 ,p_column_identifier=>'C'
@@ -905,7 +905,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3588899569721789553)
+ p_id=>wwv_flow_imp.id(3810724259910975119)
 ,p_db_column_name=>'EMP_ID'
 ,p_display_order=>40
 ,p_column_identifier=>'D'
@@ -913,11 +913,11 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_column_type=>'NUMBER'
 ,p_display_text_as=>'LOV_ESCAPE_SC'
 ,p_static_id=>'EMP_ID'
-,p_rpt_named_lov=>wwv_flow_imp.id(3609631245311822370)
+,p_rpt_named_lov=>wwv_flow_imp.id(3831455935501007936)
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3588899557793789552)
+ p_id=>wwv_flow_imp.id(3810724247982975118)
 ,p_db_column_name=>'SMOKER'
 ,p_display_order=>50
 ,p_column_identifier=>'E'
@@ -927,7 +927,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3588899440250789551)
+ p_id=>wwv_flow_imp.id(3810724130439975117)
 ,p_db_column_name=>'DATE_QUIT_SMOKE'
 ,p_display_order=>60
 ,p_column_identifier=>'F'
@@ -938,7 +938,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3588899358236789550)
+ p_id=>wwv_flow_imp.id(3810724048425975116)
 ,p_db_column_name=>'DRINKER'
 ,p_display_order=>70
 ,p_column_identifier=>'G'
@@ -948,7 +948,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3588899199407789549)
+ p_id=>wwv_flow_imp.id(3810723889596975115)
 ,p_db_column_name=>'DATE_QUIT_DRINK'
 ,p_display_order=>80
 ,p_column_identifier=>'H'
@@ -959,7 +959,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3588899092065789548)
+ p_id=>wwv_flow_imp.id(3810723782254975114)
 ,p_db_column_name=>'DRUG_USER'
 ,p_display_order=>90
 ,p_column_identifier=>'I'
@@ -969,7 +969,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3588899016341789547)
+ p_id=>wwv_flow_imp.id(3810723706530975113)
 ,p_db_column_name=>'DATE_QUIT_DRUG'
 ,p_display_order=>100
 ,p_column_identifier=>'J'
@@ -980,7 +980,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3588898906861789546)
+ p_id=>wwv_flow_imp.id(3810723597050975112)
 ,p_db_column_name=>'MEDICALLY_UNFIT'
 ,p_display_order=>110
 ,p_column_identifier=>'K'
@@ -990,7 +990,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3588898783706789545)
+ p_id=>wwv_flow_imp.id(3810723473895975111)
 ,p_db_column_name=>'DATE_MED_UNFIT'
 ,p_display_order=>120
 ,p_column_identifier=>'L'
@@ -1001,7 +1001,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3588898728211789544)
+ p_id=>wwv_flow_imp.id(3810723418400975110)
 ,p_db_column_name=>'ENTRY_DATE'
 ,p_display_order=>130
 ,p_column_identifier=>'M'
@@ -1012,7 +1012,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3588898590232789543)
+ p_id=>wwv_flow_imp.id(3810723280421975109)
 ,p_db_column_name=>'VERIFIED_DATE'
 ,p_display_order=>140
 ,p_column_identifier=>'N'
@@ -1023,7 +1023,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3588898505451789542)
+ p_id=>wwv_flow_imp.id(3810723195640975108)
 ,p_db_column_name=>'CATEGORY_ID'
 ,p_display_order=>150
 ,p_column_identifier=>'O'
@@ -1031,12 +1031,12 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_column_type=>'NUMBER'
 ,p_display_text_as=>'LOV_ESCAPE_SC'
 ,p_static_id=>'CATEGORY_ID'
-,p_rpt_named_lov=>wwv_flow_imp.id(3632542964779481205)
+,p_rpt_named_lov=>wwv_flow_imp.id(3854367654968666771)
 ,p_rpt_show_filter_lov=>'1'
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3588898377055789541)
+ p_id=>wwv_flow_imp.id(3810723067244975107)
 ,p_db_column_name=>'DATE_HEALTHPLAN_EFFECTIVE'
 ,p_display_order=>160
 ,p_column_identifier=>'P'
@@ -1047,7 +1047,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3588898296384789540)
+ p_id=>wwv_flow_imp.id(3810722986573975106)
 ,p_db_column_name=>'DATE_HEALTHPLAN_CLOSE'
 ,p_display_order=>170
 ,p_column_identifier=>'Q'
@@ -1058,7 +1058,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3588898261255789539)
+ p_id=>wwv_flow_imp.id(3810722951444975105)
 ,p_db_column_name=>'LAST_CHANGED_DATE'
 ,p_display_order=>180
 ,p_column_identifier=>'R'
@@ -1069,7 +1069,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3588898125395789538)
+ p_id=>wwv_flow_imp.id(3810722815584975104)
 ,p_db_column_name=>'HEALTH_PLAN_ID'
 ,p_display_order=>190
 ,p_column_identifier=>'S'
@@ -1079,7 +1079,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3588898038830789537)
+ p_id=>wwv_flow_imp.id(3810722729019975103)
 ,p_db_column_name=>'ENTERED_BY'
 ,p_display_order=>200
 ,p_column_identifier=>'T'
@@ -1089,7 +1089,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3588897894764789536)
+ p_id=>wwv_flow_imp.id(3810722584953975102)
 ,p_db_column_name=>'VERIFIED_BY'
 ,p_display_order=>210
 ,p_column_identifier=>'U'
@@ -1099,7 +1099,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3588897827006789535)
+ p_id=>wwv_flow_imp.id(3810722517195975101)
 ,p_db_column_name=>'KNOWN_AILMENT'
 ,p_display_order=>220
 ,p_column_identifier=>'V'
@@ -1109,7 +1109,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3588897690390789534)
+ p_id=>wwv_flow_imp.id(3810722380579975100)
 ,p_db_column_name=>'LAST_CHANGED_BY'
 ,p_display_order=>230
 ,p_column_identifier=>'W'
@@ -1119,7 +1119,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3588897562867789532)
+ p_id=>wwv_flow_imp.id(3810722253056975098)
 ,p_db_column_name=>'MEDICAL_TYPE'
 ,p_display_order=>240
 ,p_column_identifier=>'X'
@@ -1129,7 +1129,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_rpt(
- p_id=>wwv_flow_imp.id(3588691052730989385)
+ p_id=>wwv_flow_imp.id(3810515742920174951)
 ,p_application_user=>'APXWS_DEFAULT'
 ,p_report_seq=>10
 ,p_report_alias=>'641482'
@@ -1138,9 +1138,9 @@ wwv_flow_imp_page.create_worksheet_rpt(
 ,p_report_columns=>'EMP_ID:CATEGORY_ID:DATE_HEALTHPLAN_EFFECTIVE:DATE_HEALTHPLAN_CLOSE:HEALTH_PLAN_ID:MEDICAL_TYPE:'
 );
 wwv_flow_imp_page.create_page_button(
- p_id=>wwv_flow_imp.id(3588900234922789559)
+ p_id=>wwv_flow_imp.id(3810724925111975125)
 ,p_button_sequence=>10
-,p_button_plug_id=>wwv_flow_imp.id(3588900348791789560)
+,p_button_plug_id=>wwv_flow_imp.id(3810725038980975126)
 ,p_button_name=>'RETURN_1'
 ,p_button_action=>'REDIRECT_PAGE'
 ,p_button_template_options=>'#DEFAULT#:t-Button--primary'
@@ -1151,9 +1151,9 @@ wwv_flow_imp_page.create_page_button(
 ,p_button_redirect_url=>'f?p=&APP_ID.:1:&SESSION.::&DEBUG.:::'
 );
 wwv_flow_imp_page.create_page_button(
- p_id=>wwv_flow_imp.id(3607181044010654060)
+ p_id=>wwv_flow_imp.id(3829005734199839626)
 ,p_button_sequence=>10
-,p_button_plug_id=>wwv_flow_imp.id(3507995248376438509)
+,p_button_plug_id=>wwv_flow_imp.id(3729819938565624075)
 ,p_button_name=>'RETURN'
 ,p_button_action=>'REDIRECT_PAGE'
 ,p_button_template_options=>'#DEFAULT#:t-Button--primary'
@@ -1164,9 +1164,9 @@ wwv_flow_imp_page.create_page_button(
 ,p_button_redirect_url=>'f?p=&APP_ID.:1:&SESSION.::&DEBUG.:::'
 );
 wwv_flow_imp_page.create_page_button(
- p_id=>wwv_flow_imp.id(3581846791195187149)
+ p_id=>wwv_flow_imp.id(3803671481384372715)
 ,p_button_sequence=>20
-,p_button_plug_id=>wwv_flow_imp.id(3507995248376438509)
+,p_button_plug_id=>wwv_flow_imp.id(3729819938565624075)
 ,p_button_name=>'NIS_CALENDAR'
 ,p_button_action=>'REDIRECT_PAGE'
 ,p_button_template_options=>'#DEFAULT#:t-Button--primary'
@@ -1175,7 +1175,7 @@ wwv_flow_imp_page.create_page_button(
 ,p_button_position=>'EDIT'
 ,p_button_alignment=>'RIGHT'
 ,p_button_redirect_url=>'f?p=&APP_ID.:10004:&SESSION.::&DEBUG.:RP::'
-,p_security_scheme=>wwv_flow_imp.id(3585334160394360204)
+,p_security_scheme=>wwv_flow_imp.id(3807158850583545770)
 );
 wwv_flow_imp.component_end;
 end;

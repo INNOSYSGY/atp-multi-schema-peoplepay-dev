@@ -8,11 +8,11 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_shared.create_plugin(
- p_id=>wwv_flow_imp.id(423301534757574943)
+ p_id=>wwv_flow_imp.id(645126224946760509)
 ,p_plugin_type=>'PROCESS TYPE'
 ,p_name=>'UC_DOWNLOAD_FILES'
 ,p_display_name=>'UC - Download File(s)'
@@ -363,8 +363,8 @@ wwv_flow_imp_shared.create_plugin(
 ,p_about_url=>'https://plug-ins-pro.com'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(423301671922574940)
-,p_plugin_id=>wwv_flow_imp.id(423301534757574943)
+ p_id=>wwv_flow_imp.id(645126362111760506)
+,p_plugin_id=>wwv_flow_imp.id(645126224946760509)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>1
 ,p_display_sequence=>10
@@ -377,24 +377,24 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'Choose how you wish to compile the list of files to download.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(423302123386574939)
-,p_plugin_attribute_id=>wwv_flow_imp.id(423301671922574940)
+ p_id=>wwv_flow_imp.id(645126813575760505)
+,p_plugin_attribute_id=>wwv_flow_imp.id(645126362111760506)
 ,p_display_sequence=>10
 ,p_display_value=>'SQL Query'
 ,p_return_value=>'sql'
 ,p_help_text=>'<p>The files should be based on a SQL query.</p>'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(423302606771574939)
-,p_plugin_attribute_id=>wwv_flow_imp.id(423301671922574940)
+ p_id=>wwv_flow_imp.id(645127296960760505)
+,p_plugin_attribute_id=>wwv_flow_imp.id(645126362111760506)
 ,p_display_sequence=>20
 ,p_display_value=>'PL/SQL Code'
 ,p_return_value=>'plsql'
 ,p_help_text=>'<p>The files should procedurally be added to an APEX collection in a PL/SQL code block.</p>'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(423303107604574938)
-,p_plugin_id=>wwv_flow_imp.id(423301534757574943)
+ p_id=>wwv_flow_imp.id(645127797793760504)
+,p_plugin_id=>wwv_flow_imp.id(645126224946760509)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>2
 ,p_display_sequence=>20
@@ -404,7 +404,7 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_sql_min_column_count=>3
 ,p_sql_max_column_count=>4
 ,p_is_translatable=>false
-,p_depending_on_attribute_id=>wwv_flow_imp.id(423301671922574940)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(645126362111760506)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'EQUALS'
 ,p_depending_on_expression=>'sql'
@@ -442,8 +442,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ||'d. If both are provided, the first non-null one will be picked. This allows you to mix and match files from various sources.</p>'))
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(423303529809574938)
-,p_plugin_id=>wwv_flow_imp.id(423301534757574943)
+ p_id=>wwv_flow_imp.id(645128219998760504)
+,p_plugin_id=>wwv_flow_imp.id(645126224946760509)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>3
 ,p_display_sequence=>30
@@ -451,7 +451,7 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_attribute_type=>'PLSQL'
 ,p_is_required=>true
 ,p_is_translatable=>false
-,p_depending_on_attribute_id=>wwv_flow_imp.id(423301671922574940)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(645126362111760506)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'EQUALS'
 ,p_depending_on_expression=>'plsql'
@@ -488,8 +488,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ||'e>p_c001</code> and <code>p_c002</code> are both mandatory, and either <code>p_blob001</code> or <code>p_clob001</code> must be provided as well.</p>'))
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(423303857034574937)
-,p_plugin_id=>wwv_flow_imp.id(423301534757574943)
+ p_id=>wwv_flow_imp.id(645128547223760503)
+,p_plugin_id=>wwv_flow_imp.id(645126224946760509)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>4
 ,p_display_sequence=>40
@@ -501,8 +501,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'<p>Enter the zip file name to be used in case multiple files are returned.</p>'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(423304255616574937)
-,p_plugin_id=>wwv_flow_imp.id(423301534757574943)
+ p_id=>wwv_flow_imp.id(645128945805760503)
+,p_plugin_id=>wwv_flow_imp.id(645126224946760509)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>15
 ,p_display_sequence=>150
@@ -514,16 +514,16 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'Extra Options'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(423304720229574936)
-,p_plugin_attribute_id=>wwv_flow_imp.id(423304255616574937)
+ p_id=>wwv_flow_imp.id(645129410418760502)
+,p_plugin_attribute_id=>wwv_flow_imp.id(645128945805760503)
 ,p_display_sequence=>10
 ,p_display_value=>'Always Zip'
 ,p_return_value=>'always-zip'
 ,p_help_text=>'If the result set contains multiple files they will always be zipped. By default, if the result set contains only one file, it will not be zipped. Choose this option if a single file should be zipped as well.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(423305185850574936)
-,p_plugin_attribute_id=>wwv_flow_imp.id(423304255616574937)
+ p_id=>wwv_flow_imp.id(645129876039760502)
+,p_plugin_attribute_id=>wwv_flow_imp.id(645128945805760503)
 ,p_display_sequence=>20
 ,p_display_value=>'Inline Disposition'
 ,p_return_value=>'inline-disposition'

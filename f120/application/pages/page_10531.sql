@@ -8,7 +8,7 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_page.create_page(
@@ -16,12 +16,12 @@ wwv_flow_imp_page.create_page(
 ,p_name=>'rptHRAmalgatedReport'
 ,p_step_title=>'HR Processes Amalgamated Report'
 ,p_autocomplete_on_off=>'OFF'
-,p_group_id=>wwv_flow_imp.id(3603894171983398503)
+,p_group_id=>wwv_flow_imp.id(3825718862172584069)
 ,p_page_template_options=>'#DEFAULT#'
 ,p_page_component_map=>'11'
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(3581846754721187148)
+ p_id=>wwv_flow_imp.id(3803671444910372714)
 ,p_plug_name=>'HR Processes Amalgamated Report by Number of Employees per transactions'
 ,p_region_template_options=>'#DEFAULT#:t-Region--accent11:t-Region--scrollBody:t-Form--xlarge:t-Form--stretchInputs'
 ,p_escape_on_http_output=>'Y'

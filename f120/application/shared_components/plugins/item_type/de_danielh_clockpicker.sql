@@ -8,11 +8,11 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_shared.create_plugin(
- p_id=>wwv_flow_imp.id(14054781668694534651)
+ p_id=>wwv_flow_imp.id(14276606358883720217)
 ,p_plugin_type=>'ITEM TYPE'
 ,p_name=>'DE.DANIELH.CLOCKPICKER'
 ,p_display_name=>'ClockPicker'
@@ -169,8 +169,8 @@ wwv_flow_imp_shared.create_plugin(
 ,p_files_version=>29
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(14054781845268534656)
-,p_plugin_id=>wwv_flow_imp.id(14054781668694534651)
+ p_id=>wwv_flow_imp.id(14276606535457720222)
+,p_plugin_id=>wwv_flow_imp.id(14276606358883720217)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>1
 ,p_display_sequence=>10
@@ -187,22 +187,22 @@ wwv_flow_imp_shared.create_plugin_attribute(
 '- top <br>'))
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(14054799877337669926)
-,p_plugin_attribute_id=>wwv_flow_imp.id(14054781845268534656)
+ p_id=>wwv_flow_imp.id(14276624567526855492)
+,p_plugin_attribute_id=>wwv_flow_imp.id(14276606535457720222)
 ,p_display_sequence=>10
 ,p_display_value=>'Bottom'
 ,p_return_value=>'bottom'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(14054800297038670390)
-,p_plugin_attribute_id=>wwv_flow_imp.id(14054781845268534656)
+ p_id=>wwv_flow_imp.id(14276624987227855956)
+,p_plugin_attribute_id=>wwv_flow_imp.id(14276606535457720222)
 ,p_display_sequence=>20
 ,p_display_value=>'Top'
 ,p_return_value=>'top'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(14054837856264225007)
-,p_plugin_id=>wwv_flow_imp.id(14054781668694534651)
+ p_id=>wwv_flow_imp.id(14276662546453410573)
+,p_plugin_id=>wwv_flow_imp.id(14276606358883720217)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>2
 ,p_display_sequence=>20
@@ -219,22 +219,22 @@ wwv_flow_imp_shared.create_plugin_attribute(
 '- Right <br>'))
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(14054838522423225549)
-,p_plugin_attribute_id=>wwv_flow_imp.id(14054837856264225007)
+ p_id=>wwv_flow_imp.id(14276663212612411115)
+,p_plugin_attribute_id=>wwv_flow_imp.id(14276662546453410573)
 ,p_display_sequence=>10
 ,p_display_value=>'Left'
 ,p_return_value=>'left'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(14054838860824226271)
-,p_plugin_attribute_id=>wwv_flow_imp.id(14054837856264225007)
+ p_id=>wwv_flow_imp.id(14276663551013411837)
+,p_plugin_attribute_id=>wwv_flow_imp.id(14276662546453410573)
 ,p_display_sequence=>20
 ,p_display_value=>'Right'
 ,p_return_value=>'right'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(14054782717794534659)
-,p_plugin_id=>wwv_flow_imp.id(14054781668694534651)
+ p_id=>wwv_flow_imp.id(14276607407983720225)
+,p_plugin_id=>wwv_flow_imp.id(14276606358883720217)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>3
 ,p_display_sequence=>30
@@ -251,22 +251,22 @@ wwv_flow_imp_shared.create_plugin_attribute(
 '- False <br>'))
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(14054802879351688561)
-,p_plugin_attribute_id=>wwv_flow_imp.id(14054782717794534659)
+ p_id=>wwv_flow_imp.id(14276627569540874127)
+,p_plugin_attribute_id=>wwv_flow_imp.id(14276607407983720225)
 ,p_display_sequence=>10
 ,p_display_value=>'True'
 ,p_return_value=>'true'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(14054803246328689256)
-,p_plugin_attribute_id=>wwv_flow_imp.id(14054782717794534659)
+ p_id=>wwv_flow_imp.id(14276627936517874822)
+,p_plugin_attribute_id=>wwv_flow_imp.id(14276607407983720225)
 ,p_display_sequence=>20
 ,p_display_value=>'False'
 ,p_return_value=>'false'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(14054998208515258800)
-,p_plugin_id=>wwv_flow_imp.id(14054781668694534651)
+ p_id=>wwv_flow_imp.id(14276822898704444366)
+,p_plugin_id=>wwv_flow_imp.id(14276606358883720217)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>4
 ,p_display_sequence=>40
@@ -281,8 +281,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 'When set to "autoclose false" a done button to close is displayed. Enter the displayed text.'))
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(14190053956784003905)
-,p_plugin_id=>wwv_flow_imp.id(14054781668694534651)
+ p_id=>wwv_flow_imp.id(14411878646973189471)
+,p_plugin_id=>wwv_flow_imp.id(14276606358883720217)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>5
 ,p_display_sequence=>35
@@ -296,22 +296,22 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'Choose if 12h mode (am/pm) is on or off.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(14190055786268004719)
-,p_plugin_attribute_id=>wwv_flow_imp.id(14190053956784003905)
+ p_id=>wwv_flow_imp.id(14411880476457190285)
+,p_plugin_attribute_id=>wwv_flow_imp.id(14411878646973189471)
 ,p_display_sequence=>10
 ,p_display_value=>'True'
 ,p_return_value=>'true'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(14190056655309005468)
-,p_plugin_attribute_id=>wwv_flow_imp.id(14190053956784003905)
+ p_id=>wwv_flow_imp.id(14411881345498191034)
+,p_plugin_attribute_id=>wwv_flow_imp.id(14411878646973189471)
 ,p_display_sequence=>20
 ,p_display_value=>'False'
 ,p_return_value=>'false'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(18288618432726040008)
-,p_plugin_id=>wwv_flow_imp.id(14054781668694534651)
+ p_id=>wwv_flow_imp.id(18510443122915225574)
+,p_plugin_id=>wwv_flow_imp.id(14276606358883720217)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>6
 ,p_display_sequence=>60
@@ -327,24 +327,24 @@ wwv_flow_imp_shared.create_plugin_attribute(
 'If set to Yes no keyboard is shown on mobile devices, but the possibility to enter free text is also suppressed.'))
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(18288623845506044487)
-,p_plugin_attribute_id=>wwv_flow_imp.id(18288618432726040008)
+ p_id=>wwv_flow_imp.id(18510448535695230053)
+,p_plugin_attribute_id=>wwv_flow_imp.id(18510443122915225574)
 ,p_display_sequence=>10
 ,p_display_value=>'Yes'
 ,p_return_value=>'1'
 ,p_help_text=>'Suppress soft keyboards and free text input'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(18288689872169047596)
-,p_plugin_attribute_id=>wwv_flow_imp.id(18288618432726040008)
+ p_id=>wwv_flow_imp.id(18510514562358233162)
+,p_plugin_attribute_id=>wwv_flow_imp.id(18510443122915225574)
 ,p_display_sequence=>20
 ,p_display_value=>'No'
 ,p_return_value=>'0'
 ,p_help_text=>unistr('Default: Don\00B4t suppress soft keyboards and free text inputs')
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3486233513391185697)
-,p_plugin_id=>wwv_flow_imp.id(14054781668694534651)
+ p_id=>wwv_flow_imp.id(3708058203580371263)
+,p_plugin_id=>wwv_flow_imp.id(14276606358883720217)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>7
 ,p_display_sequence=>45
@@ -358,22 +358,22 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'Choose if a small button with clock icon is shown on right side of item'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3486231694606185062)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3486233513391185697)
+ p_id=>wwv_flow_imp.id(3708056384795370628)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3708058203580371263)
 ,p_display_sequence=>10
 ,p_display_value=>'Yes'
 ,p_return_value=>'1'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3486231264738184614)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3486233513391185697)
+ p_id=>wwv_flow_imp.id(3708055954927370180)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3708058203580371263)
 ,p_display_sequence=>20
 ,p_display_value=>'No'
 ,p_return_value=>'0'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3470592263714158180)
-,p_plugin_id=>wwv_flow_imp.id(14054781668694534651)
+ p_id=>wwv_flow_imp.id(3692416953903343746)
+,p_plugin_id=>wwv_flow_imp.id(14276606358883720217)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>8
 ,p_display_sequence=>80
@@ -387,15 +387,15 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'Whether to log events in the console.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3470590171531157275)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3470592263714158180)
+ p_id=>wwv_flow_imp.id(3692414861720342841)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3692416953903343746)
 ,p_display_sequence=>10
 ,p_display_value=>'True'
 ,p_return_value=>'true'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3470589758418156483)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3470592263714158180)
+ p_id=>wwv_flow_imp.id(3692414448607342049)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3692416953903343746)
 ,p_display_sequence=>20
 ,p_display_value=>'False'
 ,p_return_value=>'false'
@@ -423,8 +423,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(3470586822476154077)
-,p_plugin_id=>wwv_flow_imp.id(14054781668694534651)
+ p_id=>wwv_flow_imp.id(3692411512665339643)
+,p_plugin_id=>wwv_flow_imp.id(14276606358883720217)
 ,p_file_name=>'js/apexclockpicker.min.js'
 ,p_mime_type=>'application/javascript'
 ,p_file_charset=>'utf-8'
@@ -468,8 +468,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(3470587255051154690)
-,p_plugin_id=>wwv_flow_imp.id(14054781668694534651)
+ p_id=>wwv_flow_imp.id(3692411945240340256)
+,p_plugin_id=>wwv_flow_imp.id(14276606358883720217)
 ,p_file_name=>'js/apexclockpicker.js'
 ,p_mime_type=>'application/javascript'
 ,p_file_charset=>'utf-8'
@@ -515,8 +515,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(14168297645810460497)
-,p_plugin_id=>wwv_flow_imp.id(14054781668694534651)
+ p_id=>wwv_flow_imp.id(14390122335999646063)
+,p_plugin_id=>wwv_flow_imp.id(14276606358883720217)
 ,p_file_name=>'css/bootstrap-clockpicker.min.css'
 ,p_mime_type=>'text/css'
 ,p_file_charset=>'utf-8'
@@ -642,8 +642,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(14168298429161460508)
-,p_plugin_id=>wwv_flow_imp.id(14054781668694534651)
+ p_id=>wwv_flow_imp.id(14390123119350646074)
+,p_plugin_id=>wwv_flow_imp.id(14276606358883720217)
 ,p_file_name=>'js/bootstrap-clockpicker.min.js'
 ,p_mime_type=>'application/javascript'
 ,p_file_charset=>'utf-8'
@@ -918,8 +918,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(14449442646507770313)
-,p_plugin_id=>wwv_flow_imp.id(14054781668694534651)
+ p_id=>wwv_flow_imp.id(14671267336696955879)
+,p_plugin_id=>wwv_flow_imp.id(14276606358883720217)
 ,p_file_name=>'css/bootstrap.min.css'
 ,p_mime_type=>'text/css'
 ,p_file_charset=>'utf-8'
