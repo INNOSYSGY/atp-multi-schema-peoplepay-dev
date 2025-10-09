@@ -51,7 +51,7 @@ jobs:
           BRANCH_SLUG=$(echo "${{ github.event.inputs.branch_name }}" | sed 's/\//-/g' | tr '[:lower:]' '[:upper:]')
           export APEX_APP_ALIAS="F-${BRANCH_SLUG}"
           
-          echo "Find the application ID with alias: $APEX_APP_ALIAS"
+          echo "Find the application ID with name = ${{ github.event.inputs.branch_name }} and alias = ${APEX_APP_ALIAS}"
 
           echo "${{ vars.ATP_WALLET_DEV }}" | base64 --decode > Wallet_DEVENV.zip
           
@@ -68,8 +68,6 @@ jobs:
 
           echo "Found App ID: $APP_ID. Exporting to apex-app/f${APP_ID}.sql..."
 
-          exit
-          
           # 3. Use SQLcl's APEX EXPORT command to overwrite the file in the repo
           sql -S -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL <<EOF
           set long 100000
