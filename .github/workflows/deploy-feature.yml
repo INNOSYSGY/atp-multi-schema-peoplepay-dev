@@ -83,13 +83,15 @@ jobs:
           /
           EOF
           
-          export APP_ID=$( sql -S -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @deploy.sql 2>&1 | tr -d '[:space:]' )
+          export APP_ID=$( sql -S -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @deploy.sql | tr -d '[:space:]' )
           
           if [ "$APP_ID" == "" ];then
             echo "No APP_ID, exiting ..."
             exit 1
           fi
-          
+
+          echo "Using APEX App ID: $APP_ID"
+          echo "export APP_ID=$APP_ID" >> $GITHUB_ENV
 
           
           # 1. Sanitize the branch name to create a valid and clean alias
@@ -115,6 +117,7 @@ jobs:
           # 2. Deploy the application using the standard export file
           echo "Deploying $APP_EXPORT.sql..."
           sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @deploy_apex_app.sql
+
 
 
 
