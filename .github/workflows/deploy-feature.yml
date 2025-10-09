@@ -43,7 +43,7 @@ jobs:
           echo "${{ vars.ATP_WALLET_DEV }}" | base64 --decode > Wallet_DEVENV.zip
 
           echo "Looking for existing App ID for branch: ${{ github.ref_name }}"
-          INPUT_BRANCH_NAME = "${{ github.ref_name }}"
+          INPUT_BRANCH_NAME="${{ github.ref_name }}"
           
           # This SQL script uses a MERGE statement for atomic "get or create" logic.
           # It outputs the final app_id using dbms_output, which we capture.
@@ -51,7 +51,7 @@ jobs:
           SET SERVEROUTPUT ON;
           SET FEEDBACK OFF;
           DECLARE
-              v_branch_name VARCHAR2(255) := '${ INPUT_BRANCH_NAME }';
+              v_branch_name VARCHAR2(255) := '${INPUT_BRANCH_NAME}';
               v_app_id NUMBER;
           BEGIN
               MERGE INTO branch_to_app_id_map d
@@ -95,6 +95,7 @@ jobs:
           # 2. Deploy the application using the standard export file
           echo "Deploying $APP_EXPORT.sql..."
           sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @deploy_apex_app.sql
+
 
 
 
