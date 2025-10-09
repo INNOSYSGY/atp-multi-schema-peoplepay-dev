@@ -1,0 +1,113 @@
+prompt --application/shared_components/user_interface/lovs/salutation
+begin
+--   Manifest
+--     SALUTATION
+--   Manifest End
+wwv_flow_imp.component_begin (
+ p_version_yyyy_mm_dd=>'2024.11.30'
+,p_release=>'24.2.9'
+,p_default_workspace_id=>31592798490575853
+,p_default_application_id=>800
+,p_default_id_offset=>221543258820678920
+,p_default_owner=>'TEMPLATE_APPV8'
+);
+wwv_flow_imp_shared.create_list_of_values(
+ p_id=>wwv_flow_imp.id(3858216386996226592)
+,p_lov_name=>'SALUTATION'
+,p_lov_query=>'.'||wwv_flow_imp.id(3858216386996226592)||'.'
+,p_location=>'STATIC'
+,p_version_scn=>1
+);
+wwv_flow_imp_shared.create_static_lov_data(
+ p_id=>wwv_flow_imp.id(3858216648038226598)
+,p_lov_disp_sequence=>1
+,p_lov_disp_value=>'Adv'
+,p_lov_return_value=>'Adv.'
+);
+wwv_flow_imp_shared.create_static_lov_data(
+ p_id=>wwv_flow_imp.id(3858217080630226599)
+,p_lov_disp_sequence=>2
+,p_lov_disp_value=>'Dame'
+,p_lov_return_value=>'Dame.'
+);
+wwv_flow_imp_shared.create_static_lov_data(
+ p_id=>wwv_flow_imp.id(3858217437697226599)
+,p_lov_disp_sequence=>3
+,p_lov_disp_value=>'Dr'
+,p_lov_return_value=>'Dr.'
+);
+wwv_flow_imp_shared.create_static_lov_data(
+ p_id=>wwv_flow_imp.id(3858217868690226599)
+,p_lov_disp_sequence=>4
+,p_lov_disp_value=>'Elder'
+,p_lov_return_value=>'Elder'
+);
+wwv_flow_imp_shared.create_static_lov_data(
+ p_id=>wwv_flow_imp.id(3858218224993226599)
+,p_lov_disp_sequence=>5
+,p_lov_disp_value=>'Fr'
+,p_lov_return_value=>'Fr.'
+);
+wwv_flow_imp_shared.create_static_lov_data(
+ p_id=>wwv_flow_imp.id(3858218673635226599)
+,p_lov_disp_sequence=>6
+,p_lov_disp_value=>'Br'
+,p_lov_return_value=>'Br.'
+);
+wwv_flow_imp_shared.create_static_lov_data(
+ p_id=>wwv_flow_imp.id(3858219048602226599)
+,p_lov_disp_sequence=>7
+,p_lov_disp_value=>'Lord'
+,p_lov_return_value=>'Lord'
+);
+wwv_flow_imp_shared.create_static_lov_data(
+ p_id=>wwv_flow_imp.id(3858219440710226599)
+,p_lov_disp_sequence=>8
+,p_lov_disp_value=>'Madam'
+,p_lov_return_value=>'Madam'
+);
+wwv_flow_imp_shared.create_static_lov_data(
+ p_id=>wwv_flow_imp.id(3858219823843226599)
+,p_lov_disp_sequence=>9
+,p_lov_disp_value=>'Miss'
+,p_lov_return_value=>'Miss.'
+);
+wwv_flow_imp_shared.create_static_lov_data(
+ p_id=>wwv_flow_imp.id(3858220278497226599)
+,p_lov_disp_sequence=>10
+,p_lov_disp_value=>'Mrs'
+,p_lov_return_value=>'Mrs.'
+);
+wwv_flow_imp_shared.create_static_lov_data(
+ p_id=>wwv_flow_imp.id(3858220626629226600)
+,p_lov_disp_sequence=>11
+,p_lov_disp_value=>'Ms'
+,p_lov_return_value=>'Ms.'
+);
+wwv_flow_imp_shared.create_static_lov_data(
+ p_id=>wwv_flow_imp.id(3858221086431226600)
+,p_lov_disp_sequence=>12
+,p_lov_disp_value=>'Mr'
+,p_lov_return_value=>'Mr.'
+);
+wwv_flow_imp_shared.create_static_lov_data(
+ p_id=>wwv_flow_imp.id(3858221456823226600)
+,p_lov_disp_sequence=>13
+,p_lov_disp_value=>'Sir'
+,p_lov_return_value=>'Sir.'
+);
+wwv_flow_imp_shared.create_static_lov_data(
+ p_id=>wwv_flow_imp.id(3858221860533226600)
+,p_lov_disp_sequence=>14
+,p_lov_disp_value=>'Rev'
+,p_lov_return_value=>'Rev.'
+);
+wwv_flow_imp_shared.create_static_lov_data(
+ p_id=>wwv_flow_imp.id(3858222204819226600)
+,p_lov_disp_sequence=>15
+,p_lov_disp_value=>'Prof'
+,p_lov_return_value=>'Prof.'
+);
+wwv_flow_imp.component_end;
+end;
+/
