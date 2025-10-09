@@ -55,6 +55,7 @@ jobs:
           
           sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @export_apex_app.sql
 
+          rm export_apex_app.sql
               
       - name: Commit and Push Changes
         env:
