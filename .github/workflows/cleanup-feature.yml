@@ -24,13 +24,13 @@ jobs:
       - name: Find and Remove APEX Application
         env:
           DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
-          ENVIRONMENT: ${{ github.ref_name }}
+          BRANCH: ${{ github.ref_name }}
           DB_URL: ${{ vars.DB_URL }}
           DB_USER: ${{ vars.DB_USER }}
           WKSPACE: ${{ vars.WKSPACE }}
         run: |
           # github.ref contains the deleted branch name
-          DELETED_BRANCH="${{ github.ref_name }}"
+          DELETED_BRANCH="${BRANCH}"
           echo "🗑️ Branch deleted: $DELETED_BRANCH"
 
           # 2. Create a temporary SQL script to find and remove the application
@@ -70,6 +70,7 @@ jobs:
 
           echo "${{ vars.ATP_WALLET_DEV }}" | base64 --decode > Wallet_DEVENV.zip
           sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @cleanup.sql
+
 
 
 
