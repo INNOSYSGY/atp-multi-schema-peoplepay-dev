@@ -46,7 +46,7 @@ jobs:
 
           # This SQL script uses a MERGE statement for atomic "get or create" logic.
           # It outputs the final app_id using dbms_output, which we capture.
-          APP_ID=$(sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL <<'EOF'
+          cat > deploy.sql <<EOF
           SET SERVEROUTPUT ON;
           SET FEEDBACK OFF;
           DECLARE
@@ -69,7 +69,8 @@ jobs:
           END;
           /
           EOF 
-          )
+          
+          APP_ID=$(sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @deploy.sql)
 
           if [ -z "$APP_ID" ]; then
             echo "::error::Failed to get or create an App ID from the database."
@@ -93,6 +94,7 @@ jobs:
           # 2. Deploy the application using the standard export file
           echo "Deploying $APP_EXPORT.sql..."
           sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @deploy_apex_app.sql
+
 
 
 
