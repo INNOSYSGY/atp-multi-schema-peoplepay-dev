@@ -6,6 +6,9 @@ on:
     branches:
       - 'wc-**'
 
+  # Allow manual runs for redeploying a feature branch
+  workflow_dispatch:
+  
 jobs:
   cleanup-feature-app:
     runs-on: ubuntu-latest
@@ -72,6 +75,7 @@ jobs:
 
           echo "${{ vars.ATP_WALLET_DEV }}" | base64 --decode > Wallet_DEVENV.zip
           sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @cleanup.sql
+
 
 
 
