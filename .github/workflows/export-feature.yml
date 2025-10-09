@@ -51,27 +51,26 @@ jobs:
           BRANCH_SLUG=$(echo "${{ github.event.inputs.branch_name }}" | sed 's/\//-/g' | tr '[:lower:]' '[:upper:]')
           export APEX_APP_ALIAS="F-${BRANCH_SLUG}"
           
-          echo "Looking for application with alias: $APEX_APP_ALIAS"
+          echo "Find the application ID with alias: $APEX_APP_ALIAS"
 
           echo "${{ vars.ATP_WALLET_DEV }}" | base64 --decode > Wallet_DEVENV.zip
           
-          # 2. Find the application ID using its alias
-
-          APP_ID=$(sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL <<EOF
+          # 2.  using its alias
+          
+          cat get_app_id <<EOF
           SET FEEDBACK OFF HEADING OFF PAGESIZE 0
           SELECT application_id FROM apex_applications WHERE alias = '${APEX_APP_ALIAS}' AND workspace = '${WKSPACE}';
           EOF
           )
           
-          if [ -z "$APP_ID" ]; then
-            echo "::error::Could not find a deployed APEX application with alias ${APEX_APP_ALIAS}."
-            exit 1
-          fi
-          
-          echo "Found App ID: $APP_ID. Exporting to apex-app/f101.sql..."
+          export APP_ID=$(sql -S -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @ get_app_id |  tr -d '[:space:]' | sed 's/SQL>//g'
+
+          echo "Found App ID: $APP_ID. Exporting to apex-app/f${APP_ID}.sql..."
+
+          exit
           
           # 3. Use SQLcl's APEX EXPORT command to overwrite the file in the repo
-          sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL <<EOF
+          sql -S -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL <<EOF
           set long 100000
           SET LINESIZE 200
           SET TRIMSPOOL ON
