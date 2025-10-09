@@ -83,8 +83,12 @@ jobs:
           /
           EOF
           
-          export APP_ID=$(sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @deploy.sql)
+          sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @deploy.sql
+          
+          #export APP_ID=$(sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @deploy.sql)
 
+          exit 
+          
           if [ "$APP_ID" == "" ];then
             echo "No APP_ID, exiting ..."
             exit 1
@@ -109,6 +113,7 @@ jobs:
           # 2. Deploy the application using the standard export file
           echo "Deploying $APP_EXPORT.sql..."
           sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @deploy_apex_app.sql
+
 
 
 
