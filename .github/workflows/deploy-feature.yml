@@ -52,14 +52,14 @@ jobs:
           SET FEEDBACK OFF;
           DECLARE
               v_branch_name VARCHAR2(255) := '${INPUT_BRANCH_NAME}';
-              v_app_id NUMBER;
+              v_app_id NUMBER := apex_application_install.get_application_id;
           BEGIN
               MERGE INTO branch_to_app_id_map d
               USING (SELECT v_branch_name AS branch_name FROM dual) s
               ON (d.branch_name = s.branch_name)
               WHEN NOT MATCHED THEN
                   INSERT (branch_name, apex_app_id)
-                  VALUES (s.branch_name, apex_application_install.get_application_id); -- Get new available ID
+                  VALUES (s.branch_name, ); -- Get new available ID
 
               -- Select the final app_id (either existing or newly inserted)
               SELECT apex_app_id INTO v_app_id FROM branch_to_app_id_map WHERE branch_name = v_branch_name;
@@ -98,6 +98,7 @@ jobs:
           # 2. Deploy the application using the standard export file
           echo "Deploying $APP_EXPORT.sql..."
           sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @deploy_apex_app.sql
+
 
 
 
