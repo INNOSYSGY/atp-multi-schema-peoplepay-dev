@@ -30,7 +30,7 @@ jobs:
           WKSPACE: ${{ vars.WKSPACE }}
         run: |
           # github.ref contains the deleted branch name
-          export BRANCH_DELETED = ${{ github.ref_name }}
+          export BRANCH_DELETED=${{ github.ref_name }}
           echo "🗑️ Branch deleted: ${BRANCH_DELETED}"
 
           # 2. Create a temporary SQL script to find and remove the application
@@ -70,6 +70,7 @@ jobs:
 
           echo "${{ vars.ATP_WALLET_DEV }}" | base64 --decode > Wallet_DEVENV.zip
           sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @cleanup.sql
+
 
 
 
