@@ -51,27 +51,34 @@ jobs:
           SET SERVEROUTPUT ON;
           SET FEEDBACK OFF;
           DECLARE
-              v_branch_name VARCHAR2(255) := '${INPUT_BRANCH_NAME}';
+              v_branch_name VARCHAR2(255);
               v_app_id NUMBER;
           BEGIN
+          v_branch_name :=  '${INPUT_BRANCH_NAME}';
 
-              -- Select existing app_id from the v_branch_name
-              SELECT apex_app_id INTO v_app_id FROM branch_to_app_id_map WHERE branch_name = v_branch_name;
+          -- Select existing app_id from the v_branch_name
+          SELECT apex_app_id 
+          INTO v_app_id 
+          FROM branch_to_app_id_map 
+          WHERE branch_name = v_branch_name;
 
-              if v_app_id is null then
-                SELECT 
-                  max(APPLICATION_ID) + 1  into v_app_id
-                FROM 
-                APEX_APPLICATIONS
-                WHERE WORKSPACE = '${WKSPACE}'
-                ORDER BY 
-                APPLICATION_ID;
-                INSERT (branch_name, apex_app_id)
-                  VALUES (s.branch_name, v_app_id); -- Get new available ID
-              end if
+          EXCEPTION
+              -- If the SELECT above finds no rows, control IMMEDIATELY jumps here.
+              WHEN NO_DATA_FOUND THEN
+                  
+                  -- Find the next available ID
+                  SELECT MAX(APPLICATION_ID) + 1
+                  INTO v_app_id
+                  FROM APEX_APPLICATIONS
+                  WHERE WORKSPACE = '${WKSPACE}';
 
-              -- Output the ID so the shell script can capture it
-              DBMS_OUTPUT.PUT_LINE(v_app_id);
+                  -- Insert the new mapping (uncommented as this is crucial)
+                  INSERT INTO branch_to_app_id_map(branch_name, apex_app_id)
+                  VALUES (v_branch_name, v_app_id);
+                  
+            -- Output the ID so the shell script can capture it
+            DBMS_OUTPUT.PUT_LINE(v_app_id);
+            
           END;
           /
           EOF
@@ -104,6 +111,7 @@ jobs:
           # 2. Deploy the application using the standard export file
           echo "Deploying $APP_EXPORT.sql..."
           sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @deploy_apex_app.sql
+
 
 
 
