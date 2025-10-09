@@ -40,8 +40,6 @@ jobs:
           #export BRANCH_DELETED=${{ github.ref_name }}
           echo "🗑️ Branch deleted: ${BRANCH_DELETED}"
 
-          exit 1
-          
           # 2. Create a temporary SQL script to find and remove the application
           cat > cleanup.sql <<EOF
           SET SERVEROUTPUT ON;
@@ -79,6 +77,7 @@ jobs:
 
           echo "${{ vars.ATP_WALLET_DEV }}" | base64 --decode > Wallet_DEVENV.zip
           sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @cleanup.sql
+
 
 
 
