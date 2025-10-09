@@ -1,0 +1,78 @@
+prompt --application/shared_components/data_profiles/timeclock_api
+begin
+--   Manifest
+--     DATA PROFILE: Timeclock API
+--   Manifest End
+wwv_flow_imp.component_begin (
+ p_version_yyyy_mm_dd=>'2024.11.30'
+,p_release=>'24.2.9'
+,p_default_workspace_id=>31592798490575853
+,p_default_application_id=>1000
+,p_default_id_offset=>221683928681757931
+,p_default_owner=>'TEMPLATE_APPV8'
+);
+wwv_flow_imp_shared.create_data_profile(
+ p_id=>wwv_flow_imp.id(3659092016419940244)
+,p_name=>'Timeclock API'
+,p_format=>'JSON'
+,p_use_raw_json_selectors=>false
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(3659092233735940245)
+,p_data_profile_id=>wwv_flow_imp.id(3659092016419940244)
+,p_name=>'WORK_DATE'
+,p_sequence=>1
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>100
+,p_format_mask=>'YYYY"-"MM"-"DD"T"HH24":"MI:SS"."FF9TZR'
+,p_has_time_zone=>true
+,p_selector=>'date'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(3659092567599940245)
+,p_data_profile_id=>wwv_flow_imp.id(3659092016419940244)
+,p_name=>'COMPANY_NAME'
+,p_sequence=>2
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>4000
+,p_has_time_zone=>false
+,p_selector=>'gname'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(3659092869178940245)
+,p_data_profile_id=>wwv_flow_imp.id(3659092016419940244)
+,p_name=>'ATT_IN'
+,p_sequence=>3
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>4000
+,p_has_time_zone=>false
+,p_selector=>'att_in'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(3659093150545940245)
+,p_data_profile_id=>wwv_flow_imp.id(3659092016419940244)
+,p_name=>'EMPNO'
+,p_sequence=>4
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>100
+,p_has_time_zone=>false
+,p_selector=>'userid'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(3659093440189940246)
+,p_data_profile_id=>wwv_flow_imp.id(3659092016419940244)
+,p_name=>'ATT_OUT'
+,p_sequence=>5
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>4000
+,p_has_time_zone=>false
+,p_selector=>'att_out'
+);
+wwv_flow_imp.component_end;
+end;
+/
