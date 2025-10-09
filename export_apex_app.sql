@@ -7,7 +7,7 @@ SET FEEDBACK OFF
 SET VERIFY OFF
 SET ECHO OFF
 
+apex export -applicationid '${APEX_APP_ID}'  -split  -overwrite-files -expSupportingObjects Y -expType APPLICATION_SOURCE ;
 
-apex export -applicationid ${APEX_APP_ID}  -split  -overwrite-files -expSupportingObjects Y -expType APPLICATION_SOURCE ;
+apex export -applicationid '${APEX_APP_ID}' -overwrite-files;
 
-apex export -applicationid ${APEX_APP_ID} -overwrite-files;
