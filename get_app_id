@@ -1,2 +1,4 @@
 SET FEEDBACK OFF HEADING OFF PAGESIZE 0;
-SELECT application_id FROM apex_applications WHERE alias = 'F-DEVELOP' AND workspace = 'PPLPAYV8_AUTO';
+SELECT apex_app_id 
+FROM branch_to_app_id_map 
+WHERE branch_name = 'develop';
