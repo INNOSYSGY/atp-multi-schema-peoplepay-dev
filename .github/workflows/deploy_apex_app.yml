@@ -91,7 +91,7 @@ jobs:
           SCHEMA: ${{ vars.SCHEMA }}
         run: |
           BRANCH_SLUG=$(echo "${{ github.ref_name }}" | sed 's/\//-/g' | tr '[:lower:]' '[:upper:]')
-          export APEX_APP_ALIAS="F-${BRANCH_SLUG}" # The final alias, e.g., F-FEAT-NEW-USER-AUTH
+          export APEX_APP_ALIAS="${BRANCH_SLUG}" # The final alias, e.g., F-FEAT-NEW-USER-AUTH
           
           echo "🌿 Branch: ${{ github.ref_name }}"
           echo "🏷️  Generated APEX Alias: $APEX_APP_ALIAS"
