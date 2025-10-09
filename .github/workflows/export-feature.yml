@@ -58,11 +58,11 @@ jobs:
           # 2.  using its alias
           
           cat > get_app_id <<EOF
-          SET FEEDBACK OFF HEADING OFF PAGESIZE 0
+          SET FEEDBACK OFF HEADING OFF PAGESIZE 0;
           SELECT application_id FROM apex_applications WHERE alias = '${APEX_APP_ALIAS}' AND workspace = '${WKSPACE}';
           EOF
           
-          export APP_ID=$(sql -S -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @ get_app_id |  tr -d '[:space:]' | sed 's/SQL>//g'
+          export APP_ID=$(sql -S -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @ get_app_id |  tr -d '[:space:]' | sed 's/SQL>//g')
 
           echo "Found App ID: $APP_ID. Exporting to apex-app/f${APP_ID}.sql..."
 
