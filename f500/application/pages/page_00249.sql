@@ -1,0 +1,316 @@
+prompt --application/pages/page_00249
+begin
+--   Manifest
+--     PAGE: 00249
+--   Manifest End
+wwv_flow_imp.component_begin (
+ p_version_yyyy_mm_dd=>'2024.11.30'
+,p_release=>'24.2.9'
+,p_default_workspace_id=>31592798490575853
+,p_default_application_id=>500
+,p_default_id_offset=>221402556581611694
+,p_default_owner=>'TEMPLATE_APPV8'
+);
+wwv_flow_imp_page.create_page(
+ p_id=>249
+,p_name=>'rptGlobalSearch'
+,p_alias=>'RPTGLOBALSEARCH'
+,p_step_title=>'Global Search'
+,p_autocomplete_on_off=>'OFF'
+,p_group_id=>wwv_flow_imp.id(3806298858087241579)
+,p_page_template_options=>'#DEFAULT#'
+,p_required_role=>wwv_flow_imp.id(3806736716975971898)
+,p_protection_level=>'C'
+,p_page_component_map=>'26'
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(663302915836550619)
+,p_plug_name=>'Search Results'
+,p_region_template_options=>'#DEFAULT#:t-Form--noPadding'
+,p_plug_template=>3371237801798025892
+,p_plug_display_sequence=>20
+,p_location=>null
+,p_plug_source_type=>'NATIVE_SEARCH_REGION'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'custom_layout', 'N',
+  'lazy_loading', 'Y',
+  'minimum_characters', '0',
+  'search_as_you_type', 'Y',
+  'search_page_item', 'P249_SEARCH',
+  'show_result_count', 'Y',
+  'use_pagination', 'N')).to_clob
+);
+wwv_flow_imp_page.create_search_region_source(
+ p_id=>wwv_flow_imp.id(531589484576221247)
+,p_region_id=>wwv_flow_imp.id(663302915836550619)
+,p_search_config_id=>wwv_flow_imp.id(533780022407888843)
+,p_use_as_initial_result=>false
+,p_display_sequence=>1
+,p_name=>'address'
+);
+wwv_flow_imp_page.create_search_region_source(
+ p_id=>wwv_flow_imp.id(531589610216221248)
+,p_region_id=>wwv_flow_imp.id(663302915836550619)
+,p_search_config_id=>wwv_flow_imp.id(533780182132892224)
+,p_use_as_initial_result=>false
+,p_display_sequence=>30
+,p_name=>'alternate_role'
+);
+wwv_flow_imp_page.create_search_region_source(
+ p_id=>wwv_flow_imp.id(531589646527221249)
+,p_region_id=>wwv_flow_imp.id(663302915836550619)
+,p_search_config_id=>wwv_flow_imp.id(533780375203899655)
+,p_use_as_initial_result=>false
+,p_display_sequence=>40
+,p_name=>'contract'
+);
+wwv_flow_imp_page.create_search_region_source(
+ p_id=>wwv_flow_imp.id(531589743229221250)
+,p_region_id=>wwv_flow_imp.id(663302915836550619)
+,p_search_config_id=>wwv_flow_imp.id(533780528951905329)
+,p_use_as_initial_result=>false
+,p_display_sequence=>50
+,p_name=>'grievance'
+);
+wwv_flow_imp_page.create_search_region_source(
+ p_id=>wwv_flow_imp.id(531589864954221251)
+,p_region_id=>wwv_flow_imp.id(663302915836550619)
+,p_search_config_id=>wwv_flow_imp.id(533796998662176539)
+,p_use_as_initial_result=>false
+,p_display_sequence=>60
+,p_name=>'leave_ent'
+);
+wwv_flow_imp_page.create_search_region_source(
+ p_id=>wwv_flow_imp.id(531589954337221252)
+,p_region_id=>wwv_flow_imp.id(663302915836550619)
+,p_search_config_id=>wwv_flow_imp.id(533797129040178657)
+,p_use_as_initial_result=>false
+,p_display_sequence=>70
+,p_name=>'offence_action'
+);
+wwv_flow_imp_page.create_search_region_source(
+ p_id=>wwv_flow_imp.id(531590042474221253)
+,p_region_id=>wwv_flow_imp.id(663302915836550619)
+,p_search_config_id=>wwv_flow_imp.id(533797417549181958)
+,p_use_as_initial_result=>false
+,p_display_sequence=>80
+,p_name=>'offence'
+);
+wwv_flow_imp_page.create_search_region_source(
+ p_id=>wwv_flow_imp.id(531590138620221254)
+,p_region_id=>wwv_flow_imp.id(663302915836550619)
+,p_search_config_id=>wwv_flow_imp.id(533797568099185355)
+,p_use_as_initial_result=>false
+,p_display_sequence=>90
+,p_name=>'enttitlements'
+);
+wwv_flow_imp_page.create_search_region_source(
+ p_id=>wwv_flow_imp.id(531590271081221255)
+,p_region_id=>wwv_flow_imp.id(663302915836550619)
+,p_search_config_id=>wwv_flow_imp.id(533797739574187295)
+,p_use_as_initial_result=>false
+,p_display_sequence=>100
+,p_name=>'hobbies'
+);
+wwv_flow_imp_page.create_search_region_source(
+ p_id=>wwv_flow_imp.id(531590395227221256)
+,p_region_id=>wwv_flow_imp.id(663302915836550619)
+,p_search_config_id=>wwv_flow_imp.id(533798007259189481)
+,p_use_as_initial_result=>false
+,p_display_sequence=>110
+,p_name=>'Individual'
+);
+wwv_flow_imp_page.create_search_region_source(
+ p_id=>wwv_flow_imp.id(531590522437221257)
+,p_region_id=>wwv_flow_imp.id(663302915836550619)
+,p_search_config_id=>wwv_flow_imp.id(533798138840191974)
+,p_use_as_initial_result=>false
+,p_display_sequence=>120
+,p_name=>'Job_Applied'
+);
+wwv_flow_imp_page.create_search_region_source(
+ p_id=>wwv_flow_imp.id(531590617111221258)
+,p_region_id=>wwv_flow_imp.id(663302915836550619)
+,p_search_config_id=>wwv_flow_imp.id(533798387133194390)
+,p_use_as_initial_result=>false
+,p_display_sequence=>130
+,p_name=>'NatIdentifier'
+);
+wwv_flow_imp_page.create_search_region_source(
+ p_id=>wwv_flow_imp.id(531590697601221259)
+,p_region_id=>wwv_flow_imp.id(663302915836550619)
+,p_search_config_id=>wwv_flow_imp.id(533798616145196499)
+,p_use_as_initial_result=>false
+,p_display_sequence=>140
+,p_name=>'Disburse'
+);
+wwv_flow_imp_page.create_search_region_source(
+ p_id=>wwv_flow_imp.id(531590817597221260)
+,p_region_id=>wwv_flow_imp.id(663302915836550619)
+,p_search_config_id=>wwv_flow_imp.id(533798793220206125)
+,p_use_as_initial_result=>false
+,p_display_sequence=>150
+,p_name=>'Past_Employment'
+);
+wwv_flow_imp_page.create_search_region_source(
+ p_id=>wwv_flow_imp.id(531590882945221261)
+,p_region_id=>wwv_flow_imp.id(663302915836550619)
+,p_search_config_id=>wwv_flow_imp.id(533798960120209051)
+,p_use_as_initial_result=>false
+,p_display_sequence=>160
+,p_name=>'pay_status'
+);
+wwv_flow_imp_page.create_search_region_source(
+ p_id=>wwv_flow_imp.id(531591032725221263)
+,p_region_id=>wwv_flow_imp.id(663302915836550619)
+,p_search_config_id=>wwv_flow_imp.id(533799160825210829)
+,p_use_as_initial_result=>false
+,p_display_sequence=>170
+,p_name=>'qualification'
+);
+wwv_flow_imp_page.create_search_region_source(
+ p_id=>wwv_flow_imp.id(531591184909221264)
+,p_region_id=>wwv_flow_imp.id(663302915836550619)
+,p_search_config_id=>wwv_flow_imp.id(533799364226213513)
+,p_use_as_initial_result=>false
+,p_display_sequence=>180
+,p_name=>'Reference'
+);
+wwv_flow_imp_page.create_search_region_source(
+ p_id=>wwv_flow_imp.id(531591314191221265)
+,p_region_id=>wwv_flow_imp.id(663302915836550619)
+,p_search_config_id=>wwv_flow_imp.id(533799600515216063)
+,p_use_as_initial_result=>false
+,p_display_sequence=>190
+,p_name=>'Relatives'
+);
+wwv_flow_imp_page.create_search_region_source(
+ p_id=>wwv_flow_imp.id(531591401466221266)
+,p_region_id=>wwv_flow_imp.id(663302915836550619)
+,p_search_config_id=>wwv_flow_imp.id(533799804182217903)
+,p_use_as_initial_result=>false
+,p_display_sequence=>200
+,p_name=>'Salary_search'
+);
+wwv_flow_imp_page.create_search_region_source(
+ p_id=>wwv_flow_imp.id(531591478701221267)
+,p_region_id=>wwv_flow_imp.id(663302915836550619)
+,p_search_config_id=>wwv_flow_imp.id(533800011624220338)
+,p_use_as_initial_result=>false
+,p_display_sequence=>210
+,p_name=>'duties'
+);
+wwv_flow_imp_page.create_search_region_source(
+ p_id=>wwv_flow_imp.id(531591565404221268)
+,p_region_id=>wwv_flow_imp.id(663302915836550619)
+,p_search_config_id=>wwv_flow_imp.id(533800173340223856)
+,p_use_as_initial_result=>false
+,p_display_sequence=>220
+,p_name=>'training'
+);
+wwv_flow_imp_page.create_search_region_source(
+ p_id=>wwv_flow_imp.id(531591649682221269)
+,p_region_id=>wwv_flow_imp.id(663302915836550619)
+,p_search_config_id=>wwv_flow_imp.id(533800403804278533)
+,p_use_as_initial_result=>false
+,p_display_sequence=>230
+,p_name=>'travel_history'
+);
+wwv_flow_imp_page.create_search_region_source(
+ p_id=>wwv_flow_imp.id(531591754976221270)
+,p_region_id=>wwv_flow_imp.id(663302915836550619)
+,p_search_config_id=>wwv_flow_imp.id(533800593111281175)
+,p_use_as_initial_result=>false
+,p_display_sequence=>240
+,p_name=>'welfare'
+);
+wwv_flow_imp_page.create_search_region_source(
+ p_id=>wwv_flow_imp.id(531591864755221271)
+,p_region_id=>wwv_flow_imp.id(663302915836550619)
+,p_search_config_id=>wwv_flow_imp.id(533800806998283204)
+,p_use_as_initial_result=>false
+,p_display_sequence=>250
+,p_name=>'work_permit'
+);
+wwv_flow_imp_page.create_search_region_source(
+ p_id=>wwv_flow_imp.id(531591969717221272)
+,p_region_id=>wwv_flow_imp.id(663302915836550619)
+,p_search_config_id=>wwv_flow_imp.id(533800975342285223)
+,p_use_as_initial_result=>false
+,p_display_sequence=>260
+,p_name=>'Work_Stints'
+);
+wwv_flow_imp_page.create_search_region_source(
+ p_id=>wwv_flow_imp.id(531592128001221274)
+,p_region_id=>wwv_flow_imp.id(663302915836550619)
+,p_search_config_id=>wwv_flow_imp.id(533844075282235124)
+,p_use_as_initial_result=>false
+,p_display_sequence=>270
+,p_name=>'employee_leave_track'
+);
+wwv_flow_imp_page.create_search_region_source(
+ p_id=>wwv_flow_imp.id(565174115411744046)
+,p_region_id=>wwv_flow_imp.id(663302915836550619)
+,p_search_config_id=>wwv_flow_imp.id(577266228432587510)
+,p_use_as_initial_result=>false
+,p_display_sequence=>280
+,p_name=>'payroll_summary'
+);
+wwv_flow_imp_page.create_search_region_source(
+ p_id=>wwv_flow_imp.id(565173740483744043)
+,p_region_id=>wwv_flow_imp.id(663302915836550619)
+,p_search_config_id=>wwv_flow_imp.id(678255687567179770)
+,p_use_as_initial_result=>false
+,p_display_sequence=>290
+,p_name=>'payroll_freepay'
+);
+wwv_flow_imp_page.create_search_region_source(
+ p_id=>wwv_flow_imp.id(565173844956744044)
+,p_region_id=>wwv_flow_imp.id(663302915836550619)
+,p_search_config_id=>wwv_flow_imp.id(678258162533103415)
+,p_use_as_initial_result=>false
+,p_display_sequence=>300
+,p_name=>'payroll_deductions'
+);
+wwv_flow_imp_page.create_search_region_source(
+ p_id=>wwv_flow_imp.id(565173951399744045)
+,p_region_id=>wwv_flow_imp.id(663302915836550619)
+,p_search_config_id=>wwv_flow_imp.id(678257144354137038)
+,p_use_as_initial_result=>false
+,p_display_sequence=>310
+,p_name=>'payroll_income'
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(671718854013319696)
+,p_plug_name=>'Breadcrumb'
+,p_region_template_options=>'#DEFAULT#:t-BreadcrumbRegion--compactTitle:t-BreadcrumbRegion--useBreadcrumbTitle'
+,p_component_template_options=>'#DEFAULT#'
+,p_plug_template=>2531463326621247859
+,p_plug_display_sequence=>30
+,p_plug_display_point=>'REGION_POSITION_01'
+,p_location=>null
+,p_menu_id=>wwv_flow_imp.id(10988176195002489210)
+,p_plug_source_type=>'NATIVE_BREADCRUMB'
+,p_menu_template_id=>4072363345357175094
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(663304295347550623)
+,p_name=>'P249_SEARCH'
+,p_item_sequence=>10
+,p_item_plug_id=>wwv_flow_imp.id(663302915836550619)
+,p_prompt=>'Search'
+,p_placeholder=>'common searches are by employee No., Name, Address, Gender, Position, department etc. Some searches may take a few seconds to return a result, be patient.'
+,p_display_as=>'NATIVE_TEXT_FIELD'
+,p_field_template=>2040785906935475274
+,p_item_icon_css_classes=>'fa-search'
+,p_item_template_options=>'#DEFAULT#:t-Form-fieldContainer--stretchInputs:t-Form-fieldContainer--large'
+,p_warn_on_unsaved_changes=>'I'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'disabled', 'N',
+  'submit_when_enter_pressed', 'N',
+  'subtype', 'SEARCH',
+  'trim_spaces', 'BOTH')).to_clob
+);
+wwv_flow_imp.component_end;
+end;
+/

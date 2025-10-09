@@ -1,0 +1,107 @@
+prompt --application/shared_components/user_interface/lovs/apex_colours
+begin
+--   Manifest
+--     APEX_COLOURS
+--   Manifest End
+wwv_flow_imp.component_begin (
+ p_version_yyyy_mm_dd=>'2024.11.30'
+,p_release=>'24.2.9'
+,p_default_workspace_id=>31592798490575853
+,p_default_application_id=>500
+,p_default_id_offset=>221402556581611694
+,p_default_owner=>'TEMPLATE_APPV8'
+);
+wwv_flow_imp_shared.create_list_of_values(
+ p_id=>wwv_flow_imp.id(3442532198357493606)
+,p_lov_name=>'APEX_COLOURS'
+,p_lov_query=>'.'||wwv_flow_imp.id(3442532198357493606)||'.'
+,p_location=>'STATIC'
+,p_version_scn=>1
+);
+wwv_flow_imp_shared.create_static_lov_data(
+ p_id=>wwv_flow_imp.id(3442532556691493607)
+,p_lov_disp_sequence=>1
+,p_lov_disp_value=>'Red'
+,p_lov_return_value=>'apex-cal-red'
+);
+wwv_flow_imp_shared.create_static_lov_data(
+ p_id=>wwv_flow_imp.id(3442532894148493609)
+,p_lov_disp_sequence=>2
+,p_lov_disp_value=>'Cyan'
+,p_lov_return_value=>'apex-cal-cyan'
+);
+wwv_flow_imp_shared.create_static_lov_data(
+ p_id=>wwv_flow_imp.id(3442533303530493609)
+,p_lov_disp_sequence=>3
+,p_lov_disp_value=>'Blue'
+,p_lov_return_value=>'apex-cal-blue'
+);
+wwv_flow_imp_shared.create_static_lov_data(
+ p_id=>wwv_flow_imp.id(3442533708150493610)
+,p_lov_disp_sequence=>4
+,p_lov_disp_value=>'Bluesky'
+,p_lov_return_value=>'apex-cal-bluesky'
+);
+wwv_flow_imp_shared.create_static_lov_data(
+ p_id=>wwv_flow_imp.id(3442534107584493610)
+,p_lov_disp_sequence=>5
+,p_lov_disp_value=>'Dark Blue'
+,p_lov_return_value=>'apex-cal-darkblue'
+);
+wwv_flow_imp_shared.create_static_lov_data(
+ p_id=>wwv_flow_imp.id(3442534514183493610)
+,p_lov_disp_sequence=>6
+,p_lov_disp_value=>'Green'
+,p_lov_return_value=>'apex-cal-green'
+);
+wwv_flow_imp_shared.create_static_lov_data(
+ p_id=>wwv_flow_imp.id(3442534906402493611)
+,p_lov_disp_sequence=>7
+,p_lov_disp_value=>'Yellow'
+,p_lov_return_value=>'apex-cal-yellow'
+);
+wwv_flow_imp_shared.create_static_lov_data(
+ p_id=>wwv_flow_imp.id(3442535306862493611)
+,p_lov_disp_sequence=>8
+,p_lov_disp_value=>'Silver'
+,p_lov_return_value=>'apex-cal-silver'
+);
+wwv_flow_imp_shared.create_static_lov_data(
+ p_id=>wwv_flow_imp.id(3442535757025493611)
+,p_lov_disp_sequence=>9
+,p_lov_disp_value=>'Brown'
+,p_lov_return_value=>'apex-cal-brown'
+);
+wwv_flow_imp_shared.create_static_lov_data(
+ p_id=>wwv_flow_imp.id(3442536109334493612)
+,p_lov_disp_sequence=>10
+,p_lov_disp_value=>'Lime'
+,p_lov_return_value=>'apex-cal-lime'
+);
+wwv_flow_imp_shared.create_static_lov_data(
+ p_id=>wwv_flow_imp.id(3442536495355493612)
+,p_lov_disp_sequence=>11
+,p_lov_disp_value=>'White'
+,p_lov_return_value=>'apex-cal-white'
+);
+wwv_flow_imp_shared.create_static_lov_data(
+ p_id=>wwv_flow_imp.id(3442536915078493612)
+,p_lov_disp_sequence=>12
+,p_lov_disp_value=>'Gray'
+,p_lov_return_value=>'apex-cal-gray'
+);
+wwv_flow_imp_shared.create_static_lov_data(
+ p_id=>wwv_flow_imp.id(3442537285779493613)
+,p_lov_disp_sequence=>13
+,p_lov_disp_value=>'Black'
+,p_lov_return_value=>'apex-cal-black'
+);
+wwv_flow_imp_shared.create_static_lov_data(
+ p_id=>wwv_flow_imp.id(3442537695192493613)
+,p_lov_disp_sequence=>14
+,p_lov_disp_value=>'Orange'
+,p_lov_return_value=>'apex-cal-orange'
+);
+wwv_flow_imp.component_end;
+end;
+/
