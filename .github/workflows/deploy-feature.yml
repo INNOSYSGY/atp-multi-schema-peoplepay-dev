@@ -90,7 +90,7 @@ jobs:
             exit 1
           fi
 
-          echo "Using APEX App ID: $APP_ID"
+          echo "Using APEX APP ID: $APP_ID"
           echo "export APP_ID=$APP_ID" >> $GITHUB_ENV
 
           
@@ -109,14 +109,11 @@ jobs:
           echo "--------------------------"
 
           echo "Branch APP_ID: $APP_ID"
-
-          echo "Debug exit point"
-          exit 
-          
           
           # 2. Deploy the application using the standard export file
           echo "Deploying $APP_EXPORT.sql..."
           sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @deploy_apex_app.sql
+
 
 
 
