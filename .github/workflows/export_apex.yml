@@ -39,10 +39,10 @@ jobs:
       # Export the APEX application
       - name: Export APEX App
         env:
-          DB_URL: ${{ secrets.DB_URL }}
-          DB_USER: ${{ secrets.DB_USER }}
+          DB_URL: ${{ vars.DB_URL }}
+          DB_USER: ${{ vars.DB_USER }}
           DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
-          APEX_APP_ID: ${{ secrets.APP_ID }}
+          APEX_APP_ID: ${{ vars.APP_ID }}
           #ATP_WALLET_ERP: ${{ ATP_WALLET_ERP }}
         run: |
           echo "${{ vars.ATP_WALLET_DEV }}" | base64 --decode > Wallet_DEVENV.zip
