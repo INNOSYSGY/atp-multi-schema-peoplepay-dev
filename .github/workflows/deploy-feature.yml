@@ -85,6 +85,11 @@ jobs:
           
           export APP_ID=$(sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @deploy.sql)
 
+          if [ "$APP_ID" == "" ];then
+            echo "No APP_ID, exiting ..."
+            exit 1
+          fi
+          
           echo "Branch APP_ID: $APP_ID"
 
           # 1. Sanitize the branch name to create a valid and clean alias
@@ -104,6 +109,7 @@ jobs:
           # 2. Deploy the application using the standard export file
           echo "Deploying $APP_EXPORT.sql..."
           sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @deploy_apex_app.sql
+
 
 
 
