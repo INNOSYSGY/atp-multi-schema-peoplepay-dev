@@ -46,9 +46,16 @@ jobs:
           #ATP_WALLET_ERP: ${{ ATP_WALLET_ERP }}
         run: |
           echo "${{ vars.ATP_WALLET_DEV }}" | base64 --decode > Wallet_DEVENV.zip
+
+          echo "--- Generated app export SQL Script ---"
+          # Reads the template and outputs a processed file
+          envsubst < export_apex_app.sql.template > export_apex_app.sql
+          cat export_apex_app.sql
+          echo "--------------------------"
+          
           sql  -cloudconfig  Wallet_DEVENV.zip $DB_USER/$DB_PASSWORD@$DB_URL @export_apex_app.sql
 
-                # Commit and push the exported schema file (optional)
+              
       - name: Commit and Push Changes
         env:
           GITHUB_TOKEN: ${{ secrets.TOK }}
