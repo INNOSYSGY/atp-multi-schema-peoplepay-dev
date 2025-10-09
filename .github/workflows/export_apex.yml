@@ -62,6 +62,8 @@ jobs:
         run: |
           git config --global user.name "Leonardo Cuyar"
           git config --global user.email "leo.cuyar@gmail.com"
+          git checkout ${{ github.ref_name }}
+          git pull 
           git add .
           git commit -m "Backup - $(date +%Y%m%d)"
           git push
