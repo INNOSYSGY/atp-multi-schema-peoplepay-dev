@@ -8,7 +8,7 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp.g_varchar2_table := wwv_flow_imp.empty_varchar2_table;
@@ -487,7 +487,7 @@ wwv_flow_imp.g_varchar2_table(472) := 'A28A0028A28A0028A28A0028A28A0028A28A0028A
 wwv_flow_imp.g_varchar2_table(473) := 'A28A0028A28A0028A28A0028A28A0028A28A0028A28A0028A28A0028A28A0028A28A0028A28A0028A28A0028A28A0028A28A0028A28A0028A28A0028A28A0028A28A0028A28A0028A28A0028A28A0028A28A0028A28A0028A28A0028A28A0028A28A0028';
 wwv_flow_imp.g_varchar2_table(474) := 'A28A0028A28A0028A28A0028A28A00FFD9';
 wwv_flow_imp_shared.create_app_static_file(
- p_id=>wwv_flow_imp.id(3622619404960132098)
+ p_id=>wwv_flow_imp.id(3844444095149317664)
 ,p_file_name=>'gpl.jpg'
 ,p_mime_type=>'image/jpeg'
 ,p_file_charset=>'utf-8'

@@ -8,7 +8,7 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp.g_varchar2_table := wwv_flow_imp.empty_varchar2_table;
@@ -928,7 +928,7 @@ wwv_flow_imp.g_varchar2_table(913) := '0D0A2020202020202020637478203D206E6577436
 wwv_flow_imp.g_varchar2_table(914) := '2C20626F756E64732E77696474682C20626F756E64732E6865696768742C20302C20302C20626F756E64732E77696474682C20626F756E64732E686569676874293B0D0A202020202020202063616E766173203D206E756C6C3B0D0A2020202020202020';
 wwv_flow_imp.g_varchar2_table(915) := '72657475726E206E657743616E7661733B0D0A2020202020207D0D0A202020207D0D0A0D0A2020202072657475726E2063616E7661733B0D0A20207D3B0D0A7D3B0D0A7D292877696E646F772C646F63756D656E74293B';
 wwv_flow_imp_shared.create_app_static_file(
- p_id=>wwv_flow_imp.id(3623821408224127986)
+ p_id=>wwv_flow_imp.id(3845646098413313552)
 ,p_file_name=>'js/html2canvas.js'
 ,p_mime_type=>'text/javascript'
 ,p_file_charset=>'utf-8'

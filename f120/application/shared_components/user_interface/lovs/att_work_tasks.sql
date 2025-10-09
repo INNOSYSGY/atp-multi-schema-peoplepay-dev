@@ -8,11 +8,11 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_shared.create_list_of_values(
- p_id=>wwv_flow_imp.id(456124338328783224)
+ p_id=>wwv_flow_imp.id(677949028517968790)
 ,p_lov_name=>'ATT_WORK_TASKS'
 ,p_lov_query=>wwv_flow_string.join(wwv_flow_t_varchar2(
 'select task_code || '' - ['' || task_desc || '']'' d, id r, ',
@@ -31,7 +31,7 @@ wwv_flow_imp_shared.create_list_of_values(
 ,p_version_scn=>1
 );
 wwv_flow_imp_shared.create_list_of_values_cols(
- p_id=>wwv_flow_imp.id(456129416871882291)
+ p_id=>wwv_flow_imp.id(677954107061067857)
 ,p_query_column_name=>'R'
 ,p_display_sequence=>10
 ,p_data_type=>'NUMBER'
@@ -39,14 +39,14 @@ wwv_flow_imp_shared.create_list_of_values_cols(
 ,p_is_searchable=>'N'
 );
 wwv_flow_imp_shared.create_list_of_values_cols(
- p_id=>wwv_flow_imp.id(456129702832882291)
+ p_id=>wwv_flow_imp.id(677954393022067857)
 ,p_query_column_name=>'D'
 ,p_heading=>'Task Code'
 ,p_display_sequence=>20
 ,p_data_type=>'VARCHAR2'
 );
 wwv_flow_imp_shared.create_list_of_values_cols(
- p_id=>wwv_flow_imp.id(456130143756882291)
+ p_id=>wwv_flow_imp.id(677954833946067857)
 ,p_query_column_name=>'PARENT_CODE'
 ,p_heading=>'Parent Code'
 ,p_display_sequence=>30

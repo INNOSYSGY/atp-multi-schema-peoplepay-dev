@@ -8,7 +8,7 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp.g_varchar2_table := wwv_flow_imp.empty_varchar2_table;
@@ -27,7 +27,7 @@ wwv_flow_imp.g_varchar2_table(12) := '66756E6374696F6E286529207B0D0A202020202020
 wwv_flow_imp.g_varchar2_table(13) := '2E6F6E282273656C656374323A756E73656C656374696E67222C2066756E6374696F6E286529207B0D0A202020202020617065782E6A51756572792874686973292E747269676765722822736C6374756E73656C656374696E67222C207B73656C656374';
 wwv_flow_imp.g_varchar2_table(14) := '323A20657D293B0D0A202020207D293B0D0A20207D0D0A7D3B';
 wwv_flow_imp_shared.create_app_static_file(
- p_id=>wwv_flow_imp.id(3587041273271598183)
+ p_id=>wwv_flow_imp.id(3808865963460783749)
 ,p_file_name=>'js/select2-apex.js'
 ,p_mime_type=>'application/javascript'
 ,p_file_charset=>'utf-8'

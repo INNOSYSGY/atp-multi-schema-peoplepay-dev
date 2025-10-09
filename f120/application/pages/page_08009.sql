@@ -8,7 +8,7 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_page.create_page(
@@ -16,25 +16,25 @@ wwv_flow_imp_page.create_page(
 ,p_name=>'rptOvertimeSummary'
 ,p_step_title=>'rptOvertimeSummary'
 ,p_autocomplete_on_off=>'OFF'
-,p_group_id=>wwv_flow_imp.id(3584896301505629885)
+,p_group_id=>wwv_flow_imp.id(3806720991694815451)
 ,p_page_template_options=>'#DEFAULT#'
-,p_required_role=>wwv_flow_imp.id(3585334160394360204)
+,p_required_role=>wwv_flow_imp.id(3807158850583545770)
 ,p_page_component_map=>'18'
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(3624807377466342433)
+ p_id=>wwv_flow_imp.id(3846632067655527999)
 ,p_plug_name=>'Breadcrumb'
 ,p_region_template_options=>'#DEFAULT#:t-BreadcrumbRegion--useBreadcrumbTitle'
 ,p_component_template_options=>'#DEFAULT#'
 ,p_plug_template=>2531463326621247859
 ,p_plug_display_sequence=>1
 ,p_plug_display_point=>'REGION_POSITION_01'
-,p_menu_id=>wwv_flow_imp.id(10766773638420877516)
+,p_menu_id=>wwv_flow_imp.id(10988598328610063082)
 ,p_plug_source_type=>'NATIVE_BREADCRUMB'
 ,p_menu_template_id=>4072363345357175094
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(3636209896665807519)
+ p_id=>wwv_flow_imp.id(3858034586854993085)
 ,p_plug_name=>'Overtime Summary'
 ,p_region_template_options=>'#DEFAULT#:t-Region--accent2:t-Region--scrollBody'
 ,p_plug_template=>4072358936313175081
@@ -66,7 +66,7 @@ wwv_flow_imp_page.create_page_plug(
 ,p_ajax_items_to_submit=>'P8009_PERIODS_NEW'
 );
 wwv_flow_imp_page.create_worksheet(
- p_id=>wwv_flow_imp.id(3636209789831807519)
+ p_id=>wwv_flow_imp.id(3858034480020993085)
 ,p_name=>'rptMedicalDeduction'
 ,p_max_row_count_message=>'The maximum row count for this report is #MAX_ROW_COUNT# rows.  Please apply a filter to reduce the number of records in your query.'
 ,p_no_data_found_message=>'No data found.'
@@ -86,7 +86,7 @@ wwv_flow_imp_page.create_worksheet(
 ,p_internal_uid=>29317592634167631
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3624778539738812949)
+ p_id=>wwv_flow_imp.id(3846603229927998515)
 ,p_db_column_name=>'DEPT'
 ,p_display_order=>2
 ,p_column_identifier=>'B'
@@ -97,7 +97,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3624778976078812949)
+ p_id=>wwv_flow_imp.id(3846603666267998515)
 ,p_db_column_name=>'Employee Name'
 ,p_display_order=>3
 ,p_column_identifier=>'C'
@@ -108,7 +108,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3624185672221902725)
+ p_id=>wwv_flow_imp.id(3846010362411088291)
 ,p_db_column_name=>'Basic Pay'
 ,p_display_order=>23
 ,p_column_identifier=>'I'
@@ -119,7 +119,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3624185809388902726)
+ p_id=>wwv_flow_imp.id(3846010499578088292)
 ,p_db_column_name=>'Overtime 1/2Hr'
 ,p_display_order=>33
 ,p_column_identifier=>'J'
@@ -129,7 +129,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3624185896891902727)
+ p_id=>wwv_flow_imp.id(3846010587081088293)
 ,p_db_column_name=>'Overtime 2Hr'
 ,p_display_order=>43
 ,p_column_identifier=>'K'
@@ -139,7 +139,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3624185978569902728)
+ p_id=>wwv_flow_imp.id(3846010668759088294)
 ,p_db_column_name=>'Overtime'
 ,p_display_order=>53
 ,p_column_identifier=>'L'
@@ -150,7 +150,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3624186075684902729)
+ p_id=>wwv_flow_imp.id(3846010765874088295)
 ,p_db_column_name=>'% Basic Pay'
 ,p_display_order=>63
 ,p_column_identifier=>'M'
@@ -161,7 +161,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3624186282483902731)
+ p_id=>wwv_flow_imp.id(3846010972673088297)
 ,p_db_column_name=>'% Basic Pay to Date'
 ,p_display_order=>73
 ,p_column_identifier=>'O'
@@ -172,7 +172,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3624186409537902732)
+ p_id=>wwv_flow_imp.id(3846011099727088298)
 ,p_db_column_name=>'Empl. No.'
 ,p_display_order=>83
 ,p_column_identifier=>'P'
@@ -181,7 +181,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3624186692400902735)
+ p_id=>wwv_flow_imp.id(3846011382590088301)
 ,p_db_column_name=>'PAY_SLIPNO'
 ,p_display_order=>93
 ,p_column_identifier=>'Q'
@@ -191,7 +191,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3624186724880902736)
+ p_id=>wwv_flow_imp.id(3846011415070088302)
 ,p_db_column_name=>'EARNINGS_PERIOD_ID'
 ,p_display_order=>103
 ,p_column_identifier=>'R'
@@ -201,7 +201,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_rpt(
- p_id=>wwv_flow_imp.id(3636205987993794123)
+ p_id=>wwv_flow_imp.id(3858030678182979689)
 ,p_application_user=>'APXWS_DEFAULT'
 ,p_report_seq=>10
 ,p_report_alias=>'149365'
@@ -213,9 +213,9 @@ wwv_flow_imp_page.create_worksheet_rpt(
 ,p_avg_columns_on_break=>'% Basic Pay:% Basic Pay to Date'
 );
 wwv_flow_imp_page.create_page_button(
- p_id=>wwv_flow_imp.id(3624809754049367553)
+ p_id=>wwv_flow_imp.id(3846634444238553119)
 ,p_button_sequence=>10
-,p_button_plug_id=>wwv_flow_imp.id(3624807377466342433)
+,p_button_plug_id=>wwv_flow_imp.id(3846632067655527999)
 ,p_button_name=>'Return'
 ,p_button_action=>'REDIRECT_PAGE'
 ,p_button_template_options=>'#DEFAULT#:t-Button--primary:t-Button--iconRight'
@@ -227,9 +227,9 @@ wwv_flow_imp_page.create_page_button(
 ,p_icon_css_classes=>'fa-hand-o-left'
 );
 wwv_flow_imp_page.create_page_button(
- p_id=>wwv_flow_imp.id(3624809262652362798)
+ p_id=>wwv_flow_imp.id(3846633952841548364)
 ,p_button_sequence=>20
-,p_button_plug_id=>wwv_flow_imp.id(3624807377466342433)
+,p_button_plug_id=>wwv_flow_imp.id(3846632067655527999)
 ,p_button_name=>'Search'
 ,p_button_action=>'SUBMIT'
 ,p_button_template_options=>'#DEFAULT#'
@@ -240,7 +240,7 @@ wwv_flow_imp_page.create_page_button(
 ,p_button_alignment=>'RIGHT'
 );
 wwv_flow_imp_page.create_page_button(
- p_id=>wwv_flow_imp.id(3624782076963812961)
+ p_id=>wwv_flow_imp.id(3846606767152998527)
 ,p_button_sequence=>10
 ,p_button_name=>'Return'
 ,p_button_action=>'REDIRECT_PAGE'
@@ -254,7 +254,7 @@ wwv_flow_imp_page.create_page_button(
 ,p_icon_css_classes=>'fa-hand-o-left'
 );
 wwv_flow_imp_page.create_page_button(
- p_id=>wwv_flow_imp.id(3624781663060812960)
+ p_id=>wwv_flow_imp.id(3846606353249998526)
 ,p_button_sequence=>20
 ,p_button_name=>'Search'
 ,p_button_action=>'SUBMIT'
@@ -267,10 +267,10 @@ wwv_flow_imp_page.create_page_button(
 ,p_button_condition_type=>'NEVER'
 );
 wwv_flow_imp_page.create_page_item(
- p_id=>wwv_flow_imp.id(3624781008816812957)
+ p_id=>wwv_flow_imp.id(3846605699005998523)
 ,p_name=>'P8009_PERIODS_NEW'
 ,p_item_sequence=>10
-,p_item_plug_id=>wwv_flow_imp.id(3636209896665807519)
+,p_item_plug_id=>wwv_flow_imp.id(3858034586854993085)
 ,p_prompt=>'Periods'
 ,p_display_as=>'NATIVE_SELECT_ONE'
 ,p_lov=>wwv_flow_string.join(wwv_flow_t_varchar2(

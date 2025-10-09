@@ -8,11 +8,11 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_shared.create_plugin(
- p_id=>wwv_flow_imp.id(25181481716746680348)
+ p_id=>wwv_flow_imp.id(25403306406935865914)
 ,p_plugin_type=>'DYNAMIC ACTION'
 ,p_name=>'DE.DANIELH.TOASTRNOTIFICATIONS'
 ,p_display_name=>'toastr Notifications'
@@ -162,8 +162,8 @@ wwv_flow_imp_shared.create_plugin(
 ,p_files_version=>23
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(14137921020937480088)
-,p_plugin_id=>wwv_flow_imp.id(25181481716746680348)
+ p_id=>wwv_flow_imp.id(14359745711126665654)
+,p_plugin_id=>wwv_flow_imp.id(25403306406935865914)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>1
 ,p_display_sequence=>10
@@ -176,36 +176,36 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'Select the type of the notification. This preferences controls the color.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(14137921304470480811)
-,p_plugin_attribute_id=>wwv_flow_imp.id(14137921020937480088)
+ p_id=>wwv_flow_imp.id(14359745994659666377)
+,p_plugin_attribute_id=>wwv_flow_imp.id(14359745711126665654)
 ,p_display_sequence=>10
 ,p_display_value=>'Info'
 ,p_return_value=>'info'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(14137921705591481708)
-,p_plugin_attribute_id=>wwv_flow_imp.id(14137921020937480088)
+ p_id=>wwv_flow_imp.id(14359746395780667274)
+,p_plugin_attribute_id=>wwv_flow_imp.id(14359745711126665654)
 ,p_display_sequence=>20
 ,p_display_value=>'Success'
 ,p_return_value=>'success'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(14137922123876482353)
-,p_plugin_attribute_id=>wwv_flow_imp.id(14137921020937480088)
+ p_id=>wwv_flow_imp.id(14359746814065667919)
+,p_plugin_attribute_id=>wwv_flow_imp.id(14359745711126665654)
 ,p_display_sequence=>30
 ,p_display_value=>'Warning'
 ,p_return_value=>'warning'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(14137922539980482907)
-,p_plugin_attribute_id=>wwv_flow_imp.id(14137921020937480088)
+ p_id=>wwv_flow_imp.id(14359747230169668473)
+,p_plugin_attribute_id=>wwv_flow_imp.id(14359745711126665654)
 ,p_display_sequence=>40
 ,p_display_value=>'Error'
 ,p_return_value=>'error'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(14137922943552486629)
-,p_plugin_id=>wwv_flow_imp.id(25181481716746680348)
+ p_id=>wwv_flow_imp.id(14359747633741672195)
+,p_plugin_id=>wwv_flow_imp.id(25403306406935865914)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>2
 ,p_display_sequence=>20
@@ -215,8 +215,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_is_translatable=>true
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(14137923246644493725)
-,p_plugin_id=>wwv_flow_imp.id(25181481716746680348)
+ p_id=>wwv_flow_imp.id(14359747936833679291)
+,p_plugin_id=>wwv_flow_imp.id(25403306406935865914)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>3
 ,p_display_sequence=>30
@@ -229,50 +229,50 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'Choose the position/location of the notification.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(14137923535996495010)
-,p_plugin_attribute_id=>wwv_flow_imp.id(14137923246644493725)
+ p_id=>wwv_flow_imp.id(14359748226185680576)
+,p_plugin_attribute_id=>wwv_flow_imp.id(14359747936833679291)
 ,p_display_sequence=>10
 ,p_display_value=>'Top Right'
 ,p_return_value=>'toast-top-right'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(14137923910012495659)
-,p_plugin_attribute_id=>wwv_flow_imp.id(14137923246644493725)
+ p_id=>wwv_flow_imp.id(14359748600201681225)
+,p_plugin_attribute_id=>wwv_flow_imp.id(14359747936833679291)
 ,p_display_sequence=>20
 ,p_display_value=>'Top Left'
 ,p_return_value=>'toast-top-left'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(14137924349688497623)
-,p_plugin_attribute_id=>wwv_flow_imp.id(14137923246644493725)
+ p_id=>wwv_flow_imp.id(14359749039877683189)
+,p_plugin_attribute_id=>wwv_flow_imp.id(14359747936833679291)
 ,p_display_sequence=>30
 ,p_display_value=>'Bottom Right'
 ,p_return_value=>'toast-bottom-right'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(14137924730548499041)
-,p_plugin_attribute_id=>wwv_flow_imp.id(14137923246644493725)
+ p_id=>wwv_flow_imp.id(14359749420737684607)
+,p_plugin_attribute_id=>wwv_flow_imp.id(14359747936833679291)
 ,p_display_sequence=>40
 ,p_display_value=>'Bottom Left'
 ,p_return_value=>'toast-bottom-left'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(14137925087905500528)
-,p_plugin_attribute_id=>wwv_flow_imp.id(14137923246644493725)
+ p_id=>wwv_flow_imp.id(14359749778094686094)
+,p_plugin_attribute_id=>wwv_flow_imp.id(14359747936833679291)
 ,p_display_sequence=>50
 ,p_display_value=>'Top Full Width'
 ,p_return_value=>'toast-top-full-width'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(14137925530168502004)
-,p_plugin_attribute_id=>wwv_flow_imp.id(14137923246644493725)
+ p_id=>wwv_flow_imp.id(14359750220357687570)
+,p_plugin_attribute_id=>wwv_flow_imp.id(14359747936833679291)
 ,p_display_sequence=>60
 ,p_display_value=>'Bottom Full Width'
 ,p_return_value=>'toast-bottom-full-width'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(14137925873638505838)
-,p_plugin_id=>wwv_flow_imp.id(25181481716746680348)
+ p_id=>wwv_flow_imp.id(14359750563827691404)
+,p_plugin_id=>wwv_flow_imp.id(25403306406935865914)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>4
 ,p_display_sequence=>40
@@ -285,22 +285,22 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'Should a close button be displayed?'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(14137926236546506387)
-,p_plugin_attribute_id=>wwv_flow_imp.id(14137925873638505838)
+ p_id=>wwv_flow_imp.id(14359750926735691953)
+,p_plugin_attribute_id=>wwv_flow_imp.id(14359750563827691404)
 ,p_display_sequence=>10
 ,p_display_value=>'True'
 ,p_return_value=>'true'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(14137926625298506967)
-,p_plugin_attribute_id=>wwv_flow_imp.id(14137925873638505838)
+ p_id=>wwv_flow_imp.id(14359751315487692533)
+,p_plugin_attribute_id=>wwv_flow_imp.id(14359750563827691404)
 ,p_display_sequence=>20
 ,p_display_value=>'False'
 ,p_return_value=>'false'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(14137927033332510945)
-,p_plugin_id=>wwv_flow_imp.id(25181481716746680348)
+ p_id=>wwv_flow_imp.id(14359751723521696511)
+,p_plugin_id=>wwv_flow_imp.id(25403306406935865914)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>5
 ,p_display_sequence=>50
@@ -313,22 +313,22 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'When using multiple notifications on 1 page, should the newest be on top?'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(14137927286441511840)
-,p_plugin_attribute_id=>wwv_flow_imp.id(14137927033332510945)
+ p_id=>wwv_flow_imp.id(14359751976630697406)
+,p_plugin_attribute_id=>wwv_flow_imp.id(14359751723521696511)
 ,p_display_sequence=>10
 ,p_display_value=>'True'
 ,p_return_value=>'true'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(14137927682457512291)
-,p_plugin_attribute_id=>wwv_flow_imp.id(14137927033332510945)
+ p_id=>wwv_flow_imp.id(14359752372646697857)
+,p_plugin_attribute_id=>wwv_flow_imp.id(14359751723521696511)
 ,p_display_sequence=>20
 ,p_display_value=>'False'
 ,p_return_value=>'false'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(14137928225774517779)
-,p_plugin_id=>wwv_flow_imp.id(25181481716746680348)
+ p_id=>wwv_flow_imp.id(14359752915963703345)
+,p_plugin_id=>wwv_flow_imp.id(25403306406935865914)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>6
 ,p_display_sequence=>60
@@ -341,22 +341,22 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'Show a progress bar to visualize the time when a notification disappears.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(14137928558967518231)
-,p_plugin_attribute_id=>wwv_flow_imp.id(14137928225774517779)
+ p_id=>wwv_flow_imp.id(14359753249156703797)
+,p_plugin_attribute_id=>wwv_flow_imp.id(14359752915963703345)
 ,p_display_sequence=>10
 ,p_display_value=>'True'
 ,p_return_value=>'true'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(14137928964588518677)
-,p_plugin_attribute_id=>wwv_flow_imp.id(14137928225774517779)
+ p_id=>wwv_flow_imp.id(14359753654777704243)
+,p_plugin_attribute_id=>wwv_flow_imp.id(14359752915963703345)
 ,p_display_sequence=>20
 ,p_display_value=>'False'
 ,p_return_value=>'false'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(14137929489890524033)
-,p_plugin_id=>wwv_flow_imp.id(25181481716746680348)
+ p_id=>wwv_flow_imp.id(14359754180079709599)
+,p_plugin_id=>wwv_flow_imp.id(25403306406935865914)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>7
 ,p_display_sequence=>70
@@ -369,22 +369,22 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'Block notifications with the same text/content to display multiple times.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(14137929808353524664)
-,p_plugin_attribute_id=>wwv_flow_imp.id(14137929489890524033)
+ p_id=>wwv_flow_imp.id(14359754498542710230)
+,p_plugin_attribute_id=>wwv_flow_imp.id(14359754180079709599)
 ,p_display_sequence=>10
 ,p_display_value=>'True'
 ,p_return_value=>'true'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(14137930265285525112)
-,p_plugin_attribute_id=>wwv_flow_imp.id(14137929489890524033)
+ p_id=>wwv_flow_imp.id(14359754955474710678)
+,p_plugin_attribute_id=>wwv_flow_imp.id(14359754180079709599)
 ,p_display_sequence=>20
 ,p_display_value=>'False'
 ,p_return_value=>'false'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(14137930658463531405)
-,p_plugin_id=>wwv_flow_imp.id(25181481716746680348)
+ p_id=>wwv_flow_imp.id(14359755348652716971)
+,p_plugin_id=>wwv_flow_imp.id(25403306406935865914)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>8
 ,p_display_sequence=>120
@@ -395,8 +395,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_is_translatable=>false
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(14137930962405532577)
-,p_plugin_id=>wwv_flow_imp.id(25181481716746680348)
+ p_id=>wwv_flow_imp.id(14359755652594718143)
+,p_plugin_id=>wwv_flow_imp.id(25403306406935865914)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>9
 ,p_display_sequence=>130
@@ -407,8 +407,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_is_translatable=>false
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(14137931260383534765)
-,p_plugin_id=>wwv_flow_imp.id(25181481716746680348)
+ p_id=>wwv_flow_imp.id(14359755950572720331)
+,p_plugin_id=>wwv_flow_imp.id(25403306406935865914)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>10
 ,p_display_sequence=>100
@@ -420,8 +420,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'How long the toast will display without user interaction (in ms). A value of 0 makes a sticky notification.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(14137931514687536434)
-,p_plugin_id=>wwv_flow_imp.id(25181481716746680348)
+ p_id=>wwv_flow_imp.id(14359756204876722000)
+,p_plugin_id=>wwv_flow_imp.id(25403306406935865914)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>11
 ,p_display_sequence=>110
@@ -498,8 +498,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(14137919560966218277)
-,p_plugin_id=>wwv_flow_imp.id(25181481716746680348)
+ p_id=>wwv_flow_imp.id(14359744251155403843)
+,p_plugin_id=>wwv_flow_imp.id(25403306406935865914)
 ,p_file_name=>'toastr.min.css'
 ,p_mime_type=>'text/css'
 ,p_file_charset=>'utf-8'
@@ -557,8 +557,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(14137919884301219005)
-,p_plugin_id=>wwv_flow_imp.id(25181481716746680348)
+ p_id=>wwv_flow_imp.id(14359744574490404571)
+,p_plugin_id=>wwv_flow_imp.id(25403306406935865914)
 ,p_file_name=>'toastr.min.js'
 ,p_mime_type=>'text/javascript'
 ,p_file_charset=>'utf-8'

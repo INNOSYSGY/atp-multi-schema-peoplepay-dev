@@ -8,11 +8,11 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_shared.create_list_of_values(
- p_id=>wwv_flow_imp.id(3585343476218556457)
+ p_id=>wwv_flow_imp.id(3807168166407742023)
 ,p_lov_name=>'USER'
 ,p_lov_query=>wwv_flow_string.join(wwv_flow_t_varchar2(
 'select user_name,user_id',

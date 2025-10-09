@@ -8,11 +8,11 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_shared.create_plugin(
- p_id=>wwv_flow_imp.id(5066484074704287227)
+ p_id=>wwv_flow_imp.id(5288308764893472793)
 ,p_plugin_type=>'ITEM TYPE'
 ,p_name=>'COM.ORACLE.APEX.STARRATING_MODERN'
 ,p_display_name=>'Modern Star Rating'
@@ -154,8 +154,8 @@ wwv_flow_imp_shared.create_plugin(
 ,p_files_version=>36
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(5240588125346507853)
-,p_plugin_id=>wwv_flow_imp.id(5066484074704287227)
+ p_id=>wwv_flow_imp.id(5462412815535693419)
+,p_plugin_id=>wwv_flow_imp.id(5288308764893472793)
 ,p_attribute_scope=>'APPLICATION'
 ,p_attribute_sequence=>1
 ,p_display_sequence=>10
@@ -171,8 +171,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'Text which should be displayed for the tooltip of the "Clear" icon of the star rating widget. If not specified, the default text "Clear Rating" will be used.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(5240588447574507858)
-,p_plugin_id=>wwv_flow_imp.id(5066484074704287227)
+ p_id=>wwv_flow_imp.id(5462413137763693424)
+,p_plugin_id=>wwv_flow_imp.id(5288308764893472793)
 ,p_attribute_scope=>'APPLICATION'
 ,p_attribute_sequence=>2
 ,p_display_sequence=>20
@@ -187,8 +187,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'Choose the default color for active stars.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(5240588898740507859)
-,p_plugin_id=>wwv_flow_imp.id(5066484074704287227)
+ p_id=>wwv_flow_imp.id(5462413588929693425)
+,p_plugin_id=>wwv_flow_imp.id(5288308764893472793)
 ,p_attribute_scope=>'APPLICATION'
 ,p_attribute_sequence=>3
 ,p_display_sequence=>30
@@ -203,8 +203,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'Choose the default color for inactive stars.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(5240589254060507859)
-,p_plugin_id=>wwv_flow_imp.id(5066484074704287227)
+ p_id=>wwv_flow_imp.id(5462413944249693425)
+,p_plugin_id=>wwv_flow_imp.id(5288308764893472793)
 ,p_attribute_scope=>'APPLICATION'
 ,p_attribute_sequence=>4
 ,p_display_sequence=>40
@@ -225,8 +225,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'Choose the default icon to use.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(5240589700892507859)
-,p_plugin_id=>wwv_flow_imp.id(5066484074704287227)
+ p_id=>wwv_flow_imp.id(5462414391081693425)
+,p_plugin_id=>wwv_flow_imp.id(5288308764893472793)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>1
 ,p_display_sequence=>10
@@ -242,8 +242,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'Specify the maximum number of stars.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(5240590108269507860)
-,p_plugin_id=>wwv_flow_imp.id(5066484074704287227)
+ p_id=>wwv_flow_imp.id(5462414798458693426)
+,p_plugin_id=>wwv_flow_imp.id(5288308764893472793)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>2
 ,p_display_sequence=>30
@@ -255,7 +255,7 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_default_value=>'fa-star'
 ,p_supported_component_types=>'APEX_APPLICATION_PAGE_ITEMS:APEX_APPL_PAGE_IG_COLUMNS'
 ,p_is_translatable=>false
-,p_depending_on_attribute_id=>wwv_flow_imp.id(5240590505117507861)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(5462415195306693427)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'EQUALS'
 ,p_depending_on_expression=>'N'
@@ -268,8 +268,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'Specify the icon to use.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(5240590505117507861)
-,p_plugin_id=>wwv_flow_imp.id(5066484074704287227)
+ p_id=>wwv_flow_imp.id(5462415195306693427)
+,p_plugin_id=>wwv_flow_imp.id(5288308764893472793)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>3
 ,p_display_sequence=>20
@@ -284,8 +284,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'Choose whether to use component defaults or not.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(5240590861986507861)
-,p_plugin_id=>wwv_flow_imp.id(5066484074704287227)
+ p_id=>wwv_flow_imp.id(5462415552175693427)
+,p_plugin_id=>wwv_flow_imp.id(5288308764893472793)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>4
 ,p_display_sequence=>40
@@ -297,15 +297,15 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_default_value=>'red'
 ,p_supported_component_types=>'APEX_APPLICATION_PAGE_ITEMS:APEX_APPL_PAGE_IG_COLUMNS'
 ,p_is_translatable=>false
-,p_depending_on_attribute_id=>wwv_flow_imp.id(5240590505117507861)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(5462415195306693427)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'EQUALS'
 ,p_depending_on_expression=>'N'
 ,p_help_text=>'Choose the color for active stars.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(5240591333315507861)
-,p_plugin_id=>wwv_flow_imp.id(5066484074704287227)
+ p_id=>wwv_flow_imp.id(5462416023504693427)
+,p_plugin_id=>wwv_flow_imp.id(5288308764893472793)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>5
 ,p_display_sequence=>50
@@ -317,15 +317,15 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_default_value=>'lightgray'
 ,p_supported_component_types=>'APEX_APPLICATION_PAGE_ITEMS:APEX_APPL_PAGE_IG_COLUMNS'
 ,p_is_translatable=>false
-,p_depending_on_attribute_id=>wwv_flow_imp.id(5240590505117507861)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(5462415195306693427)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'EQUALS'
 ,p_depending_on_expression=>'N'
 ,p_help_text=>'Choose the color for inactive stars.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(5240591656867507861)
-,p_plugin_id=>wwv_flow_imp.id(5066484074704287227)
+ p_id=>wwv_flow_imp.id(5462416347056693427)
+,p_plugin_id=>wwv_flow_imp.id(5288308764893472793)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>6
 ,p_display_sequence=>60

@@ -8,7 +8,7 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_page.create_page(
@@ -17,13 +17,13 @@ wwv_flow_imp_page.create_page(
 ,p_page_mode=>'MODAL'
 ,p_step_title=>'Feedback'
 ,p_autocomplete_on_off=>'OFF'
-,p_group_id=>wwv_flow_imp.id(3603894171983398503)
+,p_group_id=>wwv_flow_imp.id(3825718862172584069)
 ,p_page_template_options=>'#DEFAULT#'
-,p_required_patch=>wwv_flow_imp.id(3491277369188657268)
+,p_required_patch=>wwv_flow_imp.id(3713102059377842834)
 ,p_page_component_map=>'11'
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(3491278438991657270)
+ p_id=>wwv_flow_imp.id(3713103129180842836)
 ,p_plug_name=>'Feedback Submitted'
 ,p_icon_css_classes=>'fa-check-circle'
 ,p_region_template_options=>'#DEFAULT#:t-Alert--wizard:t-Alert--customIcons:t-Alert--success'
@@ -37,9 +37,9 @@ wwv_flow_imp_page.create_page_plug(
   'show_line_breaks', 'Y')).to_clob
 );
 wwv_flow_imp_page.create_page_button(
- p_id=>wwv_flow_imp.id(3491278389493657270)
+ p_id=>wwv_flow_imp.id(3713103079682842836)
 ,p_button_sequence=>20
-,p_button_plug_id=>wwv_flow_imp.id(3491278438991657270)
+,p_button_plug_id=>wwv_flow_imp.id(3713103129180842836)
 ,p_button_name=>'CLOSE'
 ,p_button_action=>'DEFINED_BY_DA'
 ,p_button_template_options=>'#DEFAULT#'
@@ -50,18 +50,18 @@ wwv_flow_imp_page.create_page_button(
 ,p_button_css_classes=>'w40p'
 );
 wwv_flow_imp_page.create_page_da_event(
- p_id=>wwv_flow_imp.id(3491278544161657270)
+ p_id=>wwv_flow_imp.id(3713103234350842836)
 ,p_name=>'Close Dialog'
 ,p_event_sequence=>10
 ,p_triggering_element_type=>'BUTTON'
-,p_triggering_button_id=>wwv_flow_imp.id(3491278389493657270)
+,p_triggering_button_id=>wwv_flow_imp.id(3713103079682842836)
 ,p_bind_type=>'bind'
 ,p_execution_type=>'IMMEDIATE'
 ,p_bind_event_type=>'click'
 );
 wwv_flow_imp_page.create_page_da_action(
- p_id=>wwv_flow_imp.id(3491286843971657295)
-,p_event_id=>wwv_flow_imp.id(3491278544161657270)
+ p_id=>wwv_flow_imp.id(3713111534160842861)
+,p_event_id=>wwv_flow_imp.id(3713103234350842836)
 ,p_event_result=>'TRUE'
 ,p_action_sequence=>10
 ,p_execute_on_page_init=>'N'

@@ -8,54 +8,54 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_shared.create_list_of_values(
- p_id=>wwv_flow_imp.id(3632620997759596664)
+ p_id=>wwv_flow_imp.id(3854445687948782230)
 ,p_lov_name=>'DEPRECIATION_PRD'
-,p_lov_query=>'.'||wwv_flow_imp.id(3632620997759596664)||'.'
+,p_lov_query=>'.'||wwv_flow_imp.id(3854445687948782230)||'.'
 ,p_location=>'STATIC'
 ,p_version_scn=>1
 );
 wwv_flow_imp_shared.create_static_lov_data(
- p_id=>wwv_flow_imp.id(3632620652682596663)
+ p_id=>wwv_flow_imp.id(3854445342871782229)
 ,p_lov_disp_sequence=>1
 ,p_lov_disp_value=>'4'
 ,p_lov_return_value=>'4'
 );
 wwv_flow_imp_shared.create_static_lov_data(
- p_id=>wwv_flow_imp.id(3632620201752596663)
+ p_id=>wwv_flow_imp.id(3854444891941782229)
 ,p_lov_disp_sequence=>2
 ,p_lov_disp_value=>'5'
 ,p_lov_return_value=>'5'
 );
 wwv_flow_imp_shared.create_static_lov_data(
- p_id=>wwv_flow_imp.id(3632619847406596662)
+ p_id=>wwv_flow_imp.id(3854444537595782228)
 ,p_lov_disp_sequence=>3
 ,p_lov_disp_value=>'10'
 ,p_lov_return_value=>'10'
 );
 wwv_flow_imp_shared.create_static_lov_data(
- p_id=>wwv_flow_imp.id(3632619432496596662)
+ p_id=>wwv_flow_imp.id(3854444122685782228)
 ,p_lov_disp_sequence=>4
 ,p_lov_disp_value=>'20'
 ,p_lov_return_value=>'20'
 );
 wwv_flow_imp_shared.create_static_lov_data(
- p_id=>wwv_flow_imp.id(3632619040155596662)
+ p_id=>wwv_flow_imp.id(3854443730344782228)
 ,p_lov_disp_sequence=>5
 ,p_lov_disp_value=>'30'
 ,p_lov_return_value=>'30'
 );
 wwv_flow_imp_shared.create_static_lov_data(
- p_id=>wwv_flow_imp.id(3632618595319596661)
+ p_id=>wwv_flow_imp.id(3854443285508782227)
 ,p_lov_disp_sequence=>6
 ,p_lov_disp_value=>'40'
 ,p_lov_return_value=>'40'
 );
 wwv_flow_imp_shared.create_static_lov_data(
- p_id=>wwv_flow_imp.id(3632618259579596655)
+ p_id=>wwv_flow_imp.id(3854442949768782221)
 ,p_lov_disp_sequence=>7
 ,p_lov_disp_value=>'50'
 ,p_lov_return_value=>'50'

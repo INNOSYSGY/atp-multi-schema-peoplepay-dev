@@ -8,11 +8,11 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_shared.create_list_of_values(
- p_id=>wwv_flow_imp.id(2971090231707713101)
+ p_id=>wwv_flow_imp.id(3192914921896898667)
 ,p_lov_name=>'JOB_QUESTION_BANK'
 ,p_lov_query=>wwv_flow_string.join(wwv_flow_t_varchar2(
 'select interview_type||'' for ''||c.Description||'' EFFECTIVE(''||to_char(a.start_date,''DD-MON-YYYY'')||'') ''||a.DESCRIPTION A, a.id',

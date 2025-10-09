@@ -8,7 +8,7 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_page.create_page(
@@ -21,7 +21,7 @@ wwv_flow_imp_page.create_page(
 ,p_page_component_map=>'11'
 );
 wwv_flow_imp_page.create_page_item(
- p_id=>wwv_flow_imp.id(3631014398743653943)
+ p_id=>wwv_flow_imp.id(3852839088932839509)
 ,p_name=>'P9119_BANK_ID'
 ,p_item_sequence=>60
 ,p_item_display_point=>'LEGACY_ORPHAN_COMPONENTS'
@@ -31,7 +31,7 @@ wwv_flow_imp_page.create_page_item(
   'value_protected', 'Y')).to_clob
 );
 wwv_flow_imp_page.create_page_item(
- p_id=>wwv_flow_imp.id(3631014766360653944)
+ p_id=>wwv_flow_imp.id(3852839456549839510)
 ,p_name=>'P9119_EARNING_PERIOD'
 ,p_item_sequence=>50
 ,p_item_display_point=>'LEGACY_ORPHAN_COMPONENTS'
@@ -41,7 +41,7 @@ wwv_flow_imp_page.create_page_item(
   'value_protected', 'Y')).to_clob
 );
 wwv_flow_imp_page.create_page_process(
- p_id=>wwv_flow_imp.id(3631013931452653942)
+ p_id=>wwv_flow_imp.id(3852838621641839508)
 ,p_process_sequence=>10
 ,p_process_point=>'BEFORE_HEADER'
 ,p_process_type=>'NATIVE_PLSQL'

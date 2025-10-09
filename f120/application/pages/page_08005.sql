@@ -8,7 +8,7 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_page.create_page(
@@ -16,13 +16,13 @@ wwv_flow_imp_page.create_page(
 ,p_name=>'rptPensionDeduction'
 ,p_step_title=>'Listing of Pension Deductions'
 ,p_autocomplete_on_off=>'OFF'
-,p_group_id=>wwv_flow_imp.id(3584896301505629885)
+,p_group_id=>wwv_flow_imp.id(3806720991694815451)
 ,p_page_template_options=>'#DEFAULT#'
-,p_required_role=>wwv_flow_imp.id(3585334160394360204)
+,p_required_role=>wwv_flow_imp.id(3807158850583545770)
 ,p_page_component_map=>'18'
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(3624174241095865463)
+ p_id=>wwv_flow_imp.id(3845998931285051029)
 ,p_plug_name=>'Employees Pension Deductions'
 ,p_region_template_options=>'#DEFAULT#:t-Region--accent2:t-Region--scrollBody'
 ,p_plug_template=>4072358936313175081
@@ -48,7 +48,7 @@ wwv_flow_imp_page.create_page_plug(
 ,p_ajax_items_to_submit=>'P8005_PERIODS_NEW'
 );
 wwv_flow_imp_page.create_worksheet(
- p_id=>wwv_flow_imp.id(3624174389896865463)
+ p_id=>wwv_flow_imp.id(3845999080086051029)
 ,p_name=>'rptPensionDeduction'
 ,p_max_row_count_message=>'The maximum row count for this report is #MAX_ROW_COUNT# rows.  Please apply a filter to reduce the number of records in your query.'
 ,p_no_data_found_message=>'No data found.'
@@ -68,7 +68,7 @@ wwv_flow_imp_page.create_worksheet(
 ,p_internal_uid=>14330365745941869
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3624175540472865465)
+ p_id=>wwv_flow_imp.id(3846000230662051031)
 ,p_db_column_name=>'DEPT'
 ,p_display_order=>3
 ,p_column_identifier=>'C'
@@ -79,7 +79,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3624175997648865465)
+ p_id=>wwv_flow_imp.id(3846000687838051031)
 ,p_db_column_name=>'Employee Name'
 ,p_display_order=>4
 ,p_column_identifier=>'D'
@@ -90,7 +90,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3624176414174865466)
+ p_id=>wwv_flow_imp.id(3846001104364051032)
 ,p_db_column_name=>'Pension Employee'
 ,p_display_order=>5
 ,p_column_identifier=>'E'
@@ -102,7 +102,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3624176784770865466)
+ p_id=>wwv_flow_imp.id(3846001474960051032)
 ,p_db_column_name=>'Pension Employer'
 ,p_display_order=>6
 ,p_column_identifier=>'F'
@@ -114,7 +114,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3624177218835865466)
+ p_id=>wwv_flow_imp.id(3846001909025051032)
 ,p_db_column_name=>'Total Pension'
 ,p_display_order=>7
 ,p_column_identifier=>'G'
@@ -126,7 +126,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3624182811267902696)
+ p_id=>wwv_flow_imp.id(3846007501457088262)
 ,p_db_column_name=>'Empl. No.'
 ,p_display_order=>17
 ,p_column_identifier=>'I'
@@ -135,7 +135,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_rpt(
- p_id=>wwv_flow_imp.id(3624177770004866955)
+ p_id=>wwv_flow_imp.id(3846002460194052521)
 ,p_application_user=>'APXWS_DEFAULT'
 ,p_report_seq=>10
 ,p_report_alias=>'143338'
@@ -144,21 +144,21 @@ wwv_flow_imp_page.create_worksheet_rpt(
 ,p_report_columns=>'Empl. No.:DEPT:Employee Name:Pension Employee:Pension Employer:Total Pension:'
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(3624224814896163433)
+ p_id=>wwv_flow_imp.id(3846049505085348999)
 ,p_plug_name=>'Breadcrumb'
 ,p_region_template_options=>'#DEFAULT#:t-BreadcrumbRegion--useBreadcrumbTitle'
 ,p_component_template_options=>'#DEFAULT#'
 ,p_plug_template=>2531463326621247859
 ,p_plug_display_sequence=>1
 ,p_plug_display_point=>'REGION_POSITION_01'
-,p_menu_id=>wwv_flow_imp.id(10766773638420877516)
+,p_menu_id=>wwv_flow_imp.id(10988598328610063082)
 ,p_plug_source_type=>'NATIVE_BREADCRUMB'
 ,p_menu_template_id=>4072363345357175094
 );
 wwv_flow_imp_page.create_page_button(
- p_id=>wwv_flow_imp.id(3623678883367323643)
+ p_id=>wwv_flow_imp.id(3845503573556509209)
 ,p_button_sequence=>10
-,p_button_plug_id=>wwv_flow_imp.id(3624224814896163433)
+,p_button_plug_id=>wwv_flow_imp.id(3846049505085348999)
 ,p_button_name=>'MREPORT'
 ,p_button_action=>'REDIRECT_URL'
 ,p_button_template_options=>'#DEFAULT#:t-Button--iconRight'
@@ -167,12 +167,12 @@ wwv_flow_imp_page.create_page_button(
 ,p_button_position=>'EDIT'
 ,p_button_alignment=>'RIGHT'
 ,p_button_redirect_url=>'javascript: window.open(''http://apps4.innosysgy.com:8082/jasperserver/rest_v2/reports/reports/TEST/NIS.html?P_org_id=''+document.getElementById(''P8005_ORG_ID'').value+''&P_earning_period_id=12042'',''popUpWindow'',''height=300,width=900,left=50,top=50,type=''application/pdf'',resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes, '')'
-,p_security_scheme=>wwv_flow_imp.id(3585334160394360204)
+,p_security_scheme=>wwv_flow_imp.id(3807158850583545770)
 );
 wwv_flow_imp_page.create_page_button(
- p_id=>wwv_flow_imp.id(3624186900613902737)
+ p_id=>wwv_flow_imp.id(3846011590803088303)
 ,p_button_sequence=>20
-,p_button_plug_id=>wwv_flow_imp.id(3624224814896163433)
+,p_button_plug_id=>wwv_flow_imp.id(3846049505085348999)
 ,p_button_name=>'Report'
 ,p_button_action=>'REDIRECT_URL'
 ,p_button_template_options=>'#DEFAULT#:t-Button--iconRight'
@@ -182,12 +182,12 @@ wwv_flow_imp_page.create_page_button(
 ,p_button_alignment=>'RIGHT'
 ,p_button_redirect_url=>'javascript: window.open(''http://apps4.innosysgy.com:8082/jasperserver/flow.html?_flowId=viewReportFlow&_flowId=viewReportFlow&ParentFolderUri=%2Freports%2FTEST&decorate=no&reportUnit=%2Freports%2FTEST%2Fpayslip1&standAlone=true&P_ORG_ID=17832&EARNINGS_PERIOD_ID=12042&j_username=jasperadmin&j_password=Inno$y$jasperadmin&output=xls'',''popUpWindow'',''height=300,width=900,left=50,top=50,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=yes,directories=no, status=yes'')'
 ,p_icon_css_classes=>'fa-print'
-,p_security_scheme=>wwv_flow_imp.id(3585334160394360204)
+,p_security_scheme=>wwv_flow_imp.id(3807158850583545770)
 );
 wwv_flow_imp_page.create_page_button(
- p_id=>wwv_flow_imp.id(3623889020193421343)
+ p_id=>wwv_flow_imp.id(3845713710382606909)
 ,p_button_sequence=>30
-,p_button_plug_id=>wwv_flow_imp.id(3624224814896163433)
+,p_button_plug_id=>wwv_flow_imp.id(3846049505085348999)
 ,p_button_name=>'Return'
 ,p_button_action=>'REDIRECT_PAGE'
 ,p_button_template_options=>'#DEFAULT#:t-Button--primary:t-Button--iconRight'
@@ -199,9 +199,9 @@ wwv_flow_imp_page.create_page_button(
 ,p_icon_css_classes=>'fa-hand-o-left'
 );
 wwv_flow_imp_page.create_page_button(
- p_id=>wwv_flow_imp.id(3624184818218902716)
+ p_id=>wwv_flow_imp.id(3846009508408088282)
 ,p_button_sequence=>40
-,p_button_plug_id=>wwv_flow_imp.id(3624224814896163433)
+,p_button_plug_id=>wwv_flow_imp.id(3846049505085348999)
 ,p_button_name=>'Search'
 ,p_button_action=>'SUBMIT'
 ,p_button_template_options=>'#DEFAULT#'
@@ -212,10 +212,10 @@ wwv_flow_imp_page.create_page_button(
 ,p_button_alignment=>'RIGHT'
 );
 wwv_flow_imp_page.create_page_item(
- p_id=>wwv_flow_imp.id(3624187021355902738)
+ p_id=>wwv_flow_imp.id(3846011711545088304)
 ,p_name=>'P8005_ORG_ID'
 ,p_item_sequence=>10
-,p_item_plug_id=>wwv_flow_imp.id(3624224814896163433)
+,p_item_plug_id=>wwv_flow_imp.id(3846049505085348999)
 ,p_prompt=>'New'
 ,p_display_as=>'NATIVE_TEXT_FIELD'
 ,p_cSize=>30
@@ -229,10 +229,10 @@ wwv_flow_imp_page.create_page_item(
   'trim_spaces', 'BOTH')).to_clob
 );
 wwv_flow_imp_page.create_page_item(
- p_id=>wwv_flow_imp.id(3624438926879933475)
+ p_id=>wwv_flow_imp.id(3846263617069119041)
 ,p_name=>'P8005_PERIODS_NEW'
 ,p_item_sequence=>30
-,p_item_plug_id=>wwv_flow_imp.id(3624174241095865463)
+,p_item_plug_id=>wwv_flow_imp.id(3845998931285051029)
 ,p_prompt=>'Periods'
 ,p_display_as=>'NATIVE_POPUP_LOV'
 ,p_lov=>wwv_flow_string.join(wwv_flow_t_varchar2(

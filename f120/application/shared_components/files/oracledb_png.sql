@@ -8,7 +8,7 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp.g_varchar2_table := wwv_flow_imp.empty_varchar2_table;
@@ -394,7 +394,7 @@ wwv_flow_imp.g_varchar2_table(379) := 'B93C5E9E02A4A635841E8A41868449F3A166CA704
 wwv_flow_imp.g_varchar2_table(380) := '30210882200822642061421004411044C840C2842008822088908184094110044110210309138220088220420612260441100441840C244C088220088208194898100441100411329030210882200822642061421004411044C8F0FF8EF8CC974582707A';
 wwv_flow_imp.g_varchar2_table(381) := '0000000049454E44AE426082';
 wwv_flow_imp_shared.create_app_static_file(
- p_id=>wwv_flow_imp.id(3624588936146098739)
+ p_id=>wwv_flow_imp.id(3846413626335284305)
 ,p_file_name=>'oracledb.png'
 ,p_mime_type=>'image/png'
 ,p_file_charset=>'utf-8'

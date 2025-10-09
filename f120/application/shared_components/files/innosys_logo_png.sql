@@ -8,7 +8,7 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp.g_varchar2_table := wwv_flow_imp.empty_varchar2_table;
@@ -123,7 +123,7 @@ wwv_flow_imp.g_varchar2_table(108) := 'A53AAEAE854CBB2B56C1582C659242B5B5E0AC6E2
 wwv_flow_imp.g_varchar2_table(109) := 'FA91C6DA602C961E502752D7A654606884291239FA60A2172D21F3C852B2737628E75F6E05BB5530168BA566584F5E8BC55233AC82B1582C35C32A188BC55233AC82B1582C35C32A188BC55233AC82B1582C35C32A188BC55233AC82B1582C35C32A188B';
 wwv_flow_imp.g_varchar2_table(110) := 'C55233AC82B1582C35C32A188BC55233AC82B1582C35C32A188BC55233AC82B1582C35E3FF033798D7B2B020E2EF0000000049454E44AE426082';
 wwv_flow_imp_shared.create_app_static_file(
- p_id=>wwv_flow_imp.id(3604510317704702404)
+ p_id=>wwv_flow_imp.id(3826335007893887970)
 ,p_file_name=>'innosys_logo.png'
 ,p_mime_type=>'image/png'
 ,p_file_charset=>'utf-8'

@@ -8,11 +8,11 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_shared.create_list_of_values(
- p_id=>wwv_flow_imp.id(3333769266556345104)
+ p_id=>wwv_flow_imp.id(3555593956745530670)
 ,p_lov_name=>'TRAIN_REQ_EMPLOYEES'
 ,p_lov_query=>wwv_flow_string.join(wwv_flow_t_varchar2(
 'SElect  name_only||''-''||Emp_Company_No emp, Payment_Type, date_employed,(select employee_name||'' ''||Emp_Company_No',
@@ -36,7 +36,7 @@ wwv_flow_imp_shared.create_list_of_values(
 ,p_version_scn=>1
 );
 wwv_flow_imp_shared.create_list_of_values_cols(
- p_id=>wwv_flow_imp.id(3333769606633345105)
+ p_id=>wwv_flow_imp.id(3555594296822530671)
 ,p_query_column_name=>'ID'
 ,p_display_sequence=>10
 ,p_data_type=>'NUMBER'
@@ -44,49 +44,49 @@ wwv_flow_imp_shared.create_list_of_values_cols(
 ,p_is_searchable=>'N'
 );
 wwv_flow_imp_shared.create_list_of_values_cols(
- p_id=>wwv_flow_imp.id(3333770001484345107)
+ p_id=>wwv_flow_imp.id(3555594691673530673)
 ,p_query_column_name=>'EMP'
 ,p_heading=>'Emp'
 ,p_display_sequence=>20
 ,p_data_type=>'VARCHAR2'
 );
 wwv_flow_imp_shared.create_list_of_values_cols(
- p_id=>wwv_flow_imp.id(3333770427449345107)
+ p_id=>wwv_flow_imp.id(3555595117638530673)
 ,p_query_column_name=>'PAYMENT_TYPE'
 ,p_heading=>'Payment Type'
 ,p_display_sequence=>30
 ,p_data_type=>'VARCHAR2'
 );
 wwv_flow_imp_shared.create_list_of_values_cols(
- p_id=>wwv_flow_imp.id(3333770862672345107)
+ p_id=>wwv_flow_imp.id(3555595552861530673)
 ,p_query_column_name=>'REPORT_TO_FUNCTIONAL'
 ,p_heading=>'Report To Functional'
 ,p_display_sequence=>40
 ,p_data_type=>'VARCHAR2'
 );
 wwv_flow_imp_shared.create_list_of_values_cols(
- p_id=>wwv_flow_imp.id(3333771213274345108)
+ p_id=>wwv_flow_imp.id(3555595903463530674)
 ,p_query_column_name=>'DATE_EMPLOYED'
 ,p_heading=>'Date Employed'
 ,p_display_sequence=>50
 ,p_data_type=>'DATE'
 );
 wwv_flow_imp_shared.create_list_of_values_cols(
- p_id=>wwv_flow_imp.id(3333771601471345108)
+ p_id=>wwv_flow_imp.id(3555596291660530674)
 ,p_query_column_name=>'AVL_CONFIRMED'
 ,p_heading=>'Avl Confirmed'
 ,p_display_sequence=>60
 ,p_data_type=>'NUMBER'
 );
 wwv_flow_imp_shared.create_list_of_values_cols(
- p_id=>wwv_flow_imp.id(3333772075909345108)
+ p_id=>wwv_flow_imp.id(3555596766098530674)
 ,p_query_column_name=>'REPORT_TO'
 ,p_heading=>'Report To'
 ,p_display_sequence=>70
 ,p_data_type=>'VARCHAR2'
 );
 wwv_flow_imp_shared.create_list_of_values_cols(
- p_id=>wwv_flow_imp.id(3333772483922345109)
+ p_id=>wwv_flow_imp.id(3555597174111530675)
 ,p_query_column_name=>'LOCATION_DESCRIPTION'
 ,p_heading=>'Location Description'
 ,p_display_sequence=>80

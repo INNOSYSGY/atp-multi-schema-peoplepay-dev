@@ -8,11 +8,11 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_shared.create_plugin(
- p_id=>wwv_flow_imp.id(3573260797737859552)
+ p_id=>wwv_flow_imp.id(3795085487927045118)
 ,p_plugin_type=>'DYNAMIC ACTION'
 ,p_name=>'NL.DETORA.APEX.RESIZE_DIALOG'
 ,p_display_name=>'Resize Dialog'
@@ -59,8 +59,8 @@ wwv_flow_imp_shared.create_plugin(
 ,p_files_version=>3
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3573101300357561829)
-,p_plugin_id=>wwv_flow_imp.id(3573260797737859552)
+ p_id=>wwv_flow_imp.id(3794925990546747395)
+,p_plugin_id=>wwv_flow_imp.id(3795085487927045118)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>1
 ,p_display_sequence=>10
@@ -71,24 +71,24 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_lov_type=>'STATIC'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3573100214324559722)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3573101300357561829)
+ p_id=>wwv_flow_imp.id(3794924904513745288)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3794925990546747395)
 ,p_display_sequence=>10
 ,p_display_value=>'No'
 ,p_return_value=>'false'
 ,p_is_quick_pick=>true
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(3573099781319558546)
-,p_plugin_attribute_id=>wwv_flow_imp.id(3573101300357561829)
+ p_id=>wwv_flow_imp.id(3794924471508744112)
+,p_plugin_attribute_id=>wwv_flow_imp.id(3794925990546747395)
 ,p_display_sequence=>20
 ,p_display_value=>'Yes'
 ,p_return_value=>'true'
 ,p_is_quick_pick=>true
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(3573123691363810651)
-,p_plugin_id=>wwv_flow_imp.id(3573260797737859552)
+ p_id=>wwv_flow_imp.id(3794948381552996217)
+,p_plugin_id=>wwv_flow_imp.id(3795085487927045118)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>2
 ,p_display_sequence=>20
@@ -137,8 +137,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(3572389274150180565)
-,p_plugin_id=>wwv_flow_imp.id(3573260797737859552)
+ p_id=>wwv_flow_imp.id(3794213964339366131)
+,p_plugin_id=>wwv_flow_imp.id(3795085487927045118)
 ,p_file_name=>'apexresizedialog.js'
 ,p_mime_type=>'application/javascript'
 ,p_file_charset=>'utf-8'

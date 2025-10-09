@@ -8,7 +8,7 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_page.create_page(
@@ -16,13 +16,13 @@ wwv_flow_imp_page.create_page(
 ,p_name=>'rptRepublicBankUpgrade'
 ,p_step_title=>'Republic Bank Accounts'
 ,p_autocomplete_on_off=>'OFF'
-,p_group_id=>wwv_flow_imp.id(3584896301505629885)
+,p_group_id=>wwv_flow_imp.id(3806720991694815451)
 ,p_page_template_options=>'#DEFAULT#'
-,p_required_role=>wwv_flow_imp.id(3585334160394360204)
+,p_required_role=>wwv_flow_imp.id(3807158850583545770)
 ,p_page_component_map=>'18'
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(3613592250429276394)
+ p_id=>wwv_flow_imp.id(3835416940618461960)
 ,p_plug_name=>'Republic Bank Accounts'
 ,p_region_template_options=>'#DEFAULT#:t-Region--accent2:t-Region--scrollBody'
 ,p_plug_template=>4072358936313175081
@@ -57,7 +57,7 @@ wwv_flow_imp_page.create_page_plug(
 ,p_plug_source_type=>'NATIVE_IR'
 );
 wwv_flow_imp_page.create_worksheet(
- p_id=>wwv_flow_imp.id(3613592143595276394)
+ p_id=>wwv_flow_imp.id(3835416833784461960)
 ,p_name=>'rptMedicalDeduction'
 ,p_max_row_count_message=>'The maximum row count for this report is #MAX_ROW_COUNT# rows.  Please apply a filter to reduce the number of records in your query.'
 ,p_no_data_found_message=>'No data found.'
@@ -77,7 +77,7 @@ wwv_flow_imp_page.create_worksheet(
 ,p_internal_uid=>51935238870698756
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3632470448875466495)
+ p_id=>wwv_flow_imp.id(3854295139064652061)
 ,p_db_column_name=>'B.FIRST_NAME||''''||B.SURNAME'
 ,p_display_order=>10
 ,p_column_identifier=>'S'
@@ -86,7 +86,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3632470616832466496)
+ p_id=>wwv_flow_imp.id(3854295307021652062)
 ,p_db_column_name=>'EMP_COMPANY_NO'
 ,p_display_order=>20
 ,p_column_identifier=>'T'
@@ -95,7 +95,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3632470722491466497)
+ p_id=>wwv_flow_imp.id(3854295412680652063)
 ,p_db_column_name=>'BANK_ACCOUNT_NO'
 ,p_display_order=>30
 ,p_column_identifier=>'U'
@@ -104,7 +104,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3632470757147466498)
+ p_id=>wwv_flow_imp.id(3854295447336652064)
 ,p_db_column_name=>'ORGANISATION_NAME'
 ,p_display_order=>40
 ,p_column_identifier=>'V'
@@ -113,7 +113,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3632470917307466499)
+ p_id=>wwv_flow_imp.id(3854295607496652065)
 ,p_db_column_name=>'New Bank Account No'
 ,p_display_order=>50
 ,p_column_identifier=>'W'
@@ -122,7 +122,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_rpt(
- p_id=>wwv_flow_imp.id(3613588341757262998)
+ p_id=>wwv_flow_imp.id(3835413031946448564)
 ,p_application_user=>'APXWS_DEFAULT'
 ,p_report_seq=>10
 ,p_report_alias=>'226237'
@@ -134,7 +134,7 @@ wwv_flow_imp_page.create_worksheet_rpt(
 ,p_avg_columns_on_break=>'% Basic Pay:% Basic Pay to Date'
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(3632470937811466500)
+ p_id=>wwv_flow_imp.id(3854295628000652066)
 ,p_plug_name=>'Republic Bank Account'
 ,p_region_template_options=>'#DEFAULT#:t-BreadcrumbRegion--useBreadcrumbTitle'
 ,p_component_template_options=>'#DEFAULT#'
@@ -142,14 +142,14 @@ wwv_flow_imp_page.create_page_plug(
 ,p_plug_display_sequence=>10
 ,p_include_in_reg_disp_sel_yn=>'Y'
 ,p_plug_display_point=>'REGION_POSITION_01'
-,p_menu_id=>wwv_flow_imp.id(10766773638420877516)
+,p_menu_id=>wwv_flow_imp.id(10988598328610063082)
 ,p_plug_source_type=>'NATIVE_BREADCRUMB'
 ,p_menu_template_id=>4072363345357175094
 );
 wwv_flow_imp_page.create_page_button(
- p_id=>wwv_flow_imp.id(3632489698885632204)
+ p_id=>wwv_flow_imp.id(3854314389074817770)
 ,p_button_sequence=>30
-,p_button_plug_id=>wwv_flow_imp.id(3632470937811466500)
+,p_button_plug_id=>wwv_flow_imp.id(3854295628000652066)
 ,p_button_name=>'Return'
 ,p_button_action=>'REDIRECT_PAGE'
 ,p_button_template_options=>'#DEFAULT#:t-Button--primary:t-Button--iconRight'
@@ -161,7 +161,7 @@ wwv_flow_imp_page.create_page_button(
 ,p_icon_css_classes=>'fa-hand-o-left'
 );
 wwv_flow_imp_page.create_page_button(
- p_id=>wwv_flow_imp.id(3632462310216454747)
+ p_id=>wwv_flow_imp.id(3854287000405640313)
 ,p_button_sequence=>10
 ,p_button_name=>'Return'
 ,p_button_action=>'REDIRECT_PAGE'
@@ -175,7 +175,7 @@ wwv_flow_imp_page.create_page_button(
 ,p_icon_css_classes=>'fa-hand-o-left'
 );
 wwv_flow_imp_page.create_page_button(
- p_id=>wwv_flow_imp.id(3632469353003454790)
+ p_id=>wwv_flow_imp.id(3854294043192640356)
 ,p_button_sequence=>10
 ,p_button_name=>'Return'
 ,p_button_action=>'REDIRECT_PAGE'
@@ -189,7 +189,7 @@ wwv_flow_imp_page.create_page_button(
 ,p_icon_css_classes=>'fa-hand-o-left'
 );
 wwv_flow_imp_page.create_page_button(
- p_id=>wwv_flow_imp.id(3632462651425454748)
+ p_id=>wwv_flow_imp.id(3854287341614640314)
 ,p_button_sequence=>20
 ,p_button_name=>'Search'
 ,p_button_action=>'SUBMIT'
@@ -202,7 +202,7 @@ wwv_flow_imp_page.create_page_button(
 ,p_button_condition_type=>'NEVER'
 );
 wwv_flow_imp_page.create_page_button(
- p_id=>wwv_flow_imp.id(3632469819992454790)
+ p_id=>wwv_flow_imp.id(3854294510181640356)
 ,p_button_sequence=>20
 ,p_button_name=>'Search'
 ,p_button_action=>'SUBMIT'
@@ -215,10 +215,10 @@ wwv_flow_imp_page.create_page_button(
 ,p_button_condition_type=>'NEVER'
 );
 wwv_flow_imp_page.create_page_item(
- p_id=>wwv_flow_imp.id(3632488002814565395)
+ p_id=>wwv_flow_imp.id(3854312693003750961)
 ,p_name=>'P8031_ORG_ID'
 ,p_item_sequence=>20
-,p_item_plug_id=>wwv_flow_imp.id(3613592250429276394)
+,p_item_plug_id=>wwv_flow_imp.id(3835416940618461960)
 ,p_item_default=>':APP_ORG_ID'
 ,p_item_default_type=>'EXPRESSION'
 ,p_item_default_language=>'PLSQL'
@@ -248,7 +248,7 @@ wwv_flow_imp_page.create_page_item(
   'page_action_on_selection', 'NONE')).to_clob
 );
 wwv_flow_imp_page.create_page_da_event(
- p_id=>wwv_flow_imp.id(3632471101744466501)
+ p_id=>wwv_flow_imp.id(3854295791933652067)
 ,p_name=>'Refresh'
 ,p_event_sequence=>10
 ,p_triggering_element_type=>'ITEM'
@@ -258,14 +258,14 @@ wwv_flow_imp_page.create_page_da_event(
 ,p_bind_event_type=>'change'
 );
 wwv_flow_imp_page.create_page_da_action(
- p_id=>wwv_flow_imp.id(3632471158915466502)
-,p_event_id=>wwv_flow_imp.id(3632471101744466501)
+ p_id=>wwv_flow_imp.id(3854295849104652068)
+,p_event_id=>wwv_flow_imp.id(3854295791933652067)
 ,p_event_result=>'TRUE'
 ,p_action_sequence=>10
 ,p_execute_on_page_init=>'N'
 ,p_action=>'NATIVE_REFRESH'
 ,p_affected_elements_type=>'REGION'
-,p_affected_region_id=>wwv_flow_imp.id(3613592250429276394)
+,p_affected_region_id=>wwv_flow_imp.id(3835416940618461960)
 ,p_attribute_01=>'N'
 );
 wwv_flow_imp.component_end;

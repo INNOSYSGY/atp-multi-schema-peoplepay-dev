@@ -8,7 +8,7 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_page.create_page(
@@ -48,7 +48,7 @@ wwv_flow_imp_page.create_page(
 ,p_page_component_map=>'10'
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(3628319543928577076)
+ p_id=>wwv_flow_imp.id(3850144234117762642)
 ,p_plug_name=>'Items'
 ,p_region_template_options=>'#DEFAULT#:t-Region--scrollBody'
 ,p_plug_template=>4072358936313175081
@@ -79,9 +79,9 @@ wwv_flow_imp_page.create_page_plug(
 ,p_plug_source_type=>'NATIVE_PLSQL'
 );
 wwv_flow_imp_page.create_page_button(
- p_id=>wwv_flow_imp.id(3628320080654577081)
+ p_id=>wwv_flow_imp.id(3850144770843762647)
 ,p_button_sequence=>10
-,p_button_plug_id=>wwv_flow_imp.id(3628319543928577076)
+,p_button_plug_id=>wwv_flow_imp.id(3850144234117762642)
 ,p_button_name=>'CHECKOUT'
 ,p_button_action=>'DEFINED_BY_DA'
 ,p_button_template_options=>'#DEFAULT#:t-Button--success'
@@ -92,7 +92,7 @@ wwv_flow_imp_page.create_page_button(
 ,p_warn_on_unsaved_changes=>null
 );
 wwv_flow_imp_page.create_page_da_event(
- p_id=>wwv_flow_imp.id(3628319707881577077)
+ p_id=>wwv_flow_imp.id(3850144398070762643)
 ,p_name=>'Toggle State'
 ,p_event_sequence=>10
 ,p_triggering_element_type=>'JQUERY_SELECTOR'
@@ -102,8 +102,8 @@ wwv_flow_imp_page.create_page_da_event(
 ,p_bind_event_type=>'apextap'
 );
 wwv_flow_imp_page.create_page_da_action(
- p_id=>wwv_flow_imp.id(3628319744162577078)
-,p_event_id=>wwv_flow_imp.id(3628319707881577077)
+ p_id=>wwv_flow_imp.id(3850144434351762644)
+,p_event_id=>wwv_flow_imp.id(3850144398070762643)
 ,p_event_result=>'TRUE'
 ,p_action_sequence=>10
 ,p_execute_on_page_init=>'N'
@@ -130,18 +130,18 @@ wwv_flow_imp_page.create_page_da_action(
 '}'))
 );
 wwv_flow_imp_page.create_page_da_event(
- p_id=>wwv_flow_imp.id(3628320153329577082)
+ p_id=>wwv_flow_imp.id(3850144843518762648)
 ,p_name=>'Checkout'
 ,p_event_sequence=>20
 ,p_triggering_element_type=>'BUTTON'
-,p_triggering_button_id=>wwv_flow_imp.id(3628320080654577081)
+,p_triggering_button_id=>wwv_flow_imp.id(3850144770843762647)
 ,p_bind_type=>'bind'
 ,p_execution_type=>'IMMEDIATE'
 ,p_bind_event_type=>'click'
 );
 wwv_flow_imp_page.create_page_da_action(
- p_id=>wwv_flow_imp.id(3628320316038577083)
-,p_event_id=>wwv_flow_imp.id(3628320153329577082)
+ p_id=>wwv_flow_imp.id(3850145006227762649)
+,p_event_id=>wwv_flow_imp.id(3850144843518762648)
 ,p_event_result=>'TRUE'
 ,p_action_sequence=>10
 ,p_execute_on_page_init=>'N'

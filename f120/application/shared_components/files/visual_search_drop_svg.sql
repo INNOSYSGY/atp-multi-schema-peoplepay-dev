@@ -8,7 +8,7 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp.g_varchar2_table := wwv_flow_imp.empty_varchar2_table;
@@ -52,7 +52,7 @@ wwv_flow_imp.g_varchar2_table(37) := '392E35385A6D2D332E38362D332E3261312E36342C
 wwv_flow_imp.g_varchar2_table(38) := '36362C302C302C302C32392E37342C35302E31375A6D322E31382C342E383961322E35352C322E35352C302C302C302D2E36342C312E3834632E32322E37352C312E33352C312E32352C322E38352E382C312E37392D2E35332C322E33342D312E36322C';
 wwv_flow_imp.g_varchar2_table(39) := '322E312D322E3433732D312E33372D2E39322D322E35352D2E36345A222F3E3C2F7376673E0A';
 wwv_flow_imp_shared.create_app_static_file(
- p_id=>wwv_flow_imp.id(3594716551549106089)
+ p_id=>wwv_flow_imp.id(3816541241738291655)
 ,p_file_name=>'visual-search-drop.svg'
 ,p_mime_type=>'image/svg+xml'
 ,p_file_charset=>'utf-8'

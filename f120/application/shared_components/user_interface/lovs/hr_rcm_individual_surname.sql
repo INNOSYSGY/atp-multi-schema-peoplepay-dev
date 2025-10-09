@@ -8,11 +8,11 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_shared.create_list_of_values(
- p_id=>wwv_flow_imp.id(353793402168332799)
+ p_id=>wwv_flow_imp.id(575618092357518365)
 ,p_lov_name=>'HR_RCM_INDIVIDUAL.SURNAME'
 ,p_source_type=>'TABLE'
 ,p_location=>'LOCAL'

@@ -8,7 +8,7 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_page.create_page(
@@ -21,7 +21,7 @@ wwv_flow_imp_page.create_page(
 ,p_page_component_map=>'17'
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(3444119425884365293)
+ p_id=>wwv_flow_imp.id(3665944116073550859)
 ,p_plug_name=>'Individual Payslip Email'
 ,p_region_template_options=>'#DEFAULT#:t-Region--accent2:t-Region--scrollBody'
 ,p_plug_template=>4072358936313175081
@@ -32,9 +32,9 @@ wwv_flow_imp_page.create_page_plug(
   'output_as', 'HTML')).to_clob
 );
 wwv_flow_imp_page.create_page_button(
- p_id=>wwv_flow_imp.id(3362166872557345477)
+ p_id=>wwv_flow_imp.id(3583991562746531043)
 ,p_button_sequence=>20
-,p_button_plug_id=>wwv_flow_imp.id(3444119425884365293)
+,p_button_plug_id=>wwv_flow_imp.id(3665944116073550859)
 ,p_button_name=>'Send'
 ,p_button_action=>'DEFINED_BY_DA'
 ,p_button_template_options=>'#DEFAULT#:t-Button--success:t-Button--iconRight'
@@ -46,9 +46,9 @@ wwv_flow_imp_page.create_page_button(
 ,p_icon_css_classes=>'fa-envelope'
 );
 wwv_flow_imp_page.create_page_button(
- p_id=>wwv_flow_imp.id(3362167267225345478)
+ p_id=>wwv_flow_imp.id(3583991957414531044)
 ,p_button_sequence=>10
-,p_button_plug_id=>wwv_flow_imp.id(3444119425884365293)
+,p_button_plug_id=>wwv_flow_imp.id(3665944116073550859)
 ,p_button_name=>'Return'
 ,p_button_action=>'REDIRECT_PAGE'
 ,p_button_template_options=>'#DEFAULT#:t-Button--primary'
@@ -59,11 +59,11 @@ wwv_flow_imp_page.create_page_button(
 ,p_button_redirect_url=>'f?p=&APP_ID.:1231:&SESSION.::&DEBUG.:::'
 );
 wwv_flow_imp_page.create_page_item(
- p_id=>wwv_flow_imp.id(3362167680504345482)
+ p_id=>wwv_flow_imp.id(3583992370693531048)
 ,p_name=>'P1234_ORGANISATION'
 ,p_is_required=>true
 ,p_item_sequence=>10
-,p_item_plug_id=>wwv_flow_imp.id(3444119425884365293)
+,p_item_plug_id=>wwv_flow_imp.id(3665944116073550859)
 ,p_item_default=>':APP_ORG_ID'
 ,p_item_default_type=>'EXPRESSION'
 ,p_item_default_language=>'PLSQL'
@@ -90,11 +90,11 @@ wwv_flow_imp_page.create_page_item(
   'page_action_on_selection', 'NONE')).to_clob
 );
 wwv_flow_imp_page.create_page_item(
- p_id=>wwv_flow_imp.id(3362168103629345484)
+ p_id=>wwv_flow_imp.id(3583992793818531050)
 ,p_name=>'P1234_EARNING_PERIOD_ID'
 ,p_is_required=>true
 ,p_item_sequence=>20
-,p_item_plug_id=>wwv_flow_imp.id(3444119425884365293)
+,p_item_plug_id=>wwv_flow_imp.id(3665944116073550859)
 ,p_prompt=>'Earnings Period'
 ,p_display_as=>'NATIVE_POPUP_LOV'
 ,p_lov=>wwv_flow_string.join(wwv_flow_t_varchar2(
@@ -137,11 +137,11 @@ wwv_flow_imp_page.create_page_item(
   'min_chars', '0')).to_clob
 );
 wwv_flow_imp_page.create_page_item(
- p_id=>wwv_flow_imp.id(3362168550877345485)
+ p_id=>wwv_flow_imp.id(3583993241066531051)
 ,p_name=>'P1234_EMPLOYEE'
 ,p_is_required=>true
 ,p_item_sequence=>30
-,p_item_plug_id=>wwv_flow_imp.id(3444119425884365293)
+,p_item_plug_id=>wwv_flow_imp.id(3665944116073550859)
 ,p_prompt=>'Employee Selection'
 ,p_display_as=>'NATIVE_SHUTTLE'
 ,p_lov=>wwv_flow_string.join(wwv_flow_t_varchar2(
@@ -164,18 +164,18 @@ wwv_flow_imp_page.create_page_item(
 ,p_multi_value_separator=>':'
 );
 wwv_flow_imp_page.create_page_da_event(
- p_id=>wwv_flow_imp.id(3362168920601345494)
+ p_id=>wwv_flow_imp.id(3583993610790531060)
 ,p_name=>'Send'
 ,p_event_sequence=>10
 ,p_triggering_element_type=>'BUTTON'
-,p_triggering_button_id=>wwv_flow_imp.id(3362166872557345477)
+,p_triggering_button_id=>wwv_flow_imp.id(3583991562746531043)
 ,p_bind_type=>'bind'
 ,p_execution_type=>'IMMEDIATE'
 ,p_bind_event_type=>'click'
 );
 wwv_flow_imp_page.create_page_da_action(
- p_id=>wwv_flow_imp.id(3362169953141345495)
-,p_event_id=>wwv_flow_imp.id(3362168920601345494)
+ p_id=>wwv_flow_imp.id(3583994643330531061)
+,p_event_id=>wwv_flow_imp.id(3583993610790531060)
 ,p_event_result=>'TRUE'
 ,p_action_sequence=>20
 ,p_execute_on_page_init=>'N'
@@ -186,8 +186,8 @@ wwv_flow_imp_page.create_page_da_action(
 ,p_wait_for_result=>'Y'
 );
 wwv_flow_imp_page.create_page_da_action(
- p_id=>wwv_flow_imp.id(3362169395881345495)
-,p_event_id=>wwv_flow_imp.id(3362168920601345494)
+ p_id=>wwv_flow_imp.id(3583994086070531061)
+,p_event_id=>wwv_flow_imp.id(3583993610790531060)
 ,p_event_result=>'TRUE'
 ,p_action_sequence=>30
 ,p_execute_on_page_init=>'N'

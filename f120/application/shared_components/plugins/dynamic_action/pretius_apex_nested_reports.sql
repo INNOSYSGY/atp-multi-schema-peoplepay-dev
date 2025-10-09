@@ -8,11 +8,11 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_shared.create_plugin(
- p_id=>wwv_flow_imp.id(6176868116654982679)
+ p_id=>wwv_flow_imp.id(6398692806844168245)
 ,p_plugin_type=>'DYNAMIC ACTION'
 ,p_name=>'PRETIUS_APEX_NESTED_REPORTS'
 ,p_display_name=>'Pretius APEX Nested Reports'
@@ -550,8 +550,8 @@ wwv_flow_imp_shared.create_plugin(
 ,p_files_version=>317
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(4684162839223814570)
-,p_plugin_id=>wwv_flow_imp.id(6176868116654982679)
+ p_id=>wwv_flow_imp.id(4905987529413000136)
+,p_plugin_id=>wwv_flow_imp.id(6398692806844168245)
 ,p_attribute_scope=>'APPLICATION'
 ,p_attribute_sequence=>1
 ,p_display_sequence=>10
@@ -563,8 +563,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_is_translatable=>false
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(4684187999541820279)
-,p_plugin_id=>wwv_flow_imp.id(6176868116654982679)
+ p_id=>wwv_flow_imp.id(4906012689731005845)
+,p_plugin_id=>wwv_flow_imp.id(6398692806844168245)
 ,p_attribute_scope=>'APPLICATION'
 ,p_attribute_sequence=>2
 ,p_display_sequence=>20
@@ -576,8 +576,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_is_translatable=>false
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(6176868304242982682)
-,p_plugin_id=>wwv_flow_imp.id(6176868116654982679)
+ p_id=>wwv_flow_imp.id(6398692994432168248)
+,p_plugin_id=>wwv_flow_imp.id(6398692806844168245)
 ,p_attribute_scope=>'APPLICATION'
 ,p_attribute_sequence=>3
 ,p_display_sequence=>30
@@ -589,24 +589,24 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_lov_type=>'STATIC'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(6176868683328982682)
-,p_plugin_attribute_id=>wwv_flow_imp.id(6176868304242982682)
+ p_id=>wwv_flow_imp.id(6398693373518168248)
+,p_plugin_attribute_id=>wwv_flow_imp.id(6398692994432168248)
 ,p_display_sequence=>10
 ,p_display_value=>'Yes'
 ,p_return_value=>'Y'
 ,p_help_text=>'Mustache library will be included.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(6176869198132982683)
-,p_plugin_attribute_id=>wwv_flow_imp.id(6176868304242982682)
+ p_id=>wwv_flow_imp.id(6398693888322168249)
+,p_plugin_attribute_id=>wwv_flow_imp.id(6398692994432168248)
 ,p_display_sequence=>20
 ,p_display_value=>'No'
 ,p_return_value=>'N'
 ,p_help_text=>'Mustache library won''t be included. This library is essential for the plugin to work.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(6176869749586982683)
-,p_plugin_id=>wwv_flow_imp.id(6176868116654982679)
+ p_id=>wwv_flow_imp.id(6398694439776168249)
+,p_plugin_id=>wwv_flow_imp.id(6398692806844168245)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>1
 ,p_display_sequence=>1010
@@ -731,8 +731,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 '</ul>'))
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(6176870144835982684)
-,p_plugin_id=>wwv_flow_imp.id(6176868116654982679)
+ p_id=>wwv_flow_imp.id(6398694835025168250)
+,p_plugin_id=>wwv_flow_imp.id(6398692806844168245)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>2
 ,p_display_sequence=>7
@@ -741,7 +741,7 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_is_required=>false
 ,p_default_value=>'CE:AA:CR'
 ,p_is_translatable=>false
-,p_depending_on_attribute_id=>wwv_flow_imp.id(6176872980670982685)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(6398697670860168251)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'IN_LIST'
 ,p_depending_on_expression=>'DTDC,CTDC'
@@ -752,48 +752,48 @@ wwv_flow_imp_shared.create_plugin_attribute(
 '</p>'))
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(6176870551097982684)
-,p_plugin_attribute_id=>wwv_flow_imp.id(6176870144835982684)
+ p_id=>wwv_flow_imp.id(6398695241287168250)
+,p_plugin_attribute_id=>wwv_flow_imp.id(6398694835025168250)
 ,p_display_sequence=>5
 ,p_display_value=>'Cache results'
 ,p_return_value=>'CR'
 ,p_help_text=>'If this option checked, <b>Details query</b> resulting data is cached on first plugin use.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(6176870997202982684)
-,p_plugin_attribute_id=>wwv_flow_imp.id(6176870144835982684)
+ p_id=>wwv_flow_imp.id(6398695687392168250)
+,p_plugin_attribute_id=>wwv_flow_imp.id(6398694835025168250)
 ,p_display_sequence=>10
 ,p_display_value=>'Collapse expanded'
 ,p_return_value=>'CE'
 ,p_help_text=>'If this option checked, every expanded row will be collapsed before new row is expanded.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(6176871497671982684)
-,p_plugin_attribute_id=>wwv_flow_imp.id(6176870144835982684)
+ p_id=>wwv_flow_imp.id(6398696187861168250)
+,p_plugin_attribute_id=>wwv_flow_imp.id(6398694835025168250)
 ,p_display_sequence=>20
 ,p_display_value=>'Set max height'
 ,p_return_value=>'SMH'
 ,p_help_text=>'If this option checked, max-height property is added to expanded row. Value in pixels must be provided in <strong>Set max height</strong> attribute.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(6176872033602982684)
-,p_plugin_attribute_id=>wwv_flow_imp.id(6176870144835982684)
+ p_id=>wwv_flow_imp.id(6398696723792168250)
+,p_plugin_attribute_id=>wwv_flow_imp.id(6398694835025168250)
 ,p_display_sequence=>30
 ,p_display_value=>'Add animation'
 ,p_return_value=>'AA'
 ,p_help_text=>'If this option checked, animation is added while expanding / collapsing row.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(4303707915624680141)
-,p_plugin_attribute_id=>wwv_flow_imp.id(6176870144835982684)
+ p_id=>wwv_flow_imp.id(4525532605813865707)
+,p_plugin_attribute_id=>wwv_flow_imp.id(6398694835025168250)
 ,p_display_sequence=>40
 ,p_display_value=>'Loading indicator'
 ,p_return_value=>'LI'
 ,p_help_text=>'If this option is checked, loading indicator is shown each time plugin fetches data from db (AJAX). Loading indicator style can be set in <strong>Loading indicator style</strong> attribute.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(6176872980670982685)
-,p_plugin_id=>wwv_flow_imp.id(6176868116654982679)
+ p_id=>wwv_flow_imp.id(6398697670860168251)
+,p_plugin_id=>wwv_flow_imp.id(6398692806844168245)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>3
 ,p_display_sequence=>5
@@ -806,40 +806,40 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'Picked option defines the plugin customization level.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(6176873403767982685)
-,p_plugin_attribute_id=>wwv_flow_imp.id(6176872980670982685)
+ p_id=>wwv_flow_imp.id(6398698093957168251)
+,p_plugin_attribute_id=>wwv_flow_imp.id(6398697670860168251)
 ,p_display_sequence=>10
 ,p_display_value=>'Default template & default callback'
 ,p_return_value=>'DTDC'
 ,p_help_text=>'Default plugin behaviour. Resulting rows of data are rendered in default template (table of data) along with default callback settings.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(6176873956704982685)
-,p_plugin_attribute_id=>wwv_flow_imp.id(6176872980670982685)
+ p_id=>wwv_flow_imp.id(6398698646894168251)
+,p_plugin_attribute_id=>wwv_flow_imp.id(6398697670860168251)
 ,p_display_sequence=>20
 ,p_display_value=>'Default template & custom callback'
 ,p_return_value=>'DTCC'
 ,p_help_text=>'When this option is selected, resulting rows of data are rendered with template provided in custom template attribute.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(6176874425180982685)
-,p_plugin_attribute_id=>wwv_flow_imp.id(6176872980670982685)
+ p_id=>wwv_flow_imp.id(6398699115370168251)
+,p_plugin_attribute_id=>wwv_flow_imp.id(6398697670860168251)
 ,p_display_sequence=>30
 ,p_display_value=>'Custom template & default callback'
 ,p_return_value=>'CTDC'
 ,p_help_text=>'When this option is selected, resulting rows of data are rendered with default template and custom JS callback function defined in custom callback attribute.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(6176874869690982686)
-,p_plugin_attribute_id=>wwv_flow_imp.id(6176872980670982685)
+ p_id=>wwv_flow_imp.id(6398699559880168252)
+,p_plugin_attribute_id=>wwv_flow_imp.id(6398697670860168251)
 ,p_display_sequence=>40
 ,p_display_value=>'Custom template & custom callback'
 ,p_return_value=>'CTCC'
 ,p_help_text=>'When this option is selected, developer decides how template for resulting rows of data is build and how results should be displayed after receiving rows from database.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(6176875369908982686)
-,p_plugin_id=>wwv_flow_imp.id(6176868116654982679)
+ p_id=>wwv_flow_imp.id(6398700060098168252)
+,p_plugin_id=>wwv_flow_imp.id(6398692806844168245)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>4
 ,p_display_sequence=>1020
@@ -847,7 +847,7 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_attribute_type=>'TEXTAREA'
 ,p_is_required=>true
 ,p_is_translatable=>false
-,p_depending_on_attribute_id=>wwv_flow_imp.id(6176872980670982685)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(6398697670860168251)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'IN_LIST'
 ,p_depending_on_expression=>'CTDC,CTCC'
@@ -966,8 +966,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 '</p>'))
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(6176875786415982686)
-,p_plugin_id=>wwv_flow_imp.id(6176868116654982679)
+ p_id=>wwv_flow_imp.id(6398700476605168252)
+,p_plugin_id=>wwv_flow_imp.id(6398692806844168245)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>5
 ,p_display_sequence=>1015
@@ -975,7 +975,7 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_attribute_type=>'TEXTAREA'
 ,p_is_required=>true
 ,p_is_translatable=>false
-,p_depending_on_attribute_id=>wwv_flow_imp.id(6176872980670982685)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(6398697670860168251)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'IN_LIST'
 ,p_depending_on_expression=>'DTCC,CTCC'
@@ -1003,8 +1003,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 '</dl>'))
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(6176876237205982686)
-,p_plugin_id=>wwv_flow_imp.id(6176868116654982679)
+ p_id=>wwv_flow_imp.id(6398700927395168252)
+,p_plugin_id=>wwv_flow_imp.id(6398692806844168245)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>6
 ,p_display_sequence=>60
@@ -1013,7 +1013,7 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_is_required=>true
 ,p_default_value=>'#EBEBEB'
 ,p_is_translatable=>false
-,p_depending_on_attribute_id=>wwv_flow_imp.id(6176872980670982685)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(6398697670860168251)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'IN_LIST'
 ,p_depending_on_expression=>'DTDC,CTDC'
@@ -1025,8 +1025,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 '</dl>'))
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(6176876576682982686)
-,p_plugin_id=>wwv_flow_imp.id(6176868116654982679)
+ p_id=>wwv_flow_imp.id(6398701266872168252)
+,p_plugin_id=>wwv_flow_imp.id(6398692806844168245)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>7
 ,p_display_sequence=>100
@@ -1036,7 +1036,7 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_default_value=>'300'
 ,p_unit=>'px'
 ,p_is_translatable=>false
-,p_depending_on_attribute_id=>wwv_flow_imp.id(6176870144835982684)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(6398694835025168250)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'IN_LIST'
 ,p_depending_on_expression=>'SMH'
@@ -1051,8 +1051,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 '</dl>'))
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(6176877020389982687)
-,p_plugin_id=>wwv_flow_imp.id(6176868116654982679)
+ p_id=>wwv_flow_imp.id(6398701710579168253)
+,p_plugin_id=>wwv_flow_imp.id(6398692806844168245)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>8
 ,p_display_sequence=>80
@@ -1061,7 +1061,7 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_is_required=>true
 ,p_default_value=>'#c5c5c5'
 ,p_is_translatable=>false
-,p_depending_on_attribute_id=>wwv_flow_imp.id(6176872980670982685)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(6398697670860168251)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'IN_LIST'
 ,p_depending_on_expression=>'DTDC,CTDC'
@@ -1076,8 +1076,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 '</dl>'))
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(6176877370033982687)
-,p_plugin_id=>wwv_flow_imp.id(6176868116654982679)
+ p_id=>wwv_flow_imp.id(6398702060223168253)
+,p_plugin_id=>wwv_flow_imp.id(6398692806844168245)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>9
 ,p_display_sequence=>90
@@ -1086,7 +1086,7 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_is_required=>true
 ,p_default_value=>'#e3e3e3'
 ,p_is_translatable=>false
-,p_depending_on_attribute_id=>wwv_flow_imp.id(6176872980670982685)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(6398697670860168251)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'IN_LIST'
 ,p_depending_on_expression=>'DTDC,CTDC'
@@ -1101,8 +1101,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 '</dl>'))
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(6176877851125982687)
-,p_plugin_id=>wwv_flow_imp.id(6176868116654982679)
+ p_id=>wwv_flow_imp.id(6398702541315168253)
+,p_plugin_id=>wwv_flow_imp.id(6398692806844168245)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>10
 ,p_display_sequence=>55
@@ -1111,7 +1111,7 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_is_required=>false
 ,p_default_value=>'CR:LI'
 ,p_is_translatable=>false
-,p_depending_on_attribute_id=>wwv_flow_imp.id(6176872980670982685)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(6398697670860168251)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'NOT_IN_LIST'
 ,p_depending_on_expression=>'DTDC,CTDC'
@@ -1119,16 +1119,16 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'Custom callback attribute allows you to add extra efects to rendered data.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(6176878175081982687)
-,p_plugin_attribute_id=>wwv_flow_imp.id(6176877851125982687)
+ p_id=>wwv_flow_imp.id(6398702865271168253)
+,p_plugin_attribute_id=>wwv_flow_imp.id(6398702541315168253)
 ,p_display_sequence=>10
 ,p_display_value=>'Cache results'
 ,p_return_value=>'CR'
 ,p_help_text=>'If checked the result of the SQL query is retrieved only once for the specified table cell or jQuery selector.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(6176879195350982688)
-,p_plugin_id=>wwv_flow_imp.id(6176868116654982679)
+ p_id=>wwv_flow_imp.id(6398703885540168254)
+,p_plugin_id=>wwv_flow_imp.id(6398692806844168245)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>11
 ,p_display_sequence=>1015
@@ -1138,15 +1138,15 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_default_value=>'No data found'
 ,p_max_length=>4000
 ,p_is_translatable=>false
-,p_depending_on_attribute_id=>wwv_flow_imp.id(6176872980670982685)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(6398697670860168251)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'IN_LIST'
 ,p_depending_on_expression=>'DTDC,CTDC'
 ,p_help_text=>'Enter text or HTML to be displayed when details query returns 0 rows.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(6162872519722880830)
-,p_plugin_id=>wwv_flow_imp.id(6176868116654982679)
+ p_id=>wwv_flow_imp.id(6384697209912066396)
+,p_plugin_id=>wwv_flow_imp.id(6398692806844168245)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>12
 ,p_display_sequence=>15
@@ -1155,7 +1155,7 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_is_required=>true
 ,p_default_value=>'ATR'
 ,p_is_translatable=>false
-,p_depending_on_attribute_id=>wwv_flow_imp.id(6176870144835982684)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(6398694835025168250)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'IN_LIST'
 ,p_depending_on_expression=>'LI'
@@ -1163,8 +1163,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'This attributes allows you to choose prefered style of loading indicator while fetching data.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(6162876094609901789)
-,p_plugin_attribute_id=>wwv_flow_imp.id(6162872519722880830)
+ p_id=>wwv_flow_imp.id(6384700784799087355)
+,p_plugin_attribute_id=>wwv_flow_imp.id(6384697209912066396)
 ,p_display_sequence=>10
 ,p_display_value=>'Aligned to report'
 ,p_return_value=>'ATR'
@@ -1172,8 +1172,8 @@ wwv_flow_imp_shared.create_plugin_attr_value(
 ,p_help_text=>'Loading indicator is aligned to center of affected elements.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(6162876560220902832)
-,p_plugin_attribute_id=>wwv_flow_imp.id(6162872519722880830)
+ p_id=>wwv_flow_imp.id(6384701250410088398)
+,p_plugin_attribute_id=>wwv_flow_imp.id(6384697209912066396)
 ,p_display_sequence=>20
 ,p_display_value=>'Aligned to cell'
 ,p_return_value=>'ATC'
@@ -1181,24 +1181,24 @@ wwv_flow_imp_shared.create_plugin_attr_value(
 ,p_help_text=>'Loading indicator is aligned to parent cell of triggering element.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(6162876962196904639)
-,p_plugin_attribute_id=>wwv_flow_imp.id(6162872519722880830)
+ p_id=>wwv_flow_imp.id(6384701652386090205)
+,p_plugin_attribute_id=>wwv_flow_imp.id(6384697209912066396)
 ,p_display_sequence=>30
 ,p_display_value=>'Cell icon spinner'
 ,p_return_value=>'CIS'
 ,p_help_text=>'Loading indicator is embeded within cell after triggering element.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(6163084243157234488)
-,p_plugin_attribute_id=>wwv_flow_imp.id(6162872519722880830)
+ p_id=>wwv_flow_imp.id(6384908933346420054)
+,p_plugin_attribute_id=>wwv_flow_imp.id(6384697209912066396)
 ,p_display_sequence=>40
 ,p_display_value=>'Replace cell content'
 ,p_return_value=>'RCC'
 ,p_help_text=>'Loading indicator replaces cell content. After AJAX finishes fetching data, cell content is restored to initial content.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(5058226469864574817)
-,p_plugin_id=>wwv_flow_imp.id(6176868116654982679)
+ p_id=>wwv_flow_imp.id(5280051160053760383)
+,p_plugin_id=>wwv_flow_imp.id(6398692806844168245)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>13
 ,p_display_sequence=>12
@@ -1208,7 +1208,7 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_default_value=>'#DEFAULT_TEMPLATE#'
 ,p_max_length=>4000
 ,p_is_translatable=>false
-,p_depending_on_attribute_id=>wwv_flow_imp.id(5058474598757560670)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(5280299288946746236)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'IN_LIST'
 ,p_depending_on_expression=>'EDT'
@@ -1250,8 +1250,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 '</p>'))
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(5058474598757560670)
-,p_plugin_id=>wwv_flow_imp.id(6176868116654982679)
+ p_id=>wwv_flow_imp.id(5280299288946746236)
+,p_plugin_id=>wwv_flow_imp.id(6398692806844168245)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>14
 ,p_display_sequence=>10
@@ -1259,7 +1259,7 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_attribute_type=>'CHECKBOXES'
 ,p_is_required=>false
 ,p_is_translatable=>false
-,p_depending_on_attribute_id=>wwv_flow_imp.id(6176872980670982685)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(6398697670860168251)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'IN_LIST'
 ,p_depending_on_expression=>'DTDC,DTCC'
@@ -1267,32 +1267,32 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'This attribute allows you to add extra funcionalities to nested report rendered in HTML data.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(5058575570320568348)
-,p_plugin_attribute_id=>wwv_flow_imp.id(5058474598757560670)
+ p_id=>wwv_flow_imp.id(5280400260509753914)
+,p_plugin_attribute_id=>wwv_flow_imp.id(5280299288946746236)
 ,p_display_sequence=>20
 ,p_display_value=>'Strech report'
 ,p_return_value=>'SR'
 ,p_help_text=>'If this options is checked, nested report table is streched to 100% width of parent row.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(5058575977085568814)
-,p_plugin_attribute_id=>wwv_flow_imp.id(5058474598757560670)
+ p_id=>wwv_flow_imp.id(5280400667274754380)
+,p_plugin_attribute_id=>wwv_flow_imp.id(5280299288946746236)
 ,p_display_sequence=>30
 ,p_display_value=>'Sorting data'
 ,p_return_value=>'SD'
 ,p_help_text=>'If this option is checked, nested report supports sorting via column headings. Data is sorted using JavaScript function. Sort function supports NUMBER and VARCHAR2 column type.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(5058727234720602991)
-,p_plugin_attribute_id=>wwv_flow_imp.id(5058474598757560670)
+ p_id=>wwv_flow_imp.id(5280551924909788557)
+,p_plugin_attribute_id=>wwv_flow_imp.id(5280299288946746236)
 ,p_display_sequence=>40
 ,p_display_value=>'Extend default template'
 ,p_return_value=>'EDT'
 ,p_help_text=>'If this option is checked, default template can be extended with additional HTML before and after nested report. See <strong>Default template HTML</strong> attribute for more informations.'
 );
 wwv_flow_imp_shared.create_plugin_event(
- p_id=>wwv_flow_imp.id(5806395452326057415)
-,p_plugin_id=>wwv_flow_imp.id(6176868116654982679)
+ p_id=>wwv_flow_imp.id(6028220142515242981)
+,p_plugin_id=>wwv_flow_imp.id(6398692806844168245)
 ,p_name=>'pretius_default_callback'
 ,p_display_name=>'Default callback'
 );
@@ -1734,8 +1734,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(5441594809761234503)
-,p_plugin_id=>wwv_flow_imp.id(6176868116654982679)
+ p_id=>wwv_flow_imp.id(5663419499950420069)
+,p_plugin_id=>wwv_flow_imp.id(6398692806844168245)
 ,p_file_name=>'pretius_nestedreport.js'
 ,p_mime_type=>'application/javascript'
 ,p_file_charset=>'utf-8'
@@ -1764,8 +1764,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(5809529939172366277)
-,p_plugin_id=>wwv_flow_imp.id(6176868116654982679)
+ p_id=>wwv_flow_imp.id(6031354629361551843)
+,p_plugin_id=>wwv_flow_imp.id(6398692806844168245)
 ,p_file_name=>'pretius_main.js'
 ,p_mime_type=>'application/javascript'
 ,p_file_charset=>'utf-8'
@@ -1814,8 +1814,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(5809530656825367205)
-,p_plugin_id=>wwv_flow_imp.id(6176868116654982679)
+ p_id=>wwv_flow_imp.id(6031355347014552771)
+,p_plugin_id=>wwv_flow_imp.id(6398692806844168245)
 ,p_file_name=>'pretius_row_details_styles.css'
 ,p_mime_type=>'text/css'
 ,p_file_charset=>'utf-8'
@@ -1925,8 +1925,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(6176882815188982691)
-,p_plugin_id=>wwv_flow_imp.id(6176868116654982679)
+ p_id=>wwv_flow_imp.id(6398707505378168257)
+,p_plugin_id=>wwv_flow_imp.id(6398692806844168245)
 ,p_file_name=>'mustache.js'
 ,p_mime_type=>'application/javascript'
 ,p_file_charset=>'utf-8'

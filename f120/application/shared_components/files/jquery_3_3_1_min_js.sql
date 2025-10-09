@@ -8,7 +8,7 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp.g_varchar2_table := wwv_flow_imp.empty_varchar2_table;
@@ -883,7 +883,7 @@ wwv_flow_imp.g_varchar2_table(868) := '6174286529297D2C2266756E6374696F6E223D3D7
 wwv_flow_imp.g_varchar2_table(869) := '6572792C4B743D652E243B72657475726E20772E6E6F436F6E666C6963743D66756E6374696F6E2874297B72657475726E20652E243D3D3D77262628652E243D4B74292C742626652E6A51756572793D3D3D77262628652E6A51756572793D4A74292C77';
 wwv_flow_imp.g_varchar2_table(870) := '7D2C747C7C28652E6A51756572793D652E243D77292C777D293B0A';
 wwv_flow_imp_shared.create_app_static_file(
- p_id=>wwv_flow_imp.id(3625656396897209051)
+ p_id=>wwv_flow_imp.id(3847481087086394617)
 ,p_file_name=>'jquery-3.3.1.min.js'
 ,p_mime_type=>'application/javascript'
 ,p_file_charset=>'utf-8'

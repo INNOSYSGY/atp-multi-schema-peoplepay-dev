@@ -8,7 +8,7 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_page.create_page(
@@ -20,7 +20,7 @@ wwv_flow_imp_page.create_page(
 ,p_page_component_map=>'16'
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(3490513914291718735)
+ p_id=>wwv_flow_imp.id(3712338604480904301)
 ,p_plug_name=>'Delete Duplicates'
 ,p_region_template_options=>'#DEFAULT#:::t-Region--accent5::t-Region--scrollBody:::::::::'
 ,p_plug_template=>4072358936313175081
@@ -31,9 +31,9 @@ wwv_flow_imp_page.create_page_plug(
   'output_as', 'HTML')).to_clob
 );
 wwv_flow_imp_page.create_page_button(
- p_id=>wwv_flow_imp.id(3490514073505718736)
+ p_id=>wwv_flow_imp.id(3712338763694904302)
 ,p_button_sequence=>10
-,p_button_plug_id=>wwv_flow_imp.id(3490513914291718735)
+,p_button_plug_id=>wwv_flow_imp.id(3712338604480904301)
 ,p_button_name=>'DELETE'
 ,p_button_action=>'SUBMIT'
 ,p_button_template_options=>'#DEFAULT#::t-Button--danger::t-Button--iconRight:::::::'
@@ -44,10 +44,10 @@ wwv_flow_imp_page.create_page_button(
 ,p_icon_css_classes=>'fa-low-vision'
 );
 wwv_flow_imp_page.create_page_item(
- p_id=>wwv_flow_imp.id(3490514140273718737)
+ p_id=>wwv_flow_imp.id(3712338830462904303)
 ,p_name=>'P86_DEDUCTIONS'
 ,p_item_sequence=>20
-,p_item_plug_id=>wwv_flow_imp.id(3490513914291718735)
+,p_item_plug_id=>wwv_flow_imp.id(3712338604480904301)
 ,p_prompt=>'Deductions'
 ,p_display_as=>'PLUGIN_BE.CTB.SELECT2'
 ,p_lov=>wwv_flow_string.join(wwv_flow_t_varchar2(
@@ -79,11 +79,11 @@ wwv_flow_imp_page.create_page_item(
   'attribute_10', '100%')).to_clob
 );
 wwv_flow_imp_page.create_page_item(
- p_id=>wwv_flow_imp.id(3490898752498421484)
+ p_id=>wwv_flow_imp.id(3712723442687607050)
 ,p_name=>'P86_EARNINGS_PERIOD_ID'
 ,p_is_required=>true
 ,p_item_sequence=>10
-,p_item_plug_id=>wwv_flow_imp.id(3490513914291718735)
+,p_item_plug_id=>wwv_flow_imp.id(3712338604480904301)
 ,p_use_cache_before_default=>'NO'
 ,p_prompt=>'Earnings Period'
 ,p_display_as=>'PLUGIN_BE.CTB.SELECT2'
@@ -124,7 +124,7 @@ wwv_flow_imp_page.create_page_item(
   'attribute_10', '100%')).to_clob
 );
 wwv_flow_imp_page.create_page_process(
- p_id=>wwv_flow_imp.id(3490514300092718738)
+ p_id=>wwv_flow_imp.id(3712338990281904304)
 ,p_process_sequence=>10
 ,p_process_point=>'AFTER_SUBMIT'
 ,p_process_type=>'NATIVE_PLSQL'
@@ -157,7 +157,7 @@ wwv_flow_imp_page.create_page_process(
 ''))
 ,p_process_clob_language=>'PLSQL'
 ,p_error_display_location=>'INLINE_IN_NOTIFICATION'
-,p_process_when_button_id=>wwv_flow_imp.id(3490514073505718736)
+,p_process_when_button_id=>wwv_flow_imp.id(3712338763694904302)
 ,p_process_when=>'P86_DEDUCTIONS'
 ,p_process_when_type=>'ITEM_IS_NOT_NULL'
 ,p_internal_uid=>3068722306894722164

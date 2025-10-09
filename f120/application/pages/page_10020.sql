@@ -8,7 +8,7 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_page.create_page(
@@ -18,13 +18,13 @@ wwv_flow_imp_page.create_page(
 ,p_reload_on_submit=>'A'
 ,p_warn_on_unsaved_changes=>'N'
 ,p_autocomplete_on_off=>'ON'
-,p_group_id=>wwv_flow_imp.id(3584896379937630896)
+,p_group_id=>wwv_flow_imp.id(3806721070126816462)
 ,p_page_template_options=>'#DEFAULT#'
 ,p_help_text=>'No help is available for this page.'
 ,p_page_component_map=>'18'
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(3473074970796323502)
+ p_id=>wwv_flow_imp.id(3694899660985509068)
 ,p_plug_name=>'Listing of Potential Clients'
 ,p_region_template_options=>'#DEFAULT#:t-Region--accent14:t-Region--scrollBody'
 ,p_plug_template=>4072358936313175081
@@ -41,7 +41,7 @@ wwv_flow_imp_page.create_page_plug(
 ,p_plug_source_type=>'NATIVE_IR'
 );
 wwv_flow_imp_page.create_worksheet(
- p_id=>wwv_flow_imp.id(3473074807539323502)
+ p_id=>wwv_flow_imp.id(3694899497728509068)
 ,p_name=>'List of Active Tax Payers'
 ,p_max_row_count=>'1000000'
 ,p_max_row_count_message=>'The maximum row count for this report is #MAX_ROW_COUNT# rows.  Please apply a filter to reduce the number of records in your query.'
@@ -66,7 +66,7 @@ wwv_flow_imp_page.create_worksheet(
 ,p_internal_uid=>179764358607664067
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3589858391593084739)
+ p_id=>wwv_flow_imp.id(3811683081782270305)
 ,p_db_column_name=>'TIN'
 ,p_display_order=>1
 ,p_column_identifier=>'A'
@@ -76,7 +76,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3589857988187084738)
+ p_id=>wwv_flow_imp.id(3811682678376270304)
 ,p_db_column_name=>'NAME'
 ,p_display_order=>2
 ,p_column_identifier=>'B'
@@ -86,7 +86,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3589857660226084738)
+ p_id=>wwv_flow_imp.id(3811682350415270304)
 ,p_db_column_name=>'ADDRESS'
 ,p_display_order=>3
 ,p_column_identifier=>'C'
@@ -96,7 +96,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3589857230256084738)
+ p_id=>wwv_flow_imp.id(3811681920445270304)
 ,p_db_column_name=>'EST_EMPLOYEES'
 ,p_display_order=>4
 ,p_column_identifier=>'D'
@@ -107,7 +107,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3589856853613084738)
+ p_id=>wwv_flow_imp.id(3811681543802270304)
 ,p_db_column_name=>'PHONE'
 ,p_display_order=>5
 ,p_column_identifier=>'E'
@@ -117,7 +117,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(3589856440455084737)
+ p_id=>wwv_flow_imp.id(3811681130644270303)
 ,p_db_column_name=>'EMAIL'
 ,p_display_order=>6
 ,p_column_identifier=>'F'
@@ -127,7 +127,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_rpt(
- p_id=>wwv_flow_imp.id(3473072065592306455)
+ p_id=>wwv_flow_imp.id(3694896755781492021)
 ,p_application_user=>'APXWS_DEFAULT'
 ,p_report_seq=>10
 ,p_report_alias=>'629831'
@@ -138,9 +138,9 @@ wwv_flow_imp_page.create_worksheet_rpt(
 ,p_sum_columns_on_break=>'EST_EMPLOYEES'
 );
 wwv_flow_imp_page.create_page_button(
- p_id=>wwv_flow_imp.id(3589855584061084737)
+ p_id=>wwv_flow_imp.id(3811680274250270303)
 ,p_button_sequence=>10
-,p_button_plug_id=>wwv_flow_imp.id(3473074970796323502)
+,p_button_plug_id=>wwv_flow_imp.id(3694899660985509068)
 ,p_button_name=>'RETURN'
 ,p_button_action=>'REDIRECT_PAGE'
 ,p_button_template_options=>'#DEFAULT#:t-Button--primary'

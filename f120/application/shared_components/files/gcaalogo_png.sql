@@ -8,7 +8,7 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp.g_varchar2_table := wwv_flow_imp.empty_varchar2_table;
@@ -681,7 +681,7 @@ wwv_flow_imp.g_varchar2_table(666) := 'A0A808643219242525C1C0D008860C199AD6DFC96
 wwv_flow_imp.g_varchar2_table(667) := 'B502954A0555552618F7E903CE835C8E6B6A69F9181919472A2A29E10107044150D4210882F083EAAA2A0A8B55AE515A5A3AA0A1A141ABACACDCBDF47571FF9ADA1AB9FABA3A89DA9A1A686A6A020E8703CDCDCDD0D2D202140A05242425415A5A1AA4A5';
 wwv_flow_imp.g_varchar2_table(668) := 'A4414656061415956A55188C97CACACAB12A2A8C872A0CC673651595425555D57AB4328220A2CEFF0600250367009F78BDB10000000049454E44AE426082';
 wwv_flow_imp_shared.create_app_static_file(
- p_id=>wwv_flow_imp.id(3584766332089599710)
+ p_id=>wwv_flow_imp.id(3806591022278785276)
 ,p_file_name=>'gcaalogo.png'
 ,p_mime_type=>'image/png'
 ,p_file_charset=>'utf-8'

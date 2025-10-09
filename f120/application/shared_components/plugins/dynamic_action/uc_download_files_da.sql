@@ -8,11 +8,11 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_shared.create_plugin(
- p_id=>wwv_flow_imp.id(556967058086866299)
+ p_id=>wwv_flow_imp.id(778791748276051865)
 ,p_plugin_type=>'DYNAMIC ACTION'
 ,p_name=>'UC_DOWNLOAD_FILES_DA'
 ,p_display_name=>'UC - Download File(s)'
@@ -783,8 +783,8 @@ wwv_flow_imp_shared.create_plugin(
 ,p_files_version=>702
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(556967340052866298)
-,p_plugin_id=>wwv_flow_imp.id(556967058086866299)
+ p_id=>wwv_flow_imp.id(778792030242051864)
+,p_plugin_id=>wwv_flow_imp.id(778791748276051865)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>1
 ,p_display_sequence=>10
@@ -797,24 +797,24 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'Choose how you wish to compile the list of files to download.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(556967728345866298)
-,p_plugin_attribute_id=>wwv_flow_imp.id(556967340052866298)
+ p_id=>wwv_flow_imp.id(778792418535051864)
+,p_plugin_attribute_id=>wwv_flow_imp.id(778792030242051864)
 ,p_display_sequence=>10
 ,p_display_value=>'SQL Query'
 ,p_return_value=>'sql'
 ,p_help_text=>'<p>The files should be based on a SQL query.</p>'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(556968216274866297)
-,p_plugin_attribute_id=>wwv_flow_imp.id(556967340052866298)
+ p_id=>wwv_flow_imp.id(778792906464051863)
+,p_plugin_attribute_id=>wwv_flow_imp.id(778792030242051864)
 ,p_display_sequence=>20
 ,p_display_value=>'PL/SQL Code'
 ,p_return_value=>'plsql'
 ,p_help_text=>'<p>The files should procedurally be added to an APEX collection in a PL/SQL code block.</p>'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(556968689687866297)
-,p_plugin_id=>wwv_flow_imp.id(556967058086866299)
+ p_id=>wwv_flow_imp.id(778793379877051863)
+,p_plugin_id=>wwv_flow_imp.id(778791748276051865)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>2
 ,p_display_sequence=>20
@@ -824,7 +824,7 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_sql_min_column_count=>3
 ,p_sql_max_column_count=>4
 ,p_is_translatable=>false
-,p_depending_on_attribute_id=>wwv_flow_imp.id(556967340052866298)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(778792030242051864)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'EQUALS'
 ,p_depending_on_expression=>'sql'
@@ -862,8 +862,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ||'d. If both are provided, the first non-null one will be picked. This allows you to mix and match files from various sources.</p>'))
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(556969078082866296)
-,p_plugin_id=>wwv_flow_imp.id(556967058086866299)
+ p_id=>wwv_flow_imp.id(778793768272051862)
+,p_plugin_id=>wwv_flow_imp.id(778791748276051865)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>3
 ,p_display_sequence=>30
@@ -871,7 +871,7 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_attribute_type=>'PLSQL'
 ,p_is_required=>true
 ,p_is_translatable=>false
-,p_depending_on_attribute_id=>wwv_flow_imp.id(556967340052866298)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(778792030242051864)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'EQUALS'
 ,p_depending_on_expression=>'plsql'
@@ -908,8 +908,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ||'e>p_c001</code> and <code>p_c002</code> are both mandatory, and either <code>p_blob001</code> or <code>p_clob001</code> must be provided as well.</p>'))
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(556969505139866296)
-,p_plugin_id=>wwv_flow_imp.id(556967058086866299)
+ p_id=>wwv_flow_imp.id(778794195329051862)
+,p_plugin_id=>wwv_flow_imp.id(778791748276051865)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>4
 ,p_display_sequence=>40
@@ -921,8 +921,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'<p>Enter the zip file name to be used in case multiple files are returned.</p>'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(556969925627866296)
-,p_plugin_id=>wwv_flow_imp.id(556967058086866299)
+ p_id=>wwv_flow_imp.id(778794615817051862)
+,p_plugin_id=>wwv_flow_imp.id(778791748276051865)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>5
 ,p_display_sequence=>35
@@ -936,8 +936,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 'If you pick from the list and there is already text entered then a comma is placed at the end of the existing text, followed by the item name returned from the list.</p>'))
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(556970290923866296)
-,p_plugin_id=>wwv_flow_imp.id(556967058086866299)
+ p_id=>wwv_flow_imp.id(778794981113051862)
+,p_plugin_id=>wwv_flow_imp.id(778791748276051865)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>6
 ,p_display_sequence=>160
@@ -945,15 +945,15 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_attribute_type=>'PLSQL'
 ,p_is_required=>true
 ,p_is_translatable=>false
-,p_depending_on_attribute_id=>wwv_flow_imp.id(556977730861866293)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(778802421051051859)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'IN_LIST'
 ,p_depending_on_expression=>'execute-plsql'
 ,p_help_text=>'<p>Enter the PL/SQL code you would like to execute just prior to the download e.g. perhaps you want to track the download count in a table etc.</p>'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(556970669600866296)
-,p_plugin_id=>wwv_flow_imp.id(556967058086866299)
+ p_id=>wwv_flow_imp.id(778795359790051862)
+,p_plugin_id=>wwv_flow_imp.id(778791748276051865)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>7
 ,p_display_sequence=>170
@@ -967,8 +967,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 '<pre>this.data.staticId === ''MY_UNIQUE_ID''</pre>'))
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(556971149616866295)
-,p_plugin_id=>wwv_flow_imp.id(556967058086866299)
+ p_id=>wwv_flow_imp.id(778795839806051861)
+,p_plugin_id=>wwv_flow_imp.id(778791748276051865)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>9
 ,p_display_sequence=>5
@@ -987,16 +987,16 @@ wwv_flow_imp_shared.create_plugin_attribute(
 '</ul>'))
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(556971521714866295)
-,p_plugin_attribute_id=>wwv_flow_imp.id(556971149616866295)
+ p_id=>wwv_flow_imp.id(778796211904051861)
+,p_plugin_attribute_id=>wwv_flow_imp.id(778795839806051861)
 ,p_display_sequence=>10
 ,p_display_value=>'Download'
 ,p_return_value=>'attachment'
 ,p_help_text=>'<p>Download the file to the file system</p>'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(556972050154866295)
-,p_plugin_attribute_id=>wwv_flow_imp.id(556971149616866295)
+ p_id=>wwv_flow_imp.id(778796740344051861)
+,p_plugin_attribute_id=>wwv_flow_imp.id(778795839806051861)
 ,p_display_sequence=>20
 ,p_display_value=>'Preview'
 ,p_return_value=>'inline'
@@ -1004,16 +1004,16 @@ wwv_flow_imp_shared.create_plugin_attr_value(
 ||'nload a file when using preview mode.</p>'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(556972553864866295)
-,p_plugin_attribute_id=>wwv_flow_imp.id(556971149616866295)
+ p_id=>wwv_flow_imp.id(778797244054051861)
+,p_plugin_attribute_id=>wwv_flow_imp.id(778795839806051861)
 ,p_display_sequence=>30
 ,p_display_value=>'Preview in New Window'
 ,p_return_value=>'window'
 ,p_help_text=>'<p>Preview the file in a new browser window/tab. <strong>Note:</strong> only a limited number of file types are supported e.g. text files, images, and PDF files. If the file cannot be previewed a it will be automatically downloaded instead.</p>'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(556973040891866294)
-,p_plugin_id=>wwv_flow_imp.id(556967058086866299)
+ p_id=>wwv_flow_imp.id(778797731081051860)
+,p_plugin_id=>wwv_flow_imp.id(778791748276051865)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>10
 ,p_display_sequence=>7
@@ -1022,7 +1022,7 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_is_required=>false
 ,p_default_value=>'close-on-escape:draggable:modal:resizable:show-file-info:show-download-button'
 ,p_is_translatable=>false
-,p_depending_on_attribute_id=>wwv_flow_imp.id(556971149616866295)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(778795839806051861)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'EQUALS'
 ,p_depending_on_expression=>'inline'
@@ -1030,64 +1030,64 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'<p>When previewing a file you have a number of settings you can customize.</p>'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(556973403799866294)
-,p_plugin_attribute_id=>wwv_flow_imp.id(556973040891866294)
+ p_id=>wwv_flow_imp.id(778798093989051860)
+,p_plugin_attribute_id=>wwv_flow_imp.id(778797731081051860)
 ,p_display_sequence=>10
 ,p_display_value=>'Close on Escape'
 ,p_return_value=>'close-on-escape'
 ,p_help_text=>'<p>Check this option to close the dialog window when the "ESC" key is pressed.</p>'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(556973948980866294)
-,p_plugin_attribute_id=>wwv_flow_imp.id(556973040891866294)
+ p_id=>wwv_flow_imp.id(778798639170051860)
+,p_plugin_attribute_id=>wwv_flow_imp.id(778797731081051860)
 ,p_display_sequence=>20
 ,p_display_value=>'Custom File Info Tooltip Template'
 ,p_return_value=>'custom-file-info-template'
 ,p_help_text=>'<p>Check this option if you would like to override the default file information tooltip e.g. if you want to translate the English labels.</p>'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(556974400229866294)
-,p_plugin_attribute_id=>wwv_flow_imp.id(556973040891866294)
+ p_id=>wwv_flow_imp.id(778799090419051860)
+,p_plugin_attribute_id=>wwv_flow_imp.id(778797731081051860)
 ,p_display_sequence=>30
 ,p_display_value=>'Draggable'
 ,p_return_value=>'draggable'
 ,p_help_text=>'<p>Check this option to allow the user to be able to drag the window around and reposition it.</p>'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(556974952326866294)
-,p_plugin_attribute_id=>wwv_flow_imp.id(556973040891866294)
+ p_id=>wwv_flow_imp.id(778799642516051860)
+,p_plugin_attribute_id=>wwv_flow_imp.id(778797731081051860)
 ,p_display_sequence=>40
 ,p_display_value=>'Modal'
 ,p_return_value=>'modal'
 ,p_help_text=>'<p>Check this option to make the preview dialog window modal.</p>'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(556975427623866293)
-,p_plugin_attribute_id=>wwv_flow_imp.id(556973040891866294)
+ p_id=>wwv_flow_imp.id(778800117813051859)
+,p_plugin_attribute_id=>wwv_flow_imp.id(778797731081051860)
 ,p_display_sequence=>50
 ,p_display_value=>'Resizable'
 ,p_return_value=>'resizable'
 ,p_help_text=>'<p>Check this option to allow the user to resize the preview dialog window.</p>'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(556975920190866293)
-,p_plugin_attribute_id=>wwv_flow_imp.id(556973040891866294)
+ p_id=>wwv_flow_imp.id(778800610380051859)
+,p_plugin_attribute_id=>wwv_flow_imp.id(778797731081051860)
 ,p_display_sequence=>60
 ,p_display_value=>'Show Download Button'
 ,p_return_value=>'show-download-button'
 ,p_help_text=>'<p>Check this option to show a download button that allows the user to download the file from within the preview window/dialog.</p>'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(556976375278866293)
-,p_plugin_attribute_id=>wwv_flow_imp.id(556973040891866294)
+ p_id=>wwv_flow_imp.id(778801065468051859)
+,p_plugin_attribute_id=>wwv_flow_imp.id(778797731081051860)
 ,p_display_sequence=>70
 ,p_display_value=>'Show File Info'
 ,p_return_value=>'show-file-info'
 ,p_help_text=>'<p>Check this option to show a button that will show the file information within a tooltip on button click.</p>'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(556976919219866293)
-,p_plugin_id=>wwv_flow_imp.id(556967058086866299)
+ p_id=>wwv_flow_imp.id(778801609409051859)
+,p_plugin_id=>wwv_flow_imp.id(778791748276051865)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>11
 ,p_display_sequence=>8
@@ -1096,7 +1096,7 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_is_required=>true
 ,p_default_value=>'File Preview'
 ,p_is_translatable=>true
-,p_depending_on_attribute_id=>wwv_flow_imp.id(556971149616866295)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(778795839806051861)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'EQUALS'
 ,p_depending_on_expression=>'inline'
@@ -1109,8 +1109,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 '</pre>'))
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(556977332245866293)
-,p_plugin_id=>wwv_flow_imp.id(556967058086866299)
+ p_id=>wwv_flow_imp.id(778802022435051859)
+,p_plugin_id=>wwv_flow_imp.id(778791748276051865)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>12
 ,p_display_sequence=>9
@@ -1122,7 +1122,7 @@ wwv_flow_imp_shared.create_plugin_attribute(
 '<strong>Size:</strong> #SIZE#<br />',
 '<strong>Mime Type:</strong> #MIME_TYPE#'))
 ,p_is_translatable=>true
-,p_depending_on_attribute_id=>wwv_flow_imp.id(556973040891866294)
+,p_depending_on_attribute_id=>wwv_flow_imp.id(778797731081051860)
 ,p_depending_on_has_to_exist=>true
 ,p_depending_on_condition_type=>'IN_LIST'
 ,p_depending_on_expression=>'custom-file-info-template'
@@ -1141,8 +1141,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 '</pre>'))
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(556977730861866293)
-,p_plugin_id=>wwv_flow_imp.id(556967058086866299)
+ p_id=>wwv_flow_imp.id(778802421051051859)
+,p_plugin_id=>wwv_flow_imp.id(778791748276051865)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>15
 ,p_display_sequence=>150
@@ -1154,32 +1154,32 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'<p>Choose from the following available options:</p>'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(556978065894866292)
-,p_plugin_attribute_id=>wwv_flow_imp.id(556977730861866293)
+ p_id=>wwv_flow_imp.id(778802756084051858)
+,p_plugin_attribute_id=>wwv_flow_imp.id(778802421051051859)
 ,p_display_sequence=>10
 ,p_display_value=>'Always Zip'
 ,p_return_value=>'always-zip'
 ,p_help_text=>'If the result set contains multiple files they will always be zipped. By default, if the result set contains only one file, it will not be zipped. Choose this option if a single file should be zipped as well.'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(556978586025866292)
-,p_plugin_attribute_id=>wwv_flow_imp.id(556977730861866293)
+ p_id=>wwv_flow_imp.id(778803276215051858)
+,p_plugin_attribute_id=>wwv_flow_imp.id(778802421051051859)
 ,p_display_sequence=>20
 ,p_display_value=>'Execute PL/SQL Prior to Download'
 ,p_return_value=>'execute-plsql'
 ,p_help_text=>'<p>Check this option to run some PL/SQL code e.g. to track download counts. <strong>Note:</strong> it will be wrapped in an autonomous transaction and automatically committed or rolled back if an exception is detected.</p>'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(556979117444866291)
-,p_plugin_attribute_id=>wwv_flow_imp.id(556977730861866293)
+ p_id=>wwv_flow_imp.id(778803807634051857)
+,p_plugin_attribute_id=>wwv_flow_imp.id(778802421051051859)
 ,p_display_sequence=>50
 ,p_display_value=>'Show Spinner/Processing Icon'
 ,p_return_value=>'show-spinner'
 ,p_help_text=>'<p>Check this option if you want to have a Spinner/Processing Icon to be displayed while waiting the execution to complete.</p>'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(556979662660866291)
-,p_plugin_attribute_id=>wwv_flow_imp.id(556977730861866293)
+ p_id=>wwv_flow_imp.id(778804352850051857)
+,p_plugin_attribute_id=>wwv_flow_imp.id(778802421051051859)
 ,p_display_sequence=>60
 ,p_display_value=>'Show Spinner with Modal Overlay Mask'
 ,p_return_value=>'show-spinner-overlay'
@@ -1188,8 +1188,8 @@ wwv_flow_imp_shared.create_plugin_attr_value(
 '<p><strong>Note:</strong> this setting has no effect if you do not check "Show Spinner"</p>'))
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(556980163561866291)
-,p_plugin_attribute_id=>wwv_flow_imp.id(556977730861866293)
+ p_id=>wwv_flow_imp.id(778804853751051857)
+,p_plugin_attribute_id=>wwv_flow_imp.id(778802421051051859)
 ,p_display_sequence=>70
 ,p_display_value=>'Show Spinner on Region'
 ,p_return_value=>'spinner-position'
@@ -1197,16 +1197,16 @@ wwv_flow_imp_shared.create_plugin_attr_value(
 ||'he "Affected Elements".</p>'
 );
 wwv_flow_imp_shared.create_plugin_attr_value(
- p_id=>wwv_flow_imp.id(556980580442866290)
-,p_plugin_attribute_id=>wwv_flow_imp.id(556977730861866293)
+ p_id=>wwv_flow_imp.id(778805270632051856)
+,p_plugin_attribute_id=>wwv_flow_imp.id(778802421051051859)
 ,p_display_sequence=>80
 ,p_display_value=>'Suppress Error Messages'
 ,p_return_value=>'suppress-error-messages'
 ,p_help_text=>'<p>Select "Yes" to hide any notification messages when errors are encountered downloading the file. You would most likely only check this option when you want to display your own custom error notifications.</p>'
 );
 wwv_flow_imp_shared.create_plugin_std_attribute(
- p_id=>wwv_flow_imp.id(556990497417866284)
-,p_plugin_id=>wwv_flow_imp.id(556967058086866299)
+ p_id=>wwv_flow_imp.id(778815187607051850)
+,p_plugin_id=>wwv_flow_imp.id(778791748276051865)
 ,p_name=>'INIT_JAVASCRIPT_CODE'
 ,p_is_required=>false
 ,p_depending_on_has_to_exist=>true
@@ -1227,20 +1227,20 @@ wwv_flow_imp_shared.create_plugin_std_attribute(
 ,p_help_text=>'<p>You can use this attribute to define a function that will allow you to change/override the plugin settings. This gives you added flexibility of controlling the settings from a single Javascript function defined in an "Static Application File"</p>'
 );
 wwv_flow_imp_shared.create_plugin_event(
- p_id=>wwv_flow_imp.id(556990948415866284)
-,p_plugin_id=>wwv_flow_imp.id(556967058086866299)
+ p_id=>wwv_flow_imp.id(778815638605051850)
+,p_plugin_id=>wwv_flow_imp.id(778791748276051865)
 ,p_name=>'uc-download-file-complete'
 ,p_display_name=>'UC - Download File(s) - File Downloaded'
 );
 wwv_flow_imp_shared.create_plugin_event(
- p_id=>wwv_flow_imp.id(556991330936866283)
-,p_plugin_id=>wwv_flow_imp.id(556967058086866299)
+ p_id=>wwv_flow_imp.id(778816021126051849)
+,p_plugin_id=>wwv_flow_imp.id(778791748276051865)
 ,p_name=>'uc-download-file-error'
 ,p_display_name=>'UC - Download File(s) - Download Error'
 );
 wwv_flow_imp_shared.create_plugin_event(
- p_id=>wwv_flow_imp.id(556991690014866283)
-,p_plugin_id=>wwv_flow_imp.id(556967058086866299)
+ p_id=>wwv_flow_imp.id(778816380204051849)
+,p_plugin_id=>wwv_flow_imp.id(778791748276051865)
 ,p_name=>'uc-download-preview-complete'
 ,p_display_name=>'UC - Download File(s) - Preview Downloaded'
 );
@@ -1419,8 +1419,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(557872755020859917)
-,p_plugin_id=>wwv_flow_imp.id(556967058086866299)
+ p_id=>wwv_flow_imp.id(779697445210045483)
+,p_plugin_id=>wwv_flow_imp.id(778791748276051865)
 ,p_file_name=>'js/script.js'
 ,p_mime_type=>'text/javascript'
 ,p_file_charset=>'utf-8'
@@ -1506,8 +1506,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(557873058838859912)
-,p_plugin_id=>wwv_flow_imp.id(556967058086866299)
+ p_id=>wwv_flow_imp.id(779697749028045478)
+,p_plugin_id=>wwv_flow_imp.id(778791748276051865)
 ,p_file_name=>'js/script.min.js'
 ,p_mime_type=>'text/javascript'
 ,p_file_charset=>'utf-8'
@@ -1532,8 +1532,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(557874982654717033)
-,p_plugin_id=>wwv_flow_imp.id(556967058086866299)
+ p_id=>wwv_flow_imp.id(779699672843902599)
+,p_plugin_id=>wwv_flow_imp.id(778791748276051865)
 ,p_file_name=>'css/style.css'
 ,p_mime_type=>'text/css'
 ,p_file_charset=>'utf-8'
@@ -1570,8 +1570,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(557875349661717029)
-,p_plugin_id=>wwv_flow_imp.id(556967058086866299)
+ p_id=>wwv_flow_imp.id(779700039850902595)
+,p_plugin_id=>wwv_flow_imp.id(778791748276051865)
 ,p_file_name=>'css/style.min.css'
 ,p_mime_type=>'text/css'
 ,p_file_charset=>'utf-8'

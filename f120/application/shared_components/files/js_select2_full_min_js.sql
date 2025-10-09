@@ -8,7 +8,7 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp.g_varchar2_table := wwv_flow_imp.empty_varchar2_table;
@@ -764,7 +764,7 @@ wwv_flow_imp.g_varchar2_table(749) := '722822496E76616C696420617267756D656E74732
 wwv_flow_imp.g_varchar2_table(750) := '292C637D292C7B646566696E653A622E646566696E652C726571756972653A622E726571756972657D7D28292C633D622E7265717569726528226A71756572792E73656C6563743222293B72657475726E20612E666E2E73656C656374322E616D643D62';
 wwv_flow_imp.g_varchar2_table(751) := '2C637D293B';
 wwv_flow_imp_shared.create_app_static_file(
- p_id=>wwv_flow_imp.id(3587041548922598184)
+ p_id=>wwv_flow_imp.id(3808866239111783750)
 ,p_file_name=>'js/select2.full.min.js'
 ,p_mime_type=>'application/javascript'
 ,p_file_charset=>'utf-8'

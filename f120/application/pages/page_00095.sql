@@ -8,7 +8,7 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_page.create_page(
@@ -20,7 +20,7 @@ wwv_flow_imp_page.create_page(
 '<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>',
 ''))
 ,p_autocomplete_on_off=>'OFF'
-,p_group_id=>wwv_flow_imp.id(3603894171983398503)
+,p_group_id=>wwv_flow_imp.id(3825718862172584069)
 ,p_javascript_file_urls=>'#APP_IMAGES#js/html2canvas.min.js'
 ,p_javascript_code=>wwv_flow_string.join(wwv_flow_t_varchar2(
 'function downloadTableAsPNG() {',
@@ -109,7 +109,7 @@ wwv_flow_imp_page.create_page(
 ,p_page_component_map=>'17'
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(2165126670715473962)
+ p_id=>wwv_flow_imp.id(2386951360904659528)
 ,p_plug_name=>'Position Chart'
 ,p_region_template_options=>'#DEFAULT#:t-Region--accent11:t-Region--scrollBody'
 ,p_plug_template=>4072358936313175081
@@ -120,10 +120,10 @@ wwv_flow_imp_page.create_page_plug(
   'output_as', 'HTML')).to_clob
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(2160821353184932947)
+ p_id=>wwv_flow_imp.id(2382646043374118513)
 ,p_plug_name=>'PositionChart'
 ,p_region_name=>'org_char'
-,p_parent_plug_id=>wwv_flow_imp.id(2165126670715473962)
+,p_parent_plug_id=>wwv_flow_imp.id(2386951360904659528)
 ,p_region_template_options=>'#DEFAULT#:t-Region--removeHeader js-removeLandmark:t-Region--scrollBody'
 ,p_plug_template=>4072358936313175081
 ,p_plug_display_sequence=>30
@@ -175,9 +175,9 @@ unistr('         || ''('' || replace(dtl.unit_name, '''''''', ''\2019'') || '')'
   'attribute_04', 'Medium')).to_clob
 );
 wwv_flow_imp_page.create_page_button(
- p_id=>wwv_flow_imp.id(441339852964715311)
+ p_id=>wwv_flow_imp.id(663164543153900877)
 ,p_button_sequence=>10
-,p_button_plug_id=>wwv_flow_imp.id(2165126670715473962)
+,p_button_plug_id=>wwv_flow_imp.id(2386951360904659528)
 ,p_button_name=>'RETURN'
 ,p_button_action=>'REDIRECT_PAGE'
 ,p_button_template_options=>'#DEFAULT#:t-Button--primary:t-Button--iconRight'
@@ -188,9 +188,9 @@ wwv_flow_imp_page.create_page_button(
 ,p_icon_css_classes=>'fa-hand-o-left'
 );
 wwv_flow_imp_page.create_page_button(
- p_id=>wwv_flow_imp.id(441340197779715312)
+ p_id=>wwv_flow_imp.id(663164887968900878)
 ,p_button_sequence=>20
-,p_button_plug_id=>wwv_flow_imp.id(2165126670715473962)
+,p_button_plug_id=>wwv_flow_imp.id(2386951360904659528)
 ,p_button_name=>'Tree_Structure'
 ,p_button_action=>'REDIRECT_PAGE'
 ,p_button_template_options=>'#DEFAULT#:t-Button--success:t-Button--iconRight:t-Button--padLeft'
@@ -202,9 +202,9 @@ wwv_flow_imp_page.create_page_button(
 ,p_icon_css_classes=>'fa-tree-org'
 );
 wwv_flow_imp_page.create_page_button(
- p_id=>wwv_flow_imp.id(441340625611715312)
+ p_id=>wwv_flow_imp.id(663165315800900878)
 ,p_button_sequence=>40
-,p_button_plug_id=>wwv_flow_imp.id(2165126670715473962)
+,p_button_plug_id=>wwv_flow_imp.id(2386951360904659528)
 ,p_button_name=>'Download_CHart'
 ,p_button_action=>'DEFINED_BY_DA'
 ,p_button_template_options=>'#DEFAULT#:t-Button--warning'
@@ -215,10 +215,10 @@ wwv_flow_imp_page.create_page_button(
 ,p_warn_on_unsaved_changes=>null
 );
 wwv_flow_imp_page.create_page_item(
- p_id=>wwv_flow_imp.id(441341061589715316)
+ p_id=>wwv_flow_imp.id(663165751778900882)
 ,p_name=>'P95_POSITION'
 ,p_item_sequence=>10
-,p_item_plug_id=>wwv_flow_imp.id(2165126670715473962)
+,p_item_plug_id=>wwv_flow_imp.id(2386951360904659528)
 ,p_prompt=>'Position'
 ,p_display_as=>'NATIVE_POPUP_LOV'
 ,p_lov=>wwv_flow_string.join(wwv_flow_t_varchar2(
@@ -252,10 +252,10 @@ wwv_flow_imp_page.create_page_item(
   'min_chars', '0')).to_clob
 );
 wwv_flow_imp_page.create_page_item(
- p_id=>wwv_flow_imp.id(441341467975715317)
+ p_id=>wwv_flow_imp.id(663166158164900883)
 ,p_name=>'P95_FILTER'
 ,p_item_sequence=>20
-,p_item_plug_id=>wwv_flow_imp.id(2165126670715473962)
+,p_item_plug_id=>wwv_flow_imp.id(2386951360904659528)
 ,p_item_default=>'2'
 ,p_prompt=>'Filter'
 ,p_display_as=>'NATIVE_SELECT_LIST'
@@ -270,7 +270,7 @@ wwv_flow_imp_page.create_page_item(
   'page_action_on_selection', 'NONE')).to_clob
 );
 wwv_flow_imp_page.create_page_da_event(
- p_id=>wwv_flow_imp.id(441342106012715323)
+ p_id=>wwv_flow_imp.id(663166796201900889)
 ,p_name=>'dy_filter_chart'
 ,p_event_sequence=>10
 ,p_triggering_element_type=>'ITEM'
@@ -280,19 +280,19 @@ wwv_flow_imp_page.create_page_da_event(
 ,p_bind_event_type=>'change'
 );
 wwv_flow_imp_page.create_page_da_action(
- p_id=>wwv_flow_imp.id(441342685121715325)
-,p_event_id=>wwv_flow_imp.id(441342106012715323)
+ p_id=>wwv_flow_imp.id(663167375310900891)
+,p_event_id=>wwv_flow_imp.id(663166796201900889)
 ,p_event_result=>'TRUE'
 ,p_action_sequence=>10
 ,p_execute_on_page_init=>'Y'
 ,p_action=>'NATIVE_REFRESH'
 ,p_affected_elements_type=>'REGION'
-,p_affected_region_id=>wwv_flow_imp.id(2160821353184932947)
+,p_affected_region_id=>wwv_flow_imp.id(2382646043374118513)
 ,p_attribute_01=>'N'
 );
 wwv_flow_imp_page.create_page_da_action(
- p_id=>wwv_flow_imp.id(441343178663715325)
-,p_event_id=>wwv_flow_imp.id(441342106012715323)
+ p_id=>wwv_flow_imp.id(663167868852900891)
+,p_event_id=>wwv_flow_imp.id(663166796201900889)
 ,p_event_result=>'TRUE'
 ,p_action_sequence=>20
 ,p_execute_on_page_init=>'N'
@@ -301,18 +301,18 @@ wwv_flow_imp_page.create_page_da_action(
 ,p_attribute_02=>'Y'
 );
 wwv_flow_imp_page.create_page_da_event(
- p_id=>wwv_flow_imp.id(441343512623715325)
+ p_id=>wwv_flow_imp.id(663168202812900891)
 ,p_name=>'New_1s'
 ,p_event_sequence=>20
 ,p_triggering_element_type=>'BUTTON'
-,p_triggering_button_id=>wwv_flow_imp.id(441340625611715312)
+,p_triggering_button_id=>wwv_flow_imp.id(663165315800900878)
 ,p_bind_type=>'bind'
 ,p_execution_type=>'IMMEDIATE'
 ,p_bind_event_type=>'click'
 );
 wwv_flow_imp_page.create_page_da_action(
- p_id=>wwv_flow_imp.id(441344030501715326)
-,p_event_id=>wwv_flow_imp.id(441343512623715325)
+ p_id=>wwv_flow_imp.id(663168720690900892)
+,p_event_id=>wwv_flow_imp.id(663168202812900891)
 ,p_event_result=>'TRUE'
 ,p_action_sequence=>10
 ,p_execute_on_page_init=>'N'

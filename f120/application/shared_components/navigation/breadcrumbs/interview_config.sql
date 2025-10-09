@@ -8,33 +8,33 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_shared.create_menu(
- p_id=>wwv_flow_imp.id(3575083533841629462)
+ p_id=>wwv_flow_imp.id(3796908224030815028)
 ,p_name=>'Interview_Config'
 );
 wwv_flow_imp_shared.create_menu_option(
- p_id=>wwv_flow_imp.id(3575027923952988888)
+ p_id=>wwv_flow_imp.id(3796852614142174454)
 ,p_short_name=>'Position Locations'
 ,p_link=>'f?p=&APP_ID.:1317:&SESSION.::&DEBUG.:::'
 ,p_page_id=>1317
 );
 wwv_flow_imp_shared.create_menu_option(
- p_id=>wwv_flow_imp.id(3575028818968021619)
+ p_id=>wwv_flow_imp.id(3796853509157207185)
 ,p_short_name=>'Position Responsibilities'
 ,p_link=>'f?p=&APP_ID.:1305:&SESSION.::&DEBUG.:::'
 ,p_page_id=>1305
 );
 wwv_flow_imp_shared.create_menu_option(
- p_id=>wwv_flow_imp.id(3575082714457596299)
+ p_id=>wwv_flow_imp.id(3796907404646781865)
 ,p_short_name=>'Listing of Job Question Bank'
 ,p_link=>'f?p=&APP_ID.:2012:&SESSION.::&DEBUG.:::'
 ,p_page_id=>2012
 );
 wwv_flow_imp_shared.create_menu_option(
- p_id=>wwv_flow_imp.id(3575083137077616276)
+ p_id=>wwv_flow_imp.id(3796907827266801842)
 ,p_short_name=>'Search Positions'
 ,p_link=>'f?p=&APP_ID.:1300:&SESSION.::&DEBUG.:::'
 ,p_page_id=>1300

@@ -8,7 +8,7 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp.g_varchar2_table := wwv_flow_imp.empty_varchar2_table;
@@ -231,7 +231,7 @@ wwv_flow_imp.g_varchar2_table(216) := '65BD4AC0AD4021F173B89BF410371FDFC7C547377
 wwv_flow_imp.g_varchar2_table(217) := 'A2DEB453DC721DF29AE03358443E6BC7CBAAFA2DEDF019C22A37E2F700FD825A93E0130441B830E4E91336C302001B96AD216B0E44100441B81624FA04411004914FC813CBFB04411004419886449F20088220F20924FA04411004912F00FE0F91B47FDE';
 wwv_flow_imp.g_varchar2_table(218) := '2EDEF5AD0000000049454E44AE426082';
 wwv_flow_imp_shared.create_app_static_file(
- p_id=>wwv_flow_imp.id(3590281026205106639)
+ p_id=>wwv_flow_imp.id(3812105716394292205)
 ,p_file_name=>'epa_logo2.png'
 ,p_mime_type=>'image/png'
 ,p_file_charset=>'utf-8'

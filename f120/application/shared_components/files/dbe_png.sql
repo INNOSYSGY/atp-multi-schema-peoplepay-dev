@@ -8,7 +8,7 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp.g_varchar2_table := wwv_flow_imp.empty_varchar2_table;
@@ -265,7 +265,7 @@ wwv_flow_imp.g_varchar2_table(250) := '57193D64E021030F19FC8350CB6432A57F70A36EA
 wwv_flow_imp.g_varchar2_table(251) := '4481D85881CFB79795963AFFC141EA21030F193C7464E081071E3CBCF06C61F6C0030F3C64E081071E78C8C0030F3CF09081071E78E021030F3CF0C043061E78E081870C3CF0C0030F1978E081071E32F0C0030F3C64E081071E78C8C0030F3CF893F8BF';
 wwv_flow_imp.g_varchar2_table(252) := '0100CEBE6676F46201830000000049454E44AE426082';
 wwv_flow_imp_shared.create_app_static_file(
- p_id=>wwv_flow_imp.id(3602577888346823277)
+ p_id=>wwv_flow_imp.id(3824402578536008843)
 ,p_file_name=>'DBE.png'
 ,p_mime_type=>'image/png'
 ,p_file_charset=>'utf-8'

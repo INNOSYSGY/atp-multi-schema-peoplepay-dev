@@ -8,11 +8,11 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_shared.create_list_of_values(
- p_id=>wwv_flow_imp.id(456907826696114471)
+ p_id=>wwv_flow_imp.id(678732516885300037)
 ,p_lov_name=>'HR_HCF_HOLIDAY.HOLIDAY_CODE'
 ,p_lov_query=>wwv_flow_string.join(wwv_flow_t_varchar2(
 'select HOLIDAY_descrip || ''-'' || holiday_date d, id r',

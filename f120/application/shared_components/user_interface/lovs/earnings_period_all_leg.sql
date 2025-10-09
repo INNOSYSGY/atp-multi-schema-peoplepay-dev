@@ -8,11 +8,11 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.2.9'
 ,p_default_workspace_id=>31592798490575853
 ,p_default_application_id=>120
-,p_default_id_offset=>188895268110624634
+,p_default_id_offset=>221824690189185566
 ,p_default_owner=>'TEMPLATE_APPV8'
 );
 wwv_flow_imp_shared.create_list_of_values(
- p_id=>wwv_flow_imp.id(365579693761803579)
+ p_id=>wwv_flow_imp.id(587404383950989145)
 ,p_lov_name=>'EARNINGS_PERIOD_ALL_LEG'
 ,p_lov_query=>wwv_flow_string.join(wwv_flow_t_varchar2(
 'select earn_description,id,Earn_pay_status,A.START_PAID_FOR,A.END_PAID_FOR,EARNINGS_TYPE',
@@ -39,14 +39,14 @@ wwv_flow_imp_shared.create_list_of_values(
 ,p_version_scn=>44494578849016
 );
 wwv_flow_imp_shared.create_list_of_values_cols(
- p_id=>wwv_flow_imp.id(365580093497803576)
+ p_id=>wwv_flow_imp.id(587404783686989142)
 ,p_query_column_name=>'EARNINGS_TYPE'
 ,p_heading=>'Earnings Type'
 ,p_display_sequence=>10
 ,p_data_type=>'VARCHAR2'
 );
 wwv_flow_imp_shared.create_list_of_values_cols(
- p_id=>wwv_flow_imp.id(365580540776803575)
+ p_id=>wwv_flow_imp.id(587405230965989141)
 ,p_query_column_name=>'ID'
 ,p_display_sequence=>10
 ,p_data_type=>'NUMBER'
@@ -54,28 +54,28 @@ wwv_flow_imp_shared.create_list_of_values_cols(
 ,p_is_searchable=>'N'
 );
 wwv_flow_imp_shared.create_list_of_values_cols(
- p_id=>wwv_flow_imp.id(365580861475803574)
+ p_id=>wwv_flow_imp.id(587405551664989140)
 ,p_query_column_name=>'START_PAID_FOR'
 ,p_heading=>'Start Paid For'
 ,p_display_sequence=>10
 ,p_data_type=>'DATE'
 );
 wwv_flow_imp_shared.create_list_of_values_cols(
- p_id=>wwv_flow_imp.id(365581298215803573)
+ p_id=>wwv_flow_imp.id(587405988404989139)
 ,p_query_column_name=>'END_PAID_FOR'
 ,p_heading=>'End Paid For'
 ,p_display_sequence=>20
 ,p_data_type=>'DATE'
 );
 wwv_flow_imp_shared.create_list_of_values_cols(
- p_id=>wwv_flow_imp.id(365581673668803572)
+ p_id=>wwv_flow_imp.id(587406363857989138)
 ,p_query_column_name=>'EARN_DESCRIPTION'
 ,p_heading=>'Earn Description'
 ,p_display_sequence=>21
 ,p_data_type=>'VARCHAR2'
 );
 wwv_flow_imp_shared.create_list_of_values_cols(
- p_id=>wwv_flow_imp.id(365582149827803571)
+ p_id=>wwv_flow_imp.id(587406840016989137)
 ,p_query_column_name=>'EARN_PAY_STATUS'
 ,p_heading=>'Earn Pay Status'
 ,p_display_sequence=>30
